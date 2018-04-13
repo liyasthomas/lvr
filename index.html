@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+		<title>Lvr</title>
+		<meta name="description" content="L virtual reality">
+		<script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+		<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.5/aframe/build/aframe-ar.js"></script>
+	</head>
+	<body style='margin : 0px; overflow: hidden;'>
+		<a-scene embedded arjs='debugUIEnabled: false; sourceType: webcam; trackingMethod: best;'>
+			<a-marker preset='hiro'>
+				<a-text
+					side='double'
+					position='0 1.75 0'
+					value="Lvr"
+					align="center"
+					rotation="-90 0 0"
+					color="#fff">
+				</a-text>
+				<a-text
+					position='0 1.5 0'
+					scale='0.5 0.5 0.5'
+					value="Virtual Reality by Liyas Thomas"
+					align="center"
+					rotation="0 0 0"
+					color="#fff">
+					<a-animation
+						attribute="position"
+						from="0 0.4 0"
+						to="0 0.6 0"
+						direction="alternate"
+						dur="500"
+						repeat="indefinite"
+						easing='ease-in-out-cubic'>
+					</a-animation>
+				</a-text>
+				<a-sphere
+					id="image"
+					src="earth.jpg"
+					radius="0.5"
+					segments-height="53"
+					position="0 0.5 0"
+					rotation='0 0 0'>
+					<a-animation
+						attribute="rotation"
+						dur="15000"
+						to="0 360 0"
+						easing= "linear"     
+						repeat="indefinite">
+					</a-animation>
+				</a-sphere>
+				<a-sky src="sky.jpg" rotation="0 -90 0"></a-sky>
+			</a-marker>
+			<a-marker preset='kanji'>
+				<a-text
+					side='double'
+					position='0 1.75 0'
+					value="Lvr"
+					align="center"
+					rotation="-90 0 0"
+					color="#fff">
+				</a-text>
+				<a-text
+					position='0 1.5 0'
+					scale='0.5 0.5 0.5'
+					value="Virtual Reality by Liyas Thomas"
+					align="center"
+					rotation="0 0 0"
+					color="#fff">
+					<a-animation
+						attribute="position"
+						from="0 0.4 0"
+						to="0 0.6 0"
+						direction="alternate"
+						dur="500"
+						repeat="indefinite"
+						easing='ease-in-out-cubic'>
+					</a-animation>
+				</a-text>
+				<a-sphere
+					radius="0.5"
+					segments-height="53"
+					position="0 0.5 0"
+					rotation='0 0 0'
+					material='color: white;'>
+					<a-animation
+						attribute="position"
+						dur="1000"
+						from= "0 0 0"
+						to="0 1.5 0"
+						direction='alternate-reverse'
+						easing= "ease-out-bounce"     
+						repeat="indefinite">
+					</a-animation>
+				</a-sphere>
+			</a-marker>
+			<a-entity camera></a-entity>
+<!--
+			<a-marker-camera preset='hiro'>
+			<a-box position='0 0.5 0' material='opacity: 0.5; color: white;'>
+				<a-box scale='0.5 0.5 0.5' material='opacity: 0.75; side: double; color: white;'>
+					<a-animation attribute="rotation" to="360 360 360" dur="5000" easing='linear' repeat="indefinite"></a-animation>
+				</a-box>
+			</a-box>
+			</a-marker-camera>
+			<a-marker-camera preset='kanji'>
+			<a-box position='0 0.5 0' material='opacity: 0.5; color: white;'>
+				<a-box scale='0.5 0.5 0.5' material='opacity: 0.75; side: double; color: white;'>
+					<a-animation attribute="rotation" to="360 360 360" dur="5000" easing='linear' repeat="indefinite"></a-animation>
+				</a-box>
+			</a-box>
+			</a-marker-camera>
+-->
+<!--
+			<a-text position='0 1.75 0' value="Lvr" align="center" rotation="-90 0 0" color="#4CC3D9"></a-text>
+			<a-text position='0 1.5 0' scale='0.5 0.5 0.5' value="L virtual reality" align="center" color="white"></a-text>
+			<a-box position='0 0.5 0' material='opacity: 0.5; color: white;'>
+				<a-box scale='0.5 0.5 0.5' material='opacity: 0.75; side: double; color: white;'>
+					<a-animation attribute="rotation" to="360 360 360" dur="5000" easing='linear' repeat="indefinite"></a-animation>
+				</a-box>
+			</a-box>
+			<a-marker-camera preset='kanji'></a-marker-camera>
+-->
+<!--
+			<a-marker preset="hiro">
+				<a-box position='0 0.5 0' material='color: black; opacity: 0.75;'></a-box>
+			</a-marker>
+			<a-entity camera></a-entity>
+-->
+		</a-scene>
+	</body>
+</html>
