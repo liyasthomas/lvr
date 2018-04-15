@@ -14,22 +14,24 @@
 				<a-text
 					side='double'
 					position='0 1.75 0'
+					font='https://cdn.aframe.io/fonts/DejaVu-sdf.fnt'
 					value="Lvr"
 					align="center"
 					rotation="-90 0 0"
 					color="#fff">
 				</a-text>
 				<a-text
+					side='double'
 					position='0 1.5 0'
 					scale='0.5 0.5 0.5'
-					value="Virtual Reality by Liyas Thomas"
+					font='https://cdn.aframe.io/fonts/DejaVu-sdf.fnt'
+					value="Virtual & Augmented reality\nby Liyas Thomas"
 					align="center"
-					rotation="0 0 0"
 					color="#fff">
 					<a-animation
 						attribute="position"
-						from="0 0.4 0"
-						to="0 0.6 0"
+						from="0 1.5 0"
+						to="0 1.6 0"
 						direction="alternate"
 						dur="500"
 						repeat="indefinite"
@@ -38,11 +40,12 @@
 				</a-text>
 				<a-sphere
 					id="image"
-					src="earth.jpg"
+					src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/space/earth_atmos_4096.jpg"
 					radius="0.5"
 					segments-height="53"
 					position="0 0.5 0"
-					rotation='0 0 0'>
+					rotation='0 0 0'
+					shadow>
 					<a-animation
 						attribute="rotation"
 						dur="15000"
@@ -51,28 +54,30 @@
 						repeat="indefinite">
 					</a-animation>
 				</a-sphere>
-				<a-sky src="sky.jpg" rotation="0 -90 0"></a-sky>
+				<a-sky color="#ECECEC"></a-sky>
 			</a-marker>
 			<a-marker preset='kanji'>
 				<a-text
 					side='double'
 					position='0 1.75 0'
+					font='https://cdn.aframe.io/fonts/DejaVu-sdf.fnt'
 					value="Lvr"
 					align="center"
 					rotation="-90 0 0"
 					color="#fff">
 				</a-text>
 				<a-text
+					side='double'
 					position='0 1.5 0'
 					scale='0.5 0.5 0.5'
-					value="Virtual Reality by Liyas Thomas"
+					font='https://cdn.aframe.io/fonts/DejaVu-sdf.fnt'
+					value="Virtual & Augmented reality\nby Liyas Thomas"
 					align="center"
-					rotation="0 0 0"
 					color="#fff">
 					<a-animation
 						attribute="position"
-						from="0 0.4 0"
-						to="0 0.6 0"
+						from="0 1.5 0"
+						to="0 1.6 0"
 						direction="alternate"
 						dur="500"
 						repeat="indefinite"
@@ -84,51 +89,65 @@
 					segments-height="53"
 					position="0 0.5 0"
 					rotation='0 0 0'
-					material='color: white;'>
+					material='color: red;'
+					shadow>
 					<a-animation
 						attribute="position"
 						dur="1000"
+						fill="forwards"
 						from= "0 0 0"
-						to="0 1.5 0"
-						direction='alternate-reverse'
+						to="0 1 0"
+						direction='alternate'
 						easing= "ease-out-bounce"     
 						repeat="indefinite">
 					</a-animation>
 				</a-sphere>
+				<a-box
+					position='0 0.5 0'
+					material='opacity: 0.5; color: blue;'
+					shadow>
+					<a-animation
+						attribute="rotation"
+						dur="3000"
+						fill="forwards"
+						to="0 360 0"
+						direction="alternate">
+					</a-animation>
+					<a-box
+						scale='0.5 0.5 0.5'
+						material='opacity: 0.75; side: double; color: white;'>
+						<a-animation
+						attribute="rotation"
+						to="360 360 360"
+						dur="5000"
+						easing='linear'
+						repeat="indefinite">
+						</a-animation>
+					</a-box>
+				</a-box>
+				<a-ring
+					position="0 0.5 0"
+					color="white"
+					rotation="0 0 0"
+					radius-inner="0.45"
+					radius-outer=".5"
+					shadow>
+					<a-animation
+						attribute="rotation"
+						dur="8000"
+						to="360 360 360"
+						easing= "linear"     
+						repeat="indefinite">
+					</a-animation>
+				</a-ring>
+				<a-plane
+					src="https://cdn.aframe.io/a-painter/images/floor.jpg"
+					rotation="-90 0 0"
+					shadow>
+				</a-plane>
 			</a-marker>
-			<a-entity camera></a-entity>
-<!--
-			<a-marker-camera preset='hiro'>
-			<a-box position='0 0.5 0' material='opacity: 0.5; color: white;'>
-				<a-box scale='0.5 0.5 0.5' material='opacity: 0.75; side: double; color: white;'>
-					<a-animation attribute="rotation" to="360 360 360" dur="5000" easing='linear' repeat="indefinite"></a-animation>
-				</a-box>
-			</a-box>
-			</a-marker-camera>
-			<a-marker-camera preset='kanji'>
-			<a-box position='0 0.5 0' material='opacity: 0.5; color: white;'>
-				<a-box scale='0.5 0.5 0.5' material='opacity: 0.75; side: double; color: white;'>
-					<a-animation attribute="rotation" to="360 360 360" dur="5000" easing='linear' repeat="indefinite"></a-animation>
-				</a-box>
-			</a-box>
-			</a-marker-camera>
--->
-<!--
-			<a-text position='0 1.75 0' value="Lvr" align="center" rotation="-90 0 0" color="#4CC3D9"></a-text>
-			<a-text position='0 1.5 0' scale='0.5 0.5 0.5' value="L virtual reality" align="center" color="white"></a-text>
-			<a-box position='0 0.5 0' material='opacity: 0.5; color: white;'>
-				<a-box scale='0.5 0.5 0.5' material='opacity: 0.75; side: double; color: white;'>
-					<a-animation attribute="rotation" to="360 360 360" dur="5000" easing='linear' repeat="indefinite"></a-animation>
-				</a-box>
-			</a-box>
-			<a-marker-camera preset='kanji'></a-marker-camera>
--->
-<!--
-			<a-marker preset="hiro">
-				<a-box position='0 0.5 0' material='color: black; opacity: 0.75;'></a-box>
-			</a-marker>
-			<a-entity camera></a-entity>
--->
+			<a-entity camera>
+			</a-entity>
 		</a-scene>
 	</body>
 </html>
