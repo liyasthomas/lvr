@@ -13,9 +13,8 @@
 			<a-marker preset='hiro'>
 				<a-text
 					side='double'
-					position='0 1.75 0'
-					font='https://cdn.aframe.io/fonts/DejaVu-sdf.fnt'
-					value="Lvr"
+					position='0 1.6 0.5'
+					value="Lvr [Hiro]"
 					align="center"
 					rotation="-90 0 0"
 					color="#fff">
@@ -31,7 +30,7 @@
 					<a-animation
 						attribute="position"
 						from="0 1.5 0"
-						to="0 1.6 0"
+						to="0 1.55 0"
 						direction="alternate"
 						dur="500"
 						repeat="indefinite"
@@ -59,9 +58,8 @@
 			<a-marker preset='kanji'>
 				<a-text
 					side='double'
-					position='0 1.75 0'
-					font='https://cdn.aframe.io/fonts/DejaVu-sdf.fnt'
-					value="Lvr"
+					position='0 1.6 0.5'
+					value="Lvr [Kanji]"
 					align="center"
 					rotation="-90 0 0"
 					color="#fff">
@@ -77,14 +75,13 @@
 					<a-animation
 						attribute="position"
 						from="0 1.5 0"
-						to="0 1.6 0"
+						to="0 1.55 0"
 						direction="alternate"
 						dur="500"
 						repeat="indefinite"
 						easing='ease-in-out-cubic'>
 					</a-animation>
 				</a-text>
-<!--
 				<a-sphere
 					radius="0.5"
 					segments-height="53"
@@ -103,8 +100,42 @@
 						repeat="indefinite">
 					</a-animation>
 				</a-sphere>
--->
-<!--
+				<a-plane
+					src="https://cdn.aframe.io/a-painter/images/floor.jpg"
+					rotation="-90 0 0"
+					shadow>
+				</a-plane>
+			</a-marker>
+			<a-marker
+				preset='custom'
+				type='pattern'
+				url='patterns/a.patt'>
+				<a-text
+					side='double'
+					position='0 1.6 0.5'
+					value="Lvr [A]"
+					align="center"
+					rotation="-90 0 0"
+					color="#fff">
+				</a-text>
+				<a-text
+					side='double'
+					position='0 1.5 0'
+					scale='0.5 0.5 0.5'
+					font='https://cdn.aframe.io/fonts/DejaVu-sdf.fnt'
+					value="Virtual & Augmented reality\nby Liyas Thomas"
+					align="center"
+					color="#fff">
+					<a-animation
+						attribute="position"
+						from="0 1.5 0"
+						to="0 1.55 0"
+						direction="alternate"
+						dur="500"
+						repeat="indefinite"
+						easing='ease-in-out-cubic'>
+					</a-animation>
+				</a-text>
 				<a-ring
 					position="0 0.5 0"
 					color="white"
@@ -120,30 +151,47 @@
 						repeat="indefinite">
 					</a-animation>
 				</a-ring>
--->
-<!--
-				<a-plane
-					src="https://cdn.aframe.io/a-painter/images/floor.jpg"
-					rotation="-90 0 0"
-					shadow>
-				</a-plane>
--->
-				<a-sky color="#000"></a-sky>
 			</a-marker>
 			<a-marker
 				preset='custom'
 				type='pattern'
-				url='patterns/c.patt'>
+				url='patterns/b.patt'>
+				<a-text
+					side='double'
+					position='0 1.6 0.5'
+					value="Lvr [B]"
+					align="center"
+					rotation="-90 0 0"
+					color="#fff">
+				</a-text>
+				<a-text
+					side='double'
+					position='0 1.5 0'
+					scale='0.5 0.5 0.5'
+					font='https://cdn.aframe.io/fonts/DejaVu-sdf.fnt'
+					value="Virtual & Augmented reality\nby Liyas Thomas"
+					align="center"
+					color="#fff">
+					<a-animation
+						attribute="position"
+						from="0 1.5 0"
+						to="0 1.55 0"
+						direction="alternate"
+						dur="500"
+						repeat="indefinite"
+						easing='ease-in-out-cubic'>
+					</a-animation>
+				</a-text>
 				<a-box
 					position='0 0.5 0'
 					material='opacity: 0.5; color: blue;'
 					shadow>
 					<a-animation
-						attribute="rotation"
-						dur="3000"
-						fill="forwards"
-						to="0 360 0"
-						direction="alternate">
+					attribute="rotation"
+					to="360 360 360"
+					dur="3000"
+					easing='linear'
+					repeat="indefinite">
 					</a-animation>
 					<a-box
 						scale='0.5 0.5 0.5'
@@ -157,6 +205,161 @@
 						</a-animation>
 					</a-box>
 				</a-box>
+			</a-marker>
+			<a-marker
+				preset='custom'
+				type='pattern'
+				url='patterns/c.patt'>
+				<a-text
+					side='double'
+					position='0 1.6 0.5'
+					value="Lvr [C]"
+					align="center"
+					rotation="-90 0 0"
+					color="#fff">
+				</a-text>
+				<a-text
+					side='double'
+					position='0 1.5 0'
+					scale='0.5 0.5 0.5'
+					font='https://cdn.aframe.io/fonts/DejaVu-sdf.fnt'
+					value="Virtual & Augmented reality\nby Liyas Thomas"
+					align="center"
+					color="#fff">
+					<a-animation
+						attribute="position"
+						from="0 1.5 0"
+						to="0 1.55 0"
+						direction="alternate"
+						dur="500"
+						repeat="indefinite"
+						easing='ease-in-out-cubic'>
+					</a-animation>
+				</a-text>
+			</a-marker>
+			<a-marker
+				preset='custom'
+				type='pattern'
+				url='patterns/d.patt'>
+				<a-text
+					side='double'
+					position='0 1.6 0.5'
+					value="Lvr [D]"
+					align="center"
+					rotation="-90 0 0"
+					color="#fff">
+				</a-text>
+				<a-text
+					side='double'
+					position='0 1.5 0'
+					scale='0.5 0.5 0.5'
+					font='https://cdn.aframe.io/fonts/DejaVu-sdf.fnt'
+					value="Virtual & Augmented reality\nby Liyas Thomas"
+					align="center"
+					color="#fff">
+					<a-animation
+						attribute="position"
+						from="0 1.5 0"
+						to="0 1.55 0"
+						direction="alternate"
+						dur="500"
+						repeat="indefinite"
+						easing='ease-in-out-cubic'>
+					</a-animation>
+				</a-text>
+			</a-marker>
+			<a-marker
+				preset='custom'
+				type='pattern'
+				url='patterns/f.patt'>
+				<a-text
+					side='double'
+					position='0 1.6 0.5'
+					value="Lvr [F]"
+					align="center"
+					rotation="-90 0 0"
+					color="#fff">
+				</a-text>
+				<a-text
+					side='double'
+					position='0 1.5 0'
+					scale='0.5 0.5 0.5'
+					font='https://cdn.aframe.io/fonts/DejaVu-sdf.fnt'
+					value="Virtual & Augmented reality\nby Liyas Thomas"
+					align="center"
+					color="#fff">
+					<a-animation
+						attribute="position"
+						from="0 1.5 0"
+						to="0 1.55 0"
+						direction="alternate"
+						dur="500"
+						repeat="indefinite"
+						easing='ease-in-out-cubic'>
+					</a-animation>
+				</a-text>
+			</a-marker>
+			<a-marker
+				preset='custom'
+				type='pattern'
+				url='patterns/g.patt'>
+				<a-text
+					side='double'
+					position='0 1.6 0.5'
+					value="Lvr [G]"
+					align="center"
+					rotation="-90 0 0"
+					color="#fff">
+				</a-text>
+				<a-text
+					side='double'
+					position='0 1.5 0'
+					scale='0.5 0.5 0.5'
+					font='https://cdn.aframe.io/fonts/DejaVu-sdf.fnt'
+					value="Virtual & Augmented reality\nby Liyas Thomas"
+					align="center"
+					color="#fff">
+					<a-animation
+						attribute="position"
+						from="0 1.5 0"
+						to="0 1.55 0"
+						direction="alternate"
+						dur="500"
+						repeat="indefinite"
+						easing='ease-in-out-cubic'>
+					</a-animation>
+				</a-text>
+			</a-marker>
+			<a-marker
+				preset='custom'
+				type='pattern'
+				url='patterns/lvr.patt'>
+				<a-text
+					side='double'
+					position='0 1.6 0.5'
+					value="Lvr [Lvr]"
+					align="center"
+					rotation="-90 0 0"
+					color="#fff">
+				</a-text>
+				<a-text
+					side='double'
+					position='0 1.5 0'
+					scale='0.5 0.5 0.5'
+					font='https://cdn.aframe.io/fonts/DejaVu-sdf.fnt'
+					value="Virtual & Augmented reality\nby Liyas Thomas"
+					align="center"
+					color="#fff">
+					<a-animation
+						attribute="position"
+						from="0 1.5 0"
+						to="0 1.55 0"
+						direction="alternate"
+						dur="500"
+						repeat="indefinite"
+						easing='ease-in-out-cubic'>
+					</a-animation>
+				</a-text>
 			</a-marker>
 			<a-entity camera>
 			</a-entity>
