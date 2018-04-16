@@ -9,12 +9,20 @@
 		<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.5/aframe/build/aframe-ar.js"></script>
 		<script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.0.2/dist/aframe-extras.min.js"></script>
 	</head>
-	<body style='background-color: #000; margin: 0px; overflow: hidden;'>
+	<body style='background-color: #000; margin: 0px; overflow: hidden; font-family: Monospace;'>
 		<a-scene embedded arjs='debugUIEnabled: false; sourceType: webcam; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
+			<!-- Assets for GLTF 3D models -->
 			<a-assets>
-				<a-asset-item id="ball" src="assets/ball/scene.gltf"></a-asset-item>
-				<a-asset-item id="planet" src="assets/planet/scene.gltf"></a-asset-item>
+				<a-asset-item
+					id="ball"
+					src="assets/ball/scene.gltf">
+				</a-asset-item>
+				<a-asset-item
+					id="planet"
+					src="assets/planet/scene.gltf">
+				</a-asset-item>
 			</a-assets>
+			<!-- Marker with preset pattern [Hiro] -->
 			<a-marker preset='hiro'>
 				<a-text
 					side='double'
@@ -60,6 +68,7 @@
 				</a-sphere>
 				<a-sky src="http://www.eso.org/public/archives/images/screen/eso1501a.jpg"></a-sky>
 			</a-marker>
+			<!-- Marker with preset pattern [Kanji] -->
 			<a-marker preset='kanji'>
 				<a-text
 					side='double'
@@ -111,6 +120,7 @@
 					shadow>
 				</a-plane>
 			</a-marker>
+			<!-- Marker with custom pattern [A] -->
 			<a-marker
 				preset='custom'
 				type='pattern'
@@ -157,6 +167,7 @@
 					</a-animation>
 				</a-ring>
 			</a-marker>
+			<!-- Marker with custom pattern [B] -->
 			<a-marker
 				preset='custom'
 				type='pattern'
@@ -211,6 +222,7 @@
 					</a-box>
 				</a-box>
 			</a-marker>
+			<!-- Marker with custom pattern [C] -->
 			<a-marker
 				preset='custom'
 				type='pattern'
@@ -247,6 +259,7 @@
 					animation-mixer>
 				</a-entity>
 			</a-marker>
+			<!-- Marker with custom pattern [D] -->
 			<a-marker
 				preset='custom'
 				type='pattern'
@@ -283,6 +296,7 @@
 					animation-mixer>
 				</a-entity>
 			</a-marker>
+			<!-- Marker with custom pattern [F] -->
 			<a-marker
 				preset='custom'
 				type='pattern'
@@ -314,6 +328,7 @@
 					</a-animation>
 				</a-text>
 			</a-marker>
+			<!-- Marker with custom pattern [G] -->
 			<a-marker
 				preset='custom'
 				type='pattern'
@@ -345,6 +360,7 @@
 					</a-animation>
 				</a-text>
 			</a-marker>
+			<!-- Marker with custom pattern [O] -->
 			<a-marker
 				preset='custom'
 				type='pattern'
@@ -376,11 +392,128 @@
 					</a-animation>
 				</a-text>
 			</a-marker>
+			<!-- Marker with barcode pattern [1] -->
+			<a-marker type='barcode' value='1'>
+				<a-text
+					side='double'
+					position='0 1.75 0.5'
+					value="Lvr [Barcode 1]"
+					align="center"
+					rotation="-90 0 0"
+					color="#fff">
+				</a-text>
+				<a-text
+					side='double'
+					position='0 1.6 1'
+					scale='0.4 0.4 0.4'
+					font='https://cdn.aframe.io/fonts/DejaVu-sdf.fnt'
+					value="Virtual & Augmented Reality\nby Liyas Thomas"
+					align="center"
+					color="#fff">
+					<a-animation
+						attribute="position"
+						from="0 1.6 1"
+						to="0 1.65 1"
+						direction="alternate"
+						dur="500"
+						repeat="indefinite"
+						easing='ease-in-out-cubic'>
+					</a-animation>
+				</a-text>
+			</a-marker>
+			<!-- Marker with barcode pattern [2] -->
+			<a-marker type='barcode' value='2'>
+				<a-text
+					side='double'
+					position='0 1.75 0.5'
+					value="Lvr [Barcode 2]"
+					align="center"
+					rotation="-90 0 0"
+					color="#fff">
+				</a-text>
+				<a-text
+					side='double'
+					position='0 1.6 1'
+					scale='0.4 0.4 0.4'
+					font='https://cdn.aframe.io/fonts/DejaVu-sdf.fnt'
+					value="Virtual & Augmented Reality\nby Liyas Thomas"
+					align="center"
+					color="#fff">
+					<a-animation
+						attribute="position"
+						from="0 1.6 1"
+						to="0 1.65 1"
+						direction="alternate"
+						dur="500"
+						repeat="indefinite"
+						easing='ease-in-out-cubic'>
+					</a-animation>
+				</a-text>
+			</a-marker>
+			<!-- Marker with barcode pattern [3] -->
+			<a-marker type='barcode' value='3'>
+				<a-text
+					side='double'
+					position='0 1.75 0.5'
+					value="Lvr [Barcode 3]"
+					align="center"
+					rotation="-90 0 0"
+					color="#fff">
+				</a-text>
+				<a-text
+					side='double'
+					position='0 1.6 1'
+					scale='0.4 0.4 0.4'
+					font='https://cdn.aframe.io/fonts/DejaVu-sdf.fnt'
+					value="Virtual & Augmented Reality\nby Liyas Thomas"
+					align="center"
+					color="#fff">
+					<a-animation
+						attribute="position"
+						from="0 1.6 1"
+						to="0 1.65 1"
+						direction="alternate"
+						dur="500"
+						repeat="indefinite"
+						easing='ease-in-out-cubic'>
+					</a-animation>
+				</a-text>
+			</a-marker>
+			<!-- Marker with barcode pattern [4] -->
+			<a-marker type='barcode' value='4'>
+				<a-text
+					side='double'
+					position='0 1.75 0.5'
+					value="Lvr [Barcode 4]"
+					align="center"
+					rotation="-90 0 0"
+					color="#fff">
+				</a-text>
+				<a-text
+					side='double'
+					position='0 1.6 1'
+					scale='0.4 0.4 0.4'
+					font='https://cdn.aframe.io/fonts/DejaVu-sdf.fnt'
+					value="Virtual & Augmented Reality\nby Liyas Thomas"
+					align="center"
+					color="#fff">
+					<a-animation
+						attribute="position"
+						from="0 1.6 1"
+						to="0 1.65 1"
+						direction="alternate"
+						dur="500"
+						repeat="indefinite"
+						easing='ease-in-out-cubic'>
+					</a-animation>
+				</a-text>
+			</a-marker>
+			<!-- Marker with barcode pattern [5] -->
 			<a-marker type='barcode' value='5'>
 				<a-text
 					side='double'
 					position='0 1.75 0.5'
-					value="Lvr [Barcode]"
+					value="Lvr [Barcode 5]"
 					align="center"
 					rotation="-90 0 0"
 					color="#fff">
