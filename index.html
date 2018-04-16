@@ -11,8 +11,14 @@
 	</head>
 	<body style='background-color: #000; margin: 0px; overflow: hidden; font-family: Monospace;'>
 		<a-scene embedded arjs='debugUIEnabled: false; sourceType: webcam; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
-			<!-- Assets for GLTF 3D models -->
+			<!-- Assets for images, GLTF 3D models, etc -->
 			<a-assets>
+				<img
+					id="image1"
+					src="https://vr.google.com/blocks/static/images/blocks/work/bear.png">
+				<img
+					id="image2"
+					src="https://vr.google.com/blocks/static/images/blocks/work/watermelon.png">
 				<a-asset-item
 					id="ball"
 					src="assets/ball/scene.gltf">
@@ -51,7 +57,6 @@
 					</a-animation>
 				</a-text>
 				<a-sphere
-					id="image"
 					src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/space/earth_atmos_4096.jpg"
 					radius="0.5"
 					segments-height="53"
@@ -327,6 +332,9 @@
 						easing='ease-in-out-cubic'>
 					</a-animation>
 				</a-text>
+				<a-image
+					src="#image1">
+				</a-image>
 			</a-marker>
 			<!-- Marker with custom pattern [G] -->
 			<a-marker
@@ -359,6 +367,12 @@
 						easing='ease-in-out-cubic'>
 					</a-animation>
 				</a-text>
+				<a-circle
+					src="#image2"
+					radius="50"
+					position='0 0.5 0'
+					rotation="-90 0 0">
+				</a-circle>
 			</a-marker>
 			<!-- Marker with custom pattern [O] -->
 			<a-marker
@@ -420,6 +434,12 @@
 						easing='ease-in-out-cubic'>
 					</a-animation>
 				</a-text>
+				<a-cone
+					color="tomato"
+					radius-bottom="1"
+					position='0 0.5 0'
+					radius-top="0.5">
+				</a-cone>
 			</a-marker>
 			<!-- Marker with barcode pattern [2] -->
 			<a-marker type='barcode' value='2'>
@@ -449,6 +469,7 @@
 						easing='ease-in-out-cubic'>
 					</a-animation>
 				</a-text>
+				<a-triangle color="#CCC" rotation="-90 0 0"></a-triangle>
 			</a-marker>
 			<!-- Marker with barcode pattern [3] -->
 			<a-marker type='barcode' value='3'>
