@@ -13,12 +13,8 @@
 		<a-scene embedded arjs='debugUIEnabled: false; sourceType: webcam; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
 			<!-- Assets for images, GLTF 3D models, etc -->
 			<a-assets>
-				<img
-					id="image1"
-					src="https://vr.google.com/blocks/static/images/blocks/work/bear.png">
-				<img
-					id="image2"
-					src="https://vr.google.com/blocks/static/images/blocks/work/watermelon.png">
+				<img id="image1" src="https://vr.google.com/blocks/static/images/blocks/work/bear.png">
+				<img id="image2" src="https://vr.google.com/blocks/static/images/blocks/work/watermelon.png">
 				<a-asset-item
 					id="ball"
 					src="assets/ball/scene.gltf">
@@ -369,7 +365,7 @@
 				</a-text>
 				<a-circle
 					src="#image2"
-					radius="50"
+					radius="0.5"
 					position='0 0.5 0'
 					rotation="-90 0 0">
 				</a-circle>
@@ -469,7 +465,10 @@
 						easing='ease-in-out-cubic'>
 					</a-animation>
 				</a-text>
-				<a-triangle color="#CCC" rotation="-90 0 0"></a-triangle>
+				<a-triangle
+					color="#CCC"
+					rotation="-90 0 0">
+				</a-triangle>
 			</a-marker>
 			<!-- Marker with barcode pattern [3] -->
 			<a-marker type='barcode' value='3'>
