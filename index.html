@@ -537,6 +537,67 @@
 					</a-animation>
 				</a-text>
 			</a-marker>
+			<!-- Marker with custom pattern and barcode [9] -->
+			<a-marker
+				preset='custom'
+				type='pattern'
+				url='patterns/9.patt'>
+				<a-text
+					side='double'
+					position='0 1.75 0.5'
+					value="Lvr [pattern and barcode 9]"
+					align="center"
+					rotation="-90 0 0"
+					color="#fff">
+				</a-text>
+				<a-text
+					side='double'
+					position='0 1.6 1'
+					scale='0.4 0.4 0.4'
+					font='https://cdn.aframe.io/fonts/DejaVu-sdf.fnt'
+					value="Virtual & Augmented Reality\nby Liyas Thomas"
+					align="center"
+					color="#fff">
+					<a-animation
+						attribute="position"
+						from="0 1.6 1"
+						to="0 1.65 1"
+						direction="alternate"
+						dur="500"
+						repeat="indefinite"
+						easing='ease-in-out-cubic'>
+					</a-animation>
+				</a-text>
+			</a-marker>
+			<!-- Marker with barcode pattern [9] -->
+			<a-marker type='barcode' value='9'>
+				<a-text
+					side='double'
+					position='0 1.75 0.5'
+					value="Lvr [Barcode 5]"
+					align="center"
+					rotation="-90 0 0"
+					color="#fff">
+				</a-text>
+				<a-text
+					side='double'
+					position='0 1.6 1'
+					scale='0.4 0.4 0.4'
+					font='https://cdn.aframe.io/fonts/DejaVu-sdf.fnt'
+					value="Virtual & Augmented Reality\nby Liyas Thomas"
+					align="center"
+					color="#fff">
+					<a-animation
+						attribute="position"
+						from="0 1.6 1"
+						to="0 1.65 1"
+						direction="alternate"
+						dur="500"
+						repeat="indefinite"
+						easing='ease-in-out-cubic'>
+					</a-animation>
+				</a-text>
+			</a-marker>
 			<a-entity camera>
 			</a-entity>
 		</a-scene>
