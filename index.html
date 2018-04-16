@@ -10,7 +10,7 @@
 		<script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.0.2/dist/aframe-extras.min.js"></script>
 	</head>
 	<body style='background-color: #000; margin: 0px; overflow: hidden;'>
-		<a-scene embedded arjs='debugUIEnabled: false; sourceType: webcam; trackingMethod: best;'>
+		<a-scene embedded arjs='debugUIEnabled: false; sourceType: webcam; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
 			<a-assets>
 				<a-asset-item id="ball" src="assets/ball/scene.gltf"></a-asset-item>
 				<a-asset-item id="planet" src="assets/planet/scene.gltf"></a-asset-item>
@@ -353,6 +353,34 @@
 					side='double'
 					position='0 1.75 0.5'
 					value="Lvr [O]"
+					align="center"
+					rotation="-90 0 0"
+					color="#fff">
+				</a-text>
+				<a-text
+					side='double'
+					position='0 1.6 1'
+					scale='0.4 0.4 0.4'
+					font='https://cdn.aframe.io/fonts/DejaVu-sdf.fnt'
+					value="Virtual & Augmented Reality\nby Liyas Thomas"
+					align="center"
+					color="#fff">
+					<a-animation
+						attribute="position"
+						from="0 1.6 1"
+						to="0 1.65 1"
+						direction="alternate"
+						dur="500"
+						repeat="indefinite"
+						easing='ease-in-out-cubic'>
+					</a-animation>
+				</a-text>
+			</a-marker>
+			<a-marker type='barcode' value='5'>
+				<a-text
+					side='double'
+					position='0 1.75 0.5'
+					value="Lvr [Barcode]"
 					align="center"
 					rotation="-90 0 0"
 					color="#fff">
