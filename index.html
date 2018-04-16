@@ -236,8 +236,10 @@
 						easing='ease-in-out-cubic'>
 					</a-animation>
 				</a-text>
-				<a-asset-item id="scene" src="assets/scene.gltf"></a-asset-item>
-				<a-entity scale="20 20 20" gltf-model="#scene"></a-entity>
+				<a-assets>
+					<a-asset-item id="scene" src="assets/scene.gltf"></a-asset-item>
+				</a-assets>
+				<a-entity gltf-model="#scene" animation-mixer></a-entity>
 			</a-marker>
 			<a-marker
 				preset='custom'
