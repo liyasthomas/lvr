@@ -9,7 +9,7 @@
 		<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.5/aframe/build/aframe-ar.js"></script>
 		<script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.0.2/dist/aframe-extras.min.js"></script>
 	</head>
-	<body style='margin : 0px; overflow: hidden;'>
+	<body style='background-color: #000; margin: 0px; overflow: hidden;'>
 		<a-scene embedded arjs='debugUIEnabled: false; sourceType: webcam; trackingMethod: best;'>
 			<a-assets>
 				<a-asset-item id="scene" src="assets/scene.gltf"></a-asset-item>
@@ -240,7 +240,11 @@
 						easing='ease-in-out-cubic'>
 					</a-animation>
 				</a-text>
-				<a-entity gltf-model="#scene" scale="0.01 0.01 0.01" animation-mixer></a-entity>
+				<a-entity
+					gltf-model="#scene"
+					scale="0.03 0.03 0.03"
+					animation-mixer>
+				</a-entity>
 			</a-marker>
 			<a-marker
 				preset='custom'
