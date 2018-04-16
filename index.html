@@ -10,6 +10,9 @@
 	</head>
 	<body style='margin : 0px; overflow: hidden;'>
 		<a-scene embedded arjs='debugUIEnabled: false; sourceType: webcam; trackingMethod: best;'>
+			<a-assets>
+				<a-asset-item id="scene" src="assets/scene.gltf"></a-asset-item>
+			</a-assets>
 			<a-marker preset='hiro'>
 				<a-text
 					side='double'
@@ -236,9 +239,6 @@
 						easing='ease-in-out-cubic'>
 					</a-animation>
 				</a-text>
-				<a-assets>
-					<a-asset-item id="scene" src="assets/scene.gltf"></a-asset-item>
-				</a-assets>
 				<a-entity gltf-model="#scene" animation-mixer></a-entity>
 			</a-marker>
 			<a-marker
