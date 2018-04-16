@@ -49,11 +49,11 @@
 						attribute="rotation"
 						dur="15000"
 						to="0 360 0"
-						easing= "linear"     
+						easing= "ease-in-out-circ"     
 						repeat="indefinite">
 					</a-animation>
 				</a-sphere>
-				<a-sky color="#ECECEC"></a-sky>
+				<a-sky src="http://www.eso.org/public/archives/images/screen/eso1501a.jpg"></a-sky>
 			</a-marker>
 			<a-marker preset='kanji'>
 				<a-text
@@ -236,6 +236,8 @@
 						easing='ease-in-out-cubic'>
 					</a-animation>
 				</a-text>
+				<a-asset-item id="scene" src="assets/scene.gltf"></a-asset-item>
+				<a-entity scale="20 20 20" gltf-model="#scene"></a-entity>
 			</a-marker>
 			<a-marker
 				preset='custom'
