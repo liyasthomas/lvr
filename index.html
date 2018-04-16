@@ -13,7 +13,7 @@
 			<a-marker preset='hiro'>
 				<a-text
 					side='double'
-					position='0 1.6 0'
+					position='0 1.6 0.5'
 					value="Lvr [Hiro]"
 					align="center"
 					rotation="-90 0 0"
@@ -58,7 +58,7 @@
 			<a-marker preset='kanji'>
 				<a-text
 					side='double'
-					position='0 1.6 0'
+					position='0 1.6 0.5'
 					value="Lvr [Kanji]"
 					align="center"
 					rotation="-90 0 0"
@@ -112,7 +112,7 @@
 				url='patterns/A.patt'>
 				<a-text
 					side='double'
-					position='0 1.6 0'
+					position='0 1.6 0.5'
 					value="Lvr [A]"
 					align="center"
 					rotation="-90 0 0"
@@ -158,7 +158,7 @@
 				url='patterns/B.patt'>
 				<a-text
 					side='double'
-					position='0 1.6 0'
+					position='0 1.6 0.5'
 					value="Lvr [B]"
 					align="center"
 					rotation="-90 0 0"
@@ -212,7 +212,7 @@
 				url='patterns/C.patt'>
 				<a-text
 					side='double'
-					position='0 1.6 0'
+					position='0 1.6 0.5'
 					value="Lvr [C]"
 					align="center"
 					rotation="-90 0 0"
@@ -243,7 +243,7 @@
 				url='patterns/D.patt'>
 				<a-text
 					side='double'
-					position='0 1.6 0'
+					position='0 1.6 0.5'
 					value="Lvr [D]"
 					align="center"
 					rotation="-90 0 0"
@@ -274,7 +274,7 @@
 				url='patterns/F.patt'>
 				<a-text
 					side='double'
-					position='0 1.6 0'
+					position='0 1.6 0.5'
 					value="Lvr [F]"
 					align="center"
 					rotation="-90 0 0"
@@ -305,8 +305,39 @@
 				url='patterns/G.patt'>
 				<a-text
 					side='double'
-					position='0 1.6 0'
+					position='0 1.6 0.5'
 					value="Lvr [G]"
+					align="center"
+					rotation="-90 0 0"
+					color="#fff">
+				</a-text>
+				<a-text
+					side='double'
+					position='0 1.5 0'
+					scale='0.5 0.5 0.5'
+					font='https://cdn.aframe.io/fonts/DejaVu-sdf.fnt'
+					value="Virtual & Augmented reality\nby Liyas Thomas"
+					align="center"
+					color="#fff">
+					<a-animation
+						attribute="position"
+						from="0 1.5 0"
+						to="0 1.55 0"
+						direction="alternate"
+						dur="500"
+						repeat="indefinite"
+						easing='ease-in-out-cubic'>
+					</a-animation>
+				</a-text>
+			</a-marker>
+			<a-marker
+				preset='custom'
+				type='pattern'
+				url='patterns/O.patt'>
+				<a-text
+					side='double'
+					position='0 1.6 0.5'
+					value="Lvr [O]"
 					align="center"
 					rotation="-90 0 0"
 					color="#fff">
