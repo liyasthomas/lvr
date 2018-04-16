@@ -12,13 +12,14 @@
 	<body style='background-color: #000; margin: 0px; overflow: hidden;'>
 		<a-scene embedded arjs='debugUIEnabled: false; sourceType: webcam; trackingMethod: best;'>
 			<a-assets>
-				<a-asset-item id="scene" src="assets/scene.gltf"></a-asset-item>
+				<a-asset-item id="ball" src="assets/ball.gltf"></a-asset-item>
+				<a-asset-item id="planet" src="assets/planet.bin"></a-asset-item>
 			</a-assets>
 			<a-marker preset='hiro'>
 				<a-text
 					side='double'
 					position='0 1.6 0.5'
-					value="Lvr [Hiro]"
+					value="Lvr [C]"
 					align="center"
 					rotation="-90 0 0"
 					color="#fff">
@@ -26,15 +27,15 @@
 				<a-text
 					side='double'
 					position='0 1.5 0'
-					scale='0.5 0.5 0.5'
+					scale='0.4 0.4 0.4'
 					font='https://cdn.aframe.io/fonts/DejaVu-sdf.fnt'
-					value="Virtual & Augmented reality\nby Liyas Thomas"
+					value="Virtual & Augmented Reality\nby Liyas Thomas"
 					align="center"
 					color="#fff">
 					<a-animation
 						attribute="position"
-						from="0 1.5 0"
-						to="0 1.55 0"
+						from="0 1.45 0"
+						to="0 1.5 0"
 						direction="alternate"
 						dur="500"
 						repeat="indefinite"
@@ -63,7 +64,7 @@
 				<a-text
 					side='double'
 					position='0 1.6 0.5'
-					value="Lvr [Kanji]"
+					value="Lvr [C]"
 					align="center"
 					rotation="-90 0 0"
 					color="#fff">
@@ -71,15 +72,15 @@
 				<a-text
 					side='double'
 					position='0 1.5 0'
-					scale='0.5 0.5 0.5'
+					scale='0.4 0.4 0.4'
 					font='https://cdn.aframe.io/fonts/DejaVu-sdf.fnt'
-					value="Virtual & Augmented reality\nby Liyas Thomas"
+					value="Virtual & Augmented Reality\nby Liyas Thomas"
 					align="center"
 					color="#fff">
 					<a-animation
 						attribute="position"
-						from="0 1.5 0"
-						to="0 1.55 0"
+						from="0 1.45 0"
+						to="0 1.5 0"
 						direction="alternate"
 						dur="500"
 						repeat="indefinite"
@@ -117,7 +118,7 @@
 				<a-text
 					side='double'
 					position='0 1.6 0.5'
-					value="Lvr [A]"
+					value="Lvr [C]"
 					align="center"
 					rotation="-90 0 0"
 					color="#fff">
@@ -125,15 +126,15 @@
 				<a-text
 					side='double'
 					position='0 1.5 0'
-					scale='0.5 0.5 0.5'
+					scale='0.4 0.4 0.4'
 					font='https://cdn.aframe.io/fonts/DejaVu-sdf.fnt'
-					value="Virtual & Augmented reality\nby Liyas Thomas"
+					value="Virtual & Augmented Reality\nby Liyas Thomas"
 					align="center"
 					color="#fff">
 					<a-animation
 						attribute="position"
-						from="0 1.5 0"
-						to="0 1.55 0"
+						from="0 1.45 0"
+						to="0 1.5 0"
 						direction="alternate"
 						dur="500"
 						repeat="indefinite"
@@ -163,7 +164,7 @@
 				<a-text
 					side='double'
 					position='0 1.6 0.5'
-					value="Lvr [B]"
+					value="Lvr [C]"
 					align="center"
 					rotation="-90 0 0"
 					color="#fff">
@@ -171,15 +172,15 @@
 				<a-text
 					side='double'
 					position='0 1.5 0'
-					scale='0.5 0.5 0.5'
+					scale='0.4 0.4 0.4'
 					font='https://cdn.aframe.io/fonts/DejaVu-sdf.fnt'
-					value="Virtual & Augmented reality\nby Liyas Thomas"
+					value="Virtual & Augmented Reality\nby Liyas Thomas"
 					align="center"
 					color="#fff">
 					<a-animation
 						attribute="position"
-						from="0 1.5 0"
-						to="0 1.55 0"
+						from="0 1.45 0"
+						to="0 1.5 0"
 						direction="alternate"
 						dur="500"
 						repeat="indefinite"
@@ -225,15 +226,15 @@
 				<a-text
 					side='double'
 					position='0 1.5 0'
-					scale='0.5 0.5 0.5'
+					scale='0.4 0.4 0.4'
 					font='https://cdn.aframe.io/fonts/DejaVu-sdf.fnt'
-					value="Virtual & Augmented reality\nby Liyas Thomas"
+					value="Virtual & Augmented Reality\nby Liyas Thomas"
 					align="center"
 					color="#fff">
 					<a-animation
 						attribute="position"
-						from="0 1.5 0"
-						to="0 1.55 0"
+						from="0 1.45 0"
+						to="0 1.5 0"
 						direction="alternate"
 						dur="500"
 						repeat="indefinite"
@@ -241,8 +242,8 @@
 					</a-animation>
 				</a-text>
 				<a-entity
-					gltf-model="#scene"
-					scale="0.03 0.03 0.03"
+					gltf-model="#ball"
+					scale="0.05 0.05 0.05"
 					animation-mixer>
 				</a-entity>
 			</a-marker>
@@ -253,7 +254,7 @@
 				<a-text
 					side='double'
 					position='0 1.6 0.5'
-					value="Lvr [D]"
+					value="Lvr [C]"
 					align="center"
 					rotation="-90 0 0"
 					color="#fff">
@@ -261,21 +262,26 @@
 				<a-text
 					side='double'
 					position='0 1.5 0'
-					scale='0.5 0.5 0.5'
+					scale='0.4 0.4 0.4'
 					font='https://cdn.aframe.io/fonts/DejaVu-sdf.fnt'
-					value="Virtual & Augmented reality\nby Liyas Thomas"
+					value="Virtual & Augmented Reality\nby Liyas Thomas"
 					align="center"
 					color="#fff">
 					<a-animation
 						attribute="position"
-						from="0 1.5 0"
-						to="0 1.55 0"
+						from="0 1.45 0"
+						to="0 1.5 0"
 						direction="alternate"
 						dur="500"
 						repeat="indefinite"
 						easing='ease-in-out-cubic'>
 					</a-animation>
 				</a-text>
+				<a-entity
+					gltf-model="#planet"
+					scale="0.05 0.05 0.05"
+					animation-mixer>
+				</a-entity>
 			</a-marker>
 			<a-marker
 				preset='custom'
@@ -284,7 +290,7 @@
 				<a-text
 					side='double'
 					position='0 1.6 0.5'
-					value="Lvr [F]"
+					value="Lvr [C]"
 					align="center"
 					rotation="-90 0 0"
 					color="#fff">
@@ -292,15 +298,15 @@
 				<a-text
 					side='double'
 					position='0 1.5 0'
-					scale='0.5 0.5 0.5'
+					scale='0.4 0.4 0.4'
 					font='https://cdn.aframe.io/fonts/DejaVu-sdf.fnt'
-					value="Virtual & Augmented reality\nby Liyas Thomas"
+					value="Virtual & Augmented Reality\nby Liyas Thomas"
 					align="center"
 					color="#fff">
 					<a-animation
 						attribute="position"
-						from="0 1.5 0"
-						to="0 1.55 0"
+						from="0 1.45 0"
+						to="0 1.5 0"
 						direction="alternate"
 						dur="500"
 						repeat="indefinite"
@@ -315,7 +321,7 @@
 				<a-text
 					side='double'
 					position='0 1.6 0.5'
-					value="Lvr [G]"
+					value="Lvr [C]"
 					align="center"
 					rotation="-90 0 0"
 					color="#fff">
@@ -323,15 +329,15 @@
 				<a-text
 					side='double'
 					position='0 1.5 0'
-					scale='0.5 0.5 0.5'
+					scale='0.4 0.4 0.4'
 					font='https://cdn.aframe.io/fonts/DejaVu-sdf.fnt'
-					value="Virtual & Augmented reality\nby Liyas Thomas"
+					value="Virtual & Augmented Reality\nby Liyas Thomas"
 					align="center"
 					color="#fff">
 					<a-animation
 						attribute="position"
-						from="0 1.5 0"
-						to="0 1.55 0"
+						from="0 1.45 0"
+						to="0 1.5 0"
 						direction="alternate"
 						dur="500"
 						repeat="indefinite"
@@ -346,7 +352,7 @@
 				<a-text
 					side='double'
 					position='0 1.6 0.5'
-					value="Lvr [O]"
+					value="Lvr [C]"
 					align="center"
 					rotation="-90 0 0"
 					color="#fff">
@@ -354,15 +360,15 @@
 				<a-text
 					side='double'
 					position='0 1.5 0'
-					scale='0.5 0.5 0.5'
+					scale='0.4 0.4 0.4'
 					font='https://cdn.aframe.io/fonts/DejaVu-sdf.fnt'
-					value="Virtual & Augmented reality\nby Liyas Thomas"
+					value="Virtual & Augmented Reality\nby Liyas Thomas"
 					align="center"
 					color="#fff">
 					<a-animation
 						attribute="position"
-						from="0 1.5 0"
-						to="0 1.55 0"
+						from="0 1.45 0"
+						to="0 1.5 0"
 						direction="alternate"
 						dur="500"
 						repeat="indefinite"
