@@ -105,31 +105,6 @@
 				</a-sphere>
 -->
 <!--
-				<a-box
-					position='0 0.5 0'
-					material='opacity: 0.5; color: blue;'
-					shadow>
-					<a-animation
-						attribute="rotation"
-						dur="3000"
-						fill="forwards"
-						to="0 360 0"
-						direction="alternate">
-					</a-animation>
-					<a-box
-						scale='0.5 0.5 0.5'
-						material='opacity: 0.75; side: double; color: white;'>
-						<a-animation
-						attribute="rotation"
-						to="360 360 360"
-						dur="5000"
-						easing='linear'
-						repeat="indefinite">
-						</a-animation>
-					</a-box>
-				</a-box>
--->
-<!--
 				<a-ring
 					position="0 0.5 0"
 					color="white"
@@ -153,8 +128,35 @@
 					shadow>
 				</a-plane>
 -->
-				<a-video visible="true" webkit-playsinline playsinline src="https://www.360baze.com/download/Drake-_-Gods_Plan_360BAZE.COM_.mp4" width="2" height="1" rotation="-90 0 0" autoplay="true"></a-video>
 				<a-sky color="#000"></a-sky>
+			</a-marker>
+			<a-marker
+				preset='custom'
+				type='pattern'
+				url='patterns/c.patt'>
+				<a-box
+					position='0 0.5 0'
+					material='opacity: 0.5; color: blue;'
+					shadow>
+					<a-animation
+						attribute="rotation"
+						dur="3000"
+						fill="forwards"
+						to="0 360 0"
+						direction="alternate">
+					</a-animation>
+					<a-box
+						scale='0.5 0.5 0.5'
+						material='opacity: 0.75; side: double; color: white;'>
+						<a-animation
+						attribute="rotation"
+						to="360 360 360"
+						dur="5000"
+						easing='linear'
+						repeat="indefinite">
+						</a-animation>
+					</a-box>
+				</a-box>
 			</a-marker>
 			<a-entity camera>
 			</a-entity>
