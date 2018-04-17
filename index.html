@@ -16,14 +16,14 @@
 			.logo {
 				left: 16px;
 				top: 16px;
-				width: 64px;
+				width: 56px;
 				height: auto;
 			}
 			.full {
 				right: 16px;
 				top: 16px;
-				width: 20px;
-				height: 20px;
+				width: 28px;
+				height: 28px;
 			}
 			.a-enter-vr-button {
 				background-color: rgba(0,0,0,0) !important;
@@ -37,7 +37,7 @@
 			.spinnerScanning > div {
 				background-color: #fff;
 				height: 100%;
-				width: 5px;
+				width: 6px;
 				display: inline-block;
 				-webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
 				animation: sk-stretchdelay 1.2s infinite ease-in-out;
@@ -100,10 +100,10 @@
 			AFRAME.registerComponent('markerhandler' {
 				tick:function() {
 					if(document.querySelector("a-marker").object3D.visible == true) {
-						document.getElementsByClassName('spinnerScanning').style.visibility = 'hidden';
+						document.getElementById('spinnerScanning').style.visibility = 'hidden';
 					}
 					else {
-						document.getElementsByClassName('spinnerScanning').style.visibility = 'visible'; 
+						document.getElementById('spinnerScanning').style.visibility = 'visible'; 
 					}
 				}
 			});
