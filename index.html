@@ -34,6 +34,7 @@
 				z-index: 10;
 				left: 16px;
 				bottom: 16px;
+				height: 40px;
 			}
 			.spinnerScanning > div {
 				background-color: #fff;
@@ -150,8 +151,7 @@
 					segments-height="53"
 					position="0 0.5 0"
 					rotation='0 0 0'
-					shadow
-					markerhandler>
+					shadow>
 					<a-animation
 						attribute="rotation"
 						dur="15000"
@@ -196,8 +196,7 @@
 					position="0 0.5 0"
 					rotation='0 0 0'
 					material='color: red;'
-					shadow
-					markerhandler>
+					shadow>
 					<a-animation
 						attribute="position"
 						dur="1000"
@@ -252,8 +251,7 @@
 					rotation="0 0 0"
 					radius-inner="0.45"
 					radius-outer=".5"
-					shadow
-					markerhandler>
+					shadow>
 					<a-animation
 						attribute="rotation"
 						dur="8000"
@@ -297,8 +295,7 @@
 				<a-box
 					position='0 0.5 0'
 					material='opacity: 0.5; color: blue;'
-					shadow
-					markerhandler>
+					shadow>
 					<a-animation
 					attribute="rotation"
 					to="360 360 360"
@@ -390,8 +387,7 @@
 				<a-entity
 					gltf-model="#planet"
 					scale="0.04 0.04 0.04"
-					animation-mixer
-					markerhandler>
+					animation-mixer>
 				</a-entity>
 			</a-marker>
 			<!-- Marker with custom pattern [F] -->
@@ -426,8 +422,7 @@
 					</a-animation>
 				</a-text>
 				<a-image
-					src="#image1"
-					markerhandler>
+					src="#image1">
 				</a-image>
 			</a-marker>
 			<!-- Marker with custom pattern [G] -->
@@ -465,8 +460,7 @@
 					src="#image2"
 					radius="0.5"
 					position='0 0.5 0'
-					rotation="-90 0 0"
-					markerhandler>
+					rotation="-90 0 0">
 				</a-circle>
 			</a-marker>
 			<!-- Marker with custom pattern [O] -->
@@ -536,8 +530,7 @@
 					radius-bottom="1"
 					position='0 0.5 0'
 					radius-top="0.5"
-					shadow
-					markerhandler>
+					shadow>
 				</a-cone>
 			</a-marker>
 			<!-- Marker with barcode pattern [2] -->
@@ -573,8 +566,7 @@
 				<a-triangle
 					color="#CCC"
 					rotation="-90 0 0"
-					shadow
-					markerhandler>
+					shadow>
 				</a-triangle>
 			</a-marker>
 			<!-- Marker with barcode pattern [3] -->
