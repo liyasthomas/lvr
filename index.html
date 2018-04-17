@@ -11,7 +11,7 @@
 		<script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.0.2/dist/aframe-extras.min.js"></script>
 		<style>
 			.button {
-				position: absolute;
+				position: fixed;
 				z-index: 10;
 			}
 			.logo {
@@ -30,7 +30,7 @@
 				background-color: rgba(0,0,0,0) !important;
 			}
 			.spinnerScanning {
-				position: absolute;
+				position: fixed;
 				z-index: 10;
 				left: 16px;
 				bottom: 16px;
@@ -73,11 +73,6 @@
 		<img src="assets/logo.svg" class="logo button" alt="Lvr logo">
 		<!-- Toggle full screen -->
 		<img src="assets/full-screen.svg" class="full button" alt="Toggle full screen" title="Toggle full screen" onclick="toggleFullScreen(document.body)">
-		<div class="spinnerScanning">
-			<div class="rect1"></div>
-			<div class="rect2"></div>
-			<div class="rect3"></div>
-		</div>
 		<script>
 			function toggleFullScreen(elem) {
 				if ((document.fullScreenElement !== undefined && document.fullScreenElement === null) || (document.msFullscreenElement !== undefined && document.msFullscreenElement === null) || (document.mozFullScreen !== undefined && !document.mozFullScreen) || (document.webkitIsFullScreen !== undefined && !document.webkitIsFullScreen)) {
@@ -103,6 +98,11 @@
 				}
 			}
 		</script>
+		<div class="spinnerScanning">
+			<div class="rect1"></div>
+			<div class="rect2"></div>
+			<div class="rect3"></div>
+		</div>
 		<a-scene embedded arjs='debugUIEnabled: false; sourceType: webcam; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
 			<!-- Assets for images, GLTF 3D models, etc -->
 			<a-assets>
