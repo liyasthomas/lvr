@@ -44,32 +44,32 @@
 	</head>
 	<body style='background-color: #000; margin: 0px; overflow: hidden; font-family: Monospace;'>
 		<!-- Logo -->
-		<img src="assets/favicon.svg" class="logo button" alt="Lvr logo">
+		<img src="assets/logo.svg" class="logo button" alt="Lvr logo">
 		<!-- Toggle full screen -->
 		<img src="assets/full-screen.svg" class="full button" alt="Toggle full screen" title="Toggle full screen" onclick="toggleFullScreen(document.body)">
 		<script>
 			function toggleFullScreen(elem) {
-					if ((document.fullScreenElement !== undefined && document.fullScreenElement === null) || (document.msFullscreenElement !== undefined && document.msFullscreenElement === null) || (document.mozFullScreen !== undefined && !document.mozFullScreen) || (document.webkitIsFullScreen !== undefined && !document.webkitIsFullScreen)) {
-							if (elem.requestFullScreen) {
-									elem.requestFullScreen();
-							} else if (elem.mozRequestFullScreen) {
-									elem.mozRequestFullScreen();
-							} else if (elem.webkitRequestFullScreen) {
-									elem.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
-							} else if (elem.msRequestFullscreen) {
-									elem.msRequestFullscreen();
-							}
-					} else {
-							if (document.cancelFullScreen) {
-									document.cancelFullScreen();
-							} else if (document.mozCancelFullScreen) {
-									document.mozCancelFullScreen();
-							} else if (document.webkitCancelFullScreen) {
-									document.webkitCancelFullScreen();
-							} else if (document.msExitFullscreen) {
-									document.msExitFullscreen();
-							}
+				if ((document.fullScreenElement !== undefined && document.fullScreenElement === null) || (document.msFullscreenElement !== undefined && document.msFullscreenElement === null) || (document.mozFullScreen !== undefined && !document.mozFullScreen) || (document.webkitIsFullScreen !== undefined && !document.webkitIsFullScreen)) {
+					if (elem.requestFullScreen) {
+						elem.requestFullScreen();
+					} else if (elem.mozRequestFullScreen) {
+						elem.mozRequestFullScreen();
+					} else if (elem.webkitRequestFullScreen) {
+						elem.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
+					} else if (elem.msRequestFullscreen) {
+						elem.msRequestFullscreen();
 					}
+				} else {
+					if (document.cancelFullScreen) {
+						document.cancelFullScreen();
+					} else if (document.mozCancelFullScreen) {
+						document.mozCancelFullScreen();
+					} else if (document.webkitCancelFullScreen) {
+						document.webkitCancelFullScreen();
+					} else if (document.msExitFullscreen) {
+						document.msExitFullscreen();
+					}
+				}
 			}
 		</script>
 		<a-scene embedded arjs='debugUIEnabled: false; sourceType: webcam; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
