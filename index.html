@@ -11,8 +11,7 @@
 		<script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.0.2/dist/aframe-extras.min.js"></script>
 		<style>
 			.button {
-				position: fixed;
-				z-index: 10;
+				position: absolute;
 			}
 			.logo {
 				left: 16px;
@@ -23,23 +22,22 @@
 			.full {
 				right: 16px;
 				top: 16px;
-				width: 28px;
-				height: 28px;
+				width: 20px;
+				height: 20px;
 			}
 			.a-enter-vr-button {
 				background-color: rgba(0,0,0,0) !important;
 			}
 			.spinnerScanning {
-				position: fixed;
-				z-index: 10;
+				position: absolute;
 				left: 16px;
-				bottom: 16px;
+				bottom: 8px;
 				height: 40px;
 			}
 			.spinnerScanning > div {
 				background-color: #fff;
 				height: 100%;
-				width: 6px;
+				width: 5px;
 				display: inline-block;
 				-webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
 				animation: sk-stretchdelay 1.2s infinite ease-in-out;
@@ -98,6 +96,18 @@
 				}
 			}
 		</script>
+		<script>
+			AFRAME.registerComponent('markerhandler' {
+				tick:function() {
+					if(document.querySelector("a-marker").object3D.visible == true) {
+						document.getElementsByClassName('spinnerScanning').style.visibility = 'hidden';
+					}
+					else {
+						document.getElementsByClassName('spinnerScanning').style.visibility = 'visible'; 
+					}
+				}
+			});
+		</script>
 		<div class="spinnerScanning">
 			<div class="rect1"></div>
 			<div class="rect2"></div>
@@ -151,7 +161,8 @@
 					segments-height="53"
 					position="0 0.5 0"
 					rotation='0 0 0'
-					shadow>
+					shadow
+					markerhandler>
 					<a-animation
 						attribute="rotation"
 						dur="15000"
@@ -298,7 +309,7 @@
 					shadow>
 					<a-animation
 					attribute="rotation"
-					to="360 360 360"
+					to="360 360 0"
 					dur="3000"
 					easing='linear'
 					repeat="indefinite">
