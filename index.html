@@ -12,6 +12,7 @@
 		<style>
 			.button {
 				position: absolute;
+				z-index: 99;
 			}
 			.logo {
 				left: 16px;
@@ -30,6 +31,7 @@
 			}
 			.spinnerScanning {
 				position: absolute;
+				z-index: 99;
 				left: 16px;
 				bottom: 8px;
 				height: 40px;
@@ -108,7 +110,7 @@
 				}
 			});
 		</script>
-		<div class="spinnerScanning">
+		<div id="spinnerScanning" class="spinnerScanning">
 			<div class="rect1"></div>
 			<div class="rect2"></div>
 			<div class="rect3"></div>
