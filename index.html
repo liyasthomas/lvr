@@ -18,32 +18,6 @@
 	<body style='background-color: #000; margin: 0px; overflow: hidden; font-family: Monospace;'>
 		<!-- Logo -->
 		<img src="assets/logo.svg" style='position: absolute; top: 16px; left: 16px; z-index: 1; width: 32px;' alt="Lvr logo" title="Lvr by Liyas Thomas" onclick="toggleFullScreen(document.body)">
-		<!-- Toggle full screen -->
-		<script>
-			function toggleFullScreen(elem) {
-				if ((document.fullScreenElement !== undefined && document.fullScreenElement === null) || (document.msFullscreenElement !== undefined && document.msFullscreenElement === null) || (document.mozFullScreen !== undefined && !document.mozFullScreen) || (document.webkitIsFullScreen !== undefined && !document.webkitIsFullScreen)) {
-					if (elem.requestFullScreen) {
-						elem.requestFullScreen();
-					} else if (elem.mozRequestFullScreen) {
-						elem.mozRequestFullScreen();
-					} else if (elem.webkitRequestFullScreen) {
-						elem.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
-					} else if (elem.msRequestFullscreen) {
-						elem.msRequestFullscreen();
-					}
-				} else {
-					if (document.cancelFullScreen) {
-						document.cancelFullScreen();
-					} else if (document.mozCancelFullScreen) {
-						document.mozCancelFullScreen();
-					} else if (document.webkitCancelFullScreen) {
-						document.webkitCancelFullScreen();
-					} else if (document.msExitFullscreen) {
-						document.msExitFullscreen();
-					}
-				}
-			}
-		</script>
 		<a-scene embedded arjs='debugUIEnabled: false; sourceType: webcam; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
 			<!-- Assets for images, GLTF 3D models, etc -->
 			<a-assets>
