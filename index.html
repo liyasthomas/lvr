@@ -10,22 +10,6 @@
 		<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.5/aframe/build/aframe-ar.js"></script>
 		<script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.0.2/dist/aframe-extras.min.js"></script>
 		<style>
-			.button {
-				position: absolute;
-				z-index: 99;
-			}
-			.logo {
-				left: 16px;
-				top: 16px;
-				width: 56px;
-				height: auto;
-			}
-			.full {
-				right: 16px;
-				top: 16px;
-				width: 28px;
-				height: 28px;
-			}
 			.a-enter-vr-button {
 				background-color: rgba(0,0,0,0) !important;
 			}
@@ -33,10 +17,9 @@
 	</head>
 	<body style='background-color: #000; margin: 0px; overflow: hidden; font-family: Monospace;'>
 		<!-- Logo -->
-		<img src="assets/logo.svg" class="logo button" alt="Lvr logo">
+		<img src="assets/logo.svg" style='position: absolute; top: 16px; left: 16px; z-index: 1; width: 56px;' alt="Lvr logo" title="Lvr by Liyas Thomas">
 		<!-- Toggle full screen -->
-<!--
-		<img src="assets/full-screen.svg" class="full button" alt="Toggle full screen" title="Toggle full screen" onclick="toggleFullScreen(document.body)">
+		<img src="assets/full-screen.svg" style='position: absolute; top: 16px; right: 16px; z-index: 1; width: 24px;' alt="Toggle full screen" title="Toggle full screen" onclick="toggleFullScreen(document.body)">
 		<script>
 			function toggleFullScreen(elem) {
 				if ((document.fullScreenElement !== undefined && document.fullScreenElement === null) || (document.msFullscreenElement !== undefined && document.msFullscreenElement === null) || (document.mozFullScreen !== undefined && !document.mozFullScreen) || (document.webkitIsFullScreen !== undefined && !document.webkitIsFullScreen)) {
@@ -62,7 +45,49 @@
 				}
 			}
 		</script>
--->
+		<!-- Scanning animation when the markers are not visible -->
+		<div class="scanningSpinner">
+			<div class="rect1"></div>
+			<div class="rect2"></div>
+			<div class="rect3"></div>
+		</div>
+		<style>
+		.scanningSpinner {
+			margin: 100px auto;
+			height: 40px;
+			text-align: center;
+		}
+		.scanningSpinner > div {
+			background-color: #fff;
+			height: 100%;
+			width: 6px;
+			display: inline-block;
+			-webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+			animation: sk-stretchdelay 1.2s infinite ease-in-out;
+		}
+		.scanningSpinner .rect2 {
+			-webkit-animation-delay: -1.1s;
+			animation-delay: -1.1s;
+		}
+		.scanningSpinner .rect3 {
+			-webkit-animation-delay: -1.0s;
+			animation-delay: -1.0s;
+		}
+		@-webkit-keyframes sk-stretchdelay {
+			0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
+			20% { -webkit-transform: scaleY(1.0) }
+		}
+		@keyframes sk-stretchdelay {
+			0%, 40%, 100% { 
+				transform: scaleY(0.4);
+				-webkit-transform: scaleY(0.4);
+				}
+			20% { 
+				transform: scaleY(1.0);
+				-webkit-transform: scaleY(1.0);
+			}
+		}
+		</style>
 		<a-scene embedded arjs='debugUIEnabled: false; sourceType: webcam; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
 			<!-- Assets for images, GLTF 3D models, etc -->
 			<a-assets>
@@ -689,6 +714,38 @@
 					side='double'
 					position='0 1.75 0.5'
 					value="Lvr [Barcode 6]"
+					align="center"
+					rotation="-90 0 0"
+					color="#fff">
+				</a-text>
+				<a-text
+					side='double'
+					position='0 1.6 1'
+					scale='0.4 0.4 0.4'
+					font='https://cdn.aframe.io/fonts/DejaVu-sdf.fnt'
+					value="Virtual & Augmented Reality\nby Liyas Thomas"
+					align="center"
+					color="#fff">
+					<a-animation
+						attribute="position"
+						from="0 1.6 1"
+						to="0 1.65 1"
+						direction="alternate"
+						dur="500"
+						repeat="indefinite"
+						easing='ease-in-out-cubic'>
+					</a-animation>
+				</a-text>
+			</a-marker>
+			<!-- Marker with custom colored pattern [2] -->
+			<a-marker
+				preset='custom'
+				type='pattern'
+				url='patterns/colored.patt'>
+				<a-text
+					side='double'
+					position='0 1.75 0.5'
+					value="Lvr [custom colored pattern 2]"
 					align="center"
 					rotation="-90 0 0"
 					color="#fff">
