@@ -8,8 +8,21 @@
 		<script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
 		<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.5/aframe/build/aframe-ar.js"></script>
 		<script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.0.2/dist/aframe-extras.min.js"></script>
+		<style>
+			.logo {
+				position: fixed;
+				left: 32px;
+				top: 32px;
+				width: 64px;
+				height: 64px;
+			}
+			.a-enter-vr-button {
+				background: rgba(0,0,0,0) !important;
+			}
+		</style>
 	</head>
 	<body style='background-color: #000; margin: 0px; overflow: hidden; font-family: Monospace;'>
+		<img src="assets/logo.svg" class="logo" alt="L">
 		<a-scene embedded arjs='debugUIEnabled: false; sourceType: webcam; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
 			<!-- Assets for images, GLTF 3D models, etc -->
 			<a-assets>
