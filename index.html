@@ -6,36 +6,13 @@
 		<title>Lvr</title>
 		<meta name="description" content="L virtual reality">
 		<link rel="icon" href="assets/favicon.svg">
-		<link rel="manifest" href="manifest.json">
-		<meta name="theme-color" content="#000000">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="Lvr">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="Lvr">
-    <link rel="apple-touch-icon" href="assets/favicon.svg">
-    <meta name="msapplication-TileImage" content="assets/favicon.svg">
-    <meta name="msapplication-TileColor" content="#000000">
-    <meta name="msapplication-tap-highlight" content="no">
 		<script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
 		<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.5/aframe/build/aframe-ar.js"></script>
 		<script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.0.2/dist/aframe-extras.min.js"></script>
-		<script>
-			AFRAME.registerComponent('markerhandler', {
-				tick:function() {
-					if(document.querySelector('a-marker').object3D.visible == true) {
-						document.querySelector('.spinnerScanning').style.visibility = 'hidden';
-					}
-					else {
-						document.querySelector('.spinnerScanning').style.visibility = 'visible'; 
-					}
-				}
-			});
-		</script>
 		<style>
 			.button {
 				position: absolute;
-				z-index: 1;
+				z-index: 10;
 			}
 			.logo {
 				left: 16px;
@@ -53,9 +30,10 @@
 				background-color: rgba(0,0,0,0) !important;
 			}
 			.spinnerScanning {
-				margin: 100px auto;
-				height: 40px;
-				text-align: center;
+				position: absolute;
+				z-index: 10;
+				left: 16px;
+				bottom: 16px;
 			}
 			.spinnerScanning > div {
 				background-color: #fff;
@@ -94,7 +72,7 @@
 		<img src="assets/logo.svg" class="logo button" alt="Lvr logo">
 		<!-- Toggle full screen -->
 		<img src="assets/full-screen.svg" class="full button" alt="Toggle full screen" title="Toggle full screen" onclick="toggleFullScreen(document.body)">
-		<div class="spinnerScanning"  >
+		<div class="spinnerScanning">
 			<div class="rect1"></div>
 			<div class="rect2"></div>
 			<div class="rect3"></div>
