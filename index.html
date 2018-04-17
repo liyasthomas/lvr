@@ -20,6 +20,19 @@
 		<script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
 		<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.5/aframe/build/aframe-ar.js"></script>
 		<script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.0.2/dist/aframe-extras.min.js"></script>
+		<link rel="stylesheet" href="https://arm.updog.co/css/spinnerScanning.css">
+		<script>
+			AFRAME.registerComponent('markerhandler', {
+				tick:function() {
+					if(document.querySelector('a-marker').object3D.visible == true) {
+						document.querySelector('.spinnerScanning').style.visibility = 'hidden';
+					}
+					else {
+						document.querySelector('.spinnerScanning').style.visibility = 'visible'; 
+					}
+				}
+			});
+		</script>
 		<style>
 			.button {
 				position: absolute;
@@ -47,6 +60,12 @@
 		<img src="assets/logo.svg" class="logo button" alt="Lvr logo">
 		<!-- Toggle full screen -->
 		<img src="assets/full-screen.svg" class="full button" alt="Toggle full screen" title="Toggle full screen" onclick="toggleFullScreen(document.body)">
+		<div class="spinnerScanning"  >
+			<label>Scanning</label>
+			<div class="rect1"></div>
+			<div class="rect2"></div>
+			<div class="rect3"></div>
+		</div>
 		<script>
 			function toggleFullScreen(elem) {
 				if ((document.fullScreenElement !== undefined && document.fullScreenElement === null) || (document.msFullscreenElement !== undefined && document.msFullscreenElement === null) || (document.mozFullScreen !== undefined && !document.mozFullScreen) || (document.webkitIsFullScreen !== undefined && !document.webkitIsFullScreen)) {
@@ -120,7 +139,8 @@
 					segments-height="53"
 					position="0 0.5 0"
 					rotation='0 0 0'
-					shadow>
+					shadow
+					markerhandler>
 					<a-animation
 						attribute="rotation"
 						dur="15000"
