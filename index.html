@@ -10,12 +10,21 @@
 		<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.5/aframe/build/aframe-ar.js"></script>
 		<script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.0.2/dist/aframe-extras.min.js"></script>
 		<style>
-			.logo {
+			.button {
 				position: absolute;
+				z-index: 1;
+			}
+			.logo {
 				left: 16px;
 				top: 16px;
 				width: 64px;
 				height: 64px;
+			}
+			.full {
+				right: 16px;
+				top: 16px;
+				width: 32px;
+				height: 32px;
 			}
 			.a-enter-vr-button {
 				background-color: rgba(0,0,0,0) !important;
@@ -23,7 +32,35 @@
 		</style>
 	</head>
 	<body style='background-color: #000; margin: 0px; overflow: hidden; font-family: Monospace;'>
-		<img src="assets/logo.svg" class="logo" alt="L">
+		<!-- Logo -->
+		<img src="assets/logo.svg" class="logo button" alt="Logo">
+		<!-- Toggle full screen -->
+		<img src="assets/full-screen.svg" class="full button" alt="Toggle full screen" title="Toggle full screen">
+		<script>
+			function toggleFullScreen(elem) {
+					if ((document.fullScreenElement !== undefined && document.fullScreenElement === null) || (document.msFullscreenElement !== undefined && document.msFullscreenElement === null) || (document.mozFullScreen !== undefined && !document.mozFullScreen) || (document.webkitIsFullScreen !== undefined && !document.webkitIsFullScreen)) {
+							if (elem.requestFullScreen) {
+									elem.requestFullScreen();
+							} else if (elem.mozRequestFullScreen) {
+									elem.mozRequestFullScreen();
+							} else if (elem.webkitRequestFullScreen) {
+									elem.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
+							} else if (elem.msRequestFullscreen) {
+									elem.msRequestFullscreen();
+							}
+					} else {
+							if (document.cancelFullScreen) {
+									document.cancelFullScreen();
+							} else if (document.mozCancelFullScreen) {
+									document.mozCancelFullScreen();
+							} else if (document.webkitCancelFullScreen) {
+									document.webkitCancelFullScreen();
+							} else if (document.msExitFullscreen) {
+									document.msExitFullscreen();
+							}
+					}
+			}
+		</script>
 		<a-scene embedded arjs='debugUIEnabled: false; sourceType: webcam; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
 			<!-- Assets for images, GLTF 3D models, etc -->
 			<a-assets>
