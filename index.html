@@ -81,8 +81,12 @@
 					src="assets/stormtrooper/scene.gltf">
 				</a-asset-item>
 				<a-asset-item
-					id="stormtrooper"
+					id="cat"
 					src="assets/cat/scene.gltf">
+				</a-asset-item>
+				<a-asset-item
+					id="male"
+					src="assets/male/scene.gltf">
 				</a-asset-item>
 			</a-assets>
 			<!-- Marker with preset pattern [Hiro] -->
@@ -608,6 +612,11 @@
 						easing='ease-in-out-cubic'>
 					</a-animation>
 				</a-text>
+				<a-entity
+					gltf-model="#male"
+					scale="0.04 0.04 0.04"
+					animation-mixer>
+				</a-entity>
 			</a-marker>
 			<!-- Marker with barcode pattern [5] -->
 			<a-marker
