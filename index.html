@@ -5,7 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
 		<title>Lvr</title>
 		<meta name="description" content="L virtual reality">
-		<link rel="icon" href="assets/logo.svg">
+		<link rel="icon" href="assets/favicon.svg">
+		<link rel="manifest" href="manifest.json">
+		<meta name="theme-color" content="#000000">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Lvr">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Lvr">
+    <link rel="apple-touch-icon" href="assets/favicon.svg">
+    <meta name="msapplication-TileImage" content="assets/favicon.svg">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-tap-highlight" content="no">
 		<script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
 		<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.5/aframe/build/aframe-ar.js"></script>
 		<script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.0.2/dist/aframe-extras.min.js"></script>
@@ -23,8 +34,8 @@
 			.full {
 				right: 16px;
 				top: 16px;
-				width: 32px;
-				height: 32px;
+				width: 28px;
+				height: 28px;
 			}
 			.a-enter-vr-button {
 				background-color: rgba(0,0,0,0) !important;
@@ -35,7 +46,7 @@
 		<!-- Logo -->
 		<img src="assets/logo.svg" class="logo button" alt="Logo">
 		<!-- Toggle full screen -->
-		<img src="assets/full-screen.svg" class="full button" alt="Toggle full screen" title="Toggle full screen">
+		<img src="assets/full-screen.svg" class="full button" alt="Toggle full screen" title="Toggle full screen" onclick="toggleFullScreen(document.body)">
 		<script>
 			function toggleFullScreen(elem) {
 					if ((document.fullScreenElement !== undefined && document.fullScreenElement === null) || (document.msFullscreenElement !== undefined && document.msFullscreenElement === null) || (document.mozFullScreen !== undefined && !document.mozFullScreen) || (document.webkitIsFullScreen !== undefined && !document.webkitIsFullScreen)) {
