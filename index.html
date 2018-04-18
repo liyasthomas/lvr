@@ -744,15 +744,14 @@
 				</a-text>
 			</a-marker>
 			<a-entity
-				position="0 1.6 0"
 				camera
 				spectator="true"
 				look-controls
 				wasd-controls>
 				<a-entity
-					cursor="fuse: true;"
-					position="0 0 -1"
-					geometry="primitive: ring; radiusInner: 0.01; radiusOuter: 0.02"
+					position="0 0 -3"
+					cursor="maxDistance: 30; fuse: true;"
+					geometry="primitive: ring; radiusInner: 0.2; radiusOuter: 0.3"
 					material="color: white; shader: flat; opacity: 0.75;">
 					<a-animation
 						begin="click"
