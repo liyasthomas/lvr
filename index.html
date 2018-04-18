@@ -249,14 +249,13 @@
 					material='opacity: 0.5; color: skyblue;'
 					shadow>
 					<a-animation
-					begin="click"
-					attribute="rotation"
-					to="360 360 0"
-					dur="3000"
-					fill="backwards"
-					direction="alternate"
-					easing='linear'
-					repeat="indefinite">
+						begin="click"
+						attribute="rotation"
+						to="360 0 0"
+						dur="2000"
+						fill="backwards"
+						direction="alternate"
+						easing='linear'>
 					</a-animation>
 					<a-box
 						scale='0.5 0.5 0.5'
@@ -746,9 +745,10 @@
 			</a-marker>
 			<a-entity
 				camera
-				look-controls>
+				look-controls
+				wasd-controls>
 				<a-entity
-					cursor="fuse: true; timeout: 500"
+					cursor="fuse: true;"
 					position="0 0 -1"
 					geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
 					material="color: white; shader: flat">
