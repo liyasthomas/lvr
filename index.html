@@ -48,7 +48,6 @@
 			<!-- Assets for images, GLTF 3D models, etc -->
 			<a-assets>
 				<img id="image1" src="https://vr.google.com/blocks/static/images/blocks/work/bear.png">
-				<img id="image2" src="https://vr.google.com/blocks/static/images/blocks/work/watermelon.png">
 				<a-asset-item
 					id="ball"
 					src="assets/ball/scene.gltf">
@@ -302,7 +301,7 @@
 				</a-text>
 				<a-entity
 					gltf-model="#ball"
-					scale="0.04 0.04 0.04"
+					scale="0.03 0.03 0.03"
 					animation-mixer>
 				</a-entity>
 			</a-marker>
@@ -339,7 +338,7 @@
 				</a-text>
 				<a-entity
 					gltf-model="#planet"
-					scale="0.04 0.04 0.04"
+					scale="0.03 0.03 0.03"
 					animation-mixer>
 				</a-entity>
 			</a-marker>
@@ -410,7 +409,7 @@
 					</a-animation>
 				</a-text>
 				<a-circle
-					src="#image2"
+					color="yellow"
 					radius="0.5"
 					position='0 0.5 0'
 					rotation="-90 0 0">
@@ -522,7 +521,7 @@
 					</a-animation>
 				</a-text>
 				<a-triangle
-					color="#CCC"
+					color="#00acee"
 					rotation="-90 0 0"
 					shadow>
 				</a-triangle>
@@ -619,6 +618,22 @@
 					value="Virtual & Augmented Reality\nby Liyas Thomas"
 					align="center"
 					color="#fff">
+					<a-animation
+						attribute="position"
+						from="0 1.6 1"
+						to="0 1.65 1"
+						direction="alternate"
+						dur="500"
+						repeat="indefinite"
+						easing='ease-in-out-cubic'>
+					</a-animation>
+				</a-text>
+				<a-text
+					side='double'
+					position='0 0.5 0'
+					scale='2 2 2'
+					value="❤😀😂😍🙍👍🎈✨🍔🍉🚙🌏🌧🌤☀🔥"
+					align="center">
 					<a-animation
 						attribute="position"
 						from="0 1.6 1"
