@@ -246,18 +246,22 @@
 				</a-text>
 				<a-box
 					position='0 0.5 0'
-					material='opacity: 0.5; color: blue;'
-					shadow>
+					material='opacity: 0.5; color: skyblue;'
+					shadow
+					event-set__enter="_event: mouseenter; color: #026fc9"
+					event-set__leave="_event: mouseleave; color: #4CC3D9">
 					<a-animation
 					attribute="rotation"
 					to="360 360 0"
 					dur="3000"
+					fill="forwards"
+					direction="alternate"
 					easing='linear'
 					repeat="indefinite">
 					</a-animation>
 					<a-box
 						scale='0.5 0.5 0.5'
-						material='opacity: 0.75; side: double; color: white;'>
+						material='opacity: 0.75; side: double; color: yellowgreen;'>
 						<a-animation
 						attribute="rotation"
 						to="360 360 360"
@@ -267,6 +271,7 @@
 						</a-animation>
 					</a-box>
 				</a-box>
+				<a-sky color="pink"></a-sky>
 			</a-marker>
 			<!-- Marker with custom pattern [C] -->
 			<a-marker
@@ -740,7 +745,17 @@
 					</a-animation>
 				</a-text>
 			</a-marker>
-			<a-entity camera></a-entity>
+			<a-entity
+				camera
+				look-controls
+				cursor="rayOrigin: mouse">
+				<a-entity
+					cursor="fuse: true; fuseTimeout: 500"
+					position="0 0 -1"
+					geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+					material="color: black; shader: flat">
+				</a-entity>
+			</a-entity>
 		</a-scene>
 	</body>
 </html>
