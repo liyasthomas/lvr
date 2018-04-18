@@ -24,6 +24,11 @@ Virtual reality for everyone by [Liyas Thomas](https://github.com/liyasthomas)
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
+<div align="center">
+  <img src="https://storage.googleapis.com/gd-wagtail-prod-assets/original_images/ARUX_inline-option3.jpg" alt="Lvr" width="100%">
+  <br>
+</div>
+
 ### Prerequisites
 
 What things you need to install the software and how to install them
@@ -42,6 +47,11 @@ A step by step series of examples that tell you have to get a development env ru
 4. Host copied project to any localhost
 
 End with an example of getting some data out of the system or using it for a little demo
+
+<div align="center">
+  <img src="https://storage.googleapis.com/gd-wagtail-prod-assets/original_images/ARUX_inline2-option1.png" alt="Lvr" width="100%">
+  <br>
+</div>
 
 ## Running the tests
 
