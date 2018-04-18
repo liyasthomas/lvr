@@ -15,6 +15,11 @@
 
 Virtual reality for everyone by [Liyas Thomas](https://github.com/liyasthomas)
 
+<div align="center">
+  <img src="https://storage.googleapis.com/gd-wagtail-prod-assets/images/ARUX_hero2_2x1.max-4000x2000.jpegquality-90.png" alt="Lvr" width="100%">
+  <br>
+</div>
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
