@@ -749,27 +749,27 @@
 				look-controls
 				wasd-controls>
 				<a-entity
-					position="0 0 -3"
-					cursor="maxDistance: 30; fuse: true;"
-					geometry="primitive: ring; radiusInner: 0.2; radiusOuter: 0.3"
+					position="0 0 -1"
+					cursor="fuse: true; rayOrigin: mouse;"
+					geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
 					material="color: white; shader: flat; opacity: 0.75;">
 					<a-animation
 						begin="click"
 						easing="ease-in"
 						attribute="scale"
-						fill="backwards"
+						dur="150"
+						fill="forwards"
 						from="0.1 0.1 0.1"
-						to="1 1 1"
-						dur="150">
+						to="1 1 1">
 					</a-animation>
 					<a-animation
-						begin="fusing"
+						begin="cursor-fusing"
 						easing="ease-in"
 						attribute="scale"
-						fill="forwards"
+						dur="1500"
+						fill="backwards"
 						from="1 1 1"
-						to="0.1 0.1 0.1"
-						dur="1500">
+						to="0.1 0.1 0.1">
 					</a-animation>
 				</a-entity>
 			</a-entity>
