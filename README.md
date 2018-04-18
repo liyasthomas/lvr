@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="https://liyas-vr.firebaseapp.com"><img src="https://raw.githubusercontent.com/liyasthomas/fuse-org/master/images/manifest/icon-512x512.png" alt="Fuse Org" width="200"></a>
+  <a href="https://liyas-vr.firebaseapp.com"><img src="https://raw.githubusercontent.com/liyasthomas/fuse-org/master/images/manifest/icon-512x512.png" alt="Liyas Thomas" width="200"></a>
   <br>
   <h1>Liyas Thomas</h1>
 </div>
@@ -11,7 +11,7 @@
 	</sub>
 </div>
 
-# Lvr [![Build Status](https://travis-ci.org/liyasthomas/lvr.svg?branch=master)](https://travis-ci.org/liyasthomas/lvr) [![GitHub release](https://img.shields.io/github/release/liyasthomas/lvr.svg)](https://github.com/liyasthomas/lvr/releases/latest) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/liyasthomas/lvr/issues) [![Website](https://img.shields.io/website-up-down-ff69b4-ff69b4/https/shields.io.svg?label=Fuse%20Org)](https://liyas-vr.firebaseapp.com) [![license](https://img.shields.io/github/license/liyasthomas/lvr.svg)](https://github.com/liyasthomas/lvr/blob/master/LICENSE) [![Donate](https://img.shields.io/badge/$-donate-ff69b4.svg)](https://www.paypal.me/liyascthomas)
+# Lvr [![Build Status](https://travis-ci.org/liyasthomas/lvr.svg?branch=master)](https://travis-ci.org/liyasthomas/lvr) [![GitHub release](https://img.shields.io/github/release/liyasthomas/lvr.svg)](https://github.com/liyasthomas/lvr/releases/latest) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/liyasthomas/lvr/issues) [![Website](https://img.shields.io/website-up-down-ff69b4-ff69b4/https/shields.io.svg?label=Website)](https://liyas-vr.firebaseapp.com) [![license](https://img.shields.io/github/license/liyasthomas/lvr.svg)](https://github.com/liyasthomas/lvr/blob/master/LICENSE) [![Donate](https://img.shields.io/badge/$-donate-ff69b4.svg)](https://www.paypal.me/liyascthomas)
 
 Virtual reality for everyone by [Liyas Thomas](https://github.com/liyasthomas)
 
@@ -78,7 +78,7 @@ We use [Travis CI](https://travis-ci.com/) for continuous integration. Check out
 
 ## Versioning
 
-This project is developed under [Fuse Org](https://github.com/liyasthomas). For the versions available, see the [releases on this repository](https://github.com/liyasthomas/lvr/releases). 
+This project is developed by [Liyas Thomas](https://github.com/liyasthomas). For the versions available, see the [releases on this repository](https://github.com/liyasthomas/lvr/releases). 
 
 ## Authors
 
