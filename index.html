@@ -750,7 +750,7 @@
 				<a-entity
 					cursor="fuse: true;"
 					position="0 0 -1"
-					geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+					geometry="primitive: ring; radiusInner: 0.01; radiusOuter: 0.02"
 					material="color: white; shader: flat; opacity: 0.5;">
 					<a-animation
 						begin="click"
@@ -758,7 +758,7 @@
 						attribute="scale"
 						fill="backwards"
 						from="0.2 0.2 0.2"
-						to="1 1 1"
+						to="0.5 0.5 0.5"
 						dur="150">
 					</a-animation>
 					<a-animation
@@ -766,9 +766,9 @@
 						easing="ease-in"
 						attribute="scale"
 						fill="forwards"
-						from="1 1 1"
+						from="0.5 0.5 0.5"
 						to="0.2 0.2 0.2"
-						dur="300">
+						dur="1500">
 					</a-animation>
 				</a-entity>
 			</a-entity>
