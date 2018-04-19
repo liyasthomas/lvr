@@ -15,15 +15,18 @@
 
 Virtual reality for everyone by [Liyas Thomas](https://github.com/liyasthomas)
 
-- **Very Fast:** It runs efficiently even on mobile phones!
-- **Web-based:** It is a pure web solution, so no installation required. Full JavaScript based on three.js + jsartoolkit5.
-- **Open Source:** It is completely open source and free of charge!
-- **Standards:** It works on any phone with [webgl](http://caniuse.com/#feat=webgl) and [webrtc](http://caniuse.com/#feat=stream)
-
 <div align="center">
+  <br>
   <img src="https://storage.googleapis.com/gd-wagtail-prod-assets/images/ARUX_hero2_2x1.max-4000x2000.jpegquality-90.png" alt="Lvr" width="100%">
   <br>
 </div>
+
+### Features
+
+* **Very Fast**: It runs efficiently even on mobile phones!
+* **Web-based**: It is a pure web solution, so no installation required. Full JavaScript based on three.js + jsartoolkit5.
+* **Open Source**: It is completely open source and free of charge!
+* **Standards**: It works on any phone with [webgl](http://caniuse.com/#feat=webgl) and [webrtc](http://caniuse.com/#feat=stream)
 
 ## Getting Started
 
@@ -41,13 +44,13 @@ What things you need to install the software and how to install them:
 
 * A device which supports [webgl](http://caniuse.com/#feat=webgl) and [webrtc](http://caniuse.com/#feat=stream) with a working camera input.
 * Internet connection.
-* A web browser such as Chrome.
+* A web browser such as Google Chrome.
 
-### Try it on Mobile
+### Try it on mobile
 
 It works on all platforms. Android, iOS and Windows phone. It runs on **any browser with WebGL and WebRTC** (for iOS, you need to update to iOS 11).
 
-To try on your phone is only 2 easy steps, check it out!
+To try on your phone in only 2 easy steps, check it out!
 
 1. Open any [marker image from here](https://jeromeetienne.github.io/AR.js/data/images/HIRO.jpg) in your browser.
 2. Open my [augmented reality web app](https://liyasthomas.github.io/lvr/) in your phone browser. Give permissions to access camera. Scan marker image with your camera.
@@ -68,15 +71,15 @@ A step by step series of examples that tell you have to get a development env ru
 3. Start Web server(Apache) and Database server(phpMyadmin)
 4. Host copied project to any localhost
 
-End with an example of getting some data out of the system or using it for a little demo
+End with an example of getting some data out of the system or using it for a little demo.
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
+Explain how to run the automated tests for this system.
 
 ### Break down into end to end tests
 
-Explain what these tests test and why
+Explain what these tests test and why.
 
 ```
 Will be explained later
@@ -84,7 +87,7 @@ Will be explained later
 
 ### And coding style tests
 
-Explain what these tests test and why
+Explain what these tests test and why.
 
 ```
 Will be explained later
@@ -92,13 +95,16 @@ Will be explained later
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+Add additional notes about how to deploy this on a live system.
 
 ## Built With
 
-* HTML - The web framework used
-* CSS - Styling management
-* PHP - Used to generate SQL Feeds
+* **three.js** - For being a great library to do 3d on the web.
+* **ARToolKit**! - Years of development and experiences on doing augmented reality.
+* **emscripten and asm.js** - Thus we could compile ARToolKit c into JavaScript.
+* **Chromium** - Thanks for being so fast!
+* HTML - For the web framework.
+* CSS - For styling components.
 
 ## Contributing
 
@@ -124,16 +130,16 @@ This project is developed by [Liyas Thomas](https://github.com/liyasthomas). For
 * [Liyas Thomas](https://github.com/liyasthomas)
 
 ### Thanks
-<!--* [Liyas Thomas](https://github.com/liyasthomas)-->
+* [Liyas Thomas](https://github.com/jeromeetienne)
 
 See also the list of [contributors](https://github.com/liyasthomas/lvr/graphs/contributors) who participated in this project.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
+* Hat tip to anyone who's code was used.
+* Inspiration.
+* etc.
