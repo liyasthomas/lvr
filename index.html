@@ -56,10 +56,6 @@
 					src="assets/planet/scene.gltf">
 				</a-asset-item>
 				<a-asset-item
-					id="stormtrooper"
-					src="assets/stormtrooper/scene.gltf">
-				</a-asset-item>
-				<a-asset-item
 					id="cat"
 					src="assets/cat/scene.gltf">
 				</a-asset-item>
@@ -102,8 +98,7 @@
 					radius="0.5"
 					segments-height="53"
 					position="0 0.5 0"
-					rotation='0 0 0'
-					shadow>
+					rotation='0 0 0'>
 					<a-animation
 						attribute="rotation"
 						dur="15000"
@@ -147,8 +142,7 @@
 					segments-height="53"
 					position="0 0.5 0"
 					rotation='0 0 0'
-					material='color: red;'
-					shadow>
+					material='color: red;'>
 					<a-animation
 						attribute="position"
 						dur="1000"
@@ -162,8 +156,7 @@
 				</a-sphere>
 				<a-plane
 					src="https://cdn.aframe.io/a-painter/images/floor.jpg"
-					rotation="-90 0 0"
-					shadow>
+					rotation="-90 0 0">
 				</a-plane>
 			</a-marker>
 			<!-- Marker with custom pattern [A] -->
@@ -203,8 +196,7 @@
 					color="white"
 					rotation="0 0 0"
 					radius-inner="0.45"
-					radius-outer=".5"
-					shadow>
+					radius-outer=".5">
 					<a-animation
 						attribute="rotation"
 						dur="8000"
@@ -248,8 +240,7 @@
 				</a-text>
 				<a-box id="cube"
 					position='0 0.5 0'
-					material='opacity: 0.5; color: skyblue;'
-					shadow>
+					material='opacity: 0.5; color: skyblue;'>
 					<a-animation
 						begin="click"
 						attribute="rotation"
@@ -456,8 +447,7 @@
 					color="tomato"
 					radius-bottom="0.5"
 					position='0 0.5 0'
-					radius-top="0"
-					shadow>
+					radius-top="0">
 				</a-cone>
 			</a-marker>
 			<!-- Marker with barcode pattern [2] -->
@@ -493,8 +483,7 @@
 				</a-text>
 				<a-triangle
 					color="#00acee"
-					rotation="-90 0 0"
-					shadow>
+					rotation="-90 0 0">
 				</a-triangle>
 			</a-marker>
 			<!-- Marker with barcode pattern [3] -->
@@ -602,11 +591,6 @@
 						easing='ease-in-out-cubic'>
 					</a-animation>
 				</a-text>
-				<a-entity
-					gltf-model="#stormtrooper"
-					scale="0.4 0.4 0.4"
-					animation-mixer>
-				</a-entity>
 			</a-marker>
 			<!-- Marker with custom pattern and barcode [6] -->
 			<a-marker
@@ -712,7 +696,7 @@
 				wasd-controls>
 				<a-entity
 					position="0 0 -1"
-					cursor="fuse: true; maxDistance: 30;"
+					cursor="fuse: true;"
 					geometry="primitive: ring; radiusInner: 0.01; radiusOuter: 0.015"
 					material="color: white; shader: flat; opacity: 0.7;">
 					<a-animation
