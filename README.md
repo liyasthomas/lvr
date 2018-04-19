@@ -32,7 +32,7 @@
 
 ---
 
-## Getting Started
+## Getting started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
@@ -70,12 +70,9 @@ You are done! It will open a web page which read the phone webcam, localize a ma
 
 A step by step series of examples that tell you have to get a development env running
 
-1. Download the whole zip/clone the repo
-2. Copy files to server hosting location
-3. Start Web server(Apache) and Database server(phpMyadmin)
-4. Host copied project to any localhost
-
-End with an example of getting some data out of the system or using it for a little demo.
+1. Download the whole zip/clone the repository.
+2. Unzip and make changes.
+3. Save and deploy to any hosting platforms like Firebase, GitHub pages etc.
 
 ---
 
@@ -105,9 +102,13 @@ Will be explained later
 
 Add additional notes about how to deploy this on a live system.
 
+```
+Will be explained later
+```
+
 ---
 
-## Built With
+## Built with
 
 * **three.js** - For being a great library to do 3d on the web.
 * **ARToolKit**! - Years of development and experiences on doing augmented reality.
