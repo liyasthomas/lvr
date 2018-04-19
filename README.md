@@ -142,6 +142,10 @@ See also the list of [contributors](https://github.com/liyasthomas/lvr/graphs/co
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+## Change log
+
+See the [CHANGELOG](CHANGELOG) file for details.
+
 ## Acknowledgments
 
 * Hat tip to anyone who's code was used.
