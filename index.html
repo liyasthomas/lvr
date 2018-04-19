@@ -418,43 +418,6 @@
 					rotation="-90 0 0">
 				</a-circle>
 			</a-marker>
-			<!-- Marker with custom pattern [O] -->
-			<a-marker
-				preset='custom'
-				type='pattern'
-				url='patterns/o.patt'>
-				<a-text
-					side='double'
-					position='0 1.75 0.5'
-					value="Lvr [O]"
-					align="center"
-					rotation="-90 0 0"
-					color="#fff">
-				</a-text>
-				<a-text
-					side='double'
-					position='0 1.6 1'
-					scale='0.4 0.4 0.4'
-					font='https://cdn.aframe.io/fonts/DejaVu-sdf.fnt'
-					value="Virtual & Augmented Reality\nby Liyas Thomas"
-					align="center"
-					color="#fff">
-					<a-animation
-						attribute="position"
-						from="0 1.6 1"
-						to="0 1.65 1"
-						direction="alternate"
-						dur="500"
-						repeat="indefinite"
-						easing='ease-in-out-cubic'>
-					</a-animation>
-				</a-text>
-				<a-entity
-					gltf-model="#stormtrooper"
-					scale="0.04 0.04 0.04"
-					animation-mixer>
-				</a-entity>
-			</a-marker>
 			<!-- Marker with barcode pattern [1] -->
 			<a-marker
 				type='barcode'
@@ -631,22 +594,11 @@
 						easing='ease-in-out-cubic'>
 					</a-animation>
 				</a-text>
-				<a-text
-					side='double'
-					position='0 0.5 0'
-					scale='2 2 2'
-					value="❤😀😂😍🙍👍🎈✨🍔🍉🚙🌏🌧🌤☀🔥"
-					align="center">
-					<a-animation
-						attribute="position"
-						from="0 0.5 0"
-						to="0 1 0"
-						direction="alternate"
-						dur="500"
-						repeat="indefinite"
-						easing='ease-in-out-cubic'>
-					</a-animation>
-				</a-text>
+				<a-entity
+					gltf-model="#stormtrooper"
+					scale="0.04 0.04 0.04"
+					animation-mixer>
+				</a-entity>
 			</a-marker>
 			<!-- Marker with custom pattern and barcode [6] -->
 			<a-marker
@@ -749,7 +701,8 @@
 				wasd-controls>
 				<a-entity
 					position="0 0 -1"
-					cursor="fuse: true;"
+					scale="0.02 0.02 0.02"
+					cursor="fuse: true; maxDistance: 30;"
 					geometry="primitive: ring; radiusInner: 0.01; radiusOuter: 0.015"
 					material="color: white; shader: flat; opacity: 0.7;">
 					<a-animation
@@ -758,8 +711,8 @@
 						attribute="scale"
 						dur="150"
 						fill="forwards"
-						from="0.1 0.1 0.1"
-						to="1 1 1">
+						from="0.02 0.02 0.02"
+						to="0.03 0.03 0.3">
 					</a-animation>
 					<a-animation
 						begin="cursor-fusing"
@@ -767,8 +720,8 @@
 						attribute="scale"
 						dur="1500"
 						fill="backwards"
-						from="1 1 1"
-						to="0.1 0.1 0.1">
+						from="0.03 0.03 0.3"
+						to="0.02 0.02 0.02">
 					</a-animation>
 				</a-entity>
 			</a-entity>
