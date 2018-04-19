@@ -15,7 +15,7 @@
 
 # Lvr [![Build Status](https://travis-ci.org/liyasthomas/lvr.svg?branch=master)](https://travis-ci.org/liyasthomas/lvr) [![GitHub release](https://img.shields.io/github/release/liyasthomas/lvr.svg)](https://github.com/liyasthomas/lvr/releases/latest) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/liyasthomas/lvr/issues) [![Website](https://img.shields.io/website-up-down-ff69b4-ff69b4/https/shields.io.svg?label=Website)](https://liyas-vr.firebaseapp.com) [![license](https://img.shields.io/github/license/liyasthomas/lvr.svg)](https://github.com/liyasthomas/lvr/blob/master/LICENSE) [![Donate](https://img.shields.io/badge/$-donate-ff69b4.svg)](https://www.paypal.me/liyascthomas)
 
-Virtual reality for everyone by [Liyas Thomas](https://github.com/liyasthomas)
+### Virtual reality for everyone by [Liyas Thomas](https://github.com/liyasthomas)
 
 <div align="center">
   <br>
@@ -77,6 +77,8 @@ A step by step series of examples that tell you have to get a development env ru
 
 End with an example of getting some data out of the system or using it for a little demo.
 
+---
+
 ## Running the tests
 
 Explain how to run the automated tests for this system.
@@ -97,9 +99,13 @@ Explain what these tests test and why.
 Will be explained later
 ```
 
+---
+
 ## Deployment
 
 Add additional notes about how to deploy this on a live system.
+
+---
 
 ## Built With
 
@@ -110,17 +116,25 @@ Add additional notes about how to deploy this on a live system.
 * HTML - For the web framework.
 * CSS - For styling components.
 
+---
+
 ## Contributing
 
 Please read [CONTRIBUTING](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+
+---
 
 ## Continuous Integration
 
 We use [Travis CI](https://travis-ci.com/) for continuous integration. Check out our [Travis CI Status](https://travis-ci.org/liyasthomas/lvr).
 
+---
+
 ## Versioning
 
 This project is developed by [Liyas Thomas](https://github.com/liyasthomas). For the versions available, see the [releases on this repository](https://github.com/liyasthomas/lvr/releases). 
+
+---
 
 ## Authors
 
@@ -138,13 +152,19 @@ This project is developed by [Liyas Thomas](https://github.com/liyasthomas). For
 
 See also the list of [contributors](https://github.com/liyasthomas/lvr/graphs/contributors) who participated in this project.
 
+---
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+---
+
 ## Change log
 
-See the [CHANGELOG](CHANGELOG) file for details.
+See the [CHANGELOG](CHANGELOG.md) file for details.
+
+---
 
 ## Acknowledgments
 
