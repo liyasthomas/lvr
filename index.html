@@ -47,7 +47,6 @@
 		<a-scene embedded arjs='debugUIEnabled: false; sourceType: webcam; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
 			<!-- Assets for images, GLTF 3D models, etc -->
 			<a-assets>
-				<img id="image1" src="https://vr.google.com/blocks/static/images/blocks/work/bear.png">
 				<a-asset-item
 					id="ball"
 					src="assets/ball/scene.gltf">
@@ -383,9 +382,6 @@
 						easing='ease-in-out-cubic'>
 					</a-animation>
 				</a-text>
-				<a-image
-					src="#image1">
-				</a-image>
 			</a-marker>
 			<!-- Marker with custom pattern [G] -->
 			<a-marker
