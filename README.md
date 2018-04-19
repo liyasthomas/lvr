@@ -15,6 +15,11 @@
 
 Virtual reality for everyone by [Liyas Thomas](https://github.com/liyasthomas)
 
+- **Very Fast:** It runs efficiently even on mobile phones!
+- **Web-based:** It is a pure web solution, so no installation required. Full JavaScript based on three.js + jsartoolkit5.
+- **Open Source:** It is completely open source and free of charge!
+- **Standards:** It works on any phone with [webgl](http://caniuse.com/#feat=webgl) and [webrtc](http://caniuse.com/#feat=stream)
+
 <div align="center">
   <img src="https://storage.googleapis.com/gd-wagtail-prod-assets/images/ARUX_hero2_2x1.max-4000x2000.jpegquality-90.png" alt="Lvr" width="100%">
   <br>
@@ -25,17 +30,34 @@ Virtual reality for everyone by [Liyas Thomas](https://github.com/liyasthomas)
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 <div align="center">
+  <br>
   <img src="https://storage.googleapis.com/gd-wagtail-prod-assets/original_images/ARUX_inline-option3.jpg" alt="Lvr" width="100%">
   <br>
 </div>
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+What things you need to install the software and how to install them:
 
-* Database server such as myPHPadmin
-* Server such as Apache
-* Web browser such as Chrome
+* A device which supports [webgl](http://caniuse.com/#feat=webgl) and [webrtc](http://caniuse.com/#feat=stream) with a working camera input.
+* Internet connection.
+* A web browser such as Chrome.
+
+### Try it on Mobile
+
+It works on all platforms. Android, iOS and Windows phone. It runs on **any browser with WebGL and WebRTC** (for iOS, you need to update to iOS 11).
+
+To try on your phone is only 2 easy steps, check it out!
+
+1. Open any [marker image from here](https://jeromeetienne.github.io/AR.js/data/images/HIRO.jpg) in your browser.
+2. Open my [augmented reality web app](https://liyasthomas.github.io/lvr/) in your phone browser. Give permissions to access camera. Scan marker image with your camera.
+
+You are done! It will open a web page which read the phone webcam, localize a marker and add 3D on top of it.
+
+<div align="center">
+  <img src="https://storage.googleapis.com/gd-wagtail-prod-assets/original_images/ARUX_inline2-option1.png" alt="Lvr" width="100%">
+  <br>
+</div>
 
 ### Installing
 
@@ -47,11 +69,6 @@ A step by step series of examples that tell you have to get a development env ru
 4. Host copied project to any localhost
 
 End with an example of getting some data out of the system or using it for a little demo
-
-<div align="center">
-  <img src="https://storage.googleapis.com/gd-wagtail-prod-assets/original_images/ARUX_inline2-option1.png" alt="Lvr" width="100%">
-  <br>
-</div>
 
 ## Running the tests
 
