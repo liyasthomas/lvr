@@ -11,7 +11,10 @@
 		<script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.0.2/dist/aframe-extras.min.js"></script>
 	</head>
 	<body style='background-color: #000; margin: 0px; overflow: hidden; font-family: Monospace;'>
-		<a-scene embedded vr-mode-ui="enabled: false" arjs='debugUIEnabled: false; sourceType: webcam; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
+		<a-scene
+			embedded
+			vr-mode-ui="enabled: false"
+			arjs='debugUIEnabled: false; sourceType: webcam; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
 			<!-- Assets -->
 			<a-assets>
 				<a-asset-item
@@ -39,6 +42,13 @@
 					src="assets/gltf/heart/scene.gltf">
 				</a-asset-item>
 			</a-assets>
+			<a-entity
+				light="type: ambient; intensity: 0.5;">
+			</a-entity>
+			<a-entity
+				light="type: directional; castShadow: true; intensity: 0.4; shadowCameraVisible: true;"
+				position="-5 3 1.5">
+			</a-entity>
 			<!-- Barcode marker [1] -->
 			<a-marker
 				type='barcode'
@@ -55,7 +65,7 @@
 					side='double'
 					position='0 1.6 1'
 					scale='0.2 0.2 0.2'
-					font='https://cdn.aframe.io/fonts/DejaVu-sdf.fnt'
+					font='https://cdn.aframe.io/fonts/Monoid.fnt'
 					value="Virtual & Augmented Reality\nby Liyas Thomas"
 					align="center">
 					<a-animation
@@ -89,18 +99,21 @@
 					color="deeppink"
 					radius="0.5"
 					position='0 0.5 0'
-					rotation="-90 0 0">
+					rotation="-90 0 0"
+					shadow>
 				</a-circle>
 				<a-triangle
 					color="yellow"
-					position='0 1 0'>
+					position='0 1 0'
+					shadow>
 				</a-triangle>
 				<a-ring
 					position="0 2 0"
 					color="teal"
 					rotation="0 1 0"
 					radius-inner="0.45"
-					radius-outer=".5">
+					radius-outer=".5"
+					shadow>
 				</a-ring>
 			</a-marker>
 			<!-- Barcode marker [3] -->
@@ -117,7 +130,8 @@
 				</a-text>
 				<a-box
 					position='0 0.5 0'
-					material='opacity: 0.5; color: skyblue;'>
+					material='opacity: 0.5; color: skyblue;'
+					shadow>
 					<a-box
 						scale='0.5 0.5 0.5'
 						material='opacity: 0.75; side: double; color: yellowgreen;'>
@@ -127,13 +141,15 @@
 					radius="0.5"
 					segments-height="53"
 					position="0 1 0"
-					material='color: yellow;'>
+					material='color: yellow;'
+					shadow>
 				</a-sphere>
 				<a-cone
 					color="tomato"
 					radius-bottom="0.5"
 					position='0 2 0'
-					radius-top="0">
+					radius-top="0"
+					shadow>
 				</a-cone>
 			</a-marker>
 			<!-- Barcode marker [4] -->
@@ -150,12 +166,21 @@
 				</a-text>
 				<a-triangle
 					color="yellow"
-					position='0 1 0'>
+					position='0 1 0'
+					shadow>
 					<a-animation
 						attribute="rotation"
 						to="0 360 0"
 						dur="5000"
 						easing='linear'
+						repeat="indefinite">
+					</a-animation>
+					<a-animation
+						attribute="material.color"
+						from="yellow"
+						to="green"
+						dur="1000"
+						direction="alternate"
 						repeat="indefinite">
 					</a-animation>
 				</a-triangle>
@@ -164,7 +189,8 @@
 					color="teal"
 					rotation="0 1 0"
 					radius-inner="0.45"
-					radius-outer=".5">
+					radius-outer=".5"
+					shadow>
 					<a-animation
 						attribute="rotation"
 						to="360 360 360"
@@ -188,13 +214,14 @@
 				</a-text>
 				<a-box id="cube"
 					position='0 0.5 0'
-					material='opacity: 0.5; color: skyblue;'>
+					material='opacity: 0.5; color: skyblue;'
+					shadow>
 					<a-animation
 						begin="click"
 						attribute="rotation"
 						to="360 360 0"
 						dur="2000"
-						fill="backwards"
+						fill="both"
 						direction="alternate"
 						easing='linear'>
 					</a-animation>
@@ -214,11 +241,11 @@
 					radius="0.5"
 					segments-height="53"
 					position="0 1 0"
-					material='color: red;'>
+					material='color: red;'
+					shadow>
 					<a-animation
 						attribute="position"
 						dur="1000"
-						fill="forwards"
 						from= "0 1 0"
 						to="0 2 0"
 						direction='alternate-reverse'
@@ -226,6 +253,21 @@
 						repeat="indefinite">
 					</a-animation>
 				</a-sphere>
+				<a-cone
+					color="tomato"
+					radius-bottom="0.5"
+					position='0 2 0'
+					radius-top="0"
+					shadow>
+					<a-animation
+						attribute="geometry.radiusTop"
+						from= "0"
+						to="0.5"
+						fill="both"
+						direction="alternate"
+						repeat="indefinite">
+					</a-animation>
+				</a-cone>
 			</a-marker>
 			<!-- preset marker [Hiro] -->
 			<a-marker preset='hiro'>
@@ -258,7 +300,8 @@
 					radius="0.5"
 					segments-height="53"
 					position="0 0.5 0"
-					rotation='0 0 0'>
+					rotation='0 0 0'
+					shadow>
 					<a-animation
 						attribute="rotation"
 						dur="10000"
@@ -285,6 +328,7 @@
 				<a-entity
 					gltf-model="#love"
 					scale="0.02 0.02 0.02"
+					shadow
 					animation-mixer>
 				</a-entity>
 			</a-marker>
@@ -304,6 +348,7 @@
 				<a-entity
 					gltf-model="#cat"
 					scale="0.04 0.04 0.04"
+					shadow
 					animation-mixer>
 				</a-entity>
 			</a-marker>
@@ -323,6 +368,7 @@
 				<a-entity
 					gltf-model="#planet"
 					scale="0.02 0.02 0.02"
+					shadow
 					animation-mixer>
 				</a-entity>
 			</a-marker>
@@ -343,6 +389,7 @@
 					position='0 0 -1'
 					gltf-model="#male"
 					scale="0.5 0.5 0.5"
+					shadow
 					animation-mixer>
 				</a-entity>
 			</a-marker>
@@ -361,7 +408,8 @@
 				</a-text>
 				<a-entity
 					gltf-model="#janis"
-					scale="0.6 0.6 0.6"
+					scale="1 1 1"
+					shadow
 					animation-mixer>
 				</a-entity>
 			</a-marker>
@@ -381,6 +429,7 @@
 				<a-entity
 					gltf-model="#heart"
 					scale="0.02 0.02 0.02"
+					shadow
 					animation-mixer>
 				</a-entity>
 			</a-marker>
@@ -439,7 +488,6 @@
 						easing="ease-in"
 						attribute="scale"
 						dur="150"
-						fill="forwards"
 						from="0.1 0.1 0.1"
 						to="1 1 1">
 					</a-animation>
