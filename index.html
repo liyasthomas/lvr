@@ -15,6 +15,10 @@
 			<!-- Assets -->
 			<a-assets>
 				<a-asset-item
+					id="love"
+					src="assets/gltf/love/scene.gltf">
+				</a-asset-item>
+				<a-asset-item
 					id="cat"
 					src="assets/gltf/cat/scene.gltf">
 				</a-asset-item>
@@ -278,6 +282,11 @@
 					align="center"
 					rotation="-90 0 0">
 				</a-text>
+				<a-entity
+					gltf-model="#love"
+					scale="0.04 0.04 0.04"
+					animation-mixer>
+				</a-entity>
 			</a-marker>
 			<!-- Custom marker [B] -->
 			<a-marker
