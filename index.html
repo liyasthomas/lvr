@@ -12,8 +12,9 @@
 	</head>
 	<body style='background-color: #000; margin: 0px; overflow: hidden; font-family: Monospace;'>
 		<!-- Logo -->
-		<img src="assets/images/logo.svg" style='position: absolute; top: 16px; left: 16px; z-index: 1; width: 32px;' alt="Lvr logo" title="Lvr by Liyas Thomas" onclick="toggleFullScreen(document.body)">
+<!--		<img src="assets/images/logo.svg" style='position: absolute; top: 16px; left: 16px; z-index: 1; width: 32px;' alt="Lvr logo" title="Lvr by Liyas Thomas" onclick="toggleFullScreen(document.body)">-->
 		<!-- Toggle full screen -->
+<!--
 		<script>
 			function toggleFullScreen(elem) {
 				if ((document.fullScreenElement !== undefined && document.fullScreenElement === null) || (document.msFullscreenElement !== undefined && document.msFullscreenElement === null) || (document.mozFullScreen !== undefined && !document.mozFullScreen) || (document.webkitIsFullScreen !== undefined && !document.webkitIsFullScreen)) {
@@ -39,6 +40,7 @@
 				}
 			}
 		</script>
+-->
 		<a-scene embedded vr-mode-ui="enabled: false" arjs='debugUIEnabled: false; sourceType: webcam; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
 			<!-- Assets -->
 			<a-assets>
@@ -206,7 +208,7 @@
 					</a-animation>
 				</a-text>
 				<a-entity
-					position='0 0 1'
+					position='0 0 -1'
 					gltf-model="#male"
 					scale="0.5 0.5 0.5"
 					animation-mixer>
@@ -245,7 +247,7 @@
 				</a-text>
 				<a-entity
 					gltf-model="#spaceinvader"
-					scale="0.5 0.5 0.5"
+					scale="0.3 0.3 0.3"
 					animation-mixer>
 				</a-entity>
 			</a-marker>
