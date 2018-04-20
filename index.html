@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+		<meta charset="utf-8">
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">-->
 		<title>Lvr</title>
 		<meta name="description" content="L virtual reality">
 		<link rel="icon" href="assets/images/favicon.png">
@@ -40,7 +40,7 @@
 			}
 		</script>
 		<a-scene embedded vr-mode-ui="enabled: false" arjs='debugUIEnabled: false; sourceType: webcam; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
-			<!-- Assets for images, GLTF 3D models, etc -->
+			<!-- Assets -->
 			<a-assets>
 				<a-asset-item
 					id="ball"
@@ -58,8 +58,198 @@
 					id="male"
 					src="assets/gltf/male/scene.gltf">
 				</a-asset-item>
+				<a-asset-item
+					id="spaceinvader"
+					src="assets/gltf/spaceinvader/scene.gltf">
+				</a-asset-item>
 			</a-assets>
-			<!-- Marker with preset pattern [Hiro] -->
+			<!-- Barcode marker [1] -->
+			<a-marker
+				type='barcode'
+				value='1'>
+				<a-text
+					side='double'
+					position='0 1.75 0.5'
+					scale='0.2 0.2 0.2'
+					value="Lvr [Hiro]"
+					align="center"
+					rotation="-90 0 0"
+					color="#fff">
+				</a-text>
+				<a-text
+					side='double'
+					position='0 1.6 1'
+					scale='0.2 0.2 0.2'
+					font='https://cdn.aframe.io/fonts/DejaVu-sdf.fnt'
+					value="Virtual & Augmented Reality\nby Liyas Thomas"
+					align="center"
+					color="#fff">
+					<a-animation
+						attribute="position"
+						from="0 1.6 1"
+						to="0 1.65 1"
+						direction="alternate"
+						dur="500"
+						repeat="indefinite"
+						easing='ease-in-out-cubic'>
+					</a-animation>
+				</a-text>
+				<a-cone
+					color="tomato"
+					radius-bottom="0.5"
+					position='0 0.5 0'
+					radius-top="0">
+				</a-cone>
+			</a-marker>
+			<!-- Barcode marker [2] -->
+			<a-marker
+				type='barcode'
+				value='2'>
+				<a-text
+					side='double'
+					position='0 1.75 0.5'
+					scale='0.2 0.2 0.2'
+					value="Lvr [Hiro]"
+					align="center"
+					rotation="-90 0 0"
+					color="#fff">
+				</a-text>
+				<a-text
+					side='double'
+					position='0 1.6 1'
+					scale='0.2 0.2 0.2'
+					font='https://cdn.aframe.io/fonts/DejaVu-sdf.fnt'
+					value="Virtual & Augmented Reality\nby Liyas Thomas"
+					align="center"
+					color="#fff">
+					<a-animation
+						attribute="position"
+						from="0 1.6 1"
+						to="0 1.65 1"
+						direction="alternate"
+						dur="500"
+						repeat="indefinite"
+						easing='ease-in-out-cubic'>
+					</a-animation>
+				</a-text>
+				<a-triangle
+					color="#00acee"
+					rotation="-90 0 0">
+				</a-triangle>
+			</a-marker>
+			<!-- Barcode marker [3] -->
+			<a-marker
+				type='barcode'
+				value='3'>
+				<a-text
+					side='double'
+					position='0 1.75 0.5'
+					scale='0.2 0.2 0.2'
+					value="Lvr [Hiro]"
+					align="center"
+					rotation="-90 0 0"
+					color="#fff">
+				</a-text>
+				<a-text
+					side='double'
+					position='0 1.6 1'
+					scale='0.2 0.2 0.2'
+					font='https://cdn.aframe.io/fonts/DejaVu-sdf.fnt'
+					value="Virtual & Augmented Reality\nby Liyas Thomas"
+					align="center"
+					color="#fff">
+					<a-animation
+						attribute="position"
+						from="0 1.6 1"
+						to="0 1.65 1"
+						direction="alternate"
+						dur="500"
+						repeat="indefinite"
+						easing='ease-in-out-cubic'>
+					</a-animation>
+				</a-text>
+				<a-entity
+					gltf-model="#cat"
+					scale="0.04 0.04 0.04"
+					animation-mixer>
+				</a-entity>
+			</a-marker>
+			<!-- Barcode marker [4] -->
+			<a-marker
+				type='barcode'
+				value='4'>
+				<a-text
+					side='double'
+					position='0 1.75 0.5'
+					scale='0.2 0.2 0.2'
+					value="Lvr [Hiro]"
+					align="center"
+					rotation="-90 0 0"
+					color="#fff">
+				</a-text>
+				<a-text
+					side='double'
+					position='0 1.6 1'
+					scale='0.2 0.2 0.2'
+					font='https://cdn.aframe.io/fonts/DejaVu-sdf.fnt'
+					value="Virtual & Augmented Reality\nby Liyas Thomas"
+					align="center"
+					color="#fff">
+					<a-animation
+						attribute="position"
+						from="0 1.6 1"
+						to="0 1.65 1"
+						direction="alternate"
+						dur="500"
+						repeat="indefinite"
+						easing='ease-in-out-cubic'>
+					</a-animation>
+				</a-text>
+				<a-entity
+					position='0 0 1'
+					gltf-model="#male"
+					scale="0.5 0.5 0.5"
+					animation-mixer>
+				</a-entity>
+			</a-marker>
+			<!-- Barcode marker [5] -->
+			<a-marker
+				type='barcode'
+				value='5'>
+				<a-text
+					side='double'
+					position='0 1.75 0.5'
+					scale='0.2 0.2 0.2'
+					value="Lvr [Hiro]"
+					align="center"
+					rotation="-90 0 0"
+					color="#fff">
+				</a-text>
+				<a-text
+					side='double'
+					position='0 1.6 1'
+					scale='0.2 0.2 0.2'
+					font='https://cdn.aframe.io/fonts/DejaVu-sdf.fnt'
+					value="Virtual & Augmented Reality\nby Liyas Thomas"
+					align="center"
+					color="#fff">
+					<a-animation
+						attribute="position"
+						from="0 1.6 1"
+						to="0 1.65 1"
+						direction="alternate"
+						dur="500"
+						repeat="indefinite"
+						easing='ease-in-out-cubic'>
+					</a-animation>
+				</a-text>
+				<a-entity
+					gltf-model="#spaceinvader"
+					scale="0.5 0.5 0.5"
+					animation-mixer>
+				</a-entity>
+			</a-marker>
+			<!-- preset marker [Hiro] -->
 			<a-marker preset='hiro'>
 				<a-text
 					side='double'
@@ -103,7 +293,7 @@
 					</a-animation>
 				</a-sphere>
 			</a-marker>
-			<!-- Marker with preset pattern [Kanji] -->
+			<!-- preset marker [Kanji] -->
 			<a-marker preset='kanji'>
 				<a-text
 					side='double'
@@ -154,7 +344,7 @@
 					rotation="-90 0 0">
 				</a-plane>
 			</a-marker>
-			<!-- Marker with custom pattern [A] -->
+			<!-- Custom marker [A] -->
 			<a-marker
 				preset='custom'
 				type='pattern'
@@ -201,7 +391,7 @@
 					</a-animation>
 				</a-ring>
 			</a-marker>
-			<!-- Marker with custom pattern [B] -->
+			<!-- Custom marker [B] -->
 			<a-marker
 				preset='custom'
 				type='pattern'
@@ -259,7 +449,7 @@
 				</a-box>
 				<a-sky color="pink"></a-sky>
 			</a-marker>
-			<!-- Marker with custom pattern [C] -->
+			<!-- Custom marker [C] -->
 			<a-marker
 				preset='custom'
 				type='pattern'
@@ -297,7 +487,7 @@
 					animation-mixer>
 				</a-entity>
 			</a-marker>
-			<!-- Marker with custom pattern [D] -->
+			<!-- Custom marker [D] -->
 			<a-marker
 				preset='custom'
 				type='pattern'
@@ -331,11 +521,11 @@
 				</a-text>
 				<a-entity
 					gltf-model="#planet"
-					scale="0.03 0.03 0.03"
+					scale="0.02 0.02 0.02"
 					animation-mixer>
 				</a-entity>
 			</a-marker>
-			<!-- Marker with custom pattern [F] -->
+			<!-- Custom marker [F] -->
 			<a-marker
 				preset='custom'
 				type='pattern'
@@ -368,7 +558,7 @@
 					</a-animation>
 				</a-text>
 			</a-marker>
-			<!-- Marker with custom pattern [G] -->
+			<!-- Custom marker [G] -->
 			<a-marker
 				preset='custom'
 				type='pattern'
@@ -407,187 +597,7 @@
 					rotation="-90 0 0">
 				</a-circle>
 			</a-marker>
-			<!-- Marker with barcode pattern [1] -->
-			<a-marker
-				type='barcode'
-				value='1'>
-				<a-text
-					side='double'
-					position='0 1.75 0.5'
-					scale='0.2 0.2 0.2'
-					value="Lvr [Hiro]"
-					align="center"
-					rotation="-90 0 0"
-					color="#fff">
-				</a-text>
-				<a-text
-					side='double'
-					position='0 1.6 1'
-					scale='0.2 0.2 0.2'
-					font='https://cdn.aframe.io/fonts/DejaVu-sdf.fnt'
-					value="Virtual & Augmented Reality\nby Liyas Thomas"
-					align="center"
-					color="#fff">
-					<a-animation
-						attribute="position"
-						from="0 1.6 1"
-						to="0 1.65 1"
-						direction="alternate"
-						dur="500"
-						repeat="indefinite"
-						easing='ease-in-out-cubic'>
-					</a-animation>
-				</a-text>
-				<a-cone
-					color="tomato"
-					radius-bottom="0.5"
-					position='0 0.5 0'
-					radius-top="0">
-				</a-cone>
-			</a-marker>
-			<!-- Marker with barcode pattern [2] -->
-			<a-marker
-				type='barcode'
-				value='2'>
-				<a-text
-					side='double'
-					position='0 1.75 0.5'
-					scale='0.2 0.2 0.2'
-					value="Lvr [Hiro]"
-					align="center"
-					rotation="-90 0 0"
-					color="#fff">
-				</a-text>
-				<a-text
-					side='double'
-					position='0 1.6 1'
-					scale='0.2 0.2 0.2'
-					font='https://cdn.aframe.io/fonts/DejaVu-sdf.fnt'
-					value="Virtual & Augmented Reality\nby Liyas Thomas"
-					align="center"
-					color="#fff">
-					<a-animation
-						attribute="position"
-						from="0 1.6 1"
-						to="0 1.65 1"
-						direction="alternate"
-						dur="500"
-						repeat="indefinite"
-						easing='ease-in-out-cubic'>
-					</a-animation>
-				</a-text>
-				<a-triangle
-					color="#00acee"
-					rotation="-90 0 0">
-				</a-triangle>
-			</a-marker>
-			<!-- Marker with barcode pattern [3] -->
-			<a-marker
-				type='barcode'
-				value='3'>
-				<a-text
-					side='double'
-					position='0 1.75 0.5'
-					scale='0.2 0.2 0.2'
-					value="Lvr [Hiro]"
-					align="center"
-					rotation="-90 0 0"
-					color="#fff">
-				</a-text>
-				<a-text
-					side='double'
-					position='0 1.6 1'
-					scale='0.2 0.2 0.2'
-					font='https://cdn.aframe.io/fonts/DejaVu-sdf.fnt'
-					value="Virtual & Augmented Reality\nby Liyas Thomas"
-					align="center"
-					color="#fff">
-					<a-animation
-						attribute="position"
-						from="0 1.6 1"
-						to="0 1.65 1"
-						direction="alternate"
-						dur="500"
-						repeat="indefinite"
-						easing='ease-in-out-cubic'>
-					</a-animation>
-				</a-text>
-				<a-entity
-					gltf-model="#cat"
-					scale="0.04 0.04 0.04"
-					animation-mixer>
-				</a-entity>
-			</a-marker>
-			<!-- Marker with barcode pattern [4] -->
-			<a-marker
-				type='barcode'
-				value='4'>
-				<a-text
-					side='double'
-					position='0 1.75 0.5'
-					scale='0.2 0.2 0.2'
-					value="Lvr [Hiro]"
-					align="center"
-					rotation="-90 0 0"
-					color="#fff">
-				</a-text>
-				<a-text
-					side='double'
-					position='0 1.6 1'
-					scale='0.2 0.2 0.2'
-					font='https://cdn.aframe.io/fonts/DejaVu-sdf.fnt'
-					value="Virtual & Augmented Reality\nby Liyas Thomas"
-					align="center"
-					color="#fff">
-					<a-animation
-						attribute="position"
-						from="0 1.6 1"
-						to="0 1.65 1"
-						direction="alternate"
-						dur="500"
-						repeat="indefinite"
-						easing='ease-in-out-cubic'>
-					</a-animation>
-				</a-text>
-				<a-entity
-					gltf-model="#male"
-					scale="0.5 0.5 0.5"
-					animation-mixer>
-				</a-entity>
-			</a-marker>
-			<!-- Marker with barcode pattern [5] -->
-			<a-marker
-				type='barcode'
-				value='5'>
-				<a-text
-					side='double'
-					position='0 1.75 0.5'
-					scale='0.2 0.2 0.2'
-					value="Lvr [Hiro]"
-					align="center"
-					rotation="-90 0 0"
-					color="#fff">
-				</a-text>
-				<a-text
-					side='double'
-					position='0 1.6 1'
-					scale='0.2 0.2 0.2'
-					font='https://cdn.aframe.io/fonts/DejaVu-sdf.fnt'
-					value="Virtual & Augmented Reality\nby Liyas Thomas"
-					align="center"
-					color="#fff">
-					<a-animation
-						attribute="position"
-						from="0 1.6 1"
-						to="0 1.65 1"
-						direction="alternate"
-						dur="500"
-						repeat="indefinite"
-						easing='ease-in-out-cubic'>
-					</a-animation>
-				</a-text>
-			</a-marker>
-			<!-- Marker with custom pattern and barcode [6] -->
+			<!-- Custom marker and barcode [6] -->
 			<a-marker
 				preset='custom'
 				type='pattern'
@@ -620,7 +630,7 @@
 					</a-animation>
 				</a-text>
 			</a-marker>
-			<!-- Marker with barcode pattern [6] -->
+			<!-- Barcode marker [6] -->
 			<a-marker
 				type='barcode'
 				value='6'>
@@ -652,7 +662,7 @@
 					</a-animation>
 				</a-text>
 			</a-marker>
-			<!-- Marker with custom colored pattern [2] -->
+			<!-- custom colored marker [2] -->
 			<a-marker
 				preset='custom'
 				type='pattern'
@@ -685,8 +695,10 @@
 					</a-animation>
 				</a-text>
 			</a-marker>
+			<!-- Camera -->
 			<a-entity
 				camera>
+				<!-- cursor -->
 				<a-entity
 					position="0 0 -1"
 					cursor="fuse: true;"
