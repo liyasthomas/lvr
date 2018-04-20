@@ -59,6 +59,12 @@ What things you need to install the software and how to install them.
 * Internet connection.
 * A web browser such as Google Chrome.
 
+<div align="center">
+  <br>
+  <img src="https://mixedreality.mozilla.org/static/img/experience/devices.png" alt="Lvr" width="100%">
+  <br>
+</div>
+
 ### Try it on mobile :iphone:
 
 It works on all platforms. Android, iOS and Windows phone. It runs on **any browser with WebGL and WebRTC** (for iOS, you need to update to iOS 11).
