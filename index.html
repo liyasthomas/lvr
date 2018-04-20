@@ -15,6 +15,14 @@
 			embedded
 			vr-mode-ui="enabled: false"
 			arjs='debugUIEnabled: false; sourceType: webcam; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
+			<!-- Light -->
+			<a-entity
+				light="type: ambient; intensity: 0.5;">
+			</a-entity>
+			<a-entity
+				light="type: directional; castShadow: true; intensity: 0.4; shadowCameraVisible: true;"
+				position="-5 3 1.5">
+			</a-entity>
 			<!-- Assets -->
 			<a-assets>
 				<a-asset-item
@@ -42,13 +50,6 @@
 					src="assets/gltf/heart/scene.gltf">
 				</a-asset-item>
 			</a-assets>
-			<a-entity
-				light="type: ambient; intensity: 0.5;">
-			</a-entity>
-			<a-entity
-				light="type: directional; castShadow: true; intensity: 0.4; shadowCameraVisible: true;"
-				position="-5 3 1.5">
-			</a-entity>
 			<!-- Barcode marker [1] -->
 			<a-marker
 				type='barcode'
