@@ -12,13 +12,15 @@
 		<style>
 			.a-enter-vr-button {
 				background-color: rgba(0,0,0,0) !important;
+				display: none;
 			}
 		</style>
 	</head>
 	<body style='background-color: #000; margin: 0px; overflow: hidden; font-family: Monospace;'>
 		<!-- Logo -->
-		<img src="assets/images/logo.svg" style='position: absolute; top: 16px; left: 16px; z-index: 1; width: 32px;' alt="Lvr logo" title="Lvr by Liyas Thomas" onclick="toggleFullScreen(document.body)">
+<!--		<img src="assets/images/logo.svg" style='position: absolute; top: 16px; left: 16px; z-index: 1; width: 32px;' alt="Lvr logo" title="Lvr by Liyas Thomas" onclick="toggleFullScreen(document.body)">-->
 		<!-- Toggle full screen -->
+<!--
 		<script>
 			function toggleFullScreen(elem) {
 				if ((document.fullScreenElement !== undefined && document.fullScreenElement === null) || (document.msFullscreenElement !== undefined && document.msFullscreenElement === null) || (document.mozFullScreen !== undefined && !document.mozFullScreen) || (document.webkitIsFullScreen !== undefined && !document.webkitIsFullScreen)) {
@@ -44,7 +46,8 @@
 				}
 			}
 		</script>
-		<a-scene embedded arjs='debugUIEnabled: false; sourceType: webcam; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
+-->
+		<a-scene embedded vr-mode-ui="false" arjs='debugUIEnabled: false; sourceType: webcam; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
 			<!-- Assets for images, GLTF 3D models, etc -->
 			<a-assets>
 				<a-asset-item
