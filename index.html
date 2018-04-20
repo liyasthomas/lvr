@@ -9,17 +9,11 @@
 		<script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
 		<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.5/aframe/build/aframe-ar.js"></script>
 		<script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.0.2/dist/aframe-extras.min.js"></script>
-		<style>
-			.a-enter-vr-button {
-				background-color: rgba(0,0,0,0) !important;
-			}
-		</style>
 	</head>
 	<body style='background-color: #000; margin: 0px; overflow: hidden; font-family: Monospace;'>
 		<!-- Logo -->
-<!--		<img src="assets/images/logo.svg" style='position: absolute; top: 16px; left: 16px; z-index: 1; width: 32px;' alt="Lvr logo" title="Lvr by Liyas Thomas" onclick="toggleFullScreen(document.body)">-->
+		<img src="assets/images/logo.svg" style='position: absolute; top: 16px; left: 16px; z-index: 1; width: 32px;' alt="Lvr logo" title="Lvr by Liyas Thomas" onclick="toggleFullScreen(document.body)">
 		<!-- Toggle full screen -->
-<!--
 		<script>
 			function toggleFullScreen(elem) {
 				if ((document.fullScreenElement !== undefined && document.fullScreenElement === null) || (document.msFullscreenElement !== undefined && document.msFullscreenElement === null) || (document.mozFullScreen !== undefined && !document.mozFullScreen) || (document.webkitIsFullScreen !== undefined && !document.webkitIsFullScreen)) {
@@ -45,7 +39,6 @@
 				}
 			}
 		</script>
--->
 		<a-scene embedded vr-mode-ui="enabled: false" arjs='debugUIEnabled: false; sourceType: webcam; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
 			<!-- Assets for images, GLTF 3D models, etc -->
 			<a-assets>
@@ -693,9 +686,7 @@
 				</a-text>
 			</a-marker>
 			<a-entity
-				camera
-				look-controls
-				wasd-controls>
+				camera>
 				<a-entity
 					position="0 0 -1"
 					cursor="fuse: true;"
