@@ -13,9 +13,11 @@
 
 ---
 
-# <img src="https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/images/favicon.png" alt="Lvr" width="32"> Lvr
+# [![Build Status](https://travis-ci.org/liyasthomas/lvr.svg?branch=master)](https://travis-ci.org/liyasthomas/lvr) [![GitHub release](https://img.shields.io/github/release/liyasthomas/lvr.svg)](https://github.com/liyasthomas/lvr/releases/latest) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/liyasthomas/lvr/issues) [![Website](https://img.shields.io/website-up-down-ff69b4-ff69b4/https/shields.io.svg?label=Website)](https://liyas-vr.firebaseapp.com) [![license](https://img.shields.io/github/license/liyasthomas/lvr.svg)](https://github.com/liyasthomas/lvr/blob/master/LICENSE) [![Donate](https://img.shields.io/badge/$-donate-ff69b4.svg)](https://www.paypal.me/liyascthomas)
 
-[![Build Status](https://travis-ci.org/liyasthomas/lvr.svg?branch=master)](https://travis-ci.org/liyasthomas/lvr) [![GitHub release](https://img.shields.io/github/release/liyasthomas/lvr.svg)](https://github.com/liyasthomas/lvr/releases/latest) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/liyasthomas/lvr/issues) [![Website](https://img.shields.io/website-up-down-ff69b4-ff69b4/https/shields.io.svg?label=Website)](https://liyas-vr.firebaseapp.com) [![license](https://img.shields.io/github/license/liyasthomas/lvr.svg)](https://github.com/liyasthomas/lvr/blob/master/LICENSE) [![Donate](https://img.shields.io/badge/$-donate-ff69b4.svg)](https://www.paypal.me/liyascthomas)
+<img src="https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/images/favicon.png" alt="Lvr" width="32">
+
+# Lvr
 
 ### Virtual reality for everyone by [Liyas Thomas](https://github.com/liyasthomas)
 
@@ -25,12 +27,40 @@
   <br>
 </div>
 
-### Features
+### Features :sparkles:
 
-* **Very Fast**: It runs efficiently even on mobile phones!
-* **Web-based**: It is a pure web solution, so no installation required. Full JavaScript based on three.js + jsartoolkit5.
-* **Open Source**: It is completely open source and free of charge!
-* **Standards**: It works on any phone with [webgl](http://caniuse.com/#feat=webgl) and [webrtc](http://caniuse.com/#feat=stream).
+:eyeglasses: **Virtual Reality made simple**: A-Frame handles the 3D and WebVR
+boilerplate required to get running across platforms including mobile, desktop,
+Vive, and Rift.
+
+:heart: **Declarative HTML**: HTML is easy to read and copy-and-paste. Since
+A-Frame can be used from HTML, A-Frame is accessible to everyone: web
+developers, VR enthusiasts, educators, artists, makers, kids. It is completely open source and free of charge!
+
+:electric_plug: **Entity-Component Architecture**: A-Frame is a powerful
+framework on top of three.js, providing a declarative, composable, reusable
+entity-component structure for three.js. While A-Frame can be used from HTML,
+developers have unlimited access to JavaScript, DOM APIs, three.js, WebVR, and
+WebGL.
+
+:zap: **Performance**: Lvr is a thin framework on top of A-Frame and [AR.js](https://github.com/jeromeetienne/AR.js).
+Although A-Frame uses the DOM, A-Frame does not touch the browser layout
+engine. Performance is a top priority, being battle-tested on highly
+interactive WebVR experiences. It runs efficiently even on mobile phones!
+
+:globe_with_meridians: **Cross-Platform**: Build VR applications for Vive,
+Rift, Daydream, GearVR, and Cardboard. Don't have a headset or controllers? No
+problem! A-Frame still works on standard desktop and smartphones. It is a pure web solution, so no installation required. Full JavaScript based on three.js + jsartoolkit5.
+
+:mag: **Visual Inspector**: A-Frame provides a built-in visual 3D inspector
+with a workflow similar to a browser's developer tools and interface similar to
+Unity. Open up any A-Frame scene and hit `<ctrl> + <alt> + i`.
+
+:runner: **Features**: Hit the ground running with A-Frame's built-in
+components such as geometries, materials, lights, animations, models,
+raycasters, shadows, positional audio, tracked controllers. Get even further
+with community components such as particle systems, physics, multiuser, oceans,
+mountains, speech recognition, or teleportation! It works on any phone with [webgl](https://caniuse.com/#feat=webgl) and [webrtc](https://caniuse.com/#feat=stream).
 
 ---
 
@@ -48,22 +78,23 @@ These instructions will get you a copy of the project up and running on your loc
 
 What things you need to install the software and how to install them.
 
-* A device which supports [webgl](http://caniuse.com/#feat=webgl) and [webrtc](http://caniuse.com/#feat=stream) with a working camera input.
+* A device which supports [webgl](https://caniuse.com/#feat=webgl) and [webrtc](https://caniuse.com/#feat=stream) with a working camera input.
 * Internet connection.
 * A web browser such as Google Chrome.
 
-### Try it on mobile
+### Try it on mobile :iphone:
 
 It works on all platforms. Android, iOS and Windows phone. It runs on **any browser with WebGL and WebRTC** (for iOS, you need to update to iOS 11).
 
 Try on your phone in only two easy steps, check it out!
 
-1. Open any [marker image from here](https://jeromeetienne.github.io/AR.js/data/images/HIRO.jpg) in your browser.
+1. Open any [marker image from here](https://github.com/liyasthomas/lvr/tree/master/assets/patterns) in your browser.
 2. Open my [augmented reality web app](https://liyasthomas.github.io/lvr/) in your phone browser. Give permissions to access camera. Scan marker image with your camera.
 
 You are done! It will open a web page which read the phone webcam, localize a marker and add 3D on top of it.
 
 <div align="center">
+  <br>
   <img src="https://storage.googleapis.com/gd-wagtail-prod-assets/original_images/ARUX_inline2-option1.png" alt="Lvr" width="100%">
   <br>
 </div>
@@ -112,10 +143,12 @@ Will be explained later
 
 ## Built with
 
-* **three.js** - For being a great library to do 3d on the web.
-* **ARToolKit**! - Years of development and experiences on doing augmented reality.
-* **emscripten and asm.js** - Thus we could compile ARToolKit c into JavaScript.
-* **Chromium** - Thanks for being so fast!
+* **[AR.js](https://github.com/jeromeetienne/AR.js)** - For efficient augmented reality for the web.
+	* [three.js](https://github.com/mrdoob/three.js) - For being a great library to do 3d on the web.
+	* [ARToolKit](https://github.com/artoolkit/artoolkit5) - Years of development and experiences on doing augmented reality.
+	* [emscripten](https://github.com/kripken/emscripten) and [asm.js](https://github.com/dherman/asm.js) - Thus we could compile ARToolKit C into JavaScript.
+* **[A-Frame](https://github.com/aframevr/aframe)** - Web framework for building virtual reality experiences.
+* **[Chromium](https://github.com/chromium/chromium)** - Thanks for being so fast!
 * HTML - For the web framework.
 * CSS - For styling components.
 
@@ -151,7 +184,7 @@ This project is developed by [Liyas Thomas](https://github.com/liyasthomas). For
 * [Liyas Thomas](https://github.com/liyasthomas)
 
 ### Thanks
-* [Liyas Thomas](https://github.com/jeromeetienne)
+* [Jerome Etienne](https://github.com/jeromeetienne) - For [AR.js](https://github.com/jeromeetienne/AR.js)
 
 See also the list of [contributors](https://github.com/liyasthomas/lvr/graphs/contributors) who participated in this project.
 
@@ -159,7 +192,7 @@ See also the list of [contributors](https://github.com/liyasthomas/lvr/graphs/co
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT) - see the [LICENSE](LICENSE) file for details.
 
 ---
 
@@ -172,5 +205,16 @@ See the [CHANGELOG](CHANGELOG.md) file for details.
 ## Acknowledgments
 
 * Hat tip to anyone who's code was used.
-* Inspiration.
+* Inspirations:
+	* [Google VR](https://vr.google.com/)
+	* [Google ARCore](https://developers.google.com/ar/)
+	* [Google WebVR Experiments](https://experiments.withgoogle.com/webvr)
+	* [Google AR Experiments](https://experiments.withgoogle.com/ar)
+	* [Apple ARKit](https://developer.apple.com/arkit/)
+	* [Microsoft HoloLens](https://www.microsoft.com/en-us/hololens)
+	* [YouTube](https://www.youtube.com)
+	* [A-Frame](https://aframe.io/)
+	* [three.js](https://threejs.org/)
+	* [CodePen](https://codepen.io/)
+	* [GitHub](https://github.com/)
 * etc.
