@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
 		<title>Lvr</title>
 		<meta name="description" content="L virtual reality">
-		<link rel="icon" href="assets/favicon.svg">
+		<link rel="icon" href="assets/images/favicon.png">
 		<script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
 		<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.5/aframe/build/aframe-ar.js"></script>
 		<script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.0.2/dist/aframe-extras.min.js"></script>
@@ -17,7 +17,7 @@
 	</head>
 	<body style='background-color: #000; margin: 0px; overflow: hidden; font-family: Monospace;'>
 		<!-- Logo -->
-		<img src="assets/logo.svg" style='position: absolute; top: 16px; left: 16px; z-index: 1; width: 32px;' alt="Lvr logo" title="Lvr by Liyas Thomas" onclick="toggleFullScreen(document.body)">
+		<img src="assets/images/logo.svg" style='position: absolute; top: 16px; left: 16px; z-index: 1; width: 32px;' alt="Lvr logo" title="Lvr by Liyas Thomas" onclick="toggleFullScreen(document.body)">
 		<!-- Toggle full screen -->
 		<script>
 			function toggleFullScreen(elem) {
@@ -49,19 +49,19 @@
 			<a-assets>
 				<a-asset-item
 					id="ball"
-					src="assets/ball/scene.gltf">
+					src="assets/gltf/ball/scene.gltf">
 				</a-asset-item>
 				<a-asset-item
 					id="planet"
-					src="assets/planet/scene.gltf">
+					src="assets/gltf/planet/scene.gltf">
 				</a-asset-item>
 				<a-asset-item
 					id="cat"
-					src="assets/cat/scene.gltf">
+					src="assets/gltf/cat/scene.gltf">
 				</a-asset-item>
 				<a-asset-item
 					id="male"
-					src="assets/male/scene.gltf">
+					src="assets/gltf/male/scene.gltf">
 				</a-asset-item>
 			</a-assets>
 			<!-- Marker with preset pattern [Hiro] -->
@@ -163,7 +163,7 @@
 			<a-marker
 				preset='custom'
 				type='pattern'
-				url='patterns/a.patt'>
+				url='assets/patterns/a.patt'>
 				<a-text
 					side='double'
 					position='0 1.75 0.5'
@@ -210,7 +210,7 @@
 			<a-marker
 				preset='custom'
 				type='pattern'
-				url='patterns/b.patt'>
+				url='assets/patterns/b.patt'>
 				<a-text
 					side='double'
 					position='0 1.75 0.5'
@@ -268,7 +268,7 @@
 			<a-marker
 				preset='custom'
 				type='pattern'
-				url='patterns/c.patt'>
+				url='assets/patterns/c.patt'>
 				<a-text
 					side='double'
 					position='0 1.75 0.5'
@@ -306,7 +306,7 @@
 			<a-marker
 				preset='custom'
 				type='pattern'
-				url='patterns/d.patt'>
+				url='assets/patterns/d.patt'>
 				<a-text
 					side='double'
 					position='0 1.75 0.5'
@@ -344,7 +344,7 @@
 			<a-marker
 				preset='custom'
 				type='pattern'
-				url='patterns/f.patt'>
+				url='assets/patterns/f.patt'>
 				<a-text
 					side='double'
 					position='0 1.75 0.5'
@@ -377,7 +377,7 @@
 			<a-marker
 				preset='custom'
 				type='pattern'
-				url='patterns/g.patt'>
+				url='assets/patterns/g.patt'>
 				<a-text
 					side='double'
 					position='0 1.75 0.5'
@@ -596,7 +596,7 @@
 			<a-marker
 				preset='custom'
 				type='pattern'
-				url='patterns/6.patt'>
+				url='assets/patterns/6.patt'>
 				<a-text
 					side='double'
 					position='0 1.75 0.5'
@@ -661,7 +661,7 @@
 			<a-marker
 				preset='custom'
 				type='pattern'
-				url='patterns/colored.patt'>
+				url='assets/patterns/colored.patt'>
 				<a-text
 					side='double'
 					position='0 1.75 0.5'

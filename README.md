@@ -13,7 +13,7 @@
 
 ---
 
-# Lvr [![Build Status](https://travis-ci.org/liyasthomas/lvr.svg?branch=master)](https://travis-ci.org/liyasthomas/lvr) [![GitHub release](https://img.shields.io/github/release/liyasthomas/lvr.svg)](https://github.com/liyasthomas/lvr/releases/latest) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/liyasthomas/lvr/issues) [![Website](https://img.shields.io/website-up-down-ff69b4-ff69b4/https/shields.io.svg?label=Website)](https://liyas-vr.firebaseapp.com) [![license](https://img.shields.io/github/license/liyasthomas/lvr.svg)](https://github.com/liyasthomas/lvr/blob/master/LICENSE) [![Donate](https://img.shields.io/badge/$-donate-ff69b4.svg)](https://www.paypal.me/liyascthomas)
+# <img src="https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/images/favicon.png" alt="Liyas Thomas" width="200"> Lvr [![Build Status](https://travis-ci.org/liyasthomas/lvr.svg?branch=master)](https://travis-ci.org/liyasthomas/lvr) [![GitHub release](https://img.shields.io/github/release/liyasthomas/lvr.svg)](https://github.com/liyasthomas/lvr/releases/latest) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/liyasthomas/lvr/issues) [![Website](https://img.shields.io/website-up-down-ff69b4-ff69b4/https/shields.io.svg?label=Website)](https://liyas-vr.firebaseapp.com) [![license](https://img.shields.io/github/license/liyasthomas/lvr.svg)](https://github.com/liyasthomas/lvr/blob/master/LICENSE) [![Donate](https://img.shields.io/badge/$-donate-ff69b4.svg)](https://www.paypal.me/liyascthomas)
 
 ### Virtual reality for everyone by [Liyas Thomas](https://github.com/liyasthomas)
 
@@ -28,7 +28,7 @@
 * **Very Fast**: It runs efficiently even on mobile phones!
 * **Web-based**: It is a pure web solution, so no installation required. Full JavaScript based on three.js + jsartoolkit5.
 * **Open Source**: It is completely open source and free of charge!
-* **Standards**: It works on any phone with [webgl](http://caniuse.com/#feat=webgl) and [webrtc](http://caniuse.com/#feat=stream)
+* **Standards**: It works on any phone with [webgl](http://caniuse.com/#feat=webgl) and [webrtc](http://caniuse.com/#feat=stream).
 
 ---
 
@@ -44,7 +44,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them:
+What things you need to install the software and how to install them.
 
 * A device which supports [webgl](http://caniuse.com/#feat=webgl) and [webrtc](http://caniuse.com/#feat=stream) with a working camera input.
 * Internet connection.
@@ -54,7 +54,7 @@ What things you need to install the software and how to install them:
 
 It works on all platforms. Android, iOS and Windows phone. It runs on **any browser with WebGL and WebRTC** (for iOS, you need to update to iOS 11).
 
-To try on your phone in only 2 easy steps, check it out!
+Try on your phone in only two easy steps, check it out!
 
 1. Open any [marker image from here](https://jeromeetienne.github.io/AR.js/data/images/HIRO.jpg) in your browser.
 2. Open my [augmented reality web app](https://liyasthomas.github.io/lvr/) in your phone browser. Give permissions to access camera. Scan marker image with your camera.
