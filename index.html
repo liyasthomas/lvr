@@ -12,7 +12,6 @@
 		<style>
 			.a-enter-vr-button {
 				background-color: rgba(0,0,0,0) !important;
-				display: none;
 			}
 		</style>
 	</head>
@@ -47,7 +46,7 @@
 			}
 		</script>
 -->
-		<a-scene embedded vr-mode-ui="false" arjs='debugUIEnabled: false; sourceType: webcam; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
+		<a-scene embedded arjs='debugUIEnabled: false; sourceType: webcam; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
 			<!-- Assets for images, GLTF 3D models, etc -->
 			<a-assets>
 				<a-asset-item
@@ -166,7 +165,7 @@
 			<a-marker
 				preset='custom'
 				type='pattern'
-				url='assets/patterns/a.patt'>
+				url='assets/patt/a.patt'>
 				<a-text
 					side='double'
 					position='0 1.75 0.5'
@@ -213,7 +212,7 @@
 			<a-marker
 				preset='custom'
 				type='pattern'
-				url='assets/patterns/b.patt'>
+				url='assets/patt/b.patt'>
 				<a-text
 					side='double'
 					position='0 1.75 0.5'
@@ -271,7 +270,7 @@
 			<a-marker
 				preset='custom'
 				type='pattern'
-				url='assets/patterns/c.patt'>
+				url='assets/patt/c.patt'>
 				<a-text
 					side='double'
 					position='0 1.75 0.5'
@@ -309,7 +308,7 @@
 			<a-marker
 				preset='custom'
 				type='pattern'
-				url='assets/patterns/d.patt'>
+				url='assets/patt/d.patt'>
 				<a-text
 					side='double'
 					position='0 1.75 0.5'
@@ -347,7 +346,7 @@
 			<a-marker
 				preset='custom'
 				type='pattern'
-				url='assets/patterns/f.patt'>
+				url='assets/patt/f.patt'>
 				<a-text
 					side='double'
 					position='0 1.75 0.5'
@@ -380,7 +379,7 @@
 			<a-marker
 				preset='custom'
 				type='pattern'
-				url='assets/patterns/g.patt'>
+				url='assets/patt/g.patt'>
 				<a-text
 					side='double'
 					position='0 1.75 0.5'
@@ -599,7 +598,7 @@
 			<a-marker
 				preset='custom'
 				type='pattern'
-				url='assets/patterns/6.patt'>
+				url='assets/patt/6.patt'>
 				<a-text
 					side='double'
 					position='0 1.75 0.5'
@@ -664,7 +663,7 @@
 			<a-marker
 				preset='custom'
 				type='pattern'
-				url='assets/patterns/colored.patt'>
+				url='assets/patt/colored.patt'>
 				<a-text
 					side='double'
 					position='0 1.75 0.5'
