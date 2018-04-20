@@ -29,38 +29,17 @@
 
 ### Features :sparkles:
 
-:eyeglasses: **Virtual Reality made simple**: A-Frame handles the 3D and WebVR
-boilerplate required to get running across platforms including mobile, desktop,
-Vive, and Rift.
+:eyeglasses: **Virtual Reality made simple**: Lvr handles the 3D and WebVR boilerplates required to get running across platforms including mobile, desktop, Vive, and Rift. It works on any phone with [webgl](https://caniuse.com/#feat=webgl) and [webrtc](https://caniuse.com/#feat=stream).
 
-:heart: **Declarative HTML**: HTML is easy to read and copy-and-paste. Since
-A-Frame can be used from HTML, A-Frame is accessible to everyone: web
-developers, VR enthusiasts, educators, artists, makers, kids. It is completely open source and free of charge!
+:heart: **Declarative HTML**: HTML is easy to read and copy-and-paste. Since Lvr can be used from HTML, Lvr is accessible to everyone: web developers, VR enthusiasts, educators, artists, makers, kids. It is completely open source and free of charge!
 
-:electric_plug: **Entity-Component Architecture**: A-Frame is a powerful
-framework on top of three.js, providing a declarative, composable, reusable
-entity-component structure for three.js. While A-Frame can be used from HTML,
-developers have unlimited access to JavaScript, DOM APIs, three.js, WebVR, and
-WebGL.
+:electric_plug: **Entity-Component Architecture**: Lvr is a powerful framework on top of [three.js](https://github.com/mrdoob/three.js), providing a declarative, composable, reusable entity-component structure. While Lvr can be used from HTML, developers have unlimited access to JavaScript, DOM APIs, three.js, WebVR, and WebGL.
 
-:zap: **Performance**: Lvr is a thin framework on top of A-Frame and [AR.js](https://github.com/jeromeetienne/AR.js).
-Although A-Frame uses the DOM, A-Frame does not touch the browser layout
-engine. Performance is a top priority, being battle-tested on highly
-interactive WebVR experiences. It runs efficiently even on mobile phones!
+:zap: **Performance**: Lvr is a thin framework on top of [AR.js](https://github.com/jeromeetienne/AR.js) and [A-Frame](https://github.com/aframevr/aframe). Although A-Frame uses the DOM, A-Frame does not touch the browser layout engine. Performance is a top priority, being battle-tested on highly interactive WebVR experiences. It runs efficiently even on mobile phones!
 
 :globe_with_meridians: **Cross-Platform**: Build VR applications for Vive,
 Rift, Daydream, GearVR, and Cardboard. Don't have a headset or controllers? No
-problem! A-Frame still works on standard desktop and smartphones. It is a pure web solution, so no installation required. Full JavaScript based on three.js + jsartoolkit5.
-
-:mag: **Visual Inspector**: A-Frame provides a built-in visual 3D inspector
-with a workflow similar to a browser's developer tools and interface similar to
-Unity. Open up any A-Frame scene and hit `<ctrl> + <alt> + i`.
-
-:runner: **Features**: Hit the ground running with A-Frame's built-in
-components such as geometries, materials, lights, animations, models,
-raycasters, shadows, positional audio, tracked controllers. Get even further
-with community components such as particle systems, physics, multiuser, oceans,
-mountains, speech recognition, or teleportation! It works on any phone with [webgl](https://caniuse.com/#feat=webgl) and [webrtc](https://caniuse.com/#feat=stream).
+problem! Lvr still works on standard desktop and smartphones. It is a pure web solution, so no installation required. Full JavaScript based on three.js + jsartoolkit5.
 
 ---
 
