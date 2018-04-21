@@ -15,16 +15,10 @@
 			embedded
 			vr-mode-ui="enabled: false"
 			arjs='debugUIEnabled: false; sourceType: webcam; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
-			<!-- Light -->
-			<a-entity
-				light="type: ambient; intensity: 0.5;">
-			</a-entity>
-			<a-entity
-				light="type: directional; castShadow: true; intensity: 0.4; shadowCameraVisible: true;"
-				position="-5 3 1.5">
-			</a-entity>
 			<!-- Assets -->
 			<a-assets>
+				<audio id="blip1" src="assets/sound/blip1.wav"></audio>
+				<audio id="blip2" src="assets/sound/blip2.wav"></audio>
 				<a-asset-item
 					id="love"
 					src="assets/gltf/love/scene.gltf">
@@ -50,6 +44,17 @@
 					src="assets/gltf/heart/scene.gltf">
 				</a-asset-item>
 			</a-assets>
+			<!-- Light -->
+			<a-entity
+				light="type: ambient; intensity: 0.5;">
+			</a-entity>
+			<a-entity
+				light="type: directional; castShadow: true; intensity: 0.4; shadowCameraVisible: true;"
+				position="-5 3 1.5">
+			</a-entity>
+			<!-- Sound -->
+			<a-entity sound="autoplay: true; src: #blip1;"></a-entity>
+			<a-entity sound="autoplay: true; src: #blip2;"></a-entity>
 			<!-- Barcode marker [1] -->
 			<a-marker
 				type='barcode'
@@ -483,7 +488,7 @@
 					position="0 0 -1"
 					cursor="fuse: true;"
 					geometry="primitive: ring; radiusInner: 0.01; radiusOuter: 0.015"
-					material="color: white; shader: flat; opacity: 0.7;">
+					material="color: white; shader: flat; opacity: 0.6;">
 					<a-animation
 						begin="click"
 						easing="ease-in"
