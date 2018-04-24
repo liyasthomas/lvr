@@ -39,10 +39,6 @@
 					id="janis"
 					src="assets/gltf/janis/scene.gltf">
 				</a-asset-item>
-				<a-asset-item
-					id="heart"
-					src="assets/gltf/heart/scene.gltf">
-				</a-asset-item>
 			</a-assets>
 			<!-- Camera -->
 			<a-entity
@@ -51,10 +47,14 @@
 				<a-entity
 					position="0 0 -1"
 					cursor="fuse: true;"
-					geometry="primitive: ring; radiusInner: 0.01; radiusOuter: 0.015"
+					geometry="primitive: ring; radiusInner: 0.01; radiusOuter: 0.012; thetaLength: 360; thetaStart: 90;"
 					material="color: white; shader: flat; opacity: 0.6;">
+
+					<a-animation begin="cursor-fusing" attribute="geometry.thetaLength" fill="forwards" from="360" to="0" easing="ease-in"></a-animation>
+					<a-animation begin="mouseleave" attribute="geometry.thetaLength" fill="backwards" from="0" to="360" dur="0"></a-animation>
+
 					<a-animation
-						begin="cursor-fusing"
+						begin="fusing"
 						easing="ease-in"
 						attribute="scale"
 						dur="1500"
@@ -450,12 +450,6 @@
 					align="center"
 					rotation="-90 0 0">
 				</a-text>
-				<a-entity
-					gltf-model="#heart"
-					scale="0.02 0.02 0.02"
-					shadow
-					animation-mixer>
-				</a-entity>
 			</a-marker>
 			<!-- Custom marker and barcode [6] -->
 			<a-marker
