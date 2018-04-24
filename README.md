@@ -63,6 +63,7 @@ What things you need to install the software and how to install them.
   <br>
   <img src="https://mixedreality.mozilla.org/static/img/experience/devices.png" alt="Lvr" width="100%">
   <br>
+  <br>
 </div>
 
 ### Try it on mobile :iphone:
