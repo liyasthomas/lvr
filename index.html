@@ -52,22 +52,6 @@
 					geometry="primitive: ring; radiusInner: 0.01; radiusOuter: 0.013; thetaLength: 360; thetaStart: 90;"
 					material="color: white; shader: flat; opacity: 0.6;">
 					<a-animation
-						begin="mouseenter"
-						attribute="material.opacity"
-						fill="forwards"
-						from="0.6"
-						to="0.75">
-					</a-animation>
-					<a-animation
-						begin="mouseleave"
-						attribute="material.opacity"
-						fill="backwards"
-						from="0.75"
-						to="0.6"
-						dur="0">
-					</a-animation>
-					<a-animation
-						delay="1000"
 						begin="fusing"
 						easing="ease-in"
 						attribute="scale"
@@ -174,20 +158,20 @@
 						material='opacity: 0.75; side: double; color: yellowgreen;'>
 					</a-box>
 				</a-box>
-				<a-sphere
-					radius="0.5"
-					segments-height="53"
-					position="0 1 0"
-					material='color: yellow;'
-					shadow>
-				</a-sphere>
 				<a-cone
 					color="tomato"
 					radius-bottom="0.5"
-					position='0 2 0'
+					position='0 1 0'
 					radius-top="0"
 					shadow>
 				</a-cone>
+				<a-sphere
+					radius="0.5"
+					segments-height="53"
+					position="0 2 0"
+					material='color: yellow;'
+					shadow>
+				</a-sphere>
 			</a-marker>
 			<!-- Barcode marker [4] -->
 			<a-marker
@@ -274,26 +258,10 @@
 						</a-animation>
 					</a-box>
 				</a-box>
-				<a-sphere
-					radius="0.5"
-					segments-height="53"
-					position="0 1 0"
-					material='color: red;'
-					shadow>
-					<a-animation
-						attribute="position"
-						dur="1000"
-						from= "0 1 0"
-						to="0 2 0"
-						direction='alternate-reverse'
-						easing= "ease-out-bounce"     
-						repeat="indefinite">
-					</a-animation>
-				</a-sphere>
 				<a-cone
 					color="tomato"
 					radius-bottom="0.5"
-					position='0 2 0'
+					position='0 1 0'
 					radius-top="0"
 					shadow>
 					<a-animation
@@ -306,6 +274,22 @@
 						repeat="indefinite">
 					</a-animation>
 				</a-cone>
+				<a-sphere
+					radius="0.5"
+					segments-height="53"
+					position="0 2 0"
+					material='color: red;'
+					shadow>
+					<a-animation
+						attribute="position"
+						dur="1000"
+						from= "0 2 0"
+						to="0 3 0"
+						direction='alternate-reverse'
+						easing= "ease-out-bounce"     
+						repeat="indefinite">
+					</a-animation>
+				</a-sphere>
 			</a-marker>
 			<!-- preset marker [Hiro] -->
 			<a-marker preset='hiro'>

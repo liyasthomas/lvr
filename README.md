@@ -201,4 +201,3 @@ See the [CHANGELOG](CHANGELOG.md) file for details.
 	* [three.js](https://threejs.org/)
 	* [CodePen](https://codepen.io/)
 	* [GitHub](https://github.com/)
-* etc.
