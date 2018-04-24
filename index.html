@@ -17,8 +17,10 @@
 			arjs='debugUIEnabled: false; sourceType: webcam; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
 			<!-- Assets -->
 			<a-assets>
-				<audio id="blip1" src="assets/sound/blip1.wav"></audio>
-				<audio id="blip2" src="assets/sound/blip2.wav"></audio>
+				<audio id="blip1" src="assets/sounds/blip1.wav"></audio>
+				<audio id="blip2" src="assets/sounds/blip2.wav"></audio>
+				<img id="image1" src="assets/images/favicon.png">
+				<video id="video1" autoplay loop="true" src="assets/videos/city.mp4"></video>
 				<a-asset-item
 					id="love"
 					src="assets/gltf/love/scene.gltf">
@@ -316,10 +318,9 @@
 					rotation="-90 0 0">
 				</a-text>
 				<a-image
-					src="assets/images/favicon.png"
-					width="1"
-					height="1">
+					src="#image1">
 				</a-image>
+				<a-video src="#video1" position="0 1 0"></a-video>
 			</a-marker>
 			<!-- preset marker [Kanji] -->
 			<a-marker preset='kanji'>
