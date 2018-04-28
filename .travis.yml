@@ -4,7 +4,3 @@ node_js:
 env:
 - MY_VAR=EverythignIsAwesome
 - NODE_ENV=TEST
-deploy:
-  provider: firebase
-  token:
-    secure: "1/EMeAnqVIiD00_lgIgl7bWwdS6UqmpLmQJE9ZfzAHuEYRCI6ag3lp8xXGnI0m_sIe"
