@@ -37,7 +37,7 @@
 
 :globe_with_meridians: **Cross-Platform**: Build VR applications for Vive,
 Rift, Daydream, GearVR, and Cardboard. Don't have a headset or controllers? No
-problem! Lvr still works on standard desktop and smartphones. It is a pure web solution, so no installation required. Full JavaScript based on three.js + jsartoolkit5.
+problem! Lvr still works on standard desktop and smartphones. It is a pure web solution, so no installation required. Full JavaScript based on [three.js](https://github.com/mrdoob/three.js) + [jsartoolkit5](https://github.com/artoolkit/jsartoolkit5).
 
 ---
 
