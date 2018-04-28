@@ -4,3 +4,10 @@ node_js:
 env:
 - MY_VAR=EverythignIsAwesome
 - NODE_ENV=TEST
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
+  keep-history: true
+  on:
+    branch: master
