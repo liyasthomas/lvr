@@ -5,9 +5,6 @@ env:
 - MY_VAR=EverythignIsAwesome
 - NODE_ENV=TEST
 deploy:
-  provider: pages
-  skip-cleanup: true
-  github-token: $GITHUB_TOKEN
-  keep-history: true
-  on:
-    branch: master
+  provider: firebase
+  token:
+    secure: "1/EMeAnqVIiD00_lgIgl7bWwdS6UqmpLmQJE9ZfzAHuEYRCI6ag3lp8xXGnI0m_sIe"
