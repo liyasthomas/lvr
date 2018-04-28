@@ -1,9 +1,3 @@
-# 1.0.0 - Lvr has landed
-
-* Improved documentations.
-
----
-
 # 0.9.0 - Initial release
 
 I worked a lot on Web apps, WebAR, WebGL and PWAs.
