@@ -23,7 +23,7 @@
       body {
 				margin: 0;
 				padding: 0;
-        min-height: 100vh;
+        min-height: 100%;
 				overflow: hidden;
         font-family: monospace;
 				font-size: 18px;
@@ -44,6 +44,7 @@
       }
 			.snap {
 				position: fixed;
+				z-index: 5;
 				left: calc(50% - 32px);
 				bottom: 16px;
 				height: 56px;
@@ -398,7 +399,7 @@
 				</a-text>
 				<a-entity
 					gltf-model="#love"
-					scale="0.02 0.02 0.02"
+					scale="0.01 0.01 0.01"
 					shadow
 					animation-mixer>
 				</a-entity>
