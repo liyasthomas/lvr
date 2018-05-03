@@ -5,11 +5,43 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
 		<title>Lvr</title>
 		<meta name="description" content="L virtual reality">
+    <meta name="theme-color" content="#000000">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Lvr">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Lvr">
 		<link rel="icon" href="assets/images/favicon.png">
 		<script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
 		<script src="https://raw.githubusercontent.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
 		<script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.0/dist/aframe-extras.min.js"></script>
 		<style>
+			* {
+				outline: none;
+        text-decoration: none;
+			}
+      body {
+				margin: 0;
+				padding: 0;
+        min-height: 100vh;
+				overflow: hidden;
+        font-family: monospace;
+				font-size: 18px;
+        line-height: 1.5;
+				color: #fff;
+				background-color: #000;
+				text-rendering: optimizeLegibility;
+				-webkit-font-smoothing: antialiased;
+				font-smoothing: antialiased;
+				-webkit-tap-highlight-color: transparent;
+				-webkit-touch-callout: none;
+				-webkit-user-select: none;
+				-khtml-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				-o-user-select: none;
+				user-select: none;
+      }
 			.snap {
 				position: fixed;
 				left: calc(50% - 32px);
@@ -27,7 +59,7 @@
 			}
 		</style>
 	</head>
-	<body style='background-color: #000; margin: 0px; overflow: hidden; font-family: Monospace;'>
+	<body>
 		<div class="snap"></div>
 		<a-scene
 			embedded
@@ -38,7 +70,7 @@
 				<audio id="blip1" src="assets/sounds/blip1.wav"></audio>
 				<audio id="blip2" src="assets/sounds/blip2.wav"></audio>
 				<img id="image1" src="assets/images/favicon.png">
-				<video id="video1" autoplay loop="true" src="assets/videos/city.mp4"></video>
+				<video id="video1" webkit-playsinline autoplay loop="true" src="assets/videos/city.mp4"></video>
 				<a-asset-item
 					id="love"
 					src="assets/gltf/love/scene.gltf">
