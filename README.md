@@ -152,7 +152,7 @@ We use [Travis CI](https://travis-ci.com/) for continuous integration. Check out
 
 ## Versioning
 
-This project is developed by [Liyas Thomas](https://github.com/liyasthomas) using the [Semantic Versioning specification](https://semver.org/). For the versions available, see the [releases on this repository](https://github.com/liyasthomas/lvr/releases). 
+This project is developed by [Liyas Thomas](https://github.com/liyasthomas) using the [Semantic Versioning specification](https://semver.org/). For the versions available, see the [releases on this repository](https://github.com/liyasthomas/lvr/releases).
 
 ---
 
