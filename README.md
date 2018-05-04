@@ -27,13 +27,13 @@
 
 ### Features :sparkles:
 
-:eyeglasses: **Virtual Reality made simple**: Lvr handles the 3D and WebVR boilerplates required to get running across platforms including mobile, desktop, Vive, and Rift. It works on any phone with [webgl](https://caniuse.com/#feat=webgl) and [webrtc](https://caniuse.com/#feat=stream).
+:eyeglasses: **Virtual Reality made simple**: Lvr handles the 3D and [WebVR](https://webvr.info) boilerplates required to get running across platforms including mobile, desktop, Vive, and Rift. It works on any phone with [webgl](https://caniuse.com/#feat=webgl) and [webrtc](https://caniuse.com/#feat=stream).
 
 :heart: **Declarative HTML**: HTML is easy to read and copy-and-paste. Since Lvr can be used from HTML, Lvr is accessible to everyone: web developers, VR enthusiasts, educators, artists, makers, kids. It is completely open source and free of charge!
 
-:electric_plug: **Entity-Component Architecture**: Lvr is a powerful framework on top of [three.js](https://github.com/mrdoob/three.js), providing a declarative, composable, reusable entity-component structure. While Lvr can be used from HTML, developers have unlimited access to JavaScript, DOM APIs, three.js, WebVR, and WebGL.
+:electric_plug: **Entity-Component Architecture**: Lvr is a powerful framework on top of [three.js](https://github.com/mrdoob/three.js), providing a declarative, composable, reusable entity-component structure. While Lvr can be used from HTML, developers have unlimited access to JavaScript, DOM APIs, three.js, [WebVR](https://webvr.info), and WebGL.
 
-:zap: **Performance**: Lvr is a thin framework on top of [AR.js](https://github.com/jeromeetienne/AR.js) and [A-Frame](https://github.com/aframevr/aframe). Although A-Frame uses the DOM, A-Frame does not touch the browser layout engine. Performance is a top priority, being battle-tested on highly interactive WebVR experiences. It runs efficiently even on mobile phones!
+:zap: **Performance**: Lvr is a thin framework on top of [AR.js](https://github.com/jeromeetienne/AR.js) and [A-Frame](https://github.com/aframevr/aframe). Although A-Frame uses the DOM, A-Frame does not touch the browser layout engine. Performance is a top priority, being battle-tested on highly interactive [WebVR](https://webvr.info) experiences. It runs efficiently even on mobile phones!
 
 :globe_with_meridians: **Cross-Platform**: Build VR applications for Vive,
 Rift, Daydream, GearVR, and Cardboard. Don't have a headset or controllers? No
@@ -57,7 +57,7 @@ What things you need to install the software and how to install them.
 
 * A device which supports [webgl](https://caniuse.com/#feat=webgl) and [webrtc](https://caniuse.com/#feat=stream) with a working camera input.
 * Internet connection.
-* A web browser such as Google Chrome.
+* A web browser that supports [WebVR](https://webvr.info). Works best with Chrome on Android devices. You can still experience [WebVR](https://webvr.info) content in other browsers on Android and iOS, but it might not be as smooth since those browsers don’t fully support [WebVR](https://webvr.info).
 
 <div align="center">
   <br>
@@ -73,9 +73,10 @@ It works on all platforms. Android, iOS and Windows phone. It runs on **any brow
 Try on your phone in only two easy steps, check it out!
 
 1. Open any [marker image from here](https://github.com/liyasthomas/lvr/tree/master/assets/patterns) in your browser.
-2. Open my [augmented reality web app](https://liyasthomas.github.io/lvr/) in your phone browser. Give permissions to access camera. Scan marker image with your camera.
+2. Open my [augmented reality web app](https://liyasthomas.github.io/lvr) in your phone browser. Give permissions to access camera. Scan marker image with your camera.
+3. [Wonder](https://en.wikipedia.org/wiki/Wonder_(emotion))! :heart:
 
-You are done! It will open a web page which read the phone webcam, localize a marker and add 3D on top of it.
+You're done! It will open a web page which read the phone's webcam, localize a marker and add 3D on top of it.
 
 <div align="center">
   <br>
@@ -85,7 +86,7 @@ You are done! It will open a web page which read the phone webcam, localize a ma
 
 ### Installing
 
-A step by step series of examples that tell you have to get a development env running
+A step by step series of examples that tell you've to get a development environment running.
 
 1. Download the whole zip/clone the repository.
 2. Unzip and make changes.
@@ -146,13 +147,13 @@ Please read [CONTRIBUTING](CONTRIBUTING.md) for details on our code of conduct, 
 
 ## Continuous Integration
 
-We use [Travis CI](https://travis-ci.com/) for continuous integration. Check out our [Travis CI Status](https://travis-ci.org/liyasthomas/lvr).
+We use [Travis CI](https://travis-ci.com) for continuous integration. Check out our [Travis CI Status](https://travis-ci.org/liyasthomas/lvr).
 
 ---
 
 ## Versioning
 
-This project is developed by [Liyas Thomas](https://github.com/liyasthomas) using the [Semantic Versioning specification](https://semver.org/). For the versions available, see the [releases on this repository](https://github.com/liyasthomas/lvr/releases).
+This project is developed by [Liyas Thomas](https://github.com/liyasthomas) using the [Semantic Versioning specification](https://semver.org). For the versions available, see the [releases on this repository](https://github.com/liyasthomas/lvr/releases).
 
 ---
 
@@ -190,14 +191,14 @@ See the [CHANGELOG](CHANGELOG.md) file for details.
 
 * Hat tip to anyone who's code was used.
 * Inspirations:
-	* [Google VR](https://vr.google.com/)
-	* [Google ARCore](https://developers.google.com/ar/)
+	* [Google VR](https://vr.google.com)
+	* [Google ARCore](https://developers.google.com/ar)
 	* [Google WebVR Experiments](https://experiments.withgoogle.com/webvr)
 	* [Google AR Experiments](https://experiments.withgoogle.com/ar)
-	* [Apple ARKit](https://developer.apple.com/arkit/)
+	* [Apple ARKit](https://developer.apple.com/arkit)
 	* [Microsoft HoloLens](https://www.microsoft.com/en-us/hololens)
 	* [YouTube](https://www.youtube.com)
-	* [A-Frame](https://aframe.io/)
-	* [three.js](https://threejs.org/)
-	* [CodePen](https://codepen.io/)
-	* [GitHub](https://github.com/)
+	* [A-Frame](https://aframe.io)
+	* [three.js](https://threejs.org)
+	* [CodePen](https://codepen.io)
+	* [GitHub](https://github.com)
