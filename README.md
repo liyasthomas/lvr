@@ -27,11 +27,11 @@
 
 ### Features :sparkles:
 
-:eyeglasses: **Virtual Reality made simple**: Lvr handles the 3D and [WebVR](https://webvr.info) boilerplates required to get running across platforms including mobile, desktop, Vive, and Rift. It works on any phone with [webgl](https://caniuse.com/#feat=webgl) and [webrtc](https://caniuse.com/#feat=stream).
+:eyeglasses: **Virtual Reality made simple**: Lvr handles the 3D and [WebVR](https://webvr.info) boilerplates required to get running across platforms including mobile, desktop, Vive, and Rift. It works on any phone with [WebGL](https://caniuse.com/#feat=webgl) and [WebRTC](https://caniuse.com/#feat=stream).
 
 :heart: **Declarative HTML**: HTML is easy to read and copy-and-paste. Since Lvr can be used from HTML, Lvr is accessible to everyone: web developers, VR enthusiasts, educators, artists, makers, kids. It is completely open source and free of charge!
 
-:electric_plug: **Entity-Component Architecture**: Lvr is a powerful framework on top of [three.js](https://github.com/mrdoob/three.js), providing a declarative, composable, reusable entity-component structure. While Lvr can be used from HTML, developers have unlimited access to JavaScript, DOM APIs, three.js, [WebVR](https://webvr.info), and WebGL.
+:electric_plug: **Entity-Component Architecture**: Lvr is a powerful framework on top of [three.js](https://github.com/mrdoob/three.js), providing a declarative, composable, reusable entity-component structure. While Lvr can be used from HTML, developers have unlimited access to JavaScript, DOM APIs, three.js, [WebVR](https://webvr.info), and [WebGL](https://caniuse.com/#feat=webgl).
 
 :zap: **Performance**: Lvr is a thin framework on top of [AR.js](https://github.com/jeromeetienne/AR.js) and [A-Frame](https://github.com/aframevr/aframe). Although A-Frame uses the DOM, A-Frame does not touch the browser layout engine. Performance is a top priority, being battle-tested on highly interactive [WebVR](https://webvr.info) experiences. It runs efficiently even on mobile phones!
 
@@ -55,9 +55,10 @@ These instructions will get you a copy of the project up and running on your loc
 
 What things you need to install the software and how to install them.
 
-* A device which supports [webgl](https://caniuse.com/#feat=webgl) and [webrtc](https://caniuse.com/#feat=stream) with a working camera input.
+* A device which supports [WebGL](https://caniuse.com/#feat=webgl) and [WebRTC](https://caniuse.com/#feat=stream) with a working camera input.
 * Internet connection.
 * A web browser that supports [WebVR](https://webvr.info). Works best with Chrome on Android devices. You can still experience [WebVR](https://webvr.info) content in other browsers on Android and iOS, but it might not be as smooth since those browsers don’t fully support [WebVR](https://webvr.info).
+* [Wonder](https://en.wikipedia.org/wiki/Wonder_(emotion))! :heart:
 
 <div align="center">
   <br>
@@ -68,13 +69,12 @@ What things you need to install the software and how to install them.
 
 ### Try it on mobile :iphone:
 
-It works on all platforms. Android, iOS and Windows phone. It runs on **any browser with WebGL and WebRTC** (for iOS, you need to update to iOS 11).
+It works on all platforms. Android, iOS and Windows phone. It runs on **any browser with [WebGL](https://caniuse.com/#feat=webgl) and [WebRTC](https://caniuse.com/#feat=stream)** (for iOS, you need to update to iOS 11).
 
 Try on your phone in only two easy steps, check it out!
 
 1. Open any [marker image from here](https://github.com/liyasthomas/lvr/tree/master/assets/patterns) in your browser.
 2. Open my [augmented reality web app](https://liyasthomas.github.io/lvr) in your phone browser. Give permissions to access camera. Scan marker image with your camera.
-3. [Wonder](https://en.wikipedia.org/wiki/Wonder_(emotion))! :heart:
 
 You're done! It will open a web page which read the phone's webcam, localize a marker and add 3D on top of it.
 
