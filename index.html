@@ -166,8 +166,8 @@
 	<a-scene embedded vr-mode-ui="enabled: false" arjs='debugUIEnabled: false; sourceType: webcam; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
 		<!-- Assets -->
 		<a-assets>
-			<audio id="blip1" src="assets/sounds/blip1.wav"></audio>
-			<audio id="blip2" src="assets/sounds/blip2.wav"></audio>
+			<audio id="blip1" src="assets/sounds/blip1.wav" preload="auto"></audio>
+			<audio id="blip2" src="assets/sounds/blip2.wav" preload="auto"></audio>
 			<img id="image1" src="assets/images/favicon.png">
 			<video id="video1" webkit-playsinline autoplay loop="true" src="assets/videos/city.mp4"></video>
 			<a-asset-item id="love" src="assets/gltf/love/scene.gltf">
@@ -184,7 +184,7 @@
 		<!-- Camera -->
 		<a-entity camera>
 			<!-- cursor -->
-			<a-entity position="0 0 -1" cursor="fuse: true;" geometry="primitive: ring; radiusInner: 0.01; radiusOuter: 0.013; thetaLength: 360; thetaStart: 90;" material="color: white; shader: flat; opacity: 0.6;">
+			<a-entity cursor="fuse: true;" position="0 0 -1" geometry="primitive: ring; radiusInner: 0.01; radiusOuter: 0.013; thetaLength: 360; thetaStart: 90;" material="color: white; shader: flat; opacity: 0.6;">
 				<a-animation begin="cursor-fusing" easing="ease-in" attribute="scale" dur="1500" fill="backwards" from="1 1 1" to="0.1 0.1 0.1">
 				</a-animation>
 				<a-animation begin="click" easing="ease-in" attribute="scale" dur="150" from="0.1 0.1 0.1" to="1 1 1">
@@ -245,7 +245,7 @@
 		<a-marker type='barcode' value='5'>
 			<a-text side='double' position='0 1.75 0.5' scale='0.2 0.2 0.2' value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
-			<a-box id="cube" position='0 0.5 0' material='opacity: 0.5; color: skyblue;' shadow>
+			<a-box id="cube" position='0 0.5 0' material='opacity: 0.5; color: skyblue;' shadow sound="src: #blip2; on: click">
 				<a-animation begin="click" attribute="rotation" to="360 360 0" dur="2000" fill="both" direction="alternate" easing='linear'>
 				</a-animation>
 				<a-box scale='0.5 0.5 0.5' material='opacity: 0.75; side: double; color: yellowgreen;'>
@@ -336,8 +336,8 @@
 			</a-text>
 		</a-marker>
 		<!-- Sound -->
-		<a-entity sound="autoplay: true; src: #blip1;"></a-entity>
-		<a-entity sound="autoplay: true; src: #blip2;"></a-entity>
+		<a-entity sound="src: #blip1; autoplay: true;"></a-entity>
+		<a-entity sound="src: #blip2; autoplay: true;"></a-entity>
 	</a-scene>
 </body>
 
