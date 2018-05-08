@@ -75,6 +75,7 @@
 		#actions {
 			position: fixed;
 			bottom: 16px;
+			left: 0;
 			width: 100%;
 			display: flex;
 			flex-direction: row;
@@ -88,6 +89,31 @@
 			margin: 0 16px;
 			cursor: pointer;
 			transition: all .2s;
+		}
+
+		.overlap {
+			height: 32px;
+			width: 32px;
+		}
+
+		.overlap input {
+			display: none;
+		}
+
+		.rotor {
+			position: absolute;
+			transition: .4s;
+			background-image: url(assets/images/overlap.svg);
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center;
+			height: 32px;
+			width: 32px;
+			filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.1));
+		}
+
+		input:checked+.rotor {
+			transform: rotate(90deg);
 		}
 
 		.snap {
@@ -104,26 +130,6 @@
 			box-shadow: 0px 0px 6px -1px rgba(0, 0, 0, .2);
 		}
 
-		.overlap {
-			background-image: url(assets/images/overlap.svg);
-			background-repeat: no-repeat;
-			background-size: contain;
-			background-position: center;
-			height: 32px;
-			width: 32px;
-			filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.1));
-		}
-
-		.save {
-			background-image: url(assets/images/switch.svg);
-			background-repeat: no-repeat;
-			background-size: contain;
-			background-position: center;
-			height: 32px;
-			width: 32px;
-			filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.1));
-		}
-
 		.switch {
 			height: 32px;
 			width: 32px;
@@ -135,9 +141,8 @@
 
 		.slider {
 			position: absolute;
-			top: 8px;
 			transition: .4s;
-			background-image: url(switch.svg);
+			background-image: url(assets/images/switch.svg);
 			background-repeat: no-repeat;
 			background-size: contain;
 			background-position: center;
@@ -155,7 +160,10 @@
 
 <body>
 	<div id="actions">
-		<div class="button overlap"></div>
+		<label class="button overlap">
+			<input type="checkbox">
+			<span class="rotor"></span>
+		</label>
 		<div class="button snap" onclick="generate();"></div>
 		<label class="button switch">
 			<input type="checkbox">
