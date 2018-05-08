@@ -239,6 +239,8 @@
 			</a-asset-item>
 			<a-asset-item id="janis" src="assets/gltf/janis/scene.gltf">
 			</a-asset-item>
+			<a-asset-item id="stickman" src="assets/gltf/stickman/scene.gltf">
+			</a-asset-item>
 		</a-assets>
 		<!-- Camera -->
 		<a-entity camera>
@@ -378,6 +380,8 @@
 		<a-marker preset='custom' type='pattern' url='assets/patt/G-90.patt'>
 			<a-text side='double' position='0 1.75 0.5' scale='0.2 0.2 0.2' value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
+			<a-entity gltf-model="#stickman" scale="1.2 1.2 1.2" shadow animation-mixer>
+			</a-entity>
 		</a-marker>
 		<!-- Custom marker and barcode [6] -->
 		<a-marker preset='custom' type='pattern' url='assets/patt/6.patt'>
