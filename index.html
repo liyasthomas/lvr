@@ -70,31 +70,76 @@
 			user-select: none;
 		}
 
-		.snap {
+		#actions {
 			position: fixed;
-			z-index: 2;
-			left: calc(50% - 23px);
 			bottom: 16px;
-			height: 46px;
-			width: 46px;
-			border-radius: 100%;
-			border: 3px solid #fff;
-			box-shadow: inset 0px 0px 6px -2px rgba(0, 0, 0,.2), 0px 0px 6px -1px rgba(0, 0, 0,.2);
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			z-index: 2
+		}
+
+		.button {
+			display: inline-block;
+			margin: 0 16px;
 			cursor: pointer;
 			transition: all .2s;
+		}
+
+		.snap {
+			height: 46px;
+			width: 46px;
+			border: 3px solid #fff;
+			border-radius: 100%;
+			box-shadow: inset 0px 0px 6px -2px rgba(0, 0, 0, .1), 0px 0px 6px rgba(0, 0, 0, .1);
 		}
 
 		.snap:active {
 			transform: scale(1.2);
 			background-color: rgba(255, 255, 255, 1);
-			box-shadow: 0px 0px 6px -1px rgba(0, 0, 0,.2);
+			box-shadow: 0px 0px 6px -1px rgba(0, 0, 0, .2);
+		}
+
+		.switch {
+			height: 32px;
+			width: 32px;
+		}
+
+		.switch input {
+			display: none;
+		}
+
+		.slider {
+			position: absolute;
+			top: 8px;
+			transition: .4s;
+			background-image: url(switch.svg);
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center;
+			height: 32px;
+			width: 32px;
+			filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.1));
+		}
+
+		input:checked+.slider {
+			transform: scaleX(-1);
 		}
 
 	</style>
 </head>
 
 <body>
-	<div class="snap" onclick="generate();"></div>
+	<div id="actions">
+		<div class="button snap" onclick="generate();"></div>
+		<label class="button switch">
+			<input type="checkbox">
+			<span class="slider"></span>
+		</label>
+	</div>
+	<!--
 	<script type="text/javascript">
 		(function(exports) {
 			function urlsToAbsolute(nodeList) {
@@ -163,6 +208,7 @@
 		})(window);
 
 	</script>
+-->
 	<a-scene embedded vr-mode-ui="enabled: false" arjs='debugUIEnabled: false; sourceType: webcam; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
 		<!-- Assets -->
 		<a-assets>
