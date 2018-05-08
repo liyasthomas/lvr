@@ -105,7 +105,7 @@
 		}
 
 		.overlap {
-			background-image: url(overlap.svg);
+			background-image: url(assets/images/overlap.svg);
 			background-repeat: no-repeat;
 			background-size: contain;
 			background-position: center;
@@ -153,8 +153,9 @@
 	</style>
 </head>
 
-<body id="wrapper">
+<body>
 	<div id="actions">
+		<div class="button overlap"></div>
 		<div class="button snap" onclick="generate();"></div>
 		<label class="button switch">
 			<input type="checkbox">
@@ -191,7 +192,7 @@
 				html2canvas(wrapper, {
 					onrendered: function(canvas) {
 						canvas.toBlob(function(blob) {
-							saveAs(blob, 'myScreenshot.png');
+							saveAs(blob, 'Snap.png');
 						});
 					}
 				});
@@ -213,7 +214,7 @@
 		})(window);
 
 	</script>
-	<a-scene embedded vr-mode-ui="enabled: false" arjs='debugUIEnabled: false; sourceType: webcam; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
+	<a-scene id="wrapper" embedded vr-mode-ui="enabled: false" arjs='debugUIEnabled: false; sourceType: webcam; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
 		<!-- Assets -->
 		<a-assets>
 			<audio id="blip1" src="assets/sounds/blip1.wav" preload="auto"></audio>
