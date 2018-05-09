@@ -32,13 +32,29 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
 	<title>Lvr</title>
 	<meta name="description" content="L virtual reality">
+	<link rel="shortcut icon" href="assets/images/favicon.png">
 	<meta name="theme-color" content="#000000">
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="application-name" content="Lvr">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 	<meta name="apple-mobile-web-app-title" content="Lvr">
-	<link rel="icon" href="assets/images/favicon.png">
+	<link rel="apple-touch-icon" href="assets/images/favicon.png">
+	<meta name="msapplication-TileImage" content="assets/images/favicon.png">
+	<meta name="msapplication-TileColor" content="#000000">
+	<meta name="msapplication-tap-highlight" content="no">
+	<meta property="og:site_name" content="Lvr">
+	<meta property="og:url" content="https://liyas-vr.firebaseapp.com">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Lvr">
+	<meta property="og:description" content="L virtual reality">
+	<meta property="og:image" content="assets/images/favicon.png">
+	<meta name="twitter:site" content="@liyasthomas">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Lvr">
+	<meta name="twitter:description" content="L virtual reality">
+	<meta name="twitter:image" content="assets/images/favicon.png">
+	<meta name="twitter:url" content="https://liyas-vr.firebaseapp.com">
 	<script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
 	<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script>
 	<script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.0/dist/aframe-extras.min.js"></script>
@@ -47,13 +63,12 @@
 	<style>
 		* {
 			outline: none;
-			text-decoration: none;
 		}
 
 		body {
 			margin: 0;
 			padding: 0;
-			min-height: 100vh;
+			min-height: 100%;
 			overflow: hidden;
 			font-family: monospace;
 			font-size: 18px;
@@ -92,68 +107,57 @@
 			transition: all .2s;
 		}
 
-		.overlap {
+		.overlap,
+		.switch {
 			height: 32px;
 			width: 32px;
 		}
 
-		.overlap input {
+		.overlap input,
+		.switch input {
 			display: none;
 		}
 
-		.rotor {
+		.rotor,
+		.slider {
 			position: absolute;
 			transition: .4s;
-			background-image: url(assets/images/overlap.svg);
 			background-repeat: no-repeat;
 			background-size: contain;
 			background-position: center;
 			height: 32px;
 			width: 32px;
-			filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.1));
+			filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.2));
+		}
+
+		.rotor {
+			background-image: url(overlap.svg);
+		}
+
+		.slider {
+			background-image: url(switch.svg);
 		}
 
 		input:checked+.rotor {
 			transform: rotate(90deg);
 		}
 
+		input:checked+.slider {
+			transform: scaleX(-1);
+		}
+
 		.snap {
 			height: 46px;
 			width: 46px;
-			border: 3px solid #fff;
+			border: 4px solid #fff;
 			border-radius: 100%;
-			box-shadow: inset 0px 0px 6px -2px rgba(0, 0, 0, .1), 0px 0px 6px rgba(0, 0, 0, .1);
+			box-shadow: inset 0px 0px 6px -2px rgba(0, 0, 0, .2), 0px 0px 6px rgba(0, 0, 0, .2);
 		}
 
 		.snap:active {
 			transform: scale(1.2);
 			background-color: rgba(255, 255, 255, 1);
-			box-shadow: 0px 0px 6px -1px rgba(0, 0, 0, .2);
-		}
-
-		.switch {
-			height: 32px;
-			width: 32px;
-		}
-
-		.switch input {
-			display: none;
-		}
-
-		.slider {
-			position: absolute;
-			transition: .4s;
-			background-image: url(assets/images/switch.svg);
-			background-repeat: no-repeat;
-			background-size: contain;
-			background-position: center;
-			height: 32px;
-			width: 32px;
-			filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.1));
-		}
-
-		input:checked+.slider {
-			transform: scaleX(-1);
+			box-shadow: 0px 0px 6px rgba(0, 0, 0, .2);
 		}
 
 	</style>
@@ -381,7 +385,7 @@
 		<a-marker preset='custom' type='pattern' url='assets/patt/G-90.patt'>
 			<a-text side='double' position='0 1.75 0.5' scale='0.2 0.2 0.2' value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
-			<a-entity gltf-model="#stickman" scale="1.2 1.2 1.2" shadow animation-mixer>
+			<a-entity gltf-model="#stickman" scale="0.3 0.3 0.3" shadow animation-mixer>
 			</a-entity>
 		</a-marker>
 		<!-- Custom marker and barcode [6] -->
