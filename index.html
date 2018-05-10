@@ -88,19 +88,6 @@
 			user-select: none;
 		}
 
-		#logo {
-			position: fixed;
-			top: 16px;
-			left: 16px;
-			background-image: url(assets/images/snap-logo-white.svg);
-			background-repeat: no-repeat;
-			background-size: contain;
-			background-position: center;
-			height: 46px;
-			width: 46px;
-			filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.2));
-		}
-
 		#actions {
 			position: fixed;
 			bottom: 16px;
@@ -241,13 +228,12 @@
 
 	</script>
 	<a-scene id="wrapper" embedded vr-mode-ui="enabled: false" arjs='debugUIEnabled: false; sourceType: webcam; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
-		<div id="logo"></div>
 		<!-- Assets -->
 		<a-assets>
 			<audio id="blip1" src="assets/sounds/blip1.wav" preload="auto"></audio>
 			<audio id="blip2" src="assets/sounds/blip2.wav" preload="auto"></audio>
 			<img id="image1" src="assets/images/snap-logo-black.png">
-<!--			<video id="video1" webkit-playsinline autoplay loop="true" src="assets/videos/city.mp4"></video>-->
+			<!--			<video id="video1" webkit-playsinline autoplay loop="true" src="assets/videos/city.mp4"></video>-->
 			<a-asset-item id="love" src="assets/gltf/love/scene.gltf">
 			</a-asset-item>
 			<a-asset-item id="cat" src="assets/gltf/cat/scene.gltf">
@@ -348,7 +334,7 @@
 			</a-text>
 			<a-image src="#image1">
 			</a-image>
-<!--			<a-video src="#video1" position="0 1 0"></a-video>-->
+			<!--			<a-video src="#video1" position="0 1 0"></a-video>-->
 		</a-marker>
 		<!-- preset marker [Kanji] -->
 		<a-marker preset='kanji'>
