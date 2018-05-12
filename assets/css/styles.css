@@ -1,0 +1,26 @@
+* {
+	outline: none;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	min-height: 100%;
+	overflow: hidden;
+	font-family: monospace;
+	font-size: 18px;
+	line-height: 1.5;
+	color: #fff;
+	background-color: #000;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
