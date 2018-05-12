@@ -1,0 +1,105 @@
+<!--
+	@license
+	Made by: Liyas Thomas
+	
+	Copyright (c) 2018 Liyas Thomas (https://liyas-thomas.firebaseapp.com)
+
+	ALL RIGHTS RESERVED. ALL WRONGS RESERVED.
+
+	Permission is hereby granted, free of charge, to any person obtaining a copy of
+	this software and associated documentation files (the "Software"), to deal in
+	the Software without restriction, including without limitation the rights to
+	use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+	of the Software, and to permit persons to whom the Software is furnished to do
+	so, subject to the following conditions:
+
+	The above copyright notice and this permission notice shall be included in all
+	copies or substantial portions of the Software.
+
+	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+	SOFTWARE.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<title>Lvr · Science</title>
+	<meta name="description" content="L virtual reality">
+	<link rel="shortcut icon" href="../assets/images/snap-logo-black.png">
+	<meta name="theme-color" content="#000000">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="application-name" content="Lvr">
+	<script src="../assets/js/aframe.min.js"></script>
+	<script src="../assets/js/aframe-ar.js"></script>
+	<script src="../assets/js/aframe-extras.min.js"></script>
+	<style>
+		* {
+			outline: none;
+		}
+
+		body {
+			margin: 0;
+			padding: 0;
+			min-height: 100%;
+			overflow: hidden;
+			font-family: monospace;
+			font-size: 18px;
+			line-height: 1.5;
+			color: #fff;
+			background-color: #000;
+			text-rendering: optimizeLegibility;
+			-webkit-font-smoothing: antialiased;
+			font-smoothing: antialiased;
+			-webkit-tap-highlight-color: transparent;
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			-o-user-select: none;
+			user-select: none;
+		}
+
+	</style>
+</head>
+
+<body>
+	<a-scene id="wrapper" embedded vr-mode-ui="enabled: false" arjs='debugUIEnabled: false; sourceType: webcam; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
+		<!-- Assets -->
+		<a-assets>
+			<audio id="blip1" src="../assets/sounds/blip1.wav" preload="auto"></audio>
+			<audio id="blip2" src="../assets/sounds/blip2.wav" preload="auto"></audio>
+		</a-assets>
+		<!-- Camera -->
+		<a-entity camera>
+			<!-- cursor -->
+			<a-entity cursor="fuse: true;" position="0 0 -1" geometry="primitive: ring; radiusInner: 0.01; radiusOuter: 0.013; thetaLength: 360; thetaStart: 90;" material="color: white; shader: flat; opacity: 0.6;">
+				<a-animation begin="cursor-fusing" easing="ease-in" attribute="scale" dur="1500" fill="backwards" from="1 1 1" to="0.1 0.1 0.1">
+				</a-animation>
+				<a-animation begin="click" easing="ease-in" attribute="scale" dur="150" from="0.1 0.1 0.1" to="1 1 1">
+				</a-animation>
+			</a-entity>
+		</a-entity>
+		<!-- Barcode marker [1] -->
+		<a-marker type='barcode' value='1'>
+			<a-text side='double' position='0 1.75 0.5' scale='0.2 0.2 0.2' value="Lvr - Science" align="center" rotation="-90 0 0">
+			</a-text>
+			<a-text side='double' position='0 1.6 1' scale='0.2 0.2 0.2' font='https://cdn.aframe.io/fonts/Monoid.fnt' value="Virtual & Augmented Reality\nby Liyas Thomas" align="center">
+				<a-animation attribute="position" from="0 1.6 1" to="0 1.65 1" direction="alternate" dur="500" repeat="indefinite" easing='ease-in-out-cubic'>
+				</a-animation>
+			</a-text>
+		</a-marker>
+		<!-- Sound -->
+		<a-entity sound="src: #blip1; autoplay: true;"></a-entity>
+		<a-entity sound="src: #blip2; autoplay: true;"></a-entity>
+	</a-scene>
+</body>
+
+</html>
