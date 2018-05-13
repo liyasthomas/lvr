@@ -140,7 +140,8 @@
 	</style>
 </head>
 
-<body>
+<body id="capture">
+<img src="assets/images/snap-logo-white.svg" alt="">
 	<div id="actions">
 		<label class="button cube">
 			<input type="checkbox">
@@ -178,8 +179,8 @@
 			}
 
 			function screenshotPage() {
-				var actions = document.getElementById('actions');
-				html2canvas(actions, {
+				var capture = document.getElementById('capture');
+				html2canvas(capture, {
 					onrendered: function(canvas) {
 						canvas.toBlob(function(blob) {
 							saveAs(blob, 'Snap.png');
