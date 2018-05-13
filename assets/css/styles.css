@@ -24,3 +24,122 @@ body {
 	-o-user-select: none;
 	user-select: none;
 }
+
+.material-icons {
+	font-family: 'Material Icons';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px;
+	display: inline-block;
+	line-height: 1;
+	text-transform: none;
+	letter-spacing: normal;
+	word-wrap: normal;
+	white-space: nowrap;
+	direction: ltr;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	-moz-osx-font-smoothing: grayscale;
+	font-feature-settings: 'liga';
+}
+
+.material-icons.md-18 {
+	font-size: 18px;
+}
+
+.material-icons.md-24 {
+	font-size: 24px;
+}
+
+.material-icons.md-36 {
+	font-size: 36px;
+}
+
+.material-icons.md-48 {
+	font-size: 48px;
+}
+
+.material-icons.md-dark {
+	color: rgba(0, 0, 0, 0.87);
+}
+
+.material-icons.md-dark.md-inactive {
+	color: rgba(0, 0, 0, 0.26);
+}
+
+.material-icons.md-light {
+	color: rgba(255, 255, 255, 1);
+}
+
+.material-icons.md-light.md-inactive {
+	color: rgba(255, 255, 255, 0.3);
+}
+
+#actions {
+	position: absolute;
+	z-index: 2;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+.toolbar {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	flex-shrink: 0;
+}
+
+.toolbar.left {
+	justify-content: flex-start;
+}
+
+.toolbar.right {
+	justify-content: flex-end;
+}
+
+.bottom {
+	margin-top: auto;
+}
+
+.center {
+	justify-content: center;
+}
+
+.button {
+	margin: 4px;
+	padding: 16px;
+	justify-content: center;
+	align-items: center;
+	vertical-align: middle;
+	line-height: 1;
+	border-radius: 100%;
+	cursor: pointer;
+	transition: all .2s;
+}
+
+.button:hover,
+.button:active {
+	background-color: rgba(255, 255, 255, .3);
+}
+
+.semi {
+	background-color: rgba(255, 255, 255, .3);
+}
+
+.semi:hover,
+.semi:active {
+	background-color: #50E3C2;
+}
+
+.snap {
+	padding: 16px;
+	border-radius: 100%;
+	background-color: #fff;
+}

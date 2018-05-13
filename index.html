@@ -55,6 +55,7 @@
 	<meta name="twitter:description" content="L virtual reality">
 	<meta name="twitter:image" content="assets/images/snap-logo-black.png">
 	<meta name="twitter:url" content="https://liyas-vr.firebaseapp.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="assets/css/styles.css">
 	<!--	<script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>-->
 	<!--	<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script>-->
@@ -64,199 +65,83 @@
 	<script src="assets/js/aframe-extras.min.js"></script>
 	<script src="assets/js/FileSaver.min.js"></script>
 	<script src="assets/js/html2canvas.min.js"></script>
-	<style>
-		#actions {
-			position: fixed;
-			bottom: 16px;
-			left: 0;
-			width: 100%;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			justify-content: center;
-			z-index: 2;
-		}
-
-		.button {
-			display: inline-block;
-			margin: 0 32px;
-			cursor: pointer;
-			transition: all .2s;
-		}
-
-		.cube,
-		.switch {
-			height: 32px;
-			width: 32px;
-		}
-
-		.cube input,
-		.switch input {
-			display: none;
-		}
-
-		.rotor,
-		.slider {
-			position: absolute;
-			transition: .4s;
-			background-repeat: no-repeat;
-			background-size: contain;
-			background-position: center;
-			height: 32px;
-			width: 32px;
-			filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.2));
-		}
-
-		.rotor {
-			background-image: url(assets/images/cube.svg);
-		}
-
-		.slider {
-			background-image: url(assets/images/switch.svg);
-		}
-
-		input:checked+.rotor {
-			transform: rotate(90deg);
-		}
-
-		input:checked+.slider {
-			transform: scaleX(-1);
-		}
-
-		.snap {
-			height: 46px;
-			width: 46px;
-			border: 4px solid #fff;
-			border-radius: 100%;
-			box-shadow: inset 0px 0px 6px -2px rgba(0, 0, 0, .2), 0px 0px 6px rgba(0, 0, 0, .2);
-		}
-
-		.snap:active {
-			transform: scale(1.2);
-			background-color: rgba(255, 255, 255, 1);
-			box-shadow: 0px 0px 6px rgba(0, 0, 0, .2);
-		}
-
-	</style>
 </head>
 
-<body id="capture">
+<body>
 	<div id="actions">
-		<label class="button cube flash">
-			<input type="checkbox">
-			<span class="rotor"></span>
-		</label>
-		<div class="button snap" onclick="generate();"></div>
-		<label class="button switch">
-			<input type="checkbox">
-			<span class="slider"></span>
-		</label>
-	</div>
-	<script>
-		//Test browser support
-		const SUPPORTS_MEDIA_DEVICES = 'mediaDevices' in navigator;
-
-		if (SUPPORTS_MEDIA_DEVICES) {
-			//Get the environment camera (usually the second one)
-			navigator.mediaDevices.enumerateDevices().then(devices => {
-
-				const cameras = devices.filter((device) => device.kind === 'videoinput');
-
-				if (cameras.length === 0) {
-					throw 'No camera found on this device.';
-				}
-				const camera = cameras[cameras.length - 1];
-
-				// Create stream and get video track
-				navigator.mediaDevices.getUserMedia({
-					video: {
-						deviceId: camera.deviceId,
-						facingMode: ['user', 'environment'],
-						height: {
-							ideal: 1080
-						},
-						width: {
-							ideal: 1920
+		<div class="toolbar left">
+			<div class="button">
+				<i class="material-icons md-light">close</i>
+			</div>
+		</div>
+		<div class="toolbar bottom center">
+			<div class="button semi" onclick="generate();">
+				<div class="snap">
+					<i class="material-icons md-36 md-dark">camera_alt</i>
+				</div>
+			</div>
+		</div>
+		<div class="toolbar right">
+			<div class="button">
+				<i class="material-icons md-light">flash_on</i>
+			</div>
+			<div class="button">
+				<i class="material-icons md-light">switch_camera</i>
+			</div>
+		</div>
+		<script>
+			(function(exports) {
+				function urlsToAbsolute(nodeList) {
+					if (!nodeList.length) {
+						return [];
+					}
+					var attrName = 'href';
+					if (nodeList[0].__proto__ === HTMLImageElement.prototype || nodeList[0].__proto__ === HTMLScriptElement.prototype) {
+						attrName = 'src';
+					}
+					nodeList = [].map.call(nodeList, function(el, i) {
+						var attr = el.getAttribute(attrName);
+						if (!attr) {
+							return;
 						}
-					}
-				}).then(stream => {
-					const track = stream.getVideoTracks()[0];
-
-					//Create image capture object and get camera capabilities
-					const imageCapture = new ImageCapture(track)
-					const photoCapabilities = imageCapture.getPhotoCapabilities().then(() => {
-
-						//todo: check if camera has a torch
-
-						//let there be light!
-						const btn = document.querySelector('.flash');
-						btn.addEventListener('click', function() {
-							track.applyConstraints({
-								advanced: [{
-									torch: true
-								}]
-							});
-						});
+						var absURL = /^(https?|data):/i.test(attr);
+						if (absURL) {
+							return el;
+						} else {
+							return el;
+						}
 					});
-				});
-			});
-
-			//The light will be on as long the track exists
-		}
-
-	</script>
-	<script>
-		(function(exports) {
-			function urlsToAbsolute(nodeList) {
-				if (!nodeList.length) {
-					return [];
+					return nodeList;
 				}
-				var attrName = 'href';
-				if (nodeList[0].__proto__ === HTMLImageElement.prototype || nodeList[0].__proto__ === HTMLScriptElement.prototype) {
-					attrName = 'src';
+
+				function screenshotPage() {
+					var actions = document.getElementById('actions');
+					html2canvas(actions, {
+						onrendered: function(canvas) {
+							canvas.toBlob(function(blob) {
+								saveAs(blob, 'Snap.png');
+							});
+						}
+					});
 				}
-				nodeList = [].map.call(nodeList, function(el, i) {
-					var attr = el.getAttribute(attrName);
-					if (!attr) {
-						return;
-					}
-					var absURL = /^(https?|data):/i.test(attr);
-					if (absURL) {
-						return el;
-					} else {
-						return el;
-					}
-				});
-				return nodeList;
-			}
 
-			function screenshotPage() {
-				var capture = document.getElementById('capture');
-				html2canvas(capture, {
-					onrendered: function(canvas) {
-						canvas.toBlob(function(blob) {
-							saveAs(blob, 'Snap.png');
-						});
-					}
-				});
-			}
+				function addOnPageLoad_() {
+					window.addEventListener('DOMContentLoaded', function(e) {
+						var scrollX = document.documentElement.dataset.scrollX || 0;
+						var scrollY = document.documentElement.dataset.scrollY || 0;
+						window.scrollTo(scrollX, scrollY);
+					});
+				}
 
-			function addOnPageLoad_() {
-				window.addEventListener('DOMContentLoaded', function(e) {
-					var scrollX = document.documentElement.dataset.scrollX || 0;
-					var scrollY = document.documentElement.dataset.scrollY || 0;
-					window.scrollTo(scrollX, scrollY);
-				});
-			}
+				function generate() {
+					screenshotPage();
+				}
+				exports.screenshotPage = screenshotPage;
+				exports.generate = generate;
+			})(window);
 
-			function generate() {
-				screenshotPage();
-			}
-			exports.screenshotPage = screenshotPage;
-			exports.generate = generate;
-		})(window);
-
-	</script>
+		</script>
+	</div>
 	<a-scene embedded vr-mode-ui="enabled: false" arjs='debugUIEnabled: false; sourceType: webcam; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
 		<!-- Assets -->
 		<a-assets>
