@@ -5,17 +5,15 @@
 body {
 	margin: 0;
 	padding: 0;
-	min-height: 100%;
 	overflow: hidden;
-	font-family: monospace;
 	font-size: 18px;
-	line-height: 1.5;
 	color: #fff;
 	background-color: #353535;
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	font-smoothing: antialiased;
 	-webkit-tap-highlight-color: transparent;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	-moz-osx-font-smoothing: grayscale;
+	font-feature-settings: 'liga';
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
@@ -37,10 +35,6 @@ body {
 	word-wrap: normal;
 	white-space: nowrap;
 	direction: ltr;
-	-webkit-font-smoothing: antialiased;
-	text-rendering: optimizeLegibility;
-	-moz-osx-font-smoothing: grayscale;
-	font-feature-settings: 'liga';
 }
 
 .material-icons.md-18 {
@@ -119,12 +113,11 @@ body {
 	align-items: center;
 	vertical-align: middle;
 	line-height: 1;
-	border-radius: 100%;
+	border-radius: 50%;
 	cursor: pointer;
 	transition: all .2s;
 }
 
-.button:hover,
 .button:active {
 	background-color: rgba(255, 255, 255, .3);
 }
@@ -133,13 +126,12 @@ body {
 	background-color: rgba(255, 255, 255, .3);
 }
 
-.semi:hover,
 .semi:active {
 	background-color: #50E3C2;
 }
 
 .snap {
 	padding: 16px;
-	border-radius: 100%;
+	border-radius: 50%;
 	background-color: #fff;
 }
