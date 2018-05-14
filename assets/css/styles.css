@@ -43,7 +43,7 @@ body {
 }
 
 #actions {
-	position: absolute;
+	position: fixed;
 	z-index: 2;
 	left: 0;
 	top: 0;
@@ -96,7 +96,7 @@ button {
 	color: #fff;
 	border-radius: 50%;
 	cursor: pointer;
-	transition: all .1s;
+	transition: all 1s;
 }
 
 .button:active {
@@ -154,4 +154,8 @@ input:checked + div .on {
 
 input:checked + div .off {
 	display: none;
+}
+
+input:checked + div {
+	transform: scaleX(-1) scaleX(-1);
 }
