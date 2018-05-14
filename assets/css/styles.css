@@ -124,3 +124,23 @@ button {
 	background-color: #50E3C2;
 	color: #fff;
 }
+
+#grid {
+	position: absolute;
+	z-index: -1;
+}
+
+table {
+	width: 100vw;
+	height: 100vh;
+	transition: all .2s;
+}
+
+table {
+	border-collapse: collapse;
+	border-style: hidden;
+}
+
+table td {
+	border: 2px solid rgba(255, 255, 255, .2);
+}

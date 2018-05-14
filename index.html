@@ -84,6 +84,9 @@
 				<i class="material-icons">flash_on</i>
 			</button>
 			<div class="toolbar">
+				<div class="button" onclick="grid()">
+					<i class="material-icons">grid_on</i>
+				</div>
 				<div class="button" onclick="brightness()">
 					<i class="material-icons">brightness_medium</i>
 				</div>
@@ -91,6 +94,25 @@
 					<i class="material-icons">switch_camera</i>
 				</div>
 			</div>
+		</div>
+		<div id="grid" style="display: none;">
+			<table class="grid">
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
 		</div>
 		<!--Generate and Download Screenshot of webpage without lossing the styles https://stackoverflow.com/questions/44494447/generate-and-download-screenshot-of-webpage-without-lossing-the-styles/44495166#44495166-->
 		<script>
@@ -208,6 +230,17 @@
 				} else {
 					e.style.filter = 'brightness(100%)';
 					e.style.webkitFilter = 'brightness(100%)';
+				}
+			}
+
+		</script>
+		<script>
+			function grid() {
+				var e = document.getElementById('grid');
+				if (e.style.display == 'none') {
+					e.style.display = 'block';
+				} else {
+					e.style.display = 'none';
 				}
 			}
 
