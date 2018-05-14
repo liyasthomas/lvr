@@ -71,7 +71,7 @@
 	<div id="actions">
 		<div class="toolbar left">
 			<div class="button">
-				<i class="material-icons">close</i>
+				<i class="material-icons">arrow_back</i>
 			</div>
 		</div>
 		<div class="toolbar bottom center">
@@ -80,23 +80,39 @@
 			</div>
 		</div>
 		<div class="toolbar space">
-			<button class="button flash">
-				<i class="material-icons">flash_on</i>
-			</button>
-			<div class="toolbar">
-				<div class="button" onclick="grid()">
-					<i class="material-icons">grid_on</i>
-				</div>
-				<div class="button" onclick="brightness()">
-					<i class="material-icons">brightness_medium</i>
-				</div>
+			<label class="switch">
+				<input type="checkbox" onclick="grid()">
 				<div class="button">
-					<i class="material-icons">switch_camera</i>
+					<i class="on material-icons">grid_on</i>
+					<i class="off material-icons">grid_off</i>
 				</div>
+			</label>
+			<div class="toolbar">
+				<label class="switch">
+					<input type="checkbox" class="flash">
+					<div class="button">
+						<i class="on material-icons">flash_on</i>
+						<i class="off material-icons">flash_off</i>
+					</div>
+				</label>
+				<label class="switch">
+					<input type="checkbox" onclick="brightness()">
+					<div class="button">
+						<i class="on material-icons">brightness_high</i>
+						<i class="off material-icons">brightness_low</i>
+					</div>
+				</label>
+				<label class="switch">
+					<input type="checkbox">
+					<div class="button">
+						<i class="on material-icons">camera_front</i>
+						<i class="off material-icons">camera_rear</i>
+					</div>
+				</label>
 			</div>
 		</div>
 		<div id="grid" style="display: none;">
-			<table class="grid">
+			<table>
 				<tr>
 					<td></td>
 					<td></td>
@@ -269,7 +285,7 @@
 		<!-- Camera -->
 		<a-entity camera>
 			<!-- cursor -->
-			<a-entity cursor="fuse: true;" position="0 0 -1" geometry="primitive: ring; radiusInner: 0.01; radiusOuter: 0.013; thetaLength: 360; thetaStart: 90;" material="color: white; shader: flat; opacity: 0.6;">
+			<a-entity cursor="fuse: true;" position="0 0 -1" geometry="primitive: ring; radiusInner: 0.01; radiusOuter: 0.013; thetaLength: 360; thetaStart: 90;" material="color: white; shader: flat; opacity: 0.5;">
 				<a-animation begin="cursor-fusing" easing="ease-in" attribute="scale" dur="1500" fill="backwards" from="1 1 1" to="0.1 0.1 0.1">
 				</a-animation>
 				<a-animation begin="click" easing="ease-in" attribute="scale" dur="150" from="0.1 0.1 0.1" to="1 1 1">

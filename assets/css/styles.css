@@ -5,10 +5,15 @@
 body {
 	margin: 0;
 	padding: 0;
+	min-height: 100vh;
 	overflow: hidden;
 	font-size: 18px;
 	color: #fff;
 	background-color: #353535;
+	background-image: url(../images/snap-logo-white.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 112px;
 	-webkit-tap-highlight-color: transparent;
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
@@ -35,22 +40,6 @@ body {
 	word-wrap: normal;
 	white-space: nowrap;
 	direction: ltr;
-}
-
-.material-icons.md-18 {
-	font-size: 18px;
-}
-
-.material-icons.md-24 {
-	font-size: 24px;
-}
-
-.material-icons.md-36 {
-	font-size: 36px;
-}
-
-.material-icons.md-48 {
-	font-size: 48px;
 }
 
 #actions {
@@ -133,6 +122,8 @@ button {
 table {
 	width: 100vw;
 	height: 100vh;
+	table-layout: fixed;
+	white-space: nowrap;
 	transition: all .2s;
 }
 
@@ -143,4 +134,24 @@ table {
 
 table td {
 	border: 2px solid rgba(255, 255, 255, .2);
+}
+
+.switch {
+	display: inline-block;
+}
+
+input {
+	display: none;
+}
+
+.on {
+	display: none;
+}
+
+input:checked + div .on {
+	display: block;
+}
+
+input:checked + div .off {
+	display: none;
 }
