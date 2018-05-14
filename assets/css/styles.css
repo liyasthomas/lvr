@@ -53,22 +53,6 @@ body {
 	font-size: 48px;
 }
 
-.material-icons.md-dark {
-	color: rgba(0, 0, 0, 0.87);
-}
-
-.material-icons.md-dark.md-inactive {
-	color: rgba(0, 0, 0, 0.26);
-}
-
-.material-icons.md-light {
-	color: rgba(255, 255, 255, 1);
-}
-
-.material-icons.md-light.md-inactive {
-	color: rgba(255, 255, 255, 0.3);
-}
-
 #actions {
 	position: absolute;
 	z-index: 2;
@@ -114,12 +98,13 @@ button {
 }
 
 .button {
-	margin: 4px;
-	padding: 16px;
+	display: flex;
 	justify-content: center;
 	align-items: center;
-	vertical-align: middle;
-	line-height: 1;
+	margin: 4px;
+	height: 56px;
+	width: 56px;
+	color: #fff;
 	border-radius: 50%;
 	cursor: pointer;
 	transition: all .1s;
@@ -129,17 +114,13 @@ button {
 	background-color: rgba(255, 255, 255, .3);
 }
 
-.semi {
-	background-color: rgba(255, 255, 255, .3);
+.snap {
+	background-color: #fff;
+	color: rgba(0, 0, 0, 0.87);
 }
 
-.semi:active {
+.snap:active {
 	transform: scale(1.1);
 	background-color: #50E3C2;
-}
-
-.snap {
-	padding: 16px;
-	border-radius: 50%;
-	background-color: #fff;
+	color: #fff;
 }
