@@ -68,7 +68,7 @@
 </head>
 
 <body>
-	<div id="actions" style="-webkit-filter: brightness(100%); filter: brightness(100%);">
+	<div id="actions">
 		<div class="toolbar left">
 			<div class="button">
 				<i class="material-icons md-light">close</i>
@@ -215,7 +215,7 @@
 
 		</script>
 	</div>
-	<a-scene id="brighten" embedded vr-mode-ui="enabled: false" arjs='debugUIEnabled: false; sourceType: webcam; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
+	<a-scene id="brighten" embedded vr-mode-ui="enabled: false" arjs='debugUIEnabled: false; sourceType: webcam; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3;' style="-webkit-filter: brightness(100%); filter: brightness(100%);">
 		<!-- Assets -->
 		<a-assets>
 			<audio id="blip1" src="assets/sounds/blip1.wav" preload="auto"></audio>
