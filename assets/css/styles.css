@@ -86,8 +86,6 @@ body {
 	flex-direction: row;
 	justify-content: space-around;
 	align-items: center;
-	width: 100%;
-	flex-shrink: 0;
 }
 
 .toolbar.left {
@@ -124,7 +122,7 @@ button {
 	line-height: 1;
 	border-radius: 50%;
 	cursor: pointer;
-	transition: all .2s;
+	transition: all .1s;
 }
 
 .button:active {
@@ -136,6 +134,7 @@ button {
 }
 
 .semi:active {
+	transform: scale(1.1);
 	background-color: #50E3C2;
 }
 

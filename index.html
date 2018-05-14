@@ -68,7 +68,7 @@
 </head>
 
 <body>
-	<div id="actions">
+	<div id="actions" style="-webkit-filter: brightness(100%); filter: brightness(100%);">
 		<div class="toolbar left">
 			<div class="button">
 				<i class="material-icons md-light">close</i>
@@ -82,12 +82,16 @@
 			</div>
 		</div>
 		<div class="toolbar space">
-<!--			<button class="flash">On / Off</button>-->
 			<button class="button flash">
 				<i class="material-icons md-light">flash_on</i>
 			</button>
-			<div class="button">
-				<i class="material-icons md-light">switch_camera</i>
+			<div class="toolbar">
+				<div class="button" onclick="brightness()">
+					<i class="material-icons md-light">brightness_medium</i>
+				</div>
+				<div class="button">
+					<i class="material-icons md-light">switch_camera</i>
+				</div>
 			</div>
 		</div>
 		<!--Generate and Download Screenshot of webpage without lossing the styles https://stackoverflow.com/questions/44494447/generate-and-download-screenshot-of-webpage-without-lossing-the-styles/44495166#44495166-->
@@ -194,6 +198,19 @@
 				});
 
 				//The light will be on as long the track exists
+			}
+
+		</script>
+		<script>
+			function brightness() {
+				var e = document.getElementById('actions');
+				if (e.style.filter == 'brightness(100%)') {
+					e.style.filter = 'brightness(300%)';
+					e.style.webkitFilter = 'brightness(200%)';
+				} else {
+					e.style.filter = 'brightness(100%)';
+					e.style.webkitFilter = 'brightness(100%)';
+				}
 			}
 
 		</script>
