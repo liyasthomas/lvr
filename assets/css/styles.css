@@ -13,7 +13,7 @@ body {
 	background-image: url(../images/snap-logo-white.svg);
 	background-position: center;
 	background-repeat: no-repeat;
-	background-size: 112px;
+	background-size: 64px;
 	-webkit-tap-highlight-color: transparent;
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
@@ -96,11 +96,7 @@ button {
 	color: #fff;
 	border-radius: 50%;
 	cursor: pointer;
-	transition: all 1s;
-}
-
-.button:active {
-	background-color: rgba(255, 255, 255, .3);
+	transition: all .4s;
 }
 
 .snap {
