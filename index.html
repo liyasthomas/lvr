@@ -82,7 +82,8 @@
 			</div>
 		</div>
 		<div class="toolbar space">
-			<div class="button flash">
+			<button class="switch">On / Off</button>
+			<div class="button switch">
 				<i class="material-icons md-light">flash_on</i>
 			</div>
 			<div class="button">
@@ -180,11 +181,11 @@
 							//todo: check if camera has a torch
 
 							//let there be light!
-							const btn = document.querySelector('.flash');
+							const btn = document.querySelector('.switch');
 							btn.addEventListener('click', function() {
 								track.applyConstraints({
 									advanced: [{
-										torch = true
+										torch: true
 									}]
 								});
 							});
