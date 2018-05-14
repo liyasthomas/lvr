@@ -110,6 +110,11 @@ body {
 	justify-content: center;
 }
 
+button {
+	background: none;
+	border: none;
+}
+
 .button {
 	margin: 4px;
 	padding: 16px;

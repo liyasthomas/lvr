@@ -82,10 +82,10 @@
 			</div>
 		</div>
 		<div class="toolbar space">
-<!--			<button class="switch">On / Off</button>-->
-			<div class="button flash">
+<!--			<button class="flash">On / Off</button>-->
+			<button class="button flash">
 				<i class="material-icons md-light">flash_on</i>
-			</div>
+			</button>
 			<div class="button">
 				<i class="material-icons md-light">switch_camera</i>
 			</div>
@@ -181,7 +181,7 @@
 							//todo: check if camera has a torch
 
 							//let there be light!
-							const btn = document.getElementsByClassName('flash');
+							const btn = document.querySelector('.flash');
 							btn.addEventListener('click', function() {
 								track.applyConstraints({
 									advanced: [{
