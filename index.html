@@ -203,7 +203,7 @@
 		</script>
 		<script>
 			function brightness() {
-				var e = document.getElementById('actions');
+				var e = document.getElementById('brighten');
 				if (e.style.filter == 'brightness(100%)') {
 					e.style.filter = 'brightness(300%)';
 					e.style.webkitFilter = 'brightness(200%)';
@@ -215,7 +215,7 @@
 
 		</script>
 	</div>
-	<a-scene embedded vr-mode-ui="enabled: false" arjs='debugUIEnabled: false; sourceType: webcam; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
+	<a-scene id="brighten" embedded vr-mode-ui="enabled: false" arjs='debugUIEnabled: false; sourceType: webcam; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
 		<!-- Assets -->
 		<a-assets>
 			<audio id="blip1" src="assets/sounds/blip1.wav" preload="auto"></audio>
