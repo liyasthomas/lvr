@@ -14,17 +14,10 @@ body {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: 64px;
-	-webkit-tap-highlight-color: transparent;
-	-webkit-font-smoothing: antialiased;
-	text-rendering: optimizeLegibility;
-	-moz-osx-font-smoothing: grayscale;
-	font-feature-settings: 'liga';
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
-	-khtml-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
-	-o-user-select: none;
 	user-select: none;
 }
 
@@ -33,6 +26,7 @@ body {
 	font-weight: normal;
 	font-style: normal;
 	font-size: 24px;
+	/* Preferred icon size */
 	display: inline-block;
 	line-height: 1;
 	text-transform: none;
@@ -40,6 +34,17 @@ body {
 	word-wrap: normal;
 	white-space: nowrap;
 	direction: ltr;
+
+	/* Support for all WebKit browsers. */
+	-webkit-font-smoothing: antialiased;
+	/* Support for Safari and Chrome. */
+	text-rendering: optimizeLegibility;
+
+	/* Support for Firefox. */
+	-moz-osx-font-smoothing: grayscale;
+
+	/* Support for IE. */
+	font-feature-settings: 'liga';
 }
 
 #actions {
