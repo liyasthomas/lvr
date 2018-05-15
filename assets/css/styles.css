@@ -2,6 +2,15 @@
 	outline: none;
 }
 
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+a:hover {
+	color: inherit;
+}
+
 body {
 	margin: 0;
 	padding: 0;
@@ -91,7 +100,8 @@ button {
 	border: none;
 }
 
-.button {
+.button,
+.snap {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -101,7 +111,12 @@ button {
 	color: #fff;
 	border-radius: 50%;
 	cursor: pointer;
-	transition: all .4s;
+	transition: all .2s;
+}
+
+.button:hover,
+.button:active {
+	background-color: rgba(255, 255, 255, .3);
 }
 
 .snap {
@@ -113,28 +128,6 @@ button {
 	transform: scale(1.1);
 	background-color: #50E3C2;
 	color: #fff;
-}
-
-#grid {
-	position: absolute;
-	z-index: -1;
-}
-
-table {
-	width: 100vw;
-	height: 100vh;
-	table-layout: fixed;
-	white-space: nowrap;
-	transition: all .2s;
-}
-
-table {
-	border-collapse: collapse;
-	border-style: hidden;
-}
-
-table td {
-	border: 2px solid rgba(255, 255, 255, .2);
 }
 
 .switch {
@@ -159,4 +152,33 @@ input:checked + div .off {
 
 input:checked + div {
 	transform: scaleX(-1) scaleX(-1);
+}
+
+#grid {
+	position: absolute;
+	z-index: -1;
+}
+
+table {
+	width: 100vw;
+	height: 100vh;
+	table-layout: fixed;
+	white-space: nowrap;
+	transition: all .2s;
+}
+
+table {
+	border-collapse: collapse;
+	border-style: hidden;
+}
+
+table td {
+	border: 2px solid rgba(255, 255, 255, .2);
+}
+
+@media (max-width: 640px) {
+	.switch .button:active,
+	.button:hover {
+		background-color: transparent;
+	}
 }
