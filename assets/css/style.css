@@ -1,4 +1,5 @@
 *,
+*:focus,
 *::before,
 *::after {
 	box-sizing: border-box;
@@ -21,7 +22,7 @@ body {
 	overflow: hidden;
 	font-size: 18px;
 	color: #fff;
-	background-color: #353535;
+	background-color: #212121;
 	background-image: url(../images/snap-logo-white.svg);
 	background-position: center;
 	background-repeat: no-repeat;
@@ -56,6 +57,9 @@ body {
 
 	/* Support for IE. */
 	font-feature-settings: 'liga';
+
+	-webkit-filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.2));
+	filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.2));
 }
 
 #actions {
@@ -118,18 +122,20 @@ button {
 
 .button:hover,
 .button:active {
-	background-color: rgba(255, 255, 255, .2);
+	background-color: rgba(255, 255, 255, .1);
 }
 
 .snap {
 	background-color: #fff;
-	color: rgba(0, 0, 0, 0.87);
-	box-shadow: 0px 0px 6px -2px rgba(0, 0, 0, 0.2);
+	color: #2196f3;
+	-webkit-filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.1));
+	filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.1));
 }
 
+.snap:hover,
 .snap:active {
 	transform: scale(1.1);
-	background-color: #50E3C2;
+	background-color: #2196f3;
 	color: #fff;
 }
 
@@ -138,10 +144,6 @@ button {
 }
 
 input {
-	display: none;
-}
-
-.on {
 	display: none;
 }
 
@@ -157,6 +159,10 @@ input:checked + div {
 	transform: scaleX(-1) scaleX(-1);
 }
 
+.on {
+	display: none;
+}
+
 #grid {
 	position: absolute;
 	z-index: -1;
@@ -167,7 +173,7 @@ table {
 	height: 100vh;
 	table-layout: fixed;
 	white-space: nowrap;
-	transition: all .2s;
+	transition: all .1s;
 }
 
 table {
