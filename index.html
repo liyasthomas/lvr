@@ -1,7 +1,7 @@
 <!--
 	@license
 	Made by: Liyas Thomas
-	
+
 	Copyright (c) 2018 Liyas Thomas (https://liyas-thomas.firebaseapp.com)
 
 	ALL RIGHTS RESERVED. ALL WRONGS RESERVED.
@@ -56,7 +56,7 @@
 	<meta name="twitter:image" content="assets/images/snap-logo-black.png">
 	<meta name="twitter:url" content="https://liyas-vr.firebaseapp.com">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-	<link rel="stylesheet" href="assets/css/styles.css">
+	<link rel="stylesheet" href="assets/css/style.css">
 	<!--<script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>-->
 	<!--<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script>-->
 	<!--<script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.1/dist/aframe-extras.min.js"></script>-->
@@ -65,6 +65,7 @@
 	<script src="assets/js/aframe-extras.min.js"></script>
 	<script src="assets/js/FileSaver.min.js"></script>
 	<script src="assets/js/html2canvas.min.js"></script>
+	<script src="assets/js/script.js"></script>
 </head>
 
 <body>
@@ -76,7 +77,7 @@
 			<div class="toolbar">
 				<a href="https://liyas-vr.firebaseapp.com">
 					<div class="button">
-						<i class="material-icons">info</i>
+						<i class="material-icons">help_outline</i>
 					</div>
 				</a>
 			</div>
@@ -135,137 +136,6 @@
 				</tr>
 			</table>
 		</div>
-		<!--Generate and Download Screenshot of webpage without lossing the styles https://stackoverflow.com/questions/44494447/generate-and-download-screenshot-of-webpage-without-lossing-the-styles/44495166#44495166-->
-		<script>
-			(function(exports) {
-				function urlsToAbsolute(nodeList) {
-					if (!nodeList.length) {
-						return [];
-					}
-					var attrName = 'href';
-					if (nodeList[0].__proto__ === HTMLImageElement.prototype || nodeList[0].__proto__ === HTMLScriptElement.prototype) {
-						attrName = 'src';
-					}
-					nodeList = [].map.call(nodeList, function(el, i) {
-						var attr = el.getAttribute(attrName);
-						if (!attr) {
-							return;
-						}
-						var absURL = /^(https?|data):/i.test(attr);
-						if (absURL) {
-							return el;
-						} else {
-							return el;
-						}
-					});
-					return nodeList;
-				}
-
-				function screenshotPage() {
-					var actions = document.getElementById('actions');
-					html2canvas(actions, {
-						onrendered: function(canvas) {
-							canvas.toBlob(function(blob) {
-								saveAs(blob, 'Snap.png');
-							});
-						}
-					});
-				}
-
-				function addOnPageLoad_() {
-					window.addEventListener('DOMContentLoaded', function(e) {
-						var scrollX = document.documentElement.dataset.scrollX || 0;
-						var scrollY = document.documentElement.dataset.scrollY || 0;
-						window.scrollTo(scrollX, scrollY);
-					});
-				}
-
-				function generate() {
-					screenshotPage();
-				}
-				exports.screenshotPage = screenshotPage;
-				exports.generate = generate;
-			})(window);
-
-		</script>
-		<!--Is it possible to control the camera light on a phone via a website? https://stackoverflow.com/questions/37848494/is-it-possible-to-control-the-camera-light-on-a-phone-via-a-website/47153547#47153547-->
-		<script>
-			//Test browser support
-			const SUPPORTS_MEDIA_DEVICES = 'mediaDevices' in navigator;
-
-			if (SUPPORTS_MEDIA_DEVICES) {
-				//Get the environment camera (usually the second one)
-				navigator.mediaDevices.enumerateDevices().then(devices => {
-
-					const cameras = devices.filter((device) => device.kind === 'videoinput');
-
-					if (cameras.length === 0) {
-						throw 'No camera found on this device.';
-					}
-					const camera = cameras[cameras.length - 1];
-
-					// Create stream and get video track
-					navigator.mediaDevices.getUserMedia({
-						video: {
-							deviceId: camera.deviceId,
-							facingMode: ['user', 'environment'],
-							height: {
-								ideal: 1080
-							},
-							width: {
-								ideal: 1920
-							}
-						}
-					}).then(stream => {
-						const track = stream.getVideoTracks()[0];
-
-						//Create image capture object and get camera capabilities
-						const imageCapture = new ImageCapture(track)
-						const photoCapabilities = imageCapture.getPhotoCapabilities().then(() => {
-
-							//todo: check if camera has a torch
-
-							//let there be light!
-							const btn = document.querySelector('.flash');
-							btn.addEventListener('click', function() {
-								track.applyConstraints({
-									advanced: [{
-										torch: true
-									}]
-								});
-							});
-						});
-					});
-				});
-
-				//The light will be on as long the track exists
-			}
-
-		</script>
-		<script>
-			function brightness() {
-				var e = document.getElementById('brighten');
-				if (e.style.filter == 'brightness(100%)') {
-					e.style.filter = 'brightness(300%)';
-					e.style.webkitFilter = 'brightness(150%)';
-				} else {
-					e.style.filter = 'brightness(100%)';
-					e.style.webkitFilter = 'brightness(100%)';
-				}
-			}
-
-		</script>
-		<script>
-			function grid() {
-				var e = document.getElementById('grid');
-				if (e.style.display == 'none') {
-					e.style.display = 'block';
-				} else {
-					e.style.display = 'none';
-				}
-			}
-
-		</script>
 	</div>
 	<a-scene id="brighten" embedded vr-mode-ui="enabled: false" arjs='debugUIEnabled: false; sourceType: webcam; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3;' style="-webkit-filter: brightness(100%); filter: brightness(100%);">
 		<!-- Assets -->
@@ -374,7 +244,7 @@
 			</a-text>
 			<a-image src="#image1">
 			</a-image>
-			<!--			<a-video src="#video1" position="0 1 0"></a-video>-->
+			<!--<a-video src="#video1" position="0 1 0"></a-video>-->
 		</a-marker>
 		<!-- preset marker [Kanji] -->
 		<a-marker preset='kanji'>
