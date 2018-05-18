@@ -90,17 +90,11 @@ if (SUPPORTS_MEDIA_DEVICES) {
 				//let there be light!
 				const btn = document.querySelector('.flash');
 				btn.addEventListener('click', function () {
-					if (stream) {
-						for (const track of this.stream.getVideoTracks()) {
-							track.stop();
-						}
-					} else {
-						track.applyConstraints({
-							advanced: [{
-								torch: true
-							}]
-						});
-					}
+					track.applyConstraints({
+						advanced: [{
+							torch: true
+						}]
+					});
 				});
 			});
 		});
