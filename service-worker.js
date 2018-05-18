@@ -1,4 +1,4 @@
-var CACHE_NAME = 'saap-cache-v1';
+var CACHE_NAME = 'saap-cache-stable';
 var urlsToCache = [
   '/',
   '/index.html',
@@ -59,6 +59,20 @@ self.addEventListener('fetch', function (event) {
 	);
 });
 
-self.addEventListener('activate', function (event) {
-	event.waitUntil(self.clients.claim());
+self.addEventListener('activate', function(event) {
+
+  var cacheWhitelist = ['saap-cache-stable'];
+
+  event.waitUntil(
+    caches.keys().then(function(cacheNames) {
+      return Promise.all(
+        cacheNames.map(function(cacheName) {
+          if (cacheWhitelist.indexOf(cacheName) === -1) {
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    })
+  );
 });
+
