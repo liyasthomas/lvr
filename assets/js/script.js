@@ -29,7 +29,7 @@
 		html2canvas(actions, {
 			onrendered: function (canvas) {
 				canvas.toBlob(function (blob) {
-					saveAs(blob, 'Snap.png');
+					saveAs(blob, 'Saap.png');
 				});
 			}
 		});
@@ -108,7 +108,7 @@ if (SUPPORTS_MEDIA_DEVICES) {
 function brightness() {
 	var e = document.getElementById('brighten');
 	if (e.style.filter == 'brightness(100%)') {
-		e.style.filter = 'brightness(300%)';
+		e.style.filter = 'brightness(150%)';
 		e.style.webkitFilter = 'brightness(150%)';
 	} else {
 		e.style.filter = 'brightness(100%)';

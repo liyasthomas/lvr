@@ -122,20 +122,20 @@ button {
 
 .button:hover,
 .button:active {
-	background-color: rgba(255, 255, 255, .1);
+	background-color: rgba(255, 255, 255, 0.12);
 }
 
 .snap {
 	background-color: #fff;
 	color: #2196f3;
-	-webkit-filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.1));
-	filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.1));
+	-webkit-filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.12));
+	filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.12));
 }
 
 .snap:hover,
 .snap:active {
 	transform: scale(1.1);
-	background-color: #2196f3;
+	background-color: #00bfa5;
 	color: #fff;
 }
 
@@ -182,7 +182,7 @@ table {
 }
 
 table td {
-	border: 2px solid rgba(255, 255, 255, .1);
+	border: 2px solid rgba(255, 255, 255, 0.12);
 }
 
 @media (max-width: 640px) {
