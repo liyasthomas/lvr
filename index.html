@@ -62,28 +62,12 @@
 		if ('serviceWorker' in navigator) {
 			window.addEventListener('load', function() {
 				navigator.serviceWorker.register('service-worker.js').then(function(registration) {
-
-					var app = document.querySelector('#app');
-					if (registration.waiting) {
-						app.update(registration);
-						return;
-					}
-
-					if (registration.installing) {
-						registration.installing.addEventListener('statechange', function() {
-							app.update(registration);
-						});
-						return;
-					}
-
-					registration.addEventListener('updatefound', function() {
-						app.update(registration);
-					});
-
-					console.info('ServiceWorker registration successful with scope: ', registration.scope);
+					// Registration was successful
+					console.log('ServiceWorker registration successful with scope: ', registration.scope);
 				}, function(err) {
-					console.info('ServiceWorker registration failed: ', err);
-				});;
+					// registration failed :(
+					console.log('ServiceWorker registration failed: ', err);
+				});
 			});
 		}
 
