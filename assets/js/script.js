@@ -50,8 +50,7 @@
 	exports.generate = generate;
 })(window);
 
-
-//Is it possible to control the camera light on a phone via a website? https://stackoverflow.com/questions/37848494/is-it-possible-to-control-the-camera-light-on-a-phone-via-a-website/47153547#47153547
+//Is it possible to control the camera light on a phone via a website? https://stackoverflow.com/questions/37848494/is-it-possible-to-control-the-camera-light-on-a-phone-via-a-website
 
 //Test browser support
 const SUPPORTS_MEDIA_DEVICES = 'mediaDevices' in navigator;
@@ -91,11 +90,17 @@ if (SUPPORTS_MEDIA_DEVICES) {
 				//let there be light!
 				const btn = document.querySelector('.flash');
 				btn.addEventListener('click', function () {
-					track.applyConstraints({
-						advanced: [{
-							torch: true
-									}]
-					});
+					if (stream) {
+						for (const track of this.stream.getVideoTracks()) {
+							track.stop();
+						}
+					} else {
+						track.applyConstraints({
+							advanced: [{
+								torch: true
+							}]
+						});
+					}
 				});
 			});
 		});
@@ -104,6 +109,7 @@ if (SUPPORTS_MEDIA_DEVICES) {
 	//The light will be on as long the track exists
 }
 
+//Toggle brightness
 
 function brightness() {
 	var e = document.getElementById('brighten');
@@ -116,6 +122,7 @@ function brightness() {
 	}
 }
 
+//Toggle grid
 
 function grid() {
 	var e = document.getElementById('grid');
