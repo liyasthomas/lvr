@@ -55,9 +55,9 @@ These instructions will get you a copy of the project up and running on your loc
 
 What things you need to install the software and how to install them.
 
-* A device which supports [WebGL](https://caniuse.com/#feat=webgl) and [WebRTC](https://caniuse.com/#feat=stream) with a working camera input.
-* Internet connection.
-* A web browser that supports [WebVR](https://webvr.info). Works best with Chrome on Android devices. You can still experience [WebVR](https://webvr.info) content in other browsers on Android and iOS, but it might not be as smooth since those browsers don’t fully support [WebVR](https://webvr.info).
+* A device which supports [WebGL](https://caniuse.com/#feat=webgl) and [WebRTC](https://caniuse.com/#feat=stream) with a working camera input
+* Internet connection
+* A web browser that supports [WebVR](https://webvr.info). Works best with Chrome on Android devices. You can still experience [WebVR](https://webvr.info) content in other browsers on Android and iOS, but it might not be as smooth since those browsers don’t fully support [WebVR](https://webvr.info)
 * [Wonder](https://en.wikipedia.org/wiki/Wonder_(emotion))! :heart:
 
 <div align="center">
@@ -128,14 +128,14 @@ Will be explained later
 
 ## Built with
 
-* **[AR.js](https://github.com/jeromeetienne/AR.js)** - For efficient augmented reality for the web.
-	* [three.js](https://github.com/mrdoob/three.js) - For being a great library to do 3d on the web.
-	* [ARToolKit](https://github.com/artoolkit/artoolkit5) - Years of development and experiences on doing augmented reality.
-	* [emscripten](https://github.com/kripken/emscripten) and [asm.js](https://github.com/dherman/asm.js) - Thus we could compile ARToolKit C into JavaScript.
-* **[A-Frame](https://github.com/aframevr/aframe)** - Web framework for building virtual reality experiences.
+* **[AR.js](https://github.com/jeromeetienne/AR.js)** - For efficient augmented reality for the web
+	* [three.js](https://github.com/mrdoob/three.js) - For being a great library to do 3d on the web
+	* [ARToolKit](https://github.com/artoolkit/artoolkit5) - Years of development and experiences on doing augmented reality
+	* [emscripten](https://github.com/kripken/emscripten) and [asm.js](https://github.com/dherman/asm.js) - Thus we could compile ARToolKit C into JavaScript
+* **[A-Frame](https://github.com/aframevr/aframe)** - Web framework for building virtual reality experiences
 * **[Chromium](https://github.com/chromium/chromium)** - Thanks for being so fast!
-* HTML - For the web framework.
-* CSS - For styling components.
+* HTML - For the web framework
+* CSS - For styling components
 
 ---
 
@@ -189,7 +189,7 @@ See the [CHANGELOG](CHANGELOG.md) file for details.
 
 ## Acknowledgments
 
-* Hat tip to anyone who's code was used.
+* Hat tip to anyone who's code was used
 * Inspirations:
 	* [Google VR](https://vr.google.com)
 	* [Google ARCore](https://developers.google.com/ar)
