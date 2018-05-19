@@ -25,8 +25,8 @@
 	}
 
 	function screenshotPage() {
-		var actions = document.getElementById('actions');
-		html2canvas(actions, {
+		var capture = document.getElementById('capture');
+		html2canvas(capture, {
 			onrendered: function (canvas) {
 				canvas.toBlob(function (blob) {
 					saveAs(blob, 'Saap.png');
@@ -106,7 +106,7 @@ if (SUPPORTS_MEDIA_DEVICES) {
 //Toggle brightness
 
 function brightness() {
-	var e = document.getElementById('brighten');
+	var e = document.getElementById('capture');
 	if (e.style.filter == 'brightness(100%)') {
 		e.style.filter = 'brightness(150%)';
 		e.style.webkitFilter = 'brightness(150%)';

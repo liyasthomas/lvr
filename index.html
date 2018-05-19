@@ -76,16 +76,16 @@
 	<script src="assets/js/aframe.min.js"></script>
 	<!--AR.js v1.6.0 (https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js)-->
 	<script src="assets/js/aframe-ar.js"></script>
-	<!--A-Frame extras v4.1.1 (https://cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.1/dist/aframe-extras.min.js)-->
+	<!--A-Frame-extras.js v4.1.1 (https://cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.1/dist/aframe-extras.min.js)-->
 	<script src="assets/js/aframe-extras.min.js"></script>
 	<!--FileSaver.js v1.3.8 (https://cdn.rawgit.com/eligrey/FileSaver.js/1.3.8/src/FileSaver.js)-->
-	<script src="assets/js/FileSaver.js"></script>
-	<!--html2canvas.js v ()-->
+	<script src="assets/js/FileSaver.min.js"></script>
+	<!--html2canvas.js v0.4.1 (https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js)-->
 	<script src="assets/js/html2canvas.min.js"></script>
 	<script src="assets/js/script.js"></script>
 </head>
 
-<body id="app">
+<body>
 	<div id="actions">
 		<div class="toolbar space">
 			<div class="button">
@@ -154,12 +154,12 @@
 			</table>
 		</div>
 	</div>
-	<a-scene id="brighten" embedded vr-mode-ui="enabled: false" arjs='debugUIEnabled: false; sourceType: webcam; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3;' style="-webkit-filter: brightness(100%); filter: brightness(100%);">
-		<!-- Assets -->
+	<a-scene id="capture" embedded vr-mode-ui="enabled: false" arjs='debugUIEnabled: false; sourceType: webcam; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3;' style="-webkit-filter: brightness(100%); filter: brightness(100%);">
+		<!--Assets-->
 		<a-assets>
 			<audio id="blip1" src="assets/sounds/blip1.wav" preload="auto"></audio>
 			<audio id="blip2" src="assets/sounds/blip2.wav" preload="auto"></audio>
-			<img id="image1" src="assets/images/snap-logo-black.png">
+			<img id="image1" src="assets/images/snap-logo-white.png">
 			<!--<video id="video1" webkit-playsinline autoplay loop="true" src="assets/videos/city.mp4"></video>-->
 			<a-asset-item id="love" src="assets/gltf/love/scene.gltf">
 			</a-asset-item>
@@ -174,17 +174,17 @@
 			<a-asset-item id="stickman" src="assets/gltf/stickman/scene.gltf">
 			</a-asset-item>
 		</a-assets>
-		<!-- Camera -->
+		<!--Camera-->
 		<a-entity camera>
-			<!-- cursor -->
-			<a-entity cursor="fuse: true;" position="0 0 -1" geometry="primitive: ring; radiusInner: 0.01; radiusOuter: 0.013; thetaLength: 360; thetaStart: 90;" material="color: white; shader: flat; opacity: 0.5;">
+			<!--cursor-->
+			<a-entity cursor="fuse: true;" position="0 0 -1" geometry="primitive: ring; radiusInner: 0.01; radiusOuter: 0.013;" material="color: white; shader: flat; opacity: 0.5;">
 				<a-animation begin="cursor-fusing" easing="ease-in" attribute="scale" dur="1500" fill="backwards" from="1 1 1" to="0.1 0.1 0.1">
 				</a-animation>
 				<a-animation begin="click" easing="ease-in" attribute="scale" dur="150" from="0.1 0.1 0.1" to="1 1 1">
 				</a-animation>
 			</a-entity>
 		</a-entity>
-		<!-- Barcode marker [1] -->
+		<!--Barcode marker [1]-->
 		<a-marker type='barcode' value='1'>
 			<a-text side='double' position='0 1.75 0.5' scale='0.2 0.2 0.2' value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
@@ -193,52 +193,52 @@
 				</a-animation>
 			</a-text>
 		</a-marker>
-		<!-- Barcode marker [2] -->
+		<!--Barcode marker [2]-->
 		<a-marker type='barcode' value='2'>
 			<a-text side='double' position='0 1.75 0.5' scale='0.2 0.2 0.2' value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
 			<a-plane color="aquamarine" rotation="-90 0 0">
 			</a-plane>
-			<a-circle color="deeppink" radius="0.5" position='0 0.5 0' rotation="-90 0 0" shadow>
+			<a-circle color="deeppink" radius="0.5" position='0 0.5 0' rotation="-90 0 0">
 			</a-circle>
-			<a-triangle color="yellow" position='0 1 0' shadow>
+			<a-triangle color="yellow" position='0 1 0'>
 			</a-triangle>
-			<a-ring position="0 2 0" color="teal" rotation="0 1 0" radius-inner="0.45" radius-outer=".5" shadow>
+			<a-ring position="0 2 0" color="teal" rotation="0 1 0" radius-inner="0.45" radius-outer=".5">
 			</a-ring>
 		</a-marker>
-		<!-- Barcode marker [3] -->
+		<!--Barcode marker [3]-->
 		<a-marker type='barcode' value='3'>
 			<a-text side='double' position='0 1.75 0.5' scale='0.2 0.2 0.2' value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
-			<a-box position='0 0.5 0' material='opacity: 0.5; color: skyblue;' shadow>
+			<a-box position='0 0.5 0' material='opacity: 0.5; color: skyblue;'>
 				<a-box scale='0.5 0.5 0.5' material='opacity: 0.75; side: double; color: yellowgreen;'>
 				</a-box>
 			</a-box>
-			<a-cone color="tomato" radius-bottom="0.5" position='0 1 0' radius-top="0" shadow>
+			<a-cone color="tomato" radius-bottom="0.5" position='0 1 0' radius-top="0">
 			</a-cone>
-			<a-sphere radius="0.5" segments-height="53" position="0 2 0" material='color: yellow;' shadow>
+			<a-sphere radius="0.5" segments-height="53" position="0 2 0" material='color: yellow;'>
 			</a-sphere>
 		</a-marker>
-		<!-- Barcode marker [4] -->
+		<!--Barcode marker [4]-->
 		<a-marker type='barcode' value='4'>
 			<a-text side='double' position='0 1.75 0.5' scale='0.2 0.2 0.2' value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
-			<a-triangle color="yellow" position='0 1 0' shadow>
+			<a-triangle color="yellow" position='0 1 0'>
 				<a-animation attribute="rotation" to="0 360 0" dur="5000" easing='linear' repeat="indefinite">
 				</a-animation>
 				<a-animation attribute="material.color" from="yellow" to="green" dur="1000" direction="alternate" repeat="indefinite">
 				</a-animation>
 			</a-triangle>
-			<a-ring position="0 2 0" color="teal" rotation="0 1 0" radius-inner="0.45" radius-outer=".5" shadow>
+			<a-ring position="0 2 0" color="teal" rotation="0 1 0" radius-inner="0.45" radius-outer=".5">
 				<a-animation attribute="rotation" to="360 360 360" dur="5000" easing='linear' repeat="indefinite">
 				</a-animation>
 			</a-ring>
 		</a-marker>
-		<!-- Barcode marker [5] -->
+		<!--Barcode marker [5]-->
 		<a-marker type='barcode' value='5'>
 			<a-text side='double' position='0 1.75 0.5' scale='0.2 0.2 0.2' value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
-			<a-box id="cube" position='0 0.5 0' material='opacity: 0.5; color: skyblue;' shadow sound="src: #blip2; on: click">
+			<a-box id="cube" position='0 0.5 0' material='opacity: 0.5; color: skyblue;' sound="src: #blip2; on: click">
 				<a-animation begin="click" attribute="rotation" to="360 360 0" dur="2000" fill="both" direction="alternate" easing='linear'>
 				</a-animation>
 				<a-box scale='0.5 0.5 0.5' material='opacity: 0.75; side: double; color: yellowgreen;'>
@@ -246,16 +246,16 @@
 					</a-animation>
 				</a-box>
 			</a-box>
-			<a-cone color="tomato" radius-bottom="0.5" position='0 1 0' radius-top="0" shadow>
+			<a-cone color="tomato" radius-bottom="0.5" position='0 1 0' radius-top="0">
 				<a-animation attribute="geometry.radiusTop" from="0" to="0.5" dur="2000" fill="both" direction="alternate" repeat="indefinite">
 				</a-animation>
 			</a-cone>
-			<a-sphere radius="0.5" segments-height="53" position="0 2 0" material='color: red;' shadow>
+			<a-sphere radius="0.5" segments-height="53" position="0 2 0" material='color: red;'>
 				<a-animation attribute="position" dur="1000" from="0 2 0" to="0 3 0" direction='alternate-reverse' easing="ease-out-bounce" repeat="indefinite">
 				</a-animation>
 			</a-sphere>
 		</a-marker>
-		<!-- preset marker [Hiro] -->
+		<!--preset marker [Hiro]-->
 		<a-marker preset='hiro'>
 			<a-text side='double' position='0 1.75 0.5' scale='0.2 0.2 0.2' value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
@@ -263,74 +263,74 @@
 			</a-image>
 			<!--<a-video src="#video1" position="0 1 0"></a-video>-->
 		</a-marker>
-		<!-- preset marker [Kanji] -->
+		<!--preset marker [Kanji]-->
 		<a-marker preset='kanji'>
 			<a-text side='double' position='0 1.75 0.5' scale='0.2 0.2 0.2' value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
-			<a-sphere src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/space/earth_atmos_4096.jpg" radius="0.5" segments-height="53" position="0 0.5 0" rotation='0 0 0' shadow>
+			<a-sphere src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/space/earth_atmos_4096.jpg" radius="0.5" segments-height="53" position="0 0.5 0" rotation='0 0 0'>
 				<a-animation attribute="rotation" dur="10000" to="0 360 0" easing="ease-in-out-circ" repeat="indefinite">
 				</a-animation>
 			</a-sphere>
 			<a-sky color="#ececec"></a-sky>
 		</a-marker>
-		<!-- Custom marker [A] -->
+		<!--Custom marker [A]-->
 		<a-marker preset='custom' type='pattern' url='assets/patt/A-90.patt'>
 			<a-text side='double' position='0 1.75 0.5' scale='0.2 0.2 0.2' value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
-			<a-entity gltf-model="#love" scale="0.01 0.01 0.01" shadow animation-mixer>
+			<a-entity gltf-model="#love" scale="0.01 0.01 0.01" animation-mixer>
 			</a-entity>
 		</a-marker>
-		<!-- Custom marker [B] -->
+		<!--Custom marker [B]-->
 		<a-marker preset='custom' type='pattern' url='assets/patt/B-90.patt'>
 			<a-text side='double' position='0 1.75 0.5' scale='0.2 0.2 0.2' value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
-			<a-entity gltf-model="#cat" scale="0.04 0.04 0.04" shadow animation-mixer>
+			<a-entity gltf-model="#cat" scale="0.04 0.04 0.04" animation-mixer>
 			</a-entity>
 		</a-marker>
-		<!-- Custom marker [C] -->
+		<!--Custom marker [C]-->
 		<a-marker preset='custom' type='pattern' url='assets/patt/C-90.patt'>
 			<a-text side='double' position='0 1.75 0.5' scale='0.2 0.2 0.2' value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
-			<a-entity gltf-model="#planet" scale="0.02 0.02 0.02" shadow animation-mixer>
+			<a-entity gltf-model="#planet" scale="0.02 0.02 0.02" animation-mixer>
 			</a-entity>
 		</a-marker>
-		<!-- Custom marker [D] -->
+		<!--Custom marker [D]-->
 		<a-marker preset='custom' type='pattern' url='assets/patt/D-90.patt'>
 			<a-text side='double' position='0 1.75 0.5' scale='0.2 0.2 0.2' value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
-			<a-entity position='0 0 -1' gltf-model="#male" scale="0.5 0.5 0.5" shadow animation-mixer>
+			<a-entity position='0 0 -1' gltf-model="#male" scale="0.5 0.5 0.5" animation-mixer>
 			</a-entity>
 		</a-marker>
-		<!-- Custom marker [F] -->
+		<!--Custom marker [F]-->
 		<a-marker preset='custom' type='pattern' url='assets/patt/F-90.patt'>
 			<a-text side='double' position='0 1.75 0.5' scale='0.2 0.2 0.2' value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
-			<a-entity gltf-model="#janis" scale="1.2 1.2 1.2" shadow animation-mixer>
+			<a-entity gltf-model="#janis" scale="1.2 1.2 1.2" animation-mixer>
 			</a-entity>
 		</a-marker>
-		<!-- Custom marker [G] -->
+		<!--Custom marker [G]-->
 		<a-marker preset='custom' type='pattern' url='assets/patt/G-90.patt'>
 			<a-text side='double' position='0 1.75 0.5' scale='0.2 0.2 0.2' value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
-			<a-entity gltf-model="#stickman" scale="0.3 0.3 0.3" shadow animation-mixer>
+			<a-entity gltf-model="#stickman" scale="0.2 0.2 0.2" animation-mixer>
 			</a-entity>
 		</a-marker>
-		<!-- Custom marker and barcode [6] -->
+		<!--Custom marker and barcode [6]-->
 		<a-marker preset='custom' type='pattern' url='assets/patt/6.patt'>
 			<a-text side='double' position='0 1.75 0.5' scale='0.2 0.2 0.2' value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
 		</a-marker>
-		<!-- Barcode marker [6] -->
+		<!--Barcode marker [6]-->
 		<a-marker type='barcode' value='6'>
 			<a-text side='double' position='0 1.75 0.5' scale='0.2 0.2 0.2' value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
 		</a-marker>
-		<!-- custom colored marker [2] -->
+		<!--custom colored marker [2]-->
 		<a-marker preset='custom' type='pattern' url='assets/patt/colored.patt'>
 			<a-text side='double' position='0 1.75 0.5' scale='0.2 0.2 0.2' value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
 		</a-marker>
-		<!-- Sound -->
+		<!--Sound-->
 		<a-entity sound="src: #blip1; autoplay: true;"></a-entity>
 		<a-entity sound="src: #blip2; autoplay: true;"></a-entity>
 	</a-scene>

@@ -181,7 +181,7 @@ table {
 }
 
 table td {
-	border: 2px solid rgba(255, 255, 255, 0.12);
+	border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 @media (max-width: 640px) {
