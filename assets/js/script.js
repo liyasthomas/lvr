@@ -85,44 +85,32 @@ if (SUPPORTS_MEDIA_DEVICES) {
 			const imageCapture = new ImageCapture(track)
 			const photoCapabilities = imageCapture.getPhotoCapabilities().then(() => {
 
-				//todo: check if camera has a torch
-
-				//let there be light!
+				//Let there be light!
 				const btn = document.querySelector('.flash');
 				btn.addEventListener('click', function () {
+					var flag = true;
 					track.applyConstraints({
 						advanced: [{
-							torch: true
+							torch: flag;
 						}]
 					});
+					flag = !flag;
 				});
 			});
 		});
 	});
-
-	//The light will be on as long the track exists
 }
 
 //Toggle brightness
 
-function brightness() {
+function toggleBrightness() {
 	var e = document.getElementById('capture');
-	if (e.style.filter == 'brightness(100%)') {
-		e.style.filter = 'brightness(150%)';
-		e.style.webkitFilter = 'brightness(150%)';
-	} else {
-		e.style.filter = 'brightness(100%)';
-		e.style.webkitFilter = 'brightness(100%)';
-	}
+	e.classList.toggle('brightness');
 }
 
 //Toggle grid
 
-function grid() {
+function toggleGrid() {
 	var e = document.getElementById('grid');
-	if (e.style.display == 'none') {
-		e.style.display = 'block';
-	} else {
-		e.style.display = 'none';
-	}
+	e.classList.toggle('hidden');
 }

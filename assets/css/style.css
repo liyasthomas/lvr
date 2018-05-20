@@ -33,6 +33,10 @@ body {
 	user-select: none;
 }
 
+.hidden {
+	display: none;
+}
+
 .material-icons {
 	font-family: 'Material Icons';
 	font-weight: normal;
@@ -172,7 +176,7 @@ table {
 	height: 100vh;
 	table-layout: fixed;
 	white-space: nowrap;
-	transition: all .1s;
+	transition: all .2s;
 }
 
 table {
@@ -182,6 +186,11 @@ table {
 
 table td {
 	border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.brightness {
+	-webkit-filter: brightness(150%);
+	filter: brightness(150%);
 }
 
 @media (max-width: 640px) {

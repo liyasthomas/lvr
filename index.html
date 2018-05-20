@@ -100,11 +100,11 @@
 			</div>
 		</div>
 		<div class="toolbar bottom center">
-			<div class="snap" onclick="generate();"></div>
+			<div class="snap" onclick="generate()"></div>
 		</div>
 		<div class="toolbar space">
 			<label class="switch">
-				<input type="checkbox" onclick="grid()">
+				<input type="checkbox" onclick="toggleGrid()">
 				<div class="button">
 					<i class="on material-icons">grid_on</i>
 					<i class="off material-icons">grid_off</i>
@@ -119,7 +119,7 @@
 					</div>
 				</label>
 				<label class="switch">
-					<input type="checkbox" onclick="brightness()">
+					<input type="checkbox" onclick="toggleBrightness()">
 					<div class="button">
 						<i class="on material-icons">brightness_high</i>
 						<i class="off material-icons">brightness_low</i>
@@ -134,7 +134,7 @@
 				</label>
 			</div>
 		</div>
-		<div id="grid" style="display: none;">
+		<div id="grid" class="hidden">
 			<table>
 				<tr>
 					<td></td>
@@ -154,7 +154,7 @@
 			</table>
 		</div>
 	</div>
-	<a-scene id="capture" embedded vr-mode-ui="enabled: false" arjs='debugUIEnabled: false; sourceType: webcam; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3;' style="-webkit-filter: brightness(100%); filter: brightness(100%);">
+	<a-scene id="capture" embedded vr-mode-ui="enabled: false" arjs='debugUIEnabled: false; sourceType: webcam; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
 		<!--Assets-->
 		<a-assets>
 			<audio id="blip1" src="assets/sounds/blip1.wav" preload="auto"></audio>
