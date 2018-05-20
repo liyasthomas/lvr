@@ -86,9 +86,9 @@ if (SUPPORTS_MEDIA_DEVICES) {
 			const photoCapabilities = imageCapture.getPhotoCapabilities().then(() => {
 
 				//Let there be light!
-				var flag = !flag || true;
 				const btn = document.querySelector('.flash');
 				btn.addEventListener('click', function () {
+				var flag = !flag || true;
 					track.applyConstraints({
 						advanced: [{
 							torch: flag
