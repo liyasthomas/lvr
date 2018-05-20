@@ -174,12 +174,6 @@ input:checked + div {
 table {
 	width: 100vw;
 	height: 100vh;
-	table-layout: fixed;
-	white-space: nowrap;
-	transition: all .2s;
-}
-
-table {
 	border-collapse: collapse;
 	border-style: hidden;
 }

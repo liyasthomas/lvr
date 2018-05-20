@@ -103,28 +103,39 @@
 			<div class="snap" onclick="generate()"></div>
 		</div>
 		<div class="toolbar space">
-			<label class="switch">
-				<input type="checkbox" onclick="toggleGrid()">
-				<div class="button">
-					<i class="on material-icons">grid_on</i>
-					<i class="off material-icons">grid_off</i>
-				</div>
-			</label>
 			<div class="toolbar">
 				<label class="switch">
-					<input type="checkbox" class="flash">
+					<input type="checkbox" onclick="toggleMore()">
 					<div class="button">
-						<i class="on material-icons">flash_on</i>
-						<i class="off material-icons">flash_off</i>
+						<i class="on material-icons">close</i>
+						<i class="off material-icons">more_vert</i>
 					</div>
 				</label>
-				<label class="switch">
-					<input type="checkbox" onclick="toggleBrightness()">
-					<div class="button">
-						<i class="on material-icons">brightness_high</i>
-						<i class="off material-icons">brightness_low</i>
-					</div>
-				</label>
+				<div id="more" class="hidden">
+					<label class="switch">
+						<input type="checkbox" onclick="toggleBrightness()">
+						<div class="button">
+							<i class="on material-icons">brightness_high</i>
+							<i class="off material-icons">brightness_low</i>
+						</div>
+					</label>
+					<label class="switch">
+						<input type="checkbox" onclick="toggleGrid()">
+						<div class="button">
+							<i class="on material-icons">grid_on</i>
+							<i class="off material-icons">grid_off</i>
+						</div>
+					</label>
+					<label class="switch">
+						<input type="checkbox" class="flash">
+						<div class="button">
+							<i class="on material-icons">flash_on</i>
+							<i class="off material-icons">flash_off</i>
+						</div>
+					</label>
+				</div>
+			</div>
+			<div class="toolbar">
 				<label class="switch">
 					<input type="checkbox">
 					<div class="button">

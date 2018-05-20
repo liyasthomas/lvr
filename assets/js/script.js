@@ -86,7 +86,7 @@ if (SUPPORTS_MEDIA_DEVICES) {
 			const photoCapabilities = imageCapture.getPhotoCapabilities().then(() => {
 
 				//Let there be light!
-				var flag = true;
+				var flag = !flag || true;
 				const btn = document.querySelector('.flash');
 				btn.addEventListener('click', function () {
 					track.applyConstraints({
@@ -94,11 +94,17 @@ if (SUPPORTS_MEDIA_DEVICES) {
 							torch: flag
 						}]
 					});
-					flag = !flag;
 				});
 			});
 		});
 	});
+}
+
+//Toggle more
+
+function toggleMore() {
+	var e = document.getElementById('more');
+	e.classList.toggle('hidden');
 }
 
 //Toggle brightness
