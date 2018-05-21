@@ -88,7 +88,7 @@ if (SUPPORTS_MEDIA_DEVICES) {
 				//Let there be light!
 				const btn = document.querySelector('.flash');
 				btn.addEventListener('click', function () {
-				var flag = !flag || true;
+					var flag = !flag || true;
 					track.applyConstraints({
 						advanced: [{
 							torch: flag
