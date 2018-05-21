@@ -60,14 +60,15 @@
 	<link rel="stylesheet" href="assets/css/style.css">
 	<script>
 		if ('serviceWorker' in navigator) {
-			window.addEventListener('load', function() {
-				navigator.serviceWorker.register('service-worker.js').then(function(registration) {
-					// Registration was successful
-					console.log('ServiceWorker registration successful with scope: ', registration.scope);
-				}, function(err) {
-					// registration failed
-					console.log('ServiceWorker registration failed: ', err);
+			navigator.serviceWorker.register('service-worker.js', {
+					scope: '/'
+				})
+				.then(function(registration) {
+					console.log('Service Worker Registered');
 				});
+
+			navigator.serviceWorker.ready.then(function(registration) {
+				console.log('Service Worker Ready');
 			});
 		}
 
@@ -91,7 +92,7 @@
 			<div class="button">
 				<i class="material-icons">arrow_back</i>
 			</div>
-<!--
+			<!--
 			<div class="toolbar">
 				<a href="https://liyas-vr.firebaseapp.com">
 					<div class="button">
