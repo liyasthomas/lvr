@@ -5,9 +5,36 @@
 	"display": "fullscreen",
 	"theme_color": "#212121",
 	"background_color": "#212121",
-	"icons": [{
-		"src": "assets/images/snap-logo-white.png",
-		"type": "image/png",
-		"sizes": "512x512"
-  }]
+	"icons": [
+		{
+			"src": "assets/images/snap-logo-white.png",
+			"sizes": "48x48",
+			"type": "image/png"
+    },
+		{
+			"src": "assets/images/snap-logo-white.png",
+			"sizes": "72x72",
+			"type": "image/png"
+    },
+		{
+			"src": "assets/images/snap-logo-white.png",
+			"sizes": "96x96",
+			"type": "image/png"
+    },
+		{
+			"src": "assets/images/snap-logo-white.png",
+			"sizes": "144x114",
+			"type": "image/png"
+    },
+		{
+			"src": "assets/images/snap-logo-white.png",
+			"sizes": "192x192",
+			"type": "image/png"
+    },
+		{
+			"src": "assets/images/snap-logo-white.png",
+			"sizes": "512x512",
+			"type": "image/png"
+    }
+	]
 }
