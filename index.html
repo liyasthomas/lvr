@@ -173,7 +173,7 @@
 		<a-assets>
 			<audio id="blip1" src="assets/sounds/blip1.wav" preload="auto"></audio>
 			<audio id="blip2" src="assets/sounds/blip2.wav" preload="auto"></audio>
-			<img id="image1" src="assets/images/snap-logo-white.png">
+			<!--<img id="image1" src="assets/images/snap-logo-white.png">-->
 			<!--<video id="video1" webkit-playsinline autoplay loop="true" src="assets/videos/city.mp4"></video>-->
 			<a-asset-item id="love" src="assets/gltf/love/scene.gltf">
 			</a-asset-item>
@@ -200,7 +200,7 @@
 		</a-entity>
 		<!--Barcode marker [1]-->
 		<a-marker type='barcode' value='1'>
-			<a-text side='double' position='0 1.75 0.5' scale='0.2 0.2 0.2' value="Lvr" align="center" rotation="-90 0 0">
+			<a-text side='double' position='0 1.75 0.5' scale='0.5 0.5 0.5' value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
 			<a-text side='double' position='0 1.6 1' scale='0.2 0.2 0.2' font='https://cdn.aframe.io/fonts/Monoid.fnt' value="Virtual & Augmented Reality\nby Liyas Thomas" align="center">
 				<a-animation attribute="position" from="0 1.6 1" to="0 1.65 1" direction="alternate" dur="500" repeat="indefinite" easing='ease-in-out-cubic'>
@@ -209,7 +209,7 @@
 		</a-marker>
 		<!--Barcode marker [2]-->
 		<a-marker type='barcode' value='2'>
-			<a-text side='double' position='0 1.75 0.5' scale='0.2 0.2 0.2' value="Lvr" align="center" rotation="-90 0 0">
+			<a-text side='double' position='0 1.75 0.5' scale='0.5 0.5 0.5' value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
 			<a-plane color="aquamarine" rotation="-90 0 0">
 			</a-plane>
@@ -222,7 +222,7 @@
 		</a-marker>
 		<!--Barcode marker [3]-->
 		<a-marker type='barcode' value='3'>
-			<a-text side='double' position='0 1.75 0.5' scale='0.2 0.2 0.2' value="Lvr" align="center" rotation="-90 0 0">
+			<a-text side='double' position='0 1.75 0.5' scale='0.5 0.5 0.5' value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
 			<a-box position='0 0.5 0' material='opacity: 0.5; color: skyblue;'>
 				<a-box scale='0.5 0.5 0.5' material='opacity: 0.75; side: double; color: yellowgreen;'>
@@ -235,7 +235,7 @@
 		</a-marker>
 		<!--Barcode marker [4]-->
 		<a-marker type='barcode' value='4'>
-			<a-text side='double' position='0 1.75 0.5' scale='0.2 0.2 0.2' value="Lvr" align="center" rotation="-90 0 0">
+			<a-text side='double' position='0 1.75 0.5' scale='0.5 0.5 0.5' value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
 			<a-triangle color="yellow" position='0 1 0'>
 				<a-animation attribute="rotation" to="0 360 0" dur="5000" easing='linear' repeat="indefinite">
@@ -250,7 +250,7 @@
 		</a-marker>
 		<!--Barcode marker [5]-->
 		<a-marker type='barcode' value='5'>
-			<a-text side='double' position='0 1.75 0.5' scale='0.2 0.2 0.2' value="Lvr" align="center" rotation="-90 0 0">
+			<a-text side='double' position='0 1.75 0.5' scale='0.5 0.5 0.5' value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
 			<a-box id="cube" position='0 0.5 0' material='opacity: 0.5; color: skyblue;' sound="src: #blip2; on: click">
 				<a-animation begin="click" attribute="rotation" to="360 360 0" dur="2000" fill="both" direction="alternate" easing='linear'>
@@ -271,15 +271,19 @@
 		</a-marker>
 		<!--preset marker [Hiro]-->
 		<a-marker preset='hiro'>
-			<a-text side='double' position='0 1.75 0.5' scale='0.2 0.2 0.2' value="Lvr" align="center" rotation="-90 0 0">
+			<a-text side='double' position='0 1.75 0.5' scale='0.5 0.5 0.5' value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
-			<a-image src="#image1">
-			</a-image>
+			<a-sphere src="assets/images/textures/sun.jpg" radius="0.5" segments-height="53" position="0 0.5 0" rotation='0 0 0'>
+				<a-animation attribute="rotation" dur="10000" to="0 360 0" easing="ease-in-out-circ" repeat="indefinite">
+				</a-animation>
+			</a-sphere>
+			<a-sky color="#000"></a-sky>
 			<!--<a-video src="#video1" position="0 1 0"></a-video>-->
+			<!--<a-image src="#image1"></a-image>-->
 		</a-marker>
 		<!--preset marker [Kanji]-->
 		<a-marker preset='kanji'>
-			<a-text side='double' position='0 1.75 0.5' scale='0.2 0.2 0.2' value="Lvr" align="center" rotation="-90 0 0">
+			<a-text side='double' position='0 1.75 0.5' scale='0.5 0.5 0.5' value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
 			<a-sphere src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/space/earth_atmos_4096.jpg" radius="0.5" segments-height="53" position="0 0.5 0" rotation='0 0 0'>
 				<a-animation attribute="rotation" dur="10000" to="0 360 0" easing="ease-in-out-circ" repeat="indefinite">
@@ -289,59 +293,59 @@
 		</a-marker>
 		<!--Custom marker [A]-->
 		<a-marker preset='custom' type='pattern' url='assets/patt/A-90.patt'>
-			<a-text side='double' position='0 1.75 0.5' scale='0.2 0.2 0.2' value="Lvr" align="center" rotation="-90 0 0">
+			<a-text side='double' position='0 1.75 0.5' scale='0.5 0.5 0.5' value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
 			<a-entity gltf-model="#love" scale="0.01 0.01 0.01" animation-mixer>
 			</a-entity>
 		</a-marker>
 		<!--Custom marker [B]-->
 		<a-marker preset='custom' type='pattern' url='assets/patt/B-90.patt'>
-			<a-text side='double' position='0 1.75 0.5' scale='0.2 0.2 0.2' value="Lvr" align="center" rotation="-90 0 0">
+			<a-text side='double' position='0 1.75 0.5' scale='0.5 0.5 0.5' value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
 			<a-entity gltf-model="#cat" scale="0.04 0.04 0.04" animation-mixer>
 			</a-entity>
 		</a-marker>
 		<!--Custom marker [C]-->
 		<a-marker preset='custom' type='pattern' url='assets/patt/C-90.patt'>
-			<a-text side='double' position='0 1.75 0.5' scale='0.2 0.2 0.2' value="Lvr" align="center" rotation="-90 0 0">
+			<a-text side='double' position='0 1.75 0.5' scale='0.5 0.5 0.5' value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
 			<a-entity gltf-model="#planet" scale="0.02 0.02 0.02" animation-mixer>
 			</a-entity>
 		</a-marker>
 		<!--Custom marker [D]-->
 		<a-marker preset='custom' type='pattern' url='assets/patt/D-90.patt'>
-			<a-text side='double' position='0 1.75 0.5' scale='0.2 0.2 0.2' value="Lvr" align="center" rotation="-90 0 0">
+			<a-text side='double' position='0 1.75 0.5' scale='0.5 0.5 0.5' value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
 			<a-entity position='0 0 -1' gltf-model="#male" scale="0.5 0.5 0.5" animation-mixer>
 			</a-entity>
 		</a-marker>
 		<!--Custom marker [F]-->
 		<a-marker preset='custom' type='pattern' url='assets/patt/F-90.patt'>
-			<a-text side='double' position='0 1.75 0.5' scale='0.2 0.2 0.2' value="Lvr" align="center" rotation="-90 0 0">
+			<a-text side='double' position='0 1.75 0.5' scale='0.5 0.5 0.5' value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
 			<a-entity gltf-model="#construction" scale="1.2 1.2 1.2" animation-mixer>
 			</a-entity>
 		</a-marker>
 		<!--Custom marker [G]-->
 		<a-marker preset='custom' type='pattern' url='assets/patt/G-90.patt'>
-			<a-text side='double' position='0 1.75 0.5' scale='0.2 0.2 0.2' value="Lvr" align="center" rotation="-90 0 0">
+			<a-text side='double' position='0 1.75 0.5' scale='0.5 0.5 0.5' value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
 			<a-entity gltf-model="#stickman" scale="0.2 0.2 0.2" animation-mixer>
 			</a-entity>
 		</a-marker>
 		<!--Custom marker and barcode [6]-->
 		<a-marker preset='custom' type='pattern' url='assets/patt/6.patt'>
-			<a-text side='double' position='0 1.75 0.5' scale='0.2 0.2 0.2' value="Lvr" align="center" rotation="-90 0 0">
+			<a-text side='double' position='0 1.75 0.5' scale='0.5 0.5 0.5' value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
 		</a-marker>
 		<!--Barcode marker [6]-->
 		<a-marker type='barcode' value='6'>
-			<a-text side='double' position='0 1.75 0.5' scale='0.2 0.2 0.2' value="Lvr" align="center" rotation="-90 0 0">
+			<a-text side='double' position='0 1.75 0.5' scale='0.5 0.5 0.5' value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
 		</a-marker>
 		<!--custom colored marker [2]-->
 		<a-marker preset='custom' type='pattern' url='assets/patt/colored.patt'>
-			<a-text side='double' position='0 1.75 0.5' scale='0.2 0.2 0.2' value="Lvr" align="center" rotation="-90 0 0">
+			<a-text side='double' position='0 1.75 0.5' scale='0.5 0.5 0.5' value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
 		</a-marker>
 		<!--Sound-->
