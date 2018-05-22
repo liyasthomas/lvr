@@ -1,16 +1,16 @@
 {
-  "name": "lvr",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/liyasthomas/lvr.git"
-  },
-  "description": "Virtual reality for everyone by Liyas Thomas",
-  "author": "@liyasthomas",
-  "version": "1.0.0",
-  "devDependencies": {
-    "jshint": "^2.8.0"
-  },
-  "scripts": {
-    "test": "jshint travis.js"
-  }
+	"name": "lvr",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/liyasthomas/lvr.git"
+	},
+	"description": "Virtual reality for everyone by Liyas Thomas",
+	"author": "@liyasthomas",
+	"version": "1.0.0",
+	"devDependencies": {
+		"jshint": "^2.8.0"
+	},
+	"scripts": {
+		"test": "jshint travis.js"
+	}
 }
