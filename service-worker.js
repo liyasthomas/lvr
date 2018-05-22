@@ -1,5 +1,4 @@
-const version = "0.6.1";
-const cacheName = 'saap-${version}';
+const cacheName = 'saap-0.9.0';
 self.addEventListener('install', e => {
 	const timeStamp = Date.now();
 	e.waitUntil(
