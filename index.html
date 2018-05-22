@@ -60,7 +60,7 @@
 	<link rel="stylesheet" href="assets/css/style.css">
 	<script>
 		if ('serviceWorker' in navigator) {
-			navigator.serviceWorker.register('/service-worker.js', {
+			navigator.serviceWorker.register('service-worker', {
 					scope: '/'
 				})
 				.then(function(registration) {

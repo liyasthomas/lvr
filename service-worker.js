@@ -1,4 +1,4 @@
-const version = "0.9.0";
+const version = "0.6.1";
 const cacheName = 'saap-${version}';
 self.addEventListener('install', e => {
 	const timeStamp = Date.now();
@@ -10,6 +10,7 @@ self.addEventListener('install', e => {
 				'/assets/css/style.css',
 				'/assets/js/aframe.min.js',
 				'/assets/js/aframe-ar.js',
+				'/assets/js/aframe-extras.min.js',
 				'/assets/js/script.js'
       ])
 				.then(() => self.skipWaiting());
