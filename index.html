@@ -273,9 +273,7 @@
 		<a-marker preset='hiro'>
 			<a-text side='double' position='0 1.75 0.5' scale='0.5 0.5 0.5' value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
-			<a-sphere src="assets/images/textures/sun.jpg" radius="0.5" segments-height="53" position="0 0.5 0" rotation='0 0 0'>
-				<a-animation attribute="rotation" dur="10000" to="0 360 0" easing="ease-in-out-circ" repeat="indefinite">
-				</a-animation>
+			<a-sphere src="assets/images/textures/sun.jpg" radius="0.5" segments-height="53" position="0 0.5 0" rotation='0 0 0' animation="property: rotation; dur: 10000; to: 0 360 0; easing: ease-in-out-circ; repeat: indefinite;">
 			</a-sphere>
 			<a-sky color="#000"></a-sky>
 			<!--<a-video src="#video1" position="0 1 0"></a-video>-->
