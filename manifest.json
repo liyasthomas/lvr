@@ -1,7 +1,7 @@
 {
 	"name": "Saap",
 	"short_name": "Saap",
-	"start_url": "/lvr/",
+	"start_url": "/",
 	"display": "fullscreen",
 	"theme_color": "#212121",
 	"background_color": "#212121",
