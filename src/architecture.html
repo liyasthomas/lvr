@@ -1,7 +1,7 @@
 <!--
 	@license
 	Made by: Liyas Thomas
-	
+
 	Copyright (c) 2018 Liyas Thomas (https://liyas-thomas.firebaseapp.com)
 
 	ALL RIGHTS RESERVED. ALL WRONGS RESERVED.
@@ -30,45 +30,90 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-	<title>Lvr · Architecture</title>
+	<title>Lvr - Architecture</title>
 	<meta name="description" content="L virtual reality">
 	<link rel="shortcut icon" href="../assets/images/snap-logo-black.png">
-	<meta name="theme-color" content="#000000">
+	<link rel="manifest" href="manifest.json">
+	<meta name="theme-color" content="#212121">
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="application-name" content="Lvr">
-	<link rel="stylesheet" href="../assets/css/styles.css">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#212121">
+	<meta name="apple-mobile-web-app-title" content="Lvr">
+	<link rel="apple-touch-icon" href="../assets/images/snap-logo-black.png">
+	<meta name="msapplication-TileImage" content="../assets/images/snap-logo-black.png">
+	<meta name="msapplication-TileColor" content="#212121">
+	<meta name="msapplication-tap-highlight" content="no">
+	<meta property="og:site_name" content="Lvr">
+	<meta property="og:url" content="https://liyas-vr.firebaseapp.com">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Lvr">
+	<meta property="og:description" content="L virtual reality">
+	<meta property="og:image" content="../assets/images/snap-logo-black.png">
+	<meta name="twitter:site" content="@liyasthomas">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Lvr">
+	<meta name="twitter:description" content="L virtual reality">
+	<meta name="twitter:image" content="../assets/images/snap-logo-black.png">
+	<meta name="twitter:url" content="https://liyas-vr.firebaseapp.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="../assets/css/style.css">
 	<script src="../assets/js/aframe.min.js"></script>
 	<script src="../assets/js/aframe-ar.js"></script>
 	<script src="../assets/js/aframe-extras.min.js"></script>
 </head>
 
 <body>
-	<a-scene id="wrapper" embedded vr-mode-ui="enabled: false" arjs='debugUIEnabled: false; sourceType: webcam; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
-		<!-- Assets -->
+	<a-scene id="capture" embedded vr-mode-ui="enabled: false" arjs='debugUIEnabled: false; sourceType: webcam; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
+		<!--Assets-->
 		<a-assets>
-			<audio id="blip1" src="../assets/sounds/blip1.wav" preload="auto"></audio>
-			<audio id="blip2" src="../assets/sounds/blip2.wav" preload="auto"></audio>
+			<audio id="blip1" src="../assets/audios/blip1.wav" preload="auto"></audio>
+			<audio id="blip2" src="../assets/audios/blip2.wav" preload="auto"></audio>
+			<a-asset-item id="construction" src="../assets/gltf/construction/scene.gltf"></a-asset-item>
+			<a-asset-item id="kitchen" src="../assets/gltf/kitchen/model.gltf"></a-asset-item>
+			<a-asset-item id="kitchen_2" src="../assets/gltf/kitchen_2/model.gltf"></a-asset-item>
 		</a-assets>
-		<!-- Camera -->
+		<!--Camera-->
 		<a-entity camera>
-			<!-- cursor -->
-			<a-entity cursor="fuse: true;" position="0 0 -1" geometry="primitive: ring; radiusInner: 0.01; radiusOuter: 0.013; thetaLength: 360; thetaStart: 90;" material="color: white; shader: flat; opacity: 0.6;">
+			<!--cursor-->
+			<a-entity cursor="fuse: true;" position="0 0 -1" geometry="primitive: ring; radiusInner: 0.01; radiusOuter: 0.013;" material="color: white; shader: flat; opacity: 0.5;">
 				<a-animation begin="cursor-fusing" easing="ease-in" attribute="scale" dur="1500" fill="backwards" from="1 1 1" to="0.1 0.1 0.1">
 				</a-animation>
 				<a-animation begin="click" easing="ease-in" attribute="scale" dur="150" from="0.1 0.1 0.1" to="1 1 1">
 				</a-animation>
 			</a-entity>
 		</a-entity>
-		<!-- Barcode marker [1] -->
+		<!--Barcode marker [1]-->
 		<a-marker type='barcode' value='1'>
-			<a-text side='double' position='0 1.75 0.5' scale='0.2 0.2 0.2' value="Lvr - Architecture" align="center" rotation="-90 0 0">
+			<a-text side='double' position='0 1.75 0.5' scale='0.5 0.5 0.5' value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
 			<a-text side='double' position='0 1.6 1' scale='0.2 0.2 0.2' font='https://cdn.aframe.io/fonts/Monoid.fnt' value="Virtual & Augmented Reality\nby Liyas Thomas" align="center">
 				<a-animation attribute="position" from="0 1.6 1" to="0 1.65 1" direction="alternate" dur="500" repeat="indefinite" easing='ease-in-out-cubic'>
 				</a-animation>
 			</a-text>
 		</a-marker>
-		<!-- Sound -->
+		<!--Custom marker [A]-->
+		<a-marker preset='custom' type='pattern' url='../assets/patt/A-90.patt'>
+			<a-text side='double' position='0 1.75 0.5' scale='0.5 0.5 0.5' value="Lvr" align="center" rotation="-90 0 0">
+			</a-text>
+			<a-entity gltf-model="#construction" scale="0.05 0.05 0.05" animation-mixer>
+			</a-entity>
+		</a-marker>
+		<!--Custom marker [B]-->
+		<a-marker preset='custom' type='pattern' url='../assets/patt/B-90.patt'>
+			<a-text side='double' position='0 1.75 0.5' scale='0.5 0.5 0.5' value="Lvr" align="center" rotation="-90 0 0">
+			</a-text>
+			<a-entity gltf-model="#kitchen" scale="0.05 0.05 0.05" animation-mixer>
+			</a-entity>
+		</a-marker>
+		<!--Custom marker [C]-->
+		<a-marker preset='custom' type='pattern' url='../assets/patt/C-90.patt'>
+			<a-text side='double' position='0 1.75 0.5' scale='0.5 0.5 0.5' value="Lvr" align="center" rotation="-90 0 0">
+			</a-text>
+			<a-entity gltf-model="#kitchen_2" scale="0.05 0.05 0.05" animation-mixer>
+			</a-entity>
+		</a-marker>
+		<!--Sound-->
 		<a-entity sound="src: #blip1; autoplay: true;"></a-entity>
 		<a-entity sound="src: #blip2; autoplay: true;"></a-entity>
 	</a-scene>

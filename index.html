@@ -92,7 +92,6 @@
 			<div class="button">
 				<i class="material-icons">arrow_back</i>
 			</div>
-			<!--
 			<div class="toolbar">
 				<a href="https://liyas-vr.firebaseapp.com">
 					<div class="button">
@@ -100,7 +99,6 @@
 					</div>
 				</a>
 			</div>
--->
 		</div>
 		<div class="toolbar bottom center">
 			<div class="snap" onclick="generate()"></div>
@@ -171,22 +169,16 @@
 	<a-scene id="capture" embedded vr-mode-ui="enabled: false" arjs='debugUIEnabled: false; sourceType: webcam; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
 		<!--Assets-->
 		<a-assets>
-			<audio id="blip1" src="assets/sounds/blip1.wav" preload="auto"></audio>
-			<audio id="blip2" src="assets/sounds/blip2.wav" preload="auto"></audio>
+			<audio id="blip1" src="assets/audios/blip1.wav" preload="auto"></audio>
+			<audio id="blip2" src="assets/audios/blip2.wav" preload="auto"></audio>
 			<!--<img id="image1" src="assets/images/snap-logo-white.png">-->
 			<!--<video id="video1" webkit-playsinline autoplay loop="true" src="assets/videos/city.mp4"></video>-->
-			<a-asset-item id="love" src="assets/gltf/love/scene.gltf">
-			</a-asset-item>
-			<a-asset-item id="cat" src="assets/gltf/cat/scene.gltf">
-			</a-asset-item>
-			<a-asset-item id="planet" src="assets/gltf/planet/scene.gltf">
-			</a-asset-item>
-			<a-asset-item id="male" src="assets/gltf/male/scene.gltf">
-			</a-asset-item>
-			<a-asset-item id="construction" src="assets/gltf/construction/scene.gltf">
-			</a-asset-item>
-			<a-asset-item id="stickman" src="assets/gltf/stickman/scene.gltf">
-			</a-asset-item>
+			<a-asset-item id="love" src="assets/gltf/love/scene.gltf"></a-asset-item>
+			<a-asset-item id="cat" src="assets/gltf/cat/scene.gltf"></a-asset-item>
+			<a-asset-item id="planet" src="assets/gltf/planet/scene.gltf"></a-asset-item>
+			<a-asset-item id="male" src="assets/gltf/male/scene.gltf"></a-asset-item>
+			<a-asset-item id="construction" src="assets/gltf/construction/scene.gltf"></a-asset-item>
+			<a-asset-item id="stickman" src="assets/gltf/stickman/scene.gltf"></a-asset-item>
 		</a-assets>
 		<!--Camera-->
 		<a-entity camera>
@@ -314,14 +306,14 @@
 		<a-marker preset='custom' type='pattern' url='assets/patt/D-90.patt'>
 			<a-text side='double' position='0 1.75 0.5' scale='0.5 0.5 0.5' value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
-			<a-entity position='0 0 -1' gltf-model="#male" scale="0.5 0.5 0.5" animation-mixer>
+			<a-entity gltf-model="#male" position='0 0 -1' scale="0.5 0.5 0.5" animation-mixer>
 			</a-entity>
 		</a-marker>
 		<!--Custom marker [F]-->
 		<a-marker preset='custom' type='pattern' url='assets/patt/F-90.patt'>
 			<a-text side='double' position='0 1.75 0.5' scale='0.5 0.5 0.5' value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
-			<a-entity gltf-model="#construction" scale="1.2 1.2 1.2" animation-mixer>
+			<a-entity gltf-model="#construction" scale="0.5 0.5 0.5" animation-mixer>
 			</a-entity>
 		</a-marker>
 		<!--Custom marker [G]-->
