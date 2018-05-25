@@ -83,6 +83,8 @@ body {
 	flex-direction: row;
 	justify-content: space-around;
 	align-items: center;
+	white-space: nowrap;
+	overflow-x: auto;
 }
 
 .toolbar.left {
@@ -115,6 +117,7 @@ button {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-shrink: none;
 	margin: 4px;
 	height: 56px;
 	width: 56px;
@@ -144,6 +147,12 @@ button {
 
 .switch {
 	display: inline-block;
+}
+
+#more {
+	display: block;
+	white-space: nowrap;
+	overflow-x: auto;
 }
 
 input {
@@ -199,6 +208,7 @@ table td {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-shrink: none;
 	padding: 16px;
 	color: #fff;
 }
@@ -207,13 +217,14 @@ output {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-shrink: none;
 	padding: 16px;
 	color: #fff;
 }
 
 input[type=range] {
 	-webkit-appearance: none;
-	margin: 32px 16px;
+	margin: 16px;
 	display: inline-block;
 	width: 100%;
 }
