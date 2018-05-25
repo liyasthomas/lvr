@@ -114,6 +114,13 @@ function toggleBrightness() {
 	e.classList.toggle('brightness');
 }
 
+//Toggle opacity
+
+function toggleOpacity() {
+	var e = document.getElementById('capture');
+	e.classList.toggle('opacity');
+}
+
 //Toggle grid
 
 function toggleGrid() {
