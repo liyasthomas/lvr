@@ -22,6 +22,7 @@ body {
 	overflow: hidden;
 	font-size: 18px;
 	color: #fff;
+	font-family: 'Roboto', 'Noto', sans-serif;
 	background-color: #212121;
 	background-image: url(../images/snap-logo-white.svg);
 	background-position: center;
@@ -176,20 +177,13 @@ input:checked + div {
 	display: none;
 }
 
-#grid {
-	position: absolute;
-	z-index: -1;
-}
-
-table {
-	width: 100vw;
-	height: 100vh;
-	border-collapse: collapse;
-	border-style: hidden;
-}
-
-table td {
-	border: 2px solid rgba(255, 255, 255, 0.2);
+.ico {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-shrink: none;
+	padding: 16px;
+	color: #fff;
 }
 
 .sliders {
@@ -204,29 +198,12 @@ table td {
 	width: 100%;
 }
 
-.ico {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-shrink: none;
-	padding: 16px;
-	color: #fff;
-}
-
-output {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-shrink: none;
-	padding: 16px;
-	color: #fff;
-}
-
 input[type=range] {
 	-webkit-appearance: none;
 	margin: 16px;
-	display: inline-block;
+	display: flex;
 	width: 100%;
+	background-color: transparent;
 }
 
 input[type=range]::-webkit-slider-runnable-track {
@@ -270,6 +247,31 @@ input[type=range]::-moz-range-thumb {
 	border-radius: 50%;
 	background: #fff;
 	cursor: pointer;
+}
+
+#grid {
+	position: absolute;
+	z-index: -1;
+}
+
+table {
+	width: 100vw;
+	height: 100vh;
+	border-collapse: collapse;
+	border-style: hidden;
+}
+
+table td {
+	border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+output {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-shrink: none;
+	padding: 16px;
+	color: #fff;
 }
 
 @media (max-width: 640px) {
