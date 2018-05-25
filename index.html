@@ -83,6 +83,7 @@
 	<script src="assets/js/FileSaver.min.js"></script>
 	<!--html2canvas.js v0.4.1 (https://github.com/niklasvh/html2canvas/releases)(https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js)-->
 	<script src="assets/js/html2canvas.min.js"></script>
+	<!--App script-->
 	<script src="assets/js/script.js"></script>
 </head>
 
@@ -102,6 +103,32 @@
 		</div>
 		<div class="toolbar bottom center">
 			<div class="snap" onclick="generate()"></div>
+		</div>
+		<div class="sliders center">
+			<div id="bslider" class="slider hidden">
+				<i class="material-icons ico">brightness_medium</i>
+				<input type="range" min="50" max="150" id="b" value="100" step="1">
+				<output for="range" id="bPointSize">100%</output>
+				<div class="button" onclick="resetB()">
+					<i class="material-icons">refresh</i>
+				</div>
+			</div>
+			<div id="oslider" class="slider hidden">
+				<i class="material-icons ico">opacity</i>
+				<input type="range" min="0" max="100" id="o" value="100" step="1">
+				<output for="range" id="oPointSize">100%</output>
+				<div class="button" onclick="resetO()">
+					<i class="material-icons">refresh</i>
+				</div>
+			</div>
+			<div id="sslider" class="slider hidden">
+				<i class="material-icons ico">straighten</i>
+				<input type="range" min="0" max="2" id="s" value="1" step=".1">
+				<output for="range" id="sPointSize">1x</output>
+				<div class="button" onclick="resetS()">
+					<i class="material-icons">refresh</i>
+				</div>
+			</div>
 		</div>
 		<div class="toolbar space">
 			<div class="toolbar">
@@ -128,22 +155,29 @@
 						</div>
 					</label>
 					<label class="switch">
-						<input type="checkbox" onclick="toggleGrid()">
+						<input type="checkbox" onclick="toggleScale()">
 						<div class="button">
-							<i class="off material-icons">grid_off</i>
-							<i class="on material-icons">grid_on</i>
-						</div>
-					</label>
-					<label class="switch">
-						<input type="checkbox" class="flash">
-						<div class="button">
-							<i class="off material-icons">flash_off</i>
-							<i class="on material-icons">flash_on</i>
+							<i class="off material-icons">straighten</i>
+							<i class="on material-icons">straighten</i>
 						</div>
 					</label>
 				</div>
 			</div>
 			<div class="toolbar">
+				<label class="switch">
+					<input type="checkbox" class="flash">
+					<div class="button">
+						<i class="off material-icons">flash_off</i>
+						<i class="on material-icons">flash_on</i>
+					</div>
+				</label>
+				<label class="switch">
+					<input type="checkbox" onclick="toggleGrid()">
+					<div class="button">
+						<i class="off material-icons">grid_off</i>
+						<i class="on material-icons">grid_on</i>
+					</div>
+				</label>
 				<label class="switch">
 					<input type="checkbox">
 					<div class="button">
@@ -349,6 +383,31 @@
 		<a-entity sound="src: #blip1; autoplay: true;"></a-entity>
 		<a-entity sound="src: #blip2; autoplay: true;"></a-entity>
 	</a-scene>
+	<script>
+		var p = document.getElementById('capture'),
+			bRange = document.getElementById('b'),
+			oRange = document.getElementById('o'),
+			sRange = document.getElementById('s');
+
+		bRange.addEventListener('input', function() {
+			p.style.filter = 'brightness(' + this.value + '%)';
+
+			document.getElementById('bPointSize').value = this.value + '%';
+		}, false);
+
+		oRange.addEventListener('input', function() {
+			p.style.filter = 'opacity(' + this.value + '%)';
+
+			document.getElementById('oPointSize').value = this.value + '%';
+		}, false);
+
+		sRange.addEventListener('input', function() {
+			p.style.transform = 'scale3d(' + this.value + ',' + this.value + ',' + this.value + ')';
+
+			document.getElementById('sPointSize').value = this.value + 'x';
+		}, false);
+
+	</script>
 </body>
 
 </html>

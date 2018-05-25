@@ -110,16 +110,45 @@ function toggleMore() {
 //Toggle brightness
 
 function toggleBrightness() {
-	var e = document.getElementById('capture');
-	e.classList.toggle('brightness');
+	var e = document.getElementById('bslider');
+	e.classList.toggle('hidden');
 }
 
 //Toggle opacity
 
 function toggleOpacity() {
-	var e = document.getElementById('capture');
-	e.classList.toggle('opacity');
+	var e = document.getElementById('oslider');
+	e.classList.toggle('hidden');
 }
+
+//Toggle scale
+
+function toggleScale() {
+	var e = document.getElementById('sslider');
+	e.classList.toggle('hidden');
+}
+
+//Reset
+
+var p = document.getElementById('capture');
+
+function resetB() {
+	p.style.filter = 'brightness(100%)';
+	document.getElementById('b').value = 100;
+	document.getElementById('bPointSize').value = 100 + '%';
+};
+
+function resetO() {
+	p.style.filter = 'opacity(100%)';
+	document.getElementById('o').value = 100;
+	document.getElementById('oPointSize').value = 100 + '%';
+};
+
+function resetS() {
+	p.style.transform = 'scale3d(1,1,1)';
+	document.getElementById('s').value = 1;
+	document.getElementById('sPointSize').value = 1 + 'x';
+};
 
 //Toggle grid
 
