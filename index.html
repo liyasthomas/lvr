@@ -93,7 +93,7 @@
 			<div class="button">
 				<i class="material-icons">arrow_back</i>
 			</div>
-			<div class="toolbar">
+			<div>
 				<a href="https://liyas-vr.firebaseapp.com">
 					<div class="button">
 						<i class="material-icons">help_outline</i>
@@ -104,20 +104,26 @@
 		<div class="toolbar bottom center">
 			<div class="snap" onclick="generate()"></div>
 		</div>
-		<div class="sliders center">
-			<div id="bslider" class="slider hidden">
+		<div class="toolbar sliders center">
+			<div id="bslider" class="slider sclosed">
 				<i class="material-icons ico">brightness_medium</i>
-				<input type="range" min="50" max="150" id="b" value="100" step="1">
+				<input type="range" min="0" max="200" id="b" value="100" step="1">
 				<output for="range" id="bPointSize">100%</output>
 				<i class="material-icons ico" onclick="resetB()">refresh</i>
 			</div>
-			<div id="oslider" class="slider hidden">
+			<div id="cslider" class="slider sclosed">
+				<i class="material-icons ico">tonality</i>
+				<input type="range" min="0" max="200" id="c" value="100" step="1">
+				<output for="range" id="cPointSize">100%</output>
+				<i class="material-icons ico" onclick="resetC()">refresh</i>
+			</div>
+			<div id="oslider" class="slider sclosed">
 				<i class="material-icons ico">opacity</i>
 				<input type="range" min="0" max="100" id="o" value="100" step="1">
 				<output for="range" id="oPointSize">100%</output>
 				<i class="material-icons ico" onclick="resetO()">refresh</i>
 			</div>
-			<div id="sslider" class="slider hidden">
+			<div id="sslider" class="slider sclosed">
 				<i class="material-icons ico">straighten</i>
 				<input type="range" min="0" max="2" id="s" value="1" step=".1">
 				<output for="range" id="sPointSize">1x</output>
@@ -129,8 +135,8 @@
 				<label class="switch">
 					<input type="checkbox" onclick="toggleMore()">
 					<div class="button">
-						<i class="off material-icons">style</i>
-						<i class="on material-icons">close</i>
+						<i class="off material-icons">last_page</i>
+						<i class="on material-icons">first_page</i>
 					</div>
 				</label>
 				<div id="more" class="hidden">
@@ -139,6 +145,13 @@
 						<div class="button">
 							<i class="off material-icons">brightness_low</i>
 							<i class="on material-icons">brightness_high</i>
+						</div>
+					</label>
+					<label class="switch">
+						<input type="checkbox" onclick="toggleContrast()">
+						<div class="button">
+							<i class="off material-icons">tonality</i>
+							<i class="on material-icons">tonality</i>
 						</div>
 					</label>
 					<label class="switch">
@@ -378,6 +391,7 @@
 	<script>
 		var p = document.getElementById('capture'),
 			bRange = document.getElementById('b'),
+			cRange = document.getElementById('c'),
 			oRange = document.getElementById('o'),
 			sRange = document.getElementById('s');
 
@@ -385,6 +399,12 @@
 			p.style.filter = 'brightness(' + this.value + '%)';
 
 			document.getElementById('bPointSize').value = this.value + '%';
+		}, false);
+
+		cRange.addEventListener('input', function() {
+			p.style.filter = 'contrast(' + this.value + '%)';
+
+			document.getElementById('cPointSize').value = this.value + '%';
 		}, false);
 
 		oRange.addEventListener('input', function() {

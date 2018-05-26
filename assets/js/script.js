@@ -111,21 +111,28 @@ function toggleMore() {
 
 function toggleBrightness() {
 	var e = document.getElementById('bslider');
-	e.classList.toggle('hidden');
+	e.classList.toggle('sclosed');
+}
+
+//Toggle contrast
+
+function toggleContrast() {
+	var e = document.getElementById('cslider');
+	e.classList.toggle('sclosed');
 }
 
 //Toggle opacity
 
 function toggleOpacity() {
 	var e = document.getElementById('oslider');
-	e.classList.toggle('hidden');
+	e.classList.toggle('sclosed');
 }
 
 //Toggle scale
 
 function toggleScale() {
 	var e = document.getElementById('sslider');
-	e.classList.toggle('hidden');
+	e.classList.toggle('sclosed');
 }
 
 //Reset
@@ -136,6 +143,12 @@ function resetB() {
 	p.style.filter = 'brightness(100%)';
 	document.getElementById('b').value = 100;
 	document.getElementById('bPointSize').value = 100 + '%';
+};
+
+function resetC() {
+	p.style.filter = 'contrast(100%)';
+	document.getElementById('c').value = 100;
+	document.getElementById('cPointSize').value = 100 + '%';
 };
 
 function resetO() {

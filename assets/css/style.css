@@ -118,7 +118,6 @@ button {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-shrink: none;
 	margin: 4px;
 	height: 56px;
 	width: 56px;
@@ -139,9 +138,7 @@ button {
 	box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.12);
 }
 
-.snap:hover,
-.snap:active {
-	transform: scale(1.1);
+.snap:hover {
 	background-color: aqua;
 	color: #fff;
 }
@@ -151,9 +148,12 @@ button {
 }
 
 #more {
-	display: block;
-	white-space: nowrap;
+	display: flex;
+	width: 100%;
+	flex-shrink: none;
 	overflow-x: auto;
+	transition: all 2s;
+	transition-delay: none;
 }
 
 input {
@@ -181,7 +181,6 @@ input:checked + div {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-shrink: none;
 	padding: 16px;
 	color: #fff;
 }
@@ -196,6 +195,16 @@ input:checked + div {
 .slider {
 	display: flex;
 	width: 100%;
+	overflow-y: hidden;
+	max-height: 500px;
+	transition: all 2s;
+	transition-delay: none;
+}
+
+.slider.sclosed {
+	max-height: 0;
+	transition: all .2s;
+	transition-delay: none;
 }
 
 input[type=range] {
@@ -269,7 +278,6 @@ output {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-shrink: none;
 	padding: 16px;
 	color: #fff;
 }
