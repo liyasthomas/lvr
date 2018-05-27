@@ -27,7 +27,7 @@
 
 ### Features :sparkles:
 
-:eyeglasses: **Virtual Reality made simple**: Lvr handles the 3D and [WebVR](https://webvr.info) boilerplates required to get running across platforms including mobile, desktop, Vive, and Rift. It works on any phone with [WebGL](https://caniuse.com/#feat=webgl) and [WebRTC](https://caniuse.com/#feat=stream).
+:eyeglasses: **Virtual Reality made simple**: Lvr contains the 3D and [WebVR](https://webvr.info) boilerplates required to get running across platforms including mobile, desktop, Vive, and Rift. It works on any phone with [WebGL](https://caniuse.com/#feat=webgl) and [WebRTC](https://caniuse.com/#feat=stream).
 
 :heart: **Declarative HTML**: HTML is easy to read and copy-and-paste. Since Lvr can be used from HTML, Lvr is accessible to everyone: web developers, VR enthusiasts, educators, artists, makers, kids. It is completely open source and free of charge!
 
@@ -67,7 +67,7 @@ What things you need to install the software and how to install them.
   <br>
 </div>
 
-### Try it on mobile :iphone:
+### Demo: Try it on mobile :iphone:
 
 It works on all platforms. Android, iOS and Windows phone. It runs on **any browser with [WebGL](https://caniuse.com/#feat=webgl) and [WebRTC](https://caniuse.com/#feat=stream)** (for iOS, you need to update to iOS 11).
 
@@ -94,7 +94,7 @@ A step by step series of examples that tell you've to get a development environm
 
 ---
 
-## Running the tests
+## Configure
 
 Explain how to run the automated tests for this system.
 
