@@ -1,5 +1,4 @@
 //Generate and Download Screenshot of webpage without lossing the styles https://stackoverflow.com/questions/44494447/generate-and-download-screenshot-of-webpage-without-lossing-the-styles/44495166#44495166
-
 (function (exports) {
 	function urlsToAbsolute(nodeList) {
 		if (!nodeList.length) {
@@ -51,7 +50,6 @@
 })(window);
 
 //Is it possible to control the camera light on a phone via a website? https://stackoverflow.com/questions/37848494/is-it-possible-to-control-the-camera-light-on-a-phone-via-a-website
-
 //Test browser support
 const SUPPORTS_MEDIA_DEVICES = 'mediaDevices' in navigator;
 
@@ -101,75 +99,81 @@ if (SUPPORTS_MEDIA_DEVICES) {
 }
 
 //Toggle more
-
 function toggleMore() {
 	var e = document.getElementById('more');
 	e.classList.toggle('hidden');
 }
 
 //Toggle brightness
-
 function toggleBrightness() {
 	var e = document.getElementById('bslider');
 	e.classList.toggle('sclosed');
 }
 
 //Toggle saturate
-
 function toggleSaturate() {
 	var e = document.getElementById('sslider');
 	e.classList.toggle('sclosed');
 }
 
 //Toggle contrast
-
 function toggleContrast() {
 	var e = document.getElementById('cslider');
 	e.classList.toggle('sclosed');
 }
 
 //Toggle opacity
-
 function toggleOpacity() {
 	var e = document.getElementById('oslider');
 	e.classList.toggle('sclosed');
 }
 
 //Toggle scale
-
 function toggleScale() {
 	var e = document.getElementById('zslider');
 	e.classList.toggle('sclosed');
 }
 
 //Reset
-
 var p = document.getElementById('capture'),
-	bid = document.getElementById('bid'),
-	sid = document.getElementById('sid'),
-	cid = document.getElementById('cid'),
-	oid = document.getElementById('oid');
+	bRange = document.getElementById('b'),
+	sRange = document.getElementById('s'),
+	cRange = document.getElementById('c'),
+	oRange = document.getElementById('o'),
+	zRange = document.getElementById('z');
 
 function resetB() {
-	bid.style.filter = 'brightness(100%)';
+	var sat = sRange.value,
+		con = cRange.value,
+		opa = oRange.value;
+	p.style.filter = 'brightness(100%) saturate(' + sat + '%) contrast(' + con + '%) opacity(' + opa + '%)';
 	document.getElementById('b').value = 100;
 	document.getElementById('bPointSize').value = 100 + '٪';
 };
 
 function resetS() {
-	sid.style.filter = 'saturate(100%)';
+	var bri = bRange.value,
+		con = cRange.value,
+		opa = oRange.value;
+	p.style.filter = 'brightness(' + bri + '%) saturate(100%) contrast(' + con + '%) opacity(' + opa + '%)';
 	document.getElementById('s').value = 100;
 	document.getElementById('sPointSize').value = 100 + '٪';
 };
 
 function resetC() {
-	cid.style.filter = 'contrast(100%)';
+	var bri = bRange.value,
+		sat = sRange.value,
+		opa = oRange.value;
+	p.style.filter = 'brightness(' + bri + '%) saturate(' + sat + '%) contrast(100%) opacity(' + opa + '%)';
 	document.getElementById('c').value = 100;
 	document.getElementById('cPointSize').value = 100 + '٪';
 };
 
 function resetO() {
-	oid.style.filter = 'opacity(100%)';
+	var bri = bRange.value,
+		sat = sRange.value,
+		con = cRange.value;
+	p.style.filter = 'brightness(' + bri + '%) saturate(' + sat + '%) contrast(' + con + '%) opacity(100%)';
 	document.getElementById('o').value = 100;
 	document.getElementById('oPointSize').value = 100 + '٪';
 };
@@ -181,7 +185,6 @@ function resetZ() {
 };
 
 //Toggle grid
-
 function toggleGrid() {
 	var e = document.getElementById('grid');
 	e.classList.toggle('hidden');
