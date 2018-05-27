@@ -142,25 +142,25 @@ var p = document.getElementById('capture');
 function resetB() {
 	p.style.filter = 'brightness(100%)';
 	document.getElementById('b').value = 100;
-	document.getElementById('bPointSize').value = 100 + '%';
+	document.getElementById('bPointSize').value = 100 + '٪';
 };
 
 function resetC() {
 	p.style.filter = 'contrast(100%)';
 	document.getElementById('c').value = 100;
-	document.getElementById('cPointSize').value = 100 + '%';
+	document.getElementById('cPointSize').value = 100 + '٪';
 };
 
 function resetO() {
 	p.style.filter = 'opacity(100%)';
 	document.getElementById('o').value = 100;
-	document.getElementById('oPointSize').value = 100 + '%';
+	document.getElementById('oPointSize').value = 100 + '٪';
 };
 
 function resetS() {
 	p.style.transform = 'scale3d(1,1,1)';
 	document.getElementById('s').value = 1;
-	document.getElementById('sPointSize').value = 1 + 'x';
+	document.getElementById('sPointSize').value = 1 + '×';
 };
 
 //Toggle grid

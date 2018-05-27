@@ -101,32 +101,34 @@
 				</a>
 			</div>
 		</div>
+		<!--
 		<div class="toolbar bottom center">
 			<div class="snap" onclick="generate()"></div>
 		</div>
-		<div class="toolbar sliders center">
+		-->
+		<div class="toolbar bottom sliders center">
 			<div id="bslider" class="slider sclosed">
 				<i class="material-icons ico">brightness_medium</i>
 				<input type="range" min="0" max="200" id="b" value="100" step="1">
-				<output for="range" id="bPointSize">100%</output>
+				<output for="range" id="bPointSize">100٪</output>
 				<i class="material-icons ico" onclick="resetB()">refresh</i>
 			</div>
 			<div id="cslider" class="slider sclosed">
 				<i class="material-icons ico">tonality</i>
 				<input type="range" min="0" max="200" id="c" value="100" step="1">
-				<output for="range" id="cPointSize">100%</output>
+				<output for="range" id="cPointSize">100٪</output>
 				<i class="material-icons ico" onclick="resetC()">refresh</i>
 			</div>
 			<div id="oslider" class="slider sclosed">
 				<i class="material-icons ico">opacity</i>
 				<input type="range" min="0" max="100" id="o" value="100" step="1">
-				<output for="range" id="oPointSize">100%</output>
+				<output for="range" id="oPointSize">100٪</output>
 				<i class="material-icons ico" onclick="resetO()">refresh</i>
 			</div>
 			<div id="sslider" class="slider sclosed">
 				<i class="material-icons ico">straighten</i>
 				<input type="range" min="0" max="2" id="s" value="1" step=".1">
-				<output for="range" id="sPointSize">1x</output>
+				<output for="range" id="sPointSize">1×</output>
 				<i class="material-icons ico" onclick="resetS()">refresh</i>
 			</div>
 		</div>
@@ -398,25 +400,25 @@
 		bRange.addEventListener('input', function() {
 			p.style.filter = 'brightness(' + this.value + '%)';
 
-			document.getElementById('bPointSize').value = this.value + '%';
+			document.getElementById('bPointSize').value = this.value + '٪';
 		}, false);
 
 		cRange.addEventListener('input', function() {
 			p.style.filter = 'contrast(' + this.value + '%)';
 
-			document.getElementById('cPointSize').value = this.value + '%';
+			document.getElementById('cPointSize').value = this.value + '٪';
 		}, false);
 
 		oRange.addEventListener('input', function() {
 			p.style.filter = 'opacity(' + this.value + '%)';
 
-			document.getElementById('oPointSize').value = this.value + '%';
+			document.getElementById('oPointSize').value = this.value + '٪';
 		}, false);
 
 		sRange.addEventListener('input', function() {
 			p.style.transform = 'scale3d(' + this.value + ',' + this.value + ',' + this.value + ')';
 
-			document.getElementById('sPointSize').value = this.value + 'x';
+			document.getElementById('sPointSize').value = this.value + '×';
 		}, false);
 
 	</script>
