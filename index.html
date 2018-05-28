@@ -59,16 +59,16 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="assets/css/style.min.css">
 	<script>
-		if ('serviceWorker' in navigator) {
-			navigator.serviceWorker.register('service-worker.js', {
-					scope: '/lvr/'
+		if ("serviceWorker" in navigator) {
+			navigator.serviceWorker.register("service-worker.js", {
+					scope: "/lvr/"
 				})
 				.then(function(registration) {
-					console.log('Service Worker Registered');
+					console.log("Service Worker Registered");
 				});
 
 			navigator.serviceWorker.ready.then(function(registration) {
-				console.log('Service Worker Ready');
+				console.log("Service Worker Ready");
 			});
 		}
 
@@ -243,7 +243,7 @@
 			</table>
 		</div>
 	</div>
-	<a-scene id="capture" embedded vr-mode-ui="enabled: false" arjs='debugUIEnabled: false; sourceType: webcam; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
+	<a-scene id="capture" embedded vr-mode-ui="enabled: false" arjs="debugUIEnabled: false; sourceType: webcam; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
 		<!--Assets-->
 		<a-assets>
 			<audio id="blip1" src="assets/audio/blip1.wav" preload="auto"></audio>
@@ -268,151 +268,151 @@
 			</a-entity>
 		</a-entity>
 		<!--Barcode marker [1]-->
-		<a-marker type='barcode' value='1'>
-			<a-text side='double' position='0 1.75 0.5' scale='0.5 0.5 0.5' value="Lvr" align="center" rotation="-90 0 0">
+		<a-marker type="barcode" value="1">
+			<a-text side="double" position="0 1.75 0.5" scale="0.5 0.5 0.5" value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
-			<a-text side='double' position='0 1.6 1' scale='0.2 0.2 0.2' font='https://cdn.aframe.io/fonts/Monoid.fnt' value="Virtual & Augmented Reality\nby Liyas Thomas" align="center">
-				<a-animation attribute="position" from="0 1.6 1" to="0 1.65 1" direction="alternate" dur="500" repeat="indefinite" easing='ease-in-out-cubic'>
+			<a-text side="double" position="0 1.6 1" scale="0.2 0.2 0.2" font="https://cdn.aframe.io/fonts/Monoid.fnt" value="Virtual & Augmented Reality\nby Liyas Thomas" align="center">
+				<a-animation attribute="position" from="0 1.6 1" to="0 1.65 1" direction="alternate" dur="500" repeat="indefinite" easing="ease-in-out-cubic">
 				</a-animation>
 			</a-text>
 		</a-marker>
 		<!--Barcode marker [2]-->
-		<a-marker type='barcode' value='2'>
-			<a-text side='double' position='0 1.75 0.5' scale='0.5 0.5 0.5' value="Lvr" align="center" rotation="-90 0 0">
+		<a-marker type="barcode" value="2">
+			<a-text side="double" position="0 1.75 0.5" scale="0.5 0.5 0.5" value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
 			<a-plane color="aquamarine" rotation="-90 0 0">
 			</a-plane>
-			<a-circle color="deeppink" radius="0.5" position='0 0.5 0' rotation="-90 0 0">
+			<a-circle color="deeppink" radius="0.5" position="0 0.5 0" rotation="-90 0 0">
 			</a-circle>
-			<a-triangle color="yellow" position='0 1 0'>
+			<a-triangle color="yellow" position="0 1 0">
 			</a-triangle>
 			<a-ring position="0 2 0" color="teal" rotation="0 1 0" radius-inner="0.45" radius-outer=".5">
 			</a-ring>
 		</a-marker>
 		<!--Barcode marker [3]-->
-		<a-marker type='barcode' value='3'>
-			<a-text side='double' position='0 1.75 0.5' scale='0.5 0.5 0.5' value="Lvr" align="center" rotation="-90 0 0">
+		<a-marker type="barcode" value="3">
+			<a-text side="double" position="0 1.75 0.5" scale="0.5 0.5 0.5" value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
-			<a-box position='0 0.5 0' material='opacity: 0.5; color: skyblue;'>
-				<a-box scale='0.5 0.5 0.5' material='opacity: 0.75; side: double; color: yellowgreen;'>
+			<a-box position="0 0.5 0" material="opacity: 0.5; color: skyblue;">
+				<a-box scale="0.5 0.5 0.5" material="opacity: 0.75; side: double; color: yellowgreen;">
 				</a-box>
 			</a-box>
-			<a-cone color="tomato" radius-bottom="0.5" position='0 1 0' radius-top="0">
+			<a-cone color="tomato" radius-bottom="0.5" position="0 1 0" radius-top="0">
 			</a-cone>
-			<a-sphere radius="0.5" segments-height="53" position="0 2 0" material='color: yellow;'>
+			<a-sphere radius="0.5" segments-height="53" position="0 2 0" material="color: yellow;">
 			</a-sphere>
 		</a-marker>
 		<!--Barcode marker [4]-->
-		<a-marker type='barcode' value='4'>
-			<a-text side='double' position='0 1.75 0.5' scale='0.5 0.5 0.5' value="Lvr" align="center" rotation="-90 0 0">
+		<a-marker type="barcode" value="4">
+			<a-text side="double" position="0 1.75 0.5" scale="0.5 0.5 0.5" value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
-			<a-triangle color="yellow" position='0 1 0'>
-				<a-animation attribute="rotation" to="0 360 0" dur="5000" easing='linear' repeat="indefinite">
+			<a-triangle color="yellow" position="0 1 0">
+				<a-animation attribute="rotation" to="0 360 0" dur="5000" easing="linear" repeat="indefinite">
 				</a-animation>
 				<a-animation attribute="material.color" from="yellow" to="green" dur="1000" direction="alternate" repeat="indefinite">
 				</a-animation>
 			</a-triangle>
 			<a-ring position="0 2 0" color="teal" rotation="0 1 0" radius-inner="0.45" radius-outer=".5">
-				<a-animation attribute="rotation" to="360 360 360" dur="5000" easing='linear' repeat="indefinite">
+				<a-animation attribute="rotation" to="360 360 360" dur="5000" easing="linear" repeat="indefinite">
 				</a-animation>
 			</a-ring>
 		</a-marker>
 		<!--Barcode marker [5]-->
-		<a-marker type='barcode' value='5'>
-			<a-text side='double' position='0 1.75 0.5' scale='0.5 0.5 0.5' value="Lvr" align="center" rotation="-90 0 0">
+		<a-marker type="barcode" value="5">
+			<a-text side="double" position="0 1.75 0.5" scale="0.5 0.5 0.5" value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
-			<a-box id="cube" position='0 0.5 0' material='opacity: 0.5; color: skyblue;' sound="src: #blip2; on: click">
-				<a-animation begin="click" attribute="rotation" to="360 360 0" dur="2000" fill="both" direction="alternate" easing='linear'>
+			<a-box id="cube" position="0 0.5 0" material="opacity: 0.5; color: skyblue;" sound="src: #blip2; on: click">
+				<a-animation begin="click" attribute="rotation" to="360 360 0" dur="2000" fill="both" direction="alternate" easing="linear">
 				</a-animation>
-				<a-box scale='0.5 0.5 0.5' material='opacity: 0.75; side: double; color: yellowgreen;'>
-					<a-animation attribute="rotation" to="360 360 360" dur="5000" easing='linear' repeat="indefinite">
+				<a-box scale="0.5 0.5 0.5" material="opacity: 0.75; side: double; color: yellowgreen;">
+					<a-animation attribute="rotation" to="360 360 360" dur="5000" easing="linear" repeat="indefinite">
 					</a-animation>
 				</a-box>
 			</a-box>
-			<a-cone color="tomato" radius-bottom="0.5" position='0 1 0' radius-top="0">
+			<a-cone color="tomato" radius-bottom="0.5" position="0 1 0" radius-top="0">
 				<a-animation attribute="geometry.radiusTop" from="0" to="0.5" dur="2000" fill="both" direction="alternate" repeat="indefinite">
 				</a-animation>
 			</a-cone>
-			<a-sphere radius="0.5" segments-height="53" position="0 2 0" material='color: red;'>
-				<a-animation attribute="position" dur="1000" from="0 2 0" to="0 3 0" direction='alternate-reverse' easing="ease-out-bounce" repeat="indefinite">
+			<a-sphere radius="0.5" segments-height="53" position="0 2 0" material="color: red;">
+				<a-animation attribute="position" dur="1000" from="0 2 0" to="0 3 0" direction="alternate-reverse" easing="ease-out-bounce" repeat="indefinite">
 				</a-animation>
 			</a-sphere>
 		</a-marker>
 		<!--preset marker [Hiro]-->
-		<a-marker preset='hiro'>
-			<a-text side='double' position='0 1.75 0.5' scale='0.5 0.5 0.5' value="Lvr" align="center" rotation="-90 0 0">
+		<a-marker preset="hiro">
+			<a-text side="double" position="0 1.75 0.5" scale="0.5 0.5 0.5" value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
-			<a-sphere src="assets/images/textures/sun.jpg" radius="0.5" segments-height="53" position="0 0.5 0" rotation='0 0 0' animation="property: rotation; dur: 10000; to: 0 360 0; easing: ease-in-out-circ; repeat: indefinite;">
+			<a-sphere src="assets/images/textures/sun.jpg" radius="0.5" segments-height="53" position="0 0.5 0" rotation="0 0 0" animation="property: rotation; dur: 10000; to: 0 360 0; easing: ease-in-out-circ; repeat: indefinite;">
 			</a-sphere>
 			<a-sky color="#000"></a-sky>
 			<!--<a-video src="#video1" position="0 1 0"></a-video>-->
 			<!--<a-image src="#image1"></a-image>-->
 		</a-marker>
 		<!--preset marker [Kanji]-->
-		<a-marker preset='kanji'>
-			<a-text side='double' position='0 1.75 0.5' scale='0.5 0.5 0.5' value="Lvr" align="center" rotation="-90 0 0">
+		<a-marker preset="kanji">
+			<a-text side="double" position="0 1.75 0.5" scale="0.5 0.5 0.5" value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
-			<a-sphere src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/space/earth_atmos_4096.jpg" radius="0.5" segments-height="53" position="0 0.5 0" rotation='0 0 0'>
+			<a-sphere src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/space/earth_atmos_4096.jpg" radius="0.5" segments-height="53" position="0 0.5 0" rotation="0 0 0">
 				<a-animation attribute="rotation" dur="10000" to="0 360 0" easing="ease-in-out-circ" repeat="indefinite">
 				</a-animation>
 			</a-sphere>
 			<a-sky color="#ececec"></a-sky>
 		</a-marker>
 		<!--Custom marker [A]-->
-		<a-marker preset='custom' type='pattern' url='assets/patt/A-90.patt'>
-			<a-text side='double' position='0 1.75 0.5' scale='0.5 0.5 0.5' value="Lvr" align="center" rotation="-90 0 0">
+		<a-marker preset="custom" type="pattern" url="assets/patt/A-90.patt">
+			<a-text side="double" position="0 1.75 0.5" scale="0.5 0.5 0.5" value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
 			<a-entity gltf-model="#love" scale="0.01 0.01 0.01" animation-mixer>
 			</a-entity>
 		</a-marker>
 		<!--Custom marker [B]-->
-		<a-marker preset='custom' type='pattern' url='assets/patt/B-90.patt'>
-			<a-text side='double' position='0 1.75 0.5' scale='0.5 0.5 0.5' value="Lvr" align="center" rotation="-90 0 0">
+		<a-marker preset="custom" type="pattern" url="assets/patt/B-90.patt">
+			<a-text side="double" position="0 1.75 0.5" scale="0.5 0.5 0.5" value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
 			<a-entity gltf-model="#cat" scale="0.04 0.04 0.04" animation-mixer>
 			</a-entity>
 		</a-marker>
 		<!--Custom marker [C]-->
-		<a-marker preset='custom' type='pattern' url='assets/patt/C-90.patt'>
-			<a-text side='double' position='0 1.75 0.5' scale='0.5 0.5 0.5' value="Lvr" align="center" rotation="-90 0 0">
+		<a-marker preset="custom" type="pattern" url="assets/patt/C-90.patt">
+			<a-text side="double" position="0 1.75 0.5" scale="0.5 0.5 0.5" value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
 			<a-entity gltf-model="#stickman_2" scale="1 1 1" animation-mixer>
 			</a-entity>
 		</a-marker>
 		<!--Custom marker [D]-->
-		<a-marker preset='custom' type='pattern' url='assets/patt/D-90.patt'>
-			<a-text side='double' position='0 1.75 0.5' scale='0.5 0.5 0.5' value="Lvr" align="center" rotation="-90 0 0">
+		<a-marker preset="custom" type="pattern" url="assets/patt/D-90.patt">
+			<a-text side="double" position="0 1.75 0.5" scale="0.5 0.5 0.5" value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
-			<a-entity gltf-model="#male" position='0 0 -1' scale="0.5 0.5 0.5" animation-mixer>
+			<a-entity gltf-model="#male" position="0 0 -1" scale="0.5 0.5 0.5" animation-mixer>
 			</a-entity>
 		</a-marker>
 		<!--Custom marker [F]-->
-		<a-marker preset='custom' type='pattern' url='assets/patt/F-90.patt'>
-			<a-text side='double' position='0 1.75 0.5' scale='0.5 0.5 0.5' value="Lvr" align="center" rotation="-90 0 0">
+		<a-marker preset="custom" type="pattern" url="assets/patt/F-90.patt">
+			<a-text side="double" position="0 1.75 0.5" scale="0.5 0.5 0.5" value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
 			<a-entity gltf-model="#construction" scale="0.2 0.2 0.2" animation-mixer>
 			</a-entity>
 		</a-marker>
 		<!--Custom marker [G]-->
-		<a-marker preset='custom' type='pattern' url='assets/patt/G-90.patt'>
-			<a-text side='double' position='0 1.75 0.5' scale='0.5 0.5 0.5' value="Lvr" align="center" rotation="-90 0 0">
+		<a-marker preset="custom" type="pattern" url="assets/patt/G-90.patt">
+			<a-text side="double" position="0 1.75 0.5" scale="0.5 0.5 0.5" value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
 			<a-entity gltf-model="#stickman" scale="0.2 0.2 0.2" animation-mixer>
 			</a-entity>
 		</a-marker>
 		<!--Custom marker and barcode [6]-->
-		<a-marker preset='custom' type='pattern' url='assets/patt/6.patt'>
-			<a-text side='double' position='0 1.75 0.5' scale='0.5 0.5 0.5' value="Lvr" align="center" rotation="-90 0 0">
+		<a-marker preset="custom" type="pattern" url="assets/patt/6.patt">
+			<a-text side="double" position="0 1.75 0.5" scale="0.5 0.5 0.5" value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
 		</a-marker>
 		<!--Barcode marker [6]-->
-		<a-marker type='barcode' value='6'>
-			<a-text side='double' position='0 1.75 0.5' scale='0.5 0.5 0.5' value="Lvr" align="center" rotation="-90 0 0">
+		<a-marker type="barcode" value="6">
+			<a-text side="double" position="0 1.75 0.5" scale="0.5 0.5 0.5" value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
 		</a-marker>
 		<!--custom colored marker [2]-->
-		<a-marker preset='custom' type='pattern' url='assets/patt/colored.patt'>
-			<a-text side='double' position='0 1.75 0.5' scale='0.5 0.5 0.5' value="Lvr" align="center" rotation="-90 0 0">
+		<a-marker preset="custom" type="pattern" url="assets/patt/colored.patt">
+			<a-text side="double" position="0 1.75 0.5" scale="0.5 0.5 0.5" value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
 		</a-marker>
 		<!--Sound-->
@@ -420,48 +420,48 @@
 		<a-entity sound="src: #blip2; autoplay: true;"></a-entity>
 	</a-scene>
 	<script>
-		var p = document.getElementById('capture'),
-			bRange = document.getElementById('b'),
-			sRange = document.getElementById('s'),
-			cRange = document.getElementById('c'),
-			oRange = document.getElementById('o'),
-			zRange = document.getElementById('z');
+		var p = document.getElementById("capture"),
+			bRange = document.getElementById("b"),
+			sRange = document.getElementById("s"),
+			cRange = document.getElementById("c"),
+			oRange = document.getElementById("o"),
+			zRange = document.getElementById("z");
 
-		bRange.addEventListener('input', function() {
+		bRange.addEventListener("input", function() {
 			var sat = sRange.value,
 				con = cRange.value,
 				opa = oRange.value;
-			p.style.filter = 'brightness(' + this.value + '%) saturate(' + sat + '%) contrast(' + con + '%) opacity(' + opa + '%)';
-			document.getElementById('bPointSize').value = this.value + '٪';
+			p.style.filter = "brightness(" + this.value + "%) saturate(" + sat + "%) contrast(" + con + "%) opacity(" + opa + "%)";
+			document.getElementById("bPointSize").value = this.value + "٪";
 		}, false);
 
-		sRange.addEventListener('input', function() {
+		sRange.addEventListener("input", function() {
 			var bri = bRange.value,
 				con = cRange.value,
 				opa = oRange.value;
-			p.style.filter = 'brightness(' + bri + '%) saturate(' + this.value + '%) contrast(' + con + '%) opacity(' + opa + '%)';
-			document.getElementById('sPointSize').value = this.value + '٪';
+			p.style.filter = "brightness(" + bri + "%) saturate(" + this.value + "%) contrast(" + con + "%) opacity(" + opa + "%)";
+			document.getElementById("sPointSize").value = this.value + "٪";
 		}, false);
 
-		cRange.addEventListener('input', function() {
+		cRange.addEventListener("input", function() {
 			var bri = bRange.value,
 				sat = sRange.value,
 				opa = oRange.value;
-			p.style.filter = 'brightness(' + bri + '%) saturate(' + sat + '%) contrast(' + this.value + '%) opacity(' + opa + '%)';
-			document.getElementById('cPointSize').value = this.value + '٪';
+			p.style.filter = "brightness(" + bri + "%) saturate(" + sat + "%) contrast(" + this.value + "%) opacity(" + opa + "%)";
+			document.getElementById("cPointSize").value = this.value + "٪";
 		}, false);
 
-		oRange.addEventListener('input', function() {
+		oRange.addEventListener("input", function() {
 			var bri = bRange.value,
 				sat = sRange.value,
 				con = cRange.value;
-			p.style.filter = 'brightness(' + bri + '%) saturate(' + sat + '%) contrast(' + con + '%) opacity(' + this.value + '%)';
-			document.getElementById('oPointSize').value = this.value + '٪';
+			p.style.filter = "brightness(" + bri + "%) saturate(" + sat + "%) contrast(" + con + "%) opacity(" + this.value + "%)";
+			document.getElementById("oPointSize").value = this.value + "٪";
 		}, false);
 
-		zRange.addEventListener('input', function() {
-			p.style.transform = 'scale3d(' + this.value + ',' + this.value + ',' + this.value + ')';
-			document.getElementById('zPointSize').value = this.value + '×';
+		zRange.addEventListener("input", function() {
+			p.style.transform = "scale3d(" + this.value + "," + this.value + "," + this.value + ")";
+			document.getElementById("zPointSize").value = this.value + "×";
 		}, false);
 
 	</script>
