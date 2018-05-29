@@ -158,7 +158,6 @@ button {
 	width: 100%;
 	flex-shrink: none;
 	overflow-x: auto;
-	transition-delay: none;
 	transition: all .2s;
 }
 
@@ -187,12 +186,9 @@ input[type=checkbox]:checked + div {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	cursor: pointer;
 	padding: 16px;
 	color: #fff;
-}
-
-.ico:last-child {
-	padding-left: 0;
 }
 
 .sliders {
@@ -208,14 +204,12 @@ input[type=checkbox]:checked + div {
 	display: flex;
 	width: 100%;
 	overflow-y: hidden;
-	transition-delay: none;
 	transition: all .2s;
 }
 
-.sclosed {
+.closed {
 	opacity: 0;
 	max-height: 0;
-	transition-delay: none;
 }
 
 input[type=range] {
