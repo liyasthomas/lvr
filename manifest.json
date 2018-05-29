@@ -1,31 +1,14 @@
 {
-	"name": "Saap",
-	"short_name": "Saap",
-	"start_url": "/",
-	"display": "fullscreen",
+	"name": "Lvr",
+	"short_name": "Lvr",
+	"description": "Virtual and Augmented reality for everyone",
+	"scope": "/lvr/",
+	"start_url": "/lvr/",
+	"display": "standalone",
+	"orientation": "any",
 	"theme_color": "#212121",
 	"background_color": "#212121",
 	"icons": [
-		{
-			"src": "assets/images/snap-logo-white.png",
-			"sizes": "48x48",
-			"type": "image/png"
-    },
-		{
-			"src": "assets/images/snap-logo-white.png",
-			"sizes": "72x72",
-			"type": "image/png"
-    },
-		{
-			"src": "assets/images/snap-logo-white.png",
-			"sizes": "96x96",
-			"type": "image/png"
-    },
-		{
-			"src": "assets/images/snap-logo-white.png",
-			"sizes": "144x114",
-			"type": "image/png"
-    },
 		{
 			"src": "assets/images/snap-logo-white.png",
 			"sizes": "192x192",
