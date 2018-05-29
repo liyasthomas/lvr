@@ -103,37 +103,37 @@ if (SUPPORTS_MEDIA_DEVICES) {
 //Toggle more
 function toggleMore() {
 	var e = document.getElementById("more");
-	e.classList.toggle("hidden");
+	e.classList.toggle("closed");
 }
 
 //Toggle brightness
 function toggleBrightness() {
 	var e = document.getElementById("bslider");
-	e.classList.toggle("sclosed");
+	e.classList.toggle("closed");
 }
 
 //Toggle saturate
 function toggleSaturate() {
 	var e = document.getElementById("sslider");
-	e.classList.toggle("sclosed");
+	e.classList.toggle("closed");
 }
 
 //Toggle contrast
 function toggleContrast() {
 	var e = document.getElementById("cslider");
-	e.classList.toggle("sclosed");
+	e.classList.toggle("closed");
 }
 
 //Toggle opacity
 function toggleOpacity() {
 	var e = document.getElementById("oslider");
-	e.classList.toggle("sclosed");
+	e.classList.toggle("closed");
 }
 
 //Toggle scale
 function toggleScale() {
 	var e = document.getElementById("zslider");
-	e.classList.toggle("sclosed");
+	e.classList.toggle("closed");
 }
 
 //Reset

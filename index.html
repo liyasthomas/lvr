@@ -84,7 +84,7 @@
 	<!--html2canvas.js v0.4.1 (https://github.com/niklasvh/html2canvas/releases)(https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js)-->
 	<script src="assets/js/html2canvas.min.js"></script>
 	<!--App script-->
-	<script src="assets/js/script.js"></script>
+	<script async src="assets/js/script.js"></script>
 </head>
 
 <body>
@@ -108,35 +108,35 @@
 		-->
 		<div class="toolbar bottom sliders center">
 			<!--Brightness slider-->
-			<div id="bslider" class="slider sclosed">
+			<div id="bslider" class="slider closed">
 				<i class="material-icons ico">brightness_medium</i>
 				<input type="range" min="0" max="200" id="b" value="100" step="1">
 				<output for="range" id="bPointSize">100٪</output>
 				<i class="material-icons ico" onclick="resetB()">refresh</i>
 			</div>
 			<!--Saturate slider-->
-			<div id="sslider" class="slider sclosed">
+			<div id="sslider" class="slider closed">
 				<i class="material-icons ico">tonality</i>
 				<input type="range" min="0" max="200" id="s" value="100" step="1">
 				<output for="range" id="sPointSize">100٪</output>
 				<i class="material-icons ico" onclick="resetS()">refresh</i>
 			</div>
 			<!--Contrast slider-->
-			<div id="cslider" class="slider sclosed">
+			<div id="cslider" class="slider closed">
 				<i class="material-icons ico">exposure</i>
 				<input type="range" min="0" max="200" id="c" value="100" step="1">
 				<output for="range" id="cPointSize">100٪</output>
 				<i class="material-icons ico" onclick="resetC()">refresh</i>
 			</div>
 			<!--Opacity slider-->
-			<div id="oslider" class="slider sclosed">
+			<div id="oslider" class="slider closed">
 				<i class="material-icons ico">opacity</i>
 				<input type="range" min="0" max="100" id="o" value="100" step="1">
 				<output for="range" id="oPointSize">100٪</output>
 				<i class="material-icons ico" onclick="resetO()">refresh</i>
 			</div>
 			<!--Scale/zoom slider-->
-			<div id="zslider" class="slider sclosed">
+			<div id="zslider" class="slider closed">
 				<i class="material-icons ico">straighten</i>
 				<input type="range" min="0" max="2" id="z" value="1" step=".1">
 				<output for="range" id="zPointSize">1×</output>
@@ -153,7 +153,7 @@
 						<i class="on material-icons">photo_filter</i>
 					</div>
 				</label>
-				<div id="more" class="hidden">
+				<div id="more" class="slider closed">
 					<!--Brightness toggle-->
 					<label class="switch">
 						<input type="checkbox" onclick="toggleBrightness()">
@@ -260,7 +260,7 @@
 		<!--Camera-->
 		<a-entity camera>
 			<!--cursor-->
-			<a-entity cursor="fuse: true;" position="0 0 -1" geometry="primitive: ring; radiusInner: 0.01; radiusOuter: 0.013;" material="color: white; shader: flat; opacity: 0.5;">
+			<a-entity cursor="fuse: true;" position="0 0 -1" geometry="primitive: ring; radiusInner: 0.01; radiusOuter: 0.013;" material="color: white; shader: flat; opacity: 0.4;">
 				<a-animation begin="cursor-fusing" easing="ease-in" attribute="scale" dur="1500" fill="backwards" from="1 1 1" to="0.1 0.1 0.1">
 				</a-animation>
 				<a-animation begin="click" easing="ease-in" attribute="scale" dur="150" from="0.1 0.1 0.1" to="1 1 1">
