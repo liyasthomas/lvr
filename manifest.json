@@ -1,8 +1,13 @@
 {
-	"name": "Saap",
-	"short_name": "Saap",
-	"start_url": "/",
+	"dir": "ltr",
+	"lang": "en",
+	"name": "Lvr",
+	"short_name": "Lvr",
+	"description": "Virtual and Augmented reality for everyone",
+	"scope": "/",
+	"start_url": "/lvr",
 	"display": "fullscreen",
+	"orientation": "any",
 	"theme_color": "#212121",
 	"background_color": "#212121",
 	"icons": [
