@@ -186,12 +186,9 @@ input[type=checkbox]:checked + div {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	cursor: pointer;
 	padding: 16px;
 	color: #fff;
-}
-
-.ico:last-child {
-	padding-left: 0;
 }
 
 .sliders {
