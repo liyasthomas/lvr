@@ -7,7 +7,7 @@
 }
 
 :root {
-	--app-color: cyan;
+	--app-color: #ff0;
 }
 
 a {
@@ -25,10 +25,10 @@ body {
 	min-height: 100vh;
 	overflow: hidden;
 	font-size: 18px;
-	color: #fff;
+	color: #ff0;
 	font-family: 'Roboto', 'Noto', sans-serif;
-	background-color: #212121;
-	background-image: url(../images/snap-logo-white.svg);
+	background-color: #000;
+	background-image: url(../images/logo.svg);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: 64px;

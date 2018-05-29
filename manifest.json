@@ -6,11 +6,11 @@
 	"start_url": "/lvr/",
 	"display": "fullscreen",
 	"orientation": "any",
-	"theme_color": "#212121",
-	"background_color": "#212121",
+	"theme_color": "#ff0",
+	"background_color": "#ff0",
 	"icons": [
 		{
-			"src": "assets/images/snap-logo-black.png",
+			"src": "assets/images/favicon.png",
 			"sizes": "512x512",
 			"type": "image/png"
     }
