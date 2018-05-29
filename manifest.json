@@ -10,12 +10,7 @@
 	"background_color": "#212121",
 	"icons": [
 		{
-			"src": "assets/images/snap-logo-white.png",
-			"sizes": "192x192",
-			"type": "image/png"
-    },
-		{
-			"src": "assets/images/snap-logo-white.png",
+			"src": "assets/images/snap-logo-black.png",
 			"sizes": "512x512",
 			"type": "image/png"
     }
