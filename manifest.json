@@ -4,7 +4,7 @@
 	"description": "Virtual and Augmented reality for everyone",
 	"scope": "/lvr/",
 	"start_url": "/lvr/",
-	"display": "standalone",
+	"display": "fullscreen",
 	"orientation": "any",
 	"theme_color": "#212121",
 	"background_color": "#212121",
