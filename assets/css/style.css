@@ -7,7 +7,7 @@
 }
 
 :root {
-	--app-color: #ff6e40;
+	--app-color: #ff7143;
 }
 
 a {
@@ -86,18 +86,8 @@ body {
 .toolbar {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
 	align-items: center;
-	white-space: nowrap;
-	overflow-x: auto;
-}
-
-.toolbar.left {
-	justify-content: flex-start;
-}
-
-.toolbar.right {
-	justify-content: flex-end;
+	justify-content: center;
 }
 
 .toolbar.space {
@@ -108,17 +98,7 @@ body {
 	margin-top: auto;
 }
 
-.center {
-	justify-content: center;
-}
-
-button {
-	background: none;
-	border: none;
-}
-
-.button,
-.snap {
+.button {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -136,28 +116,9 @@ button {
 	background-color: rgba(255, 255, 255, 0.12);
 }
 
-/*
-.snap {
-	background-color: #fff;
-	color: #2196f3;
-	box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.12);
-}
-
-.snap:hover {
-	background-color: var(--app-color);
-	color: #fff;
-}
-*/
-
-.switch {
-	display: inline-block;
-}
-
-#more {
-	display: flex;
-	width: 100%;
-	flex-shrink: none;
-	overflow-x: auto;
+.snap:hover,
+.snap:active {
+	color: var(--app-color);
 }
 
 input[type=checkbox] {

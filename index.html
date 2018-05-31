@@ -74,9 +74,9 @@
 	<!--A-Frame-extras.js v4.1.1 (https://github.com/donmccurdy/aframe-extras/releases)(https://cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.1/dist/aframe-extras.min.js)-->
 	<script src="assets/js/aframe-extras.min.js"></script>
 	<!--FileSaver.js v1.3.8 (https://github.com/eligrey/FileSaver.js/releases)(https://cdn.rawgit.com/eligrey/FileSaver.js/1.3.8/src/FileSaver.js)-->
-	<!--<script src="assets/js/FileSaver.min.js"></script>-->
+	<script src="assets/js/FileSaver.min.js"></script>
 	<!--html2canvas.js v0.4.1 (https://github.com/niklasvh/html2canvas/releases)(https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js)-->
-	<!--<script src="assets/js/html2canvas.min.js"></script>-->
+	<script src="assets/js/html2canvas.min.js"></script>
 	<script async src="assets/js/script.min.js"></script>
 </head>
 
@@ -85,21 +85,16 @@
 		<div id="actions">
 			<!--
 			<div class="toolbar space">
-				<div class="button">
-					<i class="material-icons">arrow_back</i>
-				</div>
-				<div>
-					<a href="https://liyas-vr.firebaseapp.com">
-						<div class="button">
-							<i class="material-icons">help_outline</i>
-						</div>
-					</a>
-				</div>
-			</div>
-			-->
-			<!--
-			<div class="toolbar bottom center">
-				<div class="snap" onclick="generate()"></div>
+				<a href="https://liyas-vr.firebaseapp.com">
+					<div class="button">
+						<i class="material-icons">arrow_back</i>
+					</div>
+				</a>
+				<a href="https://liyas-vr.firebaseapp.com">
+					<div class="button">
+						<i class="material-icons">help_outline</i>
+					</div>
+				</a>
 			</div>
 			-->
 			<div class="toolbar bottom sliders center">
@@ -139,87 +134,90 @@
 					<i class="material-icons ico" onclick="resetZ()" title="Reset Scale">refresh</i>
 				</div>
 			</div>
-			<div class="toolbar space">
-				<div class="toolbar">
-					<!--More toggle-->
-					<label for="toggleMore" class="switch">
-						<input type="checkbox" onclick="toggleMore()" id="toggleMore">
-						<div class="button" title="More">
-							<i class="off material-icons">tune</i>
-							<i class="on material-icons">photo_filter</i>
+			<div class="toolbar">
+				<!--More toggle-->
+				<label for="toggleMore">
+					<input type="checkbox" onclick="toggleMore()" id="toggleMore">
+					<div class="button" title="Tuning">
+						<i class="off material-icons">style</i>
+						<i class="on material-icons">tune</i>
+					</div>
+				</label>
+				<div id="more" class="slider closed">
+					<!--Brightness toggle-->
+					<label for="toggleBrightness">
+						<input type="checkbox" onclick="toggleBrightness()" id="toggleBrightness">
+						<div class="button" title="Brightness">
+							<i class="off material-icons">brightness_low</i>
+							<i class="on material-icons">brightness_high</i>
 						</div>
 					</label>
-					<div id="more" class="slider closed">
-						<!--Brightness toggle-->
-						<label for="toggleBrightness" class="switch">
-							<input type="checkbox" onclick="toggleBrightness()" id="toggleBrightness">
-							<div class="button" title="Brightness">
-								<i class="off material-icons">brightness_low</i>
-								<i class="on material-icons">brightness_high</i>
-							</div>
-						</label>
-						<!--Saturate toggle-->
-						<label for="toggleSaturate" class="switch">
-							<input type="checkbox" onclick="toggleSaturate()" id="toggleSaturate">
-							<div class="button" title="Saturation">
-								<i class="off material-icons">tonality</i>
-								<i class="on material-icons">tonality</i>
-							</div>
-						</label>
-						<!--Contrast toggle-->
-						<label for="toggleContrast" class="switch">
-							<input type="checkbox" onclick="toggleContrast()" id="toggleContrast">
-							<div class="button" title="Contrast">
-								<i class="off material-icons">exposure</i>
-								<i class="on material-icons">exposure</i>
-							</div>
-						</label>
-						<!--Opacity toggle-->
-						<label for="toggleOpacity" class="switch">
-							<input type="checkbox" onclick="toggleOpacity()" id="toggleOpacity">
-							<div class="button" title="Opacity">
-								<i class="off material-icons">opacity</i>
-								<i class="on material-icons">opacity</i>
-							</div>
-						</label>
-						<!--Scale/zoom toggle-->
-						<label for="toggleScale" class="switch">
-							<input type="checkbox" onclick="toggleScale()" id="toggleScale">
-							<div class="button" title="Scale">
-								<i class="off material-icons">straighten</i>
-								<i class="on material-icons">straighten</i>
-							</div>
-						</label>
-						<!--Grid toggle-->
-						<label for="toggleGrid" class="switch">
-							<input type="checkbox" onclick="toggleGrid()" id="toggleGrid">
-							<div class="button" title="Grid">
-								<i class="off material-icons">grid_off</i>
-								<i class="on material-icons">grid_on</i>
-							</div>
-						</label>
-						<!--Flash toggle-->
-						<!--
-						<label class="switch">
+					<!--Saturate toggle-->
+					<label for="toggleSaturate">
+						<input type="checkbox" onclick="toggleSaturate()" id="toggleSaturate">
+						<div class="button" title="Saturation">
+							<i class="off material-icons">tonality</i>
+							<i class="on material-icons">tonality</i>
+						</div>
+					</label>
+					<!--Contrast toggle-->
+					<label for="toggleContrast">
+						<input type="checkbox" onclick="toggleContrast()" id="toggleContrast">
+						<div class="button" title="Contrast">
+							<i class="off material-icons">exposure</i>
+							<i class="on material-icons">exposure</i>
+						</div>
+					</label>
+					<!--Opacity toggle-->
+					<label for="toggleOpacity">
+						<input type="checkbox" onclick="toggleOpacity()" id="toggleOpacity">
+						<div class="button" title="Opacity">
+							<i class="off material-icons">opacity</i>
+							<i class="on material-icons">opacity</i>
+						</div>
+					</label>
+					<!--Scale/zoom toggle-->
+					<label for="toggleScale">
+						<input type="checkbox" onclick="toggleScale()" id="toggleScale">
+						<div class="button" title="Scale">
+							<i class="off material-icons">straighten</i>
+							<i class="on material-icons">straighten</i>
+						</div>
+					</label>
+					<!--Grid toggle-->
+					<label for="toggleGrid">
+						<input type="checkbox" onclick="toggleGrid()" id="toggleGrid">
+						<div class="button" title="Grid">
+							<i class="off material-icons">grid_off</i>
+							<i class="on material-icons">grid_on</i>
+						</div>
+					</label>
+					<!--Flash toggle-->
+					<!--
+						<label>
+							<input type="checkbox" class="flash" id="flash">
 							<div class="button" title="Flash">
 								<i class="off material-icons">flash_off</i>
 								<i class="on material-icons">flash_on</i>
 							</div>
 						</label>
-						<input type="checkbox" class="flash" id="flash">
 						-->
-					</div>
 				</div>
-				<!--Camera toggle-->
+				<!--Switch camera-->
 				<!--
-				<label class="switch">
-					<input type="checkbox">
+				<label for="Camera">
+					<input type="checkbox" onclick="Camera()" id="Camera">
 					<div class="button" title="Switch camera">
 						<i class="off material-icons">camera_rear</i>
 						<i class="on material-icons">camera_front</i>
 					</div>
 				</label>
 				-->
+				<label>
+					<div class="button snap" onclick="saap()" title="Take screenshot">
+						<i class="material-icons">camera_alt</i>
+					</div>
+				</label>
 			</div>
 			<div id="grid" class="hidden">
 				<table>
