@@ -71,7 +71,7 @@
 	<script src="assets/js/aframe.min.js"></script>
 	<!--AR.js v1.6.0 (https://github.com/jeromeetienne/AR.js/releases)(https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js)-->
 	<script src="assets/js/aframe-ar.js"></script>
-	<!--A-Frame-extras.js v4.1.1 (https://github.com/donmccurdy/aframe-extras/releases)(https://cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.1/dist/aframe-extras.min.js)-->
+	<!--A-Frame-extras.js v4.1.2 (https://github.com/donmccurdy/aframe-extras/releases)(https://cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js)-->
 	<script src="assets/js/aframe-extras.min.js"></script>
 	<!--FileSaver.js v1.3.8 (https://github.com/eligrey/FileSaver.js/releases)(https://cdn.rawgit.com/eligrey/FileSaver.js/1.3.8/src/FileSaver.js)-->
 	<script src="assets/js/FileSaver.min.js"></script>
@@ -81,6 +81,9 @@
 </head>
 
 <body>
+	<noscript>
+  	<a href="/">No JavaScript? Go home kid!</a>
+	</noscript>
 	<main role="main">
 		<div id="actions">
 			<!--
@@ -245,13 +248,11 @@
 		<a-assets>
 			<audio id="blip1" src="assets/audio/blip1.wav" preload="auto"></audio>
 			<audio id="blip2" src="assets/audio/blip2.wav" preload="auto"></audio>
-			<!--<img id="image1" src="assets/images/favicon.png">-->
+			<img id="image1" src="assets/images/favicon.png">
 			<!--<video id="video1" webkit-playsinline autoplay loop="true" src="assets/video/city.mp4"></video>-->
 			<a-asset-item id="love" src="assets/gltf/love/scene.gltf"></a-asset-item>
 			<a-asset-item id="cat" src="assets/gltf/cat/scene.gltf"></a-asset-item>
 			<a-asset-item id="bytt" src="assets/gltf/bytt/bytt.gltf"></a-asset-item>
-			<a-asset-item id="construction" src="assets/gltf/construction/scene.gltf"></a-asset-item>
-			<a-asset-item id="stickman_2" src="assets/gltf/stickman_2/model.gltf"></a-asset-item>
 			<a-asset-item id="stickman" src="assets/gltf/stickman/scene.gltf"></a-asset-item>
 		</a-assets>
 		<!--Camera-->
@@ -339,11 +340,8 @@
 		<a-marker preset="hiro">
 			<a-text side="double" position="0 1.75 0.5" scale="0.5 0.5 0.5" value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
-			<a-sphere src="assets/images/textures/sun.jpg" radius="0.5" segments-height="53" position="0 0.5 0" rotation="0 0 0" animation="property: rotation; dur: 10000; to: 0 360 0; easing: ease-in-out-circ; repeat: indefinite;">
-			</a-sphere>
-			<a-sky color="#000"></a-sky>
+			<a-image src="#image1"></a-image>
 			<!--<a-video src="#video1" position="0 1 0"></a-video>-->
-			<!--<a-image src="#image1"></a-image>-->
 		</a-marker>
 		<!--preset marker [Kanji]-->
 		<a-marker preset="kanji">
@@ -373,8 +371,6 @@
 		<a-marker preset="custom" type="pattern" url="assets/patt/C-90.patt">
 			<a-text side="double" position="0 1.75 0.5" scale="0.5 0.5 0.5" value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
-			<a-entity gltf-model="#stickman_2" scale="1 1 1" animation-mixer>
-			</a-entity>
 		</a-marker>
 		<!--Custom marker [D]-->
 		<a-marker preset="custom" type="pattern" url="assets/patt/D-90.patt">
@@ -387,8 +383,6 @@
 		<a-marker preset="custom" type="pattern" url="assets/patt/F-90.patt">
 			<a-text side="double" position="0 1.75 0.5" scale="0.5 0.5 0.5" value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
-			<a-entity gltf-model="#construction" scale="0.2 0.2 0.2" animation-mixer>
-			</a-entity>
 		</a-marker>
 		<!--Custom marker [G]-->
 		<a-marker preset="custom" type="pattern" url="assets/patt/G-90.patt">
