@@ -253,7 +253,7 @@
 
   <div class="app">
 
-    <a href="#" id="start-camera" class="visible">Touch here to start the app.</a>
+<!--    <a href="#" id="start-camera" class="visible">Touch here to start the app.</a>-->
     <img id="snap">
 
     <p id="error-message"></p>
@@ -290,17 +290,6 @@
 					navigator.msGetUserMedia);
 
 
-				// Mobile browsers cannot play video without user input,
-				// so here we're using a button to start it manually.
-				start_camera.addEventListener("click", function(e) {
-
-					e.preventDefault();
-
-					// Start video playback manually.
-					video.play();
-					showVideo();
-
-				});
 
 
 				take_photo_btn.addEventListener("click", function(e) {
