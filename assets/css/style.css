@@ -16,7 +16,7 @@ body {
 	min-height: 100vh;
 	overflow: hidden;
 	font-size: 18px;
-	color: var(--app-color);
+	color: #fff;
 	font-family: 'Roboto', 'Noto', sans-serif;
 	background-color: #000;
 	background-image: url(../images/logo.svg);
