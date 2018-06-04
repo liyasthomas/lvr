@@ -290,38 +290,6 @@
 					navigator.msGetUserMedia);
 
 
-				if (!navigator.getMedia) {
-					displayErrorMessage("Your browser doesn't have support for the navigator.getUserMedia interface.");
-				} else {
-
-					// Request the camera.
-					navigator.getMedia({
-							video: true
-						},
-						// Success Callback
-						function(stream) {
-
-							// Create an object URL for the video stream and
-							// set it as src of our HTLM video element.
-							video.src = window.URL.createObjectURL(stream);
-
-							// Play the video element to start the stream.
-							video.play();
-							video.onplay = function() {
-								showVideo();
-							};
-
-						},
-						// Error Callback
-						function(err) {
-							displayErrorMessage("There was an error with accessing the camera stream: " + err.name, err);
-						}
-					);
-
-				}
-
-
-
 				// Mobile browsers cannot play video without user input,
 				// so here we're using a button to start it manually.
 				start_camera.addEventListener("click", function(e) {
