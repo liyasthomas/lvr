@@ -272,7 +272,7 @@
 
 			<script>
 				// References to all the element we will need.
-				var video = document.querySelector('#camera-stream'),
+				var video = document.querySelector('video'),
 					image = document.querySelector('#snap'),
 					start_camera = document.querySelector('#start-camera'),
 					controls = document.querySelector('.controls'),
@@ -326,7 +326,7 @@
 				// so here we're using a button to start it manually.
 				start_camera.addEventListener("click", function(e) {
 
-					
+					e.preventDefault();
 
 					// Start video playback manually.
 					video.play();
@@ -337,7 +337,7 @@
 
 				take_photo_btn.addEventListener("click", function(e) {
 
-					
+					e.preventDefault();
 
 					var snap = takeSnapshot();
 
@@ -360,7 +360,7 @@
 
 				delete_photo_btn.addEventListener("click", function(e) {
 
-					
+					e.preventDefault();
 
 					// Hide image.
 					image.setAttribute('src', "");
