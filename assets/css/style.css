@@ -265,9 +265,32 @@ table td {
 	border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
-#capture {
+#app {
+	z-index: 1;
 	transform-origin: center;
 	transform-style: preserve-3d;
+}
+
+#snap-button-wrapper {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100vw;
+	z-index: 9999;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 15px;
+	background-color: #f44336;
+}
+
+#snap-button {
+	position: relative;
+	transition: all 0.35s cubic-bezier(0.36, 0, 0.29, 1), z-index 0s linear;
+	background-color: #f8fdff;
+	border-radius: 50%;
+	height: 52px;
+	width: 52px;
 }
 
 @media (max-width: 640px) {

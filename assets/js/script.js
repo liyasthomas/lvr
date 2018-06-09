@@ -1,53 +1,53 @@
 //Generate and Download Screenshot of webpage without lossing the styles https://stackoverflow.com/a/44495166
-(function (exports) {
-	function urlsToAbsolute(nodeList) {
-		if (!nodeList.length) {
-			return [];
-		}
-		var attrName = "href";
-		if (nodeList[0].__proto__ === HTMLImageElement.prototype || nodeList[0].__proto__ === HTMLScriptElement.prototype) {
-			attrName = "src";
-		}
-		nodeList = [].map.call(nodeList, function (el, i) {
-			var attr = el.getAttribute(attrName);
-			if (!attr) {
-				return;
-			}
-			var absURL = /^(https?|data):/i.test(attr);
-			if (absURL) {
-				return el;
-			} else {
-				return el;
-			}
-		});
-		return nodeList;
-	}
-
-	function screenshotPage() {
-		var wrapper = document.getElementById("capture");
-		html2canvas(wrapper, {
-			onrendered: function (canvas) {
-				canvas.toBlob(function (blob) {
-					saveAs(blob, "Saap.png");
-				});
-			}
-		});
-	}
-
-	function addOnPageLoad_() {
-		window.addEventListener("DOMContentLoaded", function (e) {
-			var scrollX = document.documentElement.dataset.scrollX || 0;
-			var scrollY = document.documentElement.dataset.scrollY || 0;
-			window.scrollTo(scrollX, scrollY);
-		});
-	}
-
-	function saap() {
-		screenshotPage();
-	}
-	exports.screenshotPage = screenshotPage;
-	exports.saap = saap;
-})(window);
+//(function (exports) {
+//	function urlsToAbsolute(nodeList) {
+//		if (!nodeList.length) {
+//			return [];
+//		}
+//		var attrName = "href";
+//		if (nodeList[0].__proto__ === HTMLImageElement.prototype || nodeList[0].__proto__ === HTMLScriptElement.prototype) {
+//			attrName = "src";
+//		}
+//		nodeList = [].map.call(nodeList, function (el, i) {
+//			var attr = el.getAttribute(attrName);
+//			if (!attr) {
+//				return;
+//			}
+//			var absURL = /^(https?|data):/i.test(attr);
+//			if (absURL) {
+//				return el;
+//			} else {
+//				return el;
+//			}
+//		});
+//		return nodeList;
+//	}
+//
+//	function screenshotPage() {
+//		var wrapper = document.getElementById("app");
+//		html2canvas(wrapper, {
+//			onrendered: function (canvas) {
+//				canvas.toBlob(function (blob) {
+//					saveAs(blob, "Saap.png");
+//				});
+//			}
+//		});
+//	}
+//
+//	function addOnPageLoad_() {
+//		window.addEventListener("DOMContentLoaded", function (e) {
+//			var scrollX = document.documentElement.dataset.scrollX || 0;
+//			var scrollY = document.documentElement.dataset.scrollY || 0;
+//			window.scrollTo(scrollX, scrollY);
+//		});
+//	}
+//
+//	function saap() {
+//		screenshotPage();
+//	}
+//	exports.screenshotPage = screenshotPage;
+//	exports.saap = saap;
+//})(window);
 
 //Is it possible to control the camera light on a phone via a website? https://https://stackoverflow.com/a/47153547
 //const SUPPORTS_MEDIA_DEVICES = "mediaDevices" in navigator;
@@ -129,7 +129,7 @@ function toggleScale() {
 	e.classList.toggle("closed");
 }
 
-var p = document.getElementById("capture"),
+var p = document.getElementById("app"),
 	bRange = document.getElementById("b"),
 	sRange = document.getElementById("s"),
 	cRange = document.getElementById("c"),
