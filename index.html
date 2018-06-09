@@ -59,33 +59,28 @@
 	<meta name="twitter:url" content="https://liyas-vr.firebaseapp.com">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="assets/css/style.min.css">
+	<!--
 	<script>
-		//Check that service workers are registered
 		if ('serviceWorker' in navigator) {
 			window.addEventListener('load', function() {
 				navigator.serviceWorker.register('sw.js').then(function(registration) {
-					//Registration was successful
 					console.log('ServiceWorker registration successful with scope: ', registration.scope);
 				}).catch(function(err) {
-					//Registration failed :(
 					console.log('ServiceWorker registration failed: ', err);
 				});
 			});
 		}
 
 	</script>
+	-->
 	<!--A-Frame.js v0.8.2 (https://github.com/aframevr/aframe/releases)(https://cdn.rawgit.com/aframevr/aframe/v0.8.2/dist/aframe-master.min.js)(https://aframe.io/releases/0.8.0/aframe.min.js)-->
 	<script src="assets/js/aframe.min.js"></script>
 	<!--AR.js v1.6.0 (https://github.com/jeromeetienne/AR.js/releases)(https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js)-->
 	<script src="assets/js/aframe-ar.js"></script>
 	<!--A-Frame-extras.js v4.1.2 (https://github.com/donmccurdy/aframe-extras/releases)(https://cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js)-->
 	<script src="assets/js/aframe-extras.min.js"></script>
-	<!--html2canvas.js v0.4.1 (https://github.com/niklasvh/html2canvas/releases)(https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js)-->
-<!--	<script src="assets/js/html2canvas.min.js"></script>-->
-	<!--FileSaver.js v1.3.8 (https://github.com/eligrey/FileSaver.js/releases)(https://cdn.rawgit.com/eligrey/FileSaver.js/1.3.8/src/FileSaver.js)-->
-<!--	<script src="assets/js/FileSaver.min.js"></script>-->
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-	<script async src="assets/js/script.min.js"></script>
+	<!--<script async src="assets/js/script.min.js"></script>-->
 </head>
 
 <body>
@@ -96,10 +91,10 @@
 			<audio id="blip2" src="assets/audio/blip2.wav" preload="auto"></audio>
 			<img id="image1" src="assets/images/favicon.png">
 			<!--<video id="video1" webkit-playsinline autoplay loop="true" src="assets/video/city.mp4"></video>-->
-			<a-asset-item id="love" src="assets/gltf/love/scene.gltf"></a-asset-item>
-			<a-asset-item id="cat" src="assets/gltf/cat/scene.gltf"></a-asset-item>
-			<a-asset-item id="bytt" src="assets/gltf/bytt/bytt.gltf"></a-asset-item>
-			<a-asset-item id="stickman" src="assets/gltf/stickman/scene.gltf"></a-asset-item>
+			<!--			<a-asset-item id="love" src="assets/gltf/love/scene.gltf"></a-asset-item>-->
+			<!--			<a-asset-item id="cat" src="assets/gltf/cat/scene.gltf"></a-asset-item>-->
+			<!--			<a-asset-item id="bytt" src="assets/gltf/bytt/bytt.gltf"></a-asset-item>-->
+			<!--			<a-asset-item id="stickman" src="assets/gltf/stickman/scene.gltf"></a-asset-item>-->
 		</a-assets>
 		<!--Camera-->
 		<a-entity camera>
@@ -203,15 +198,13 @@
 		<a-marker preset="custom" type="pattern" url="assets/patt/A-90.patt">
 			<a-text side="double" position="0 1.75 0.5" scale="0.5 0.5 0.5" value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
-			<a-entity gltf-model="#love" scale="0.01 0.01 0.01" animation-mixer>
-			</a-entity>
+			<!--<a-entity gltf-model="#love" scale="0.01 0.01 0.01" animation-mixer></a-entity>-->
 		</a-marker>
 		<!--Custom marker [B]-->
 		<a-marker preset="custom" type="pattern" url="assets/patt/B-90.patt">
 			<a-text side="double" position="0 1.75 0.5" scale="0.5 0.5 0.5" value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
-			<a-entity gltf-model="#cat" scale="0.04 0.04 0.04" animation-mixer>
-			</a-entity>
+			<!--<a-entity gltf-model="#cat" scale="0.04 0.04 0.04" animation-mixer></a-entity>-->
 		</a-marker>
 		<!--Custom marker [C]-->
 		<a-marker preset="custom" type="pattern" url="assets/patt/C-90.patt">
@@ -222,8 +215,7 @@
 		<a-marker preset="custom" type="pattern" url="assets/patt/D-90.patt">
 			<a-text side="double" position="0 1.75 0.5" scale="0.5 0.5 0.5" value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
-			<a-entity gltf-model="#bytt" scale="0.05 0.05 0.05" animation-mixer>
-			</a-entity>
+			<!--<a-entity gltf-model="#bytt" scale="0.05 0.05 0.05" animation-mixer></a-entity>-->
 		</a-marker>
 		<!--Custom marker [F]-->
 		<a-marker preset="custom" type="pattern" url="assets/patt/F-90.patt">
@@ -234,8 +226,7 @@
 		<a-marker preset="custom" type="pattern" url="assets/patt/G-90.patt">
 			<a-text side="double" position="0 1.75 0.5" scale="0.5 0.5 0.5" value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
-			<a-entity gltf-model="#stickman" scale="0.2 0.2 0.2" animation-mixer>
-			</a-entity>
+			<!--<a-entity gltf-model="#stickman" scale="0.2 0.2 0.2" animation-mixer></a-entity>-->
 		</a-marker>
 		<!--Custom marker and barcode [6]-->
 		<a-marker preset="custom" type="pattern" url="assets/patt/6.patt">
@@ -393,16 +384,6 @@
 						<i class="material-icons">camera_alt</i>
 					</div>
 				</label>
-
-				<div id="snap-button-wrapper">
-					<button id="snap-button"></button>
-				</div>
-
-				<a id="download-link" style="display:none"></a>
-				<script src="assets/js/merge.js"></script>
-				<script src="assets/js/capture.js"></script>
-				<script src="assets/js/index.js"></script>
-
 			</div>
 			<div id="grid" class="hidden">
 				<table>
@@ -425,6 +406,13 @@
 			</div>
 		</div>
 	</main>
+	<div id="snap-button-wrapper">
+		<button id="snap-button"></button>
+	</div>
+	<a id="download-link" style="display:none"></a>
+	<script src="assets/js/merge.js"></script>
+	<script src="assets/js/capture.js"></script>
+	<script src="assets/js/index.js"></script>
 	<noscript>
   	<a href="/">No JavaScript? Go home kid!</a>
 	</noscript>
