@@ -267,8 +267,8 @@ table td {
 
 #app {
 	z-index: 1;
-	transform-origin: center;
-	transform-style: preserve-3d;
+	/*	transform-origin: center;*/
+	/*	transform-style: preserve-3d;*/
 }
 
 #snap-button-wrapper {

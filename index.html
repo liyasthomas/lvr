@@ -30,7 +30,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 	<title>Lvr</title>
 	<meta name="description" content="Virtual and Augmented reality for everyone">
 	<link rel="shortcut icon" href="assets/images/favicon.png">
@@ -78,7 +78,7 @@
 	<!--AR.js v1.6.0 (https://github.com/jeromeetienne/AR.js/releases)(https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js)-->
 	<script src="assets/js/aframe-ar.js"></script>
 	<!--A-Frame-extras.js v4.1.2 (https://github.com/donmccurdy/aframe-extras/releases)(https://cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js)-->
-	<script src="assets/js/aframe-extras.min.js"></script>
+<!--	<script src="assets/js/aframe-extras.min.js"></script>-->
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	<!--<script async src="assets/js/script.min.js"></script>-->
 </head>
@@ -247,6 +247,13 @@
 		<a-entity sound="src: #blip1; autoplay: true;"></a-entity>
 		<a-entity sound="src: #blip2; autoplay: true;"></a-entity>
 	</a-scene>
+	<div id="snap-button-wrapper">
+		<button id="snap-button"></button>
+	</div>
+	<a id="download-link" style="display:none">dowload</a>
+	<script src="assets/js/merge.js"></script>
+	<script src="assets/js/capture.js"></script>
+	<script src="assets/js/index.js"></script>
 	<main role="main">
 		<div id="actions">
 			<!--
@@ -406,13 +413,6 @@
 			</div>
 		</div>
 	</main>
-	<div id="snap-button-wrapper">
-		<button id="snap-button"></button>
-	</div>
-	<a id="download-link" style="display:none"></a>
-	<script src="assets/js/merge.js"></script>
-	<script src="assets/js/capture.js"></script>
-	<script src="assets/js/index.js"></script>
 	<noscript>
   	<a href="/">No JavaScript? Go home kid!</a>
 	</noscript>
