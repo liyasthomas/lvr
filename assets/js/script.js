@@ -1,3 +1,7 @@
+function snap() {
+	document.querySelector('a-scene').components.screenshot.capture('perspective');
+}
+
 //Toggle more
 function toggleMore() {
 	var e = document.getElementById("more");
