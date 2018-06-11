@@ -214,9 +214,15 @@
 				</label>
 				-->
 				<label>
-					<div class="button snap" title="Take screenshot">
+					<div class="button snap" title="Take screenshot" onclick="snap()">
 						<i class="material-icons">camera_alt</i>
 					</div>
+					<script>
+						function snap() {
+						console.log("Snap clicked");
+						document.querySelector('a-scene').components.screenshot.capture('perspective');
+						}
+					</script>
 				</label>
 			</div>
 			<div id="grid" class="hidden">
