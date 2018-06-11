@@ -95,8 +95,7 @@ a:hover {
 	justify-content: center;
 	align-items: center;
 	margin: 4px;
-	height: 56px;
-	width: 56px;
+	padding: 16px;
 	color: #fff;
 	border-radius: 50%;
 	cursor: pointer;
@@ -108,9 +107,10 @@ a:hover {
 	background: rgba(255, 255, 255, .12)
 }
 
-.snap:hover,
-.snap:active {
-	color: var(--app-color)
+.rotate:hover,
+.rotate:active {
+	color: var(--app-color);
+	transform: rotate(360deg);
 }
 
 input[type=checkbox] {
