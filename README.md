@@ -15,7 +15,7 @@
 
 [![Build Status](https://travis-ci.org/liyasthomas/lvr.svg?branch=master)](https://travis-ci.org/liyasthomas/lvr) [![GitHub release](https://img.shields.io/github/release/liyasthomas/lvr/all.svg)](https://github.com/liyasthomas/lvr/releases/latest) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/liyasthomas/lvr/issues) [![Website](https://img.shields.io/website-up-down-ff69b4-ff69b4/https/shields.io.svg?label=website)](https://liyas-vr.firebaseapp.com) [![license](https://img.shields.io/github/license/liyasthomas/lvr.svg)](https://github.com/liyasthomas/lvr/blob/master/LICENSE) [![Donate](https://img.shields.io/badge/$-donate-ff69b4.svg)](https://www.paypal.me/liyascthomas)
 
-# <img src="https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/images/snap-logo-black.png" alt="Lvr" width="32"> Lvr
+# <img src="https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/images/favicon.png" alt="Lvr" width="32"> Lvr
 
 ### :eyeglasses: Virtual reality for everyone by [Liyas Thomas](https://github.com/liyasthomas)
 
