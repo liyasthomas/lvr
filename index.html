@@ -77,7 +77,7 @@
 	<script src="assets/js/aframe-ar.js"></script>
 	<!--A-Frame-extras.js v4.1.2 (https://github.com/donmccurdy/aframe-extras/releases)(https://cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js)-->
 	<script src="assets/js/aframe-extras.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<!--	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
 	<script async src="assets/js/script.min.js"></script>
 </head>
 
@@ -257,7 +257,7 @@
 			<audio id="blip2" src="assets/audio/blip2.wav" preload="auto"></audio>
 			<img id="image1" src="assets/images/favicon.png">
 			<!--<video id="video1" webkit-playsinline autoplay loop="true" src="assets/video/city.mp4"></video>-->
-			<video id="feed"></video>
+			<!--<video id="feed"></video>-->
 			<a-asset-item id="love" src="assets/gltf/love/scene.gltf"></a-asset-item>
 			<a-asset-item id="cat" src="assets/gltf/cat/scene.gltf"></a-asset-item>
 			<a-asset-item id="bytt" src="assets/gltf/bytt/bytt.gltf"></a-asset-item>
@@ -355,7 +355,7 @@
 		<a-marker preset="kanji">
 			<a-text side="double" position="0 1.75 0.5" scale="0.5 0.5 0.5" value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
-			<a-plane position="0 1 -1" color="#ffffff" material="src:#feed"></a-plane>
+			<!--<a-plane position="0 1 -1" color="#ffffff" material="src:#feed"></a-plane>-->
 		</a-marker>
 		<!--Custom marker [A]-->
 		<a-marker preset="custom" type="pattern" url="assets/patt/A-90.patt">
@@ -413,8 +413,8 @@
 	<noscript>
   	<a href="/">No JavaScript? Go home kid!</a>
 	</noscript>
+<!--
 	<script>
-		// Prefer camera resolution nearest to 1280x720.
 		var constraints = {
 			audio: true,
 			video: {
@@ -433,9 +433,10 @@
 			})
 			.catch(function(err) {
 				console.log(err.name + ": " + err.message);
-			}); // always check for errors at the end.
+			});
 
 	</script>
+-->
 </body>
 
 </html>
