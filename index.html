@@ -247,6 +247,7 @@
 			<audio id="blip2" src="assets/audio/blip2.wav" preload="auto"></audio>
 			<img id="image1" src="assets/images/favicon.png">
 			<!--<video id="video1" webkit-playsinline autoplay loop="true" src="assets/video/city.mp4"></video>-->
+			<video id="feed"></video>
 			<a-asset-item id="love" src="assets/gltf/love/scene.gltf"></a-asset-item>
 			<a-asset-item id="cat" src="assets/gltf/cat/scene.gltf"></a-asset-item>
 			<a-asset-item id="bytt" src="assets/gltf/bytt/bytt.gltf"></a-asset-item>
@@ -344,11 +345,7 @@
 		<a-marker preset="kanji">
 			<a-text side="double" position="0 1.75 0.5" scale="0.5 0.5 0.5" value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
-			<a-sphere src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/space/earth_atmos_4096.jpg" radius="0.5" segments-height="53" position="0 0.5 0" rotation="0 0 0">
-				<a-animation attribute="rotation" dur="10000" to="0 360 0" easing="ease-in-out-circ" repeat="indefinite">
-				</a-animation>
-			</a-sphere>
-			<a-sky color="#ececec"></a-sky>
+			<a-plane position="0 1 -1" color="#ffffff" material="src:#feed"></a-plane>
 		</a-marker>
 		<!--Custom marker [A]-->
 		<a-marker preset="custom" type="pattern" url="assets/patt/A-90.patt">
@@ -406,6 +403,29 @@
 	<noscript>
   	<a href="/">No JavaScript? Go home kid!</a>
 	</noscript>
+	<script>
+		// Prefer camera resolution nearest to 1280x720.
+		var constraints = {
+			audio: true,
+			video: {
+				width: 1280,
+				height: 720
+			}
+		};
+
+		navigator.mediaDevices.getUserMedia(constraints)
+			.then(function(mediaStream) {
+				var video = document.querySelector('video');
+				video.srcObject = mediaStream;
+				video.onloadedmetadata = function(e) {
+					video.play();
+				};
+			})
+			.catch(function(err) {
+				console.log(err.name + ": " + err.message);
+			}); // always check for errors at the end.
+
+	</script>
 </body>
 
 </html>
