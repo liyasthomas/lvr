@@ -22,13 +22,17 @@ const mergeImages = (sources = [], options = {}) => new Promise(resolve => {
 	const images = sources.map(source => new Promise((resolve, reject) => {
 		// Convert sources to objects
 		if (source.constructor.name !== 'Object') {
-			source = { src: source };
+			source = {
+				src: source
+			};
 		}
 
 		// Resolve source and img when loaded
 		const img = new Image();
 		img.onerror = () => reject(new Error('Couldn\'t load image'));
-		img.onload = () => resolve(Object.assign({}, source, { img }));
+		img.onload = () => resolve(Object.assign({}, source, {
+			img
+		}));
 		img.src = source.src;
 	}));
 
@@ -68,4 +72,3 @@ const mergeImages = (sources = [], options = {}) => new Promise(resolve => {
 			return canvas.toDataURL(options.format, options.quality);
 		}));
 });
-
