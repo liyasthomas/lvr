@@ -77,8 +77,7 @@
 	<script src="assets/js/aframe-ar.js"></script>
 	<!--A-Frame-extras.js v4.1.2 (https://github.com/donmccurdy/aframe-extras/releases)(https://cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js)-->
 	<script src="assets/js/aframe-extras.min.js"></script>
-<!--	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
-	<script async src="assets/js/script.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
 
 <body>
@@ -214,11 +213,6 @@
 					</div>
 				</label>
 				-->
-				<label>
-					<div class="button snap" title="Take screenshot" onclick="snap()">
-						<i class="material-icons">camera_alt</i>
-					</div>
-				</label>
 				<label>
 					<div id="snap-button" class="button snap" title="Take screenshot">
 						<i class="material-icons">camera</i>
@@ -413,30 +407,7 @@
 	<noscript>
   	<a href="/">No JavaScript? Go home kid!</a>
 	</noscript>
-<!--
-	<script>
-		var constraints = {
-			audio: true,
-			video: {
-				width: 1280,
-				height: 720
-			}
-		};
-
-		navigator.mediaDevices.getUserMedia(constraints)
-			.then(function(mediaStream) {
-				var video = document.querySelector('video');
-				video.srcObject = mediaStream;
-				video.onloadedmetadata = function(e) {
-					video.play();
-				};
-			})
-			.catch(function(err) {
-				console.log(err.name + ": " + err.message);
-			});
-
-	</script>
--->
+	<script async src="assets/js/script.min.js"></script>
 </body>
 
 </html>
