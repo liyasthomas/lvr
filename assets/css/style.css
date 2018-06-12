@@ -18,7 +18,7 @@ body {
 	font-size: 18px;
 	color: #fff;
 	font-family: 'Roboto', 'Noto', sans-serif;
-	background-color: var(--app-color);
+	background-color: #000;
 	background-image: url(../images/logo.svg);
 	background-position: center;
 	background-repeat: no-repeat;
