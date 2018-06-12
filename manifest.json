@@ -6,11 +6,11 @@
 	"start_url": "/lvr/",
 	"display": "fullscreen",
 	"orientation": "any",
-	"theme_color": "#fff",
-	"background_color": "#fff",
+	"theme_color": "#000dff",
+	"background_color": "#000dff",
 	"icons": [
 		{
-			"src": "assets/images/favicon.png",
+			"src": "assets/images/logo.png",
 			"sizes": "512x512",
 			"type": "image/png"
     }
