@@ -3,7 +3,7 @@
 *::before,
 *::after {
 	box-sizing: border-box;
-	outline: 0
+	outline: 0;
 }
 
 :root {
@@ -26,21 +26,21 @@ body {
 	-webkit-tap-highlight-color: transparent;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
-	user-select: none
+	user-select: none;
 }
 
 a {
 	text-decoration: none !important;
 	outline: 0;
-	color: inherit
+	color: inherit;
 }
 
 a:hover {
-	color: inherit
+	color: inherit;
 }
 
 .hidden {
-	display: none !important
+	display: none !important;
 }
 
 .material-icons {
@@ -59,7 +59,7 @@ a:hover {
 	text-rendering: optimizeLegibility;
 	-moz-osx-font-smoothing: grayscale;
 	font-feature-settings: 'liga';
-	filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.2))
+	filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.2));
 }
 
 #actions {
@@ -71,7 +71,7 @@ a:hover {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	overflow: hidden
+	overflow: hidden;
 }
 
 .toolbar {
@@ -82,15 +82,29 @@ a:hover {
 }
 
 .toolbar.space {
-	justify-content: space-between
+	justify-content: space-between;
 }
 
 .bottom {
-	margin-top: auto
+	margin-top: auto;
 }
 
-.button,
-.snap {
+#snap-button {
+	color: #fff;
+	margin: 16px;
+	border-radius: 50%;
+	border: 2px solid rgba(255, 255, 255, .54);
+}
+
+#snap-button-inner {
+	padding: 24px;
+	border-radius: 50%;
+	margin: 4px;
+	background-color: #ff3b30;
+	filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.2));
+}
+
+.button {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -99,25 +113,20 @@ a:hover {
 	color: #fff;
 	border-radius: 50%;
 	cursor: pointer;
-	transition: all .2s
+	transition: all .2s;
 }
 
 .button:hover,
 .button:active {
-	background: rgba(255, 255, 255, .12)
-}
-
-.snap {
-	border: 3px solid #fff;
-	filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.2))
+	background: rgba(255, 255, 255, .12);
 }
 
 input[type=checkbox] {
-	display: none
+	display: none;
 }
 
 .slider .off {
-	color: rgba(255, 255, 255, .54)
+	color: rgba(255, 255, 255, .54);
 }
 
 input[type=checkbox]:checked + div .on {
@@ -126,26 +135,26 @@ input[type=checkbox]:checked + div .on {
 
 .slider input[type=checkbox]:checked + div .on {
 	display: block;
-	color: #fff
+	color: #fff;
 }
 
 input[type=checkbox]:checked + div .off {
-	display: none
+	display: none;
 }
 
 input[type=checkbox]:checked + div {
-	transform: scaleX(-1) scaleX(-1)
+	transform: scaleX(-1) scaleX(-1);
 }
 
 .on {
-	display: none
+	display: none;
 }
 
 .sliders {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-	align-items: center
+	align-items: center;
 }
 
 .slider {
@@ -168,7 +177,7 @@ input[type=range] {
 	display: flex;
 	margin: 16px 0;
 	width: 100%;
-	background: transparent
+	background: transparent;
 }
 
 input[type=range]::-webkit-slider-runnable-track {
@@ -177,7 +186,7 @@ input[type=range]::-webkit-slider-runnable-track {
 	cursor: pointer;
 	background: rgba(255, 255, 255, .54);
 	border-radius: 6px;
-	filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.2))
+	filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.2));
 }
 
 input[type=range]::-moz-range-track {
@@ -186,7 +195,7 @@ input[type=range]::-moz-range-track {
 	cursor: pointer;
 	background: rgba(255, 255, 255, .54);
 	border-radius: 6px;
-	filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.2))
+	filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.2));
 }
 
 input[type=range]::-webkit-slider-thumb {
@@ -196,7 +205,7 @@ input[type=range]::-webkit-slider-thumb {
 	background: #fff;
 	cursor: pointer;
 	-webkit-appearance: none;
-	margin-top: -8px
+	margin-top: -8px;
 }
 
 input[type=range]::-moz-range-thumb {
@@ -205,11 +214,11 @@ input[type=range]::-moz-range-thumb {
 	width: 18px;
 	border-radius: 50%;
 	background: #fff;
-	cursor: pointer
+	cursor: pointer;
 }
 
 input[type=range]::-moz-focus-outer {
-	border: 0
+	border: 0;
 }
 
 output,
@@ -219,7 +228,7 @@ output,
 	align-items: center;
 	justify-content: center;
 	padding: 16px;
-	color: #fff
+	color: #fff;
 }
 
 .res {
@@ -229,18 +238,18 @@ output,
 
 #grid {
 	position: absolute;
-	z-index: -1
+	z-index: -1;
 }
 
 table {
 	width: 100vw;
 	height: 100vh;
 	border-collapse: collapse;
-	border-style: hidden
+	border-style: hidden;
 }
 
 table td {
-	border: 2px solid rgba(255, 255, 255, 0.3)
+	border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 #app {
@@ -251,6 +260,6 @@ table td {
 @media(max-width:640px) {
 	.button:hover,
 	.button:active {
-		background: 0
+		background: 0;
 	}
 }

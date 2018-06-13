@@ -98,7 +98,9 @@
 			</div>
 			-->
 			<div class="toolbar bottom">
-				<div id="snap-button" class="snap" title="Take screenshot"></div>
+				<div id="snap-button" title="Take screenshot">
+					<div id="snap-button-inner"></div>
+				</div>
 			</div>
 			<div class="toolbar sliders">
 				<!--Brightness slider-->
@@ -142,8 +144,8 @@
 				<label for="toggleMore">
 					<input type="checkbox" onclick="toggleMore()" id="toggleMore">
 					<div class="button" title="Tuning">
-						<i class="off material-icons">menu</i>
-						<i class="on material-icons">close</i>
+						<i class="off material-icons">expand_less</i>
+						<i class="on material-icons">expand_more</i>
 					</div>
 				</label>
 				<div id="more" class="slider closed">
