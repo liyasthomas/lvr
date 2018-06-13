@@ -30,17 +30,17 @@
 
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, shrink-to-fit=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 	<title>Lvr</title>
 	<meta name="description" content="Virtual and Augmented reality for everyone">
 	<link rel="shortcut icon" href="assets/images/favicon.png">
 	<link rel="manifest" href="manifest.json">
-	<meta name="theme-color" content="#fff">
+	<meta name="theme-color" content="#000">
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="application-name" content="Lvr">
 	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="#fff">
-	<meta name="apple-mobile-web-app-title" content="Lvr">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+	<meta name="apple-mobile-web-app-title" content="000">
 	<link rel="apple-touch-icon" href="assets/images/favicon.png">
 	<meta name="msapplication-TileImage" content="assets/images/favicon.png">
 	<meta name="msapplication-TileColor" content="#fff">
@@ -232,10 +232,9 @@
 			<img id="image1" src="assets/images/favicon.png">
 			<!--<video id="video1" webkit-playsinline autoplay loop="true" src="assets/video/city.mp4"></video>-->
 			<!--<video id="feed"></video>-->
-			<a-asset-item id="love" src="assets/gltf/love/scene.gltf"></a-asset-item>
-			<a-asset-item id="cat" src="assets/gltf/cat/scene.gltf"></a-asset-item>
+			<a-asset-item id="poop" src="assets/gltf/poop/scene.gltf"></a-asset-item>
 			<a-asset-item id="bytt" src="assets/gltf/bytt/bytt.gltf"></a-asset-item>
-			<a-asset-item id="stickman" src="assets/gltf/stickman/scene.gltf"></a-asset-item>
+			<a-asset-item id="hand" src="assets/gltf/hand/scene.gltf"></a-asset-item>
 		</a-assets>
 		<!--Camera-->
 		<a-entity camera>
@@ -335,13 +334,12 @@
 		<a-marker preset="custom" type="pattern" url="assets/patt/A-90.patt">
 			<a-text side="double" position="0 1.75 0.5" scale="0.5 0.5 0.5" value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
-			<a-entity gltf-model="#love" scale="0.01 0.01 0.01" animation-mixer></a-entity>
+			<a-entity gltf-model="#poop" scale="0.2 0.2 0.2" animation-mixer></a-entity>
 		</a-marker>
 		<!--Custom marker [B]-->
 		<a-marker preset="custom" type="pattern" url="assets/patt/B-90.patt">
 			<a-text side="double" position="0 1.75 0.5" scale="0.5 0.5 0.5" value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
-			<a-entity gltf-model="#cat" scale="0.04 0.04 0.04" animation-mixer></a-entity>
 		</a-marker>
 		<!--Custom marker [C]-->
 		<a-marker preset="custom" type="pattern" url="assets/patt/C-90.patt">
@@ -363,7 +361,7 @@
 		<a-marker preset="custom" type="pattern" url="assets/patt/G-90.patt">
 			<a-text side="double" position="0 1.75 0.5" scale="0.5 0.5 0.5" value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
-			<a-entity gltf-model="#stickman" scale="0.2 0.2 0.2" animation-mixer></a-entity>
+			<a-entity gltf-model="#hand" scale="0.2 0.2 0.2" animation-mixer></a-entity>
 		</a-marker>
 		<!--Custom marker and barcode [6]-->
 		<a-marker preset="custom" type="pattern" url="assets/patt/6.patt">

@@ -6,8 +6,8 @@
 	"start_url": "/lvr/",
 	"display": "fullscreen",
 	"orientation": "any",
-	"theme_color": "#fff",
-	"background_color": "#000dff",
+	"theme_color": "#000",
+	"background_color": "#000",
 	"icons": [
 		{
 			"src": "assets/images/logo.png",
