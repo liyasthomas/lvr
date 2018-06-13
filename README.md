@@ -1,3 +1,9 @@
+```
+When I wrote this, only God and I understood what I was doing.
+
+Now, only God knows.
+```
+
 <div align="center">
   <a href="https://liyas-vr.firebaseapp.com"><img src="https://raw.githubusercontent.com/liyasthomas/templates/master/assets/logo.gif" alt="Liyas Thomas" width="200"></a>
   <br>
@@ -10,14 +16,6 @@
   <a href="https://github.com/liyasthomas/lvr/graphs/contributors">contributors</a>
 	</sub>
 </div>
-
-```
-
-When I wrote this, only God and I understood what I was doing.
-
-Now, only God knows.
-
-```
 
 ---
 
@@ -43,9 +41,7 @@ Now, only God knows.
 
 :zap: **Performance**: Lvr is a thin framework on top of [AR.js](https://github.com/jeromeetienne/AR.js) and [A-Frame](https://github.com/aframevr/aframe). Although A-Frame uses the DOM, A-Frame does not touch the browser layout engine. Performance is a top priority, being battle-tested on highly interactive [WebVR](https://webvr.info) experiences. It runs efficiently even on mobile phones!
 
-:globe_with_meridians: **Cross-Platform**: Build VR applications for Vive,
-Rift, Daydream, GearVR, and Cardboard. Don't have a headset or controllers? No
-problem! Lvr still works on standard desktop and smartphones. It is a pure web solution, so no installation required. Full JavaScript based on [three.js](https://github.com/mrdoob/three.js) + [jsartoolkit5](https://github.com/artoolkit/jsartoolkit5).
+:globe_with_meridians: **Cross-Platform**: Build VR applications for Vive, Rift, Daydream, GearVR, and Cardboard. Don't have a headset or controllers? No problem! Lvr still works on standard desktop and smartphones. It is a pure web solution, so no installation required. Full JavaScript based on [three.js](https://github.com/mrdoob/three.js) + [jsartoolkit5](https://github.com/artoolkit/jsartoolkit5).
 
 ---
 
