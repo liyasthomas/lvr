@@ -232,9 +232,9 @@
 			<img id="image1" src="assets/images/favicon.png">
 			<!--<video id="video1" webkit-playsinline autoplay loop="true" src="assets/video/city.mp4"></video>-->
 			<!--<video id="feed"></video>-->
-			<a-asset-item id="poop" src="assets/gltf/poop/scene.gltf"></a-asset-item>
-			<a-asset-item id="bytt" src="assets/gltf/bytt/bytt.gltf"></a-asset-item>
 			<a-asset-item id="hand" src="assets/gltf/hand/scene.gltf"></a-asset-item>
+			<a-asset-item id="bytt" src="assets/gltf/bytt/bytt.gltf"></a-asset-item>
+			<a-asset-item id="poop" src="assets/gltf/poop/scene.gltf"></a-asset-item>
 		</a-assets>
 		<!--Camera-->
 		<a-entity camera>
@@ -300,7 +300,7 @@
 		<a-marker type="barcode" value="5">
 			<a-text side="double" position="0 1.75 0.5" scale="0.5 0.5 0.5" value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
-			<a-box id="cube" position="0 0.5 0" material="opacity: 0.5; color: skyblue;" sound="src: #blip2; on: click">
+			<a-box id="cube" position="0 0.5 0" material="opacity: 0.5; color: skyblue;" sound="src: #blip2; on: click" shadow>
 				<a-animation begin="click" attribute="rotation" to="360 360 0" dur="2000" fill="both" direction="alternate" easing="linear">
 				</a-animation>
 				<a-box scale="0.5 0.5 0.5" material="opacity: 0.75; side: double; color: yellowgreen;">
@@ -308,11 +308,11 @@
 					</a-animation>
 				</a-box>
 			</a-box>
-			<a-cone color="tomato" radius-bottom="0.5" position="0 1 0" radius-top="0">
+			<a-cone color="tomato" radius-bottom="0.5" position="0 1 0" radius-top="0" shadow>
 				<a-animation attribute="geometry.radiusTop" from="0" to="0.5" dur="2000" fill="both" direction="alternate" repeat="indefinite">
 				</a-animation>
 			</a-cone>
-			<a-sphere radius="0.5" segments-height="53" position="0 2 0" material="color: red;">
+			<a-sphere radius="0.5" segments-height="53" position="0 2 0" material="color: red;" shadow>
 				<a-animation attribute="position" dur="1000" from="0 2 0" to="0 3 0" direction="alternate-reverse" easing="ease-out-bounce" repeat="indefinite">
 				</a-animation>
 			</a-sphere>
@@ -334,50 +334,62 @@
 		<a-marker preset="custom" type="pattern" url="assets/patt/A-90.patt">
 			<a-text side="double" position="0 1.75 0.5" scale="0.5 0.5 0.5" value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
-			<a-entity gltf-model="#poop" scale="0.2 0.2 0.2" animation-mixer></a-entity>
+			<a-entity gltf-model="#hand" scale="1 1 1" animation-mixer></a-entity>
 		</a-marker>
 		<!--Custom marker [B]-->
 		<a-marker preset="custom" type="pattern" url="assets/patt/B-90.patt">
 			<a-text side="double" position="0 1.75 0.5" scale="0.5 0.5 0.5" value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
+			<a-entity gltf-model="#bytt" scale="0.05 0.05 0.05" animation-mixer></a-entity>
 		</a-marker>
 		<!--Custom marker [C]-->
 		<a-marker preset="custom" type="pattern" url="assets/patt/C-90.patt">
 			<a-text side="double" position="0 1.75 0.5" scale="0.5 0.5 0.5" value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
+			<a-entity gltf-model="#poop" scale="1 1 1" animation-mixer></a-entity>
 		</a-marker>
 		<!--Custom marker [D]-->
+		<!--
 		<a-marker preset="custom" type="pattern" url="assets/patt/D-90.patt">
 			<a-text side="double" position="0 1.75 0.5" scale="0.5 0.5 0.5" value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
-			<a-entity gltf-model="#bytt" scale="0.05 0.05 0.05" animation-mixer></a-entity>
 		</a-marker>
+		-->
 		<!--Custom marker [F]-->
+		<!--
 		<a-marker preset="custom" type="pattern" url="assets/patt/F-90.patt">
 			<a-text side="double" position="0 1.75 0.5" scale="0.5 0.5 0.5" value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
 		</a-marker>
+		-->
 		<!--Custom marker [G]-->
+		<!--
 		<a-marker preset="custom" type="pattern" url="assets/patt/G-90.patt">
 			<a-text side="double" position="0 1.75 0.5" scale="0.5 0.5 0.5" value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
-			<a-entity gltf-model="#hand" scale="0.2 0.2 0.2" animation-mixer></a-entity>
 		</a-marker>
+		-->
 		<!--Custom marker and barcode [6]-->
+		<!--
 		<a-marker preset="custom" type="pattern" url="assets/patt/6.patt">
 			<a-text side="double" position="0 1.75 0.5" scale="0.5 0.5 0.5" value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
 		</a-marker>
+		-->
 		<!--Barcode marker [6]-->
+		<!--
 		<a-marker type="barcode" value="6">
 			<a-text side="double" position="0 1.75 0.5" scale="0.5 0.5 0.5" value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
 		</a-marker>
+		-->
 		<!--custom colored marker [2]-->
+		<!--
 		<a-marker preset="custom" type="pattern" url="assets/patt/colored.patt">
 			<a-text side="double" position="0 1.75 0.5" scale="0.5 0.5 0.5" value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
 		</a-marker>
+		-->
 		<!--Sound-->
 		<a-entity sound="src: #blip1; autoplay: true;"></a-entity>
 		<a-entity sound="src: #blip2; autoplay: true;"></a-entity>
