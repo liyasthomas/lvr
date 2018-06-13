@@ -19,10 +19,6 @@ body {
 	color: #fff;
 	font-family: 'Roboto', 'Noto', sans-serif;
 	background-color: #000;
-	background-image: url(../images/logo.svg);
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: 64px;
 	-webkit-tap-highlight-color: transparent;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
@@ -91,9 +87,14 @@ a:hover {
 
 #snap-button {
 	color: #fff;
-	margin: 16px;
+	margin: 8px;
 	border-radius: 50%;
 	border: 2px solid rgba(255, 255, 255, .54);
+	transition: all .2s;
+}
+
+#snap-button:active {
+	transform: scale(1.2);
 }
 
 #snap-button-inner {
