@@ -1,17 +1,18 @@
 <!--
-	@license
-	Made by: Liyas Thomas
-
-	Copyright (c) 2018 Liyas Thomas (https://liyas-thomas.firebaseapp.com)
+	Made by: Liyas Thomas (https://liyas-thomas.firebaseapp.com)
 
 	ALL RIGHTS RESERVED. ALL WRONGS RESERVED.
 
-	Permission is hereby granted, free of charge, to any person obtaining a copy of
-	this software and associated documentation files (the "Software"), to deal in
-	the Software without restriction, including without limitation the rights to
-	use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
-	of the Software, and to permit persons to whom the Software is furnished to do
-	so, subject to the following conditions:
+	MIT License
+
+	Copyright (c) 2018 Liyas Thomas
+
+	Permission is hereby granted, free of charge, to any person obtaining a copy
+	of this software and associated documentation files (the "Software"), to deal
+	in the Software without restriction, including without limitation the rights
+	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+	copies of the Software, and to permit persons to whom the Software is
+	furnished to do so, subject to the following conditions:
 
 	The above copyright notice and this permission notice shall be included in all
 	copies or substantial portions of the Software.
@@ -29,194 +30,178 @@
 
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1, user-scalable=no">
 	<title>Lvr</title>
-	<meta name="description" content="L virtual reality">
-	<link rel="shortcut icon" href="assets/images/snap-logo-black.png">
+	<meta name="description" content="Virtual and Augmented reality for everyone">
+	<link rel="shortcut icon" href="assets/images/favicon.png">
 	<link rel="manifest" href="manifest.json">
-	<meta name="theme-color" content="#212121">
+	<meta name="theme-color" content="#000">
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="application-name" content="Lvr">
 	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="#212121">
-	<meta name="apple-mobile-web-app-title" content="Lvr">
-	<link rel="apple-touch-icon" href="assets/images/snap-logo-black.png">
-	<meta name="msapplication-TileImage" content="assets/images/snap-logo-black.png">
-	<meta name="msapplication-TileColor" content="#212121">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="apple-mobile-web-app-title" content="000">
+	<link rel="apple-touch-icon" href="assets/images/favicon.png">
+	<meta name="msapplication-TileImage" content="assets/images/favicon.png">
+	<meta name="msapplication-TileColor" content="#fff">
 	<meta name="msapplication-tap-highlight" content="no">
 	<meta property="og:site_name" content="Lvr">
 	<meta property="og:url" content="https://liyas-vr.firebaseapp.com">
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="Lvr">
-	<meta property="og:description" content="L virtual reality">
-	<meta property="og:image" content="assets/images/snap-logo-black.png">
+	<meta property="og:description" content="Virtual and Augmented reality for everyone">
+	<meta property="og:image" content="assets/images/favicon.png">
 	<meta name="twitter:site" content="@liyasthomas">
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content="Lvr">
-	<meta name="twitter:description" content="L virtual reality">
-	<meta name="twitter:image" content="assets/images/snap-logo-black.png">
+	<meta name="twitter:description" content="Virtual and Augmented reality for everyone">
+	<meta name="twitter:image" content="assets/images/favicon.png">
 	<meta name="twitter:url" content="https://liyas-vr.firebaseapp.com">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="assets/css/style.min.css">
 	<script>
 		if ('serviceWorker' in navigator) {
 			window.addEventListener('load', function() {
-				navigator.serviceWorker.register('sw.js');
+				navigator.serviceWorker.register('sw.js').then(function(registration) {
+					console.log('ServiceWorker registration successful with scope: ', registration.scope);
+				}).catch(function(err) {
+					console.log('ServiceWorker registration failed: ', err);
+				});
 			});
 		}
 
 	</script>
-	<!--A-Frame.js v0.8.2 (https://github.com/aframevr/aframe/releases)(https://cdn.rawgit.com/aframevr/aframe/v0.8.2/dist/aframe-master.min.js)(https://aframe.io/releases/0.8.0/aframe.min.js)-->
+	<!--A-Frame.js v0.8.2 (https://github.com/aframevr/aframe/releases)(https://cdn.rawgit.com/aframevr/aframe/v0.8.2/dist/aframe-master.min.js)(https://aframe.io/releases/0.8.2/aframe.min.js)-->
 	<script src="assets/js/aframe.min.js"></script>
-	<!--AR.js v1.6.0 (https://github.com/jeromeetienne/AR.js/releases)(https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js)-->
+	<!--AR.js v1.6.0 (https://github.com/jeromeetienne/AR.js/releases)(https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js)(https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js)-->
 	<script src="assets/js/aframe-ar.js"></script>
-	<!--A-Frame-extras.js v4.1.1 (https://github.com/donmccurdy/aframe-extras/releases)(https://cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.1/dist/aframe-extras.min.js)-->
+	<!--A-Frame-extras.js v4.1.2 (https://github.com/donmccurdy/aframe-extras/releases)(https://cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js)-->
 	<script src="assets/js/aframe-extras.min.js"></script>
-	<!--FileSaver.js v1.3.8 (https://github.com/eligrey/FileSaver.js/releases)(https://cdn.rawgit.com/eligrey/FileSaver.js/1.3.8/src/FileSaver.js)-->
-	<!--<script src="assets/js/FileSaver.min.js"></script>-->
-	<!--html2canvas.js v0.4.1 (https://github.com/niklasvh/html2canvas/releases)(https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js)-->
-	<!--<script src="assets/js/html2canvas.min.js"></script>-->
-	<script async src="assets/js/script.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
 
 <body>
 	<main role="main">
 		<div id="actions">
-			<div class="toolbar space">
-				<div class="button">
-					<i class="material-icons">arrow_back</i>
-				</div>
-				<div>
-					<a href="https://liyas-vr.firebaseapp.com">
-						<div class="button">
-							<i class="material-icons">help_outline</i>
-						</div>
-					</a>
-				</div>
-			</div>
 			<!--
-			<div class="toolbar bottom center">
-				<div class="snap" onclick="generate()"></div>
+			<div class="toolbar space">
+				<a href="https://liyas-vr.firebaseapp.com">
+					<div class="button">
+						<i class="material-icons">arrow_back</i>
+					</div>
+				</a>
+				<a href="https://liyas-vr.firebaseapp.com">
+					<div class="button">
+						<i class="material-icons">help_outline</i>
+					</div>
+				</a>
 			</div>
 			-->
-			<div class="toolbar bottom sliders center">
+			<div class="toolbar bottom">
+				<div id="snap-button" title="Take screenshot">
+					<div id="snap-button-inner"></div>
+				</div>
+			</div>
+			<div class="toolbar sliders">
 				<!--Brightness slider-->
 				<div id="bslider" class="slider closed">
-					<label for="b"><i class="material-icons ico">brightness_medium</i></label>
+					<label for="b" title="Brightness"><i class="material-icons ico">brightness_medium</i></label>
 					<input type="range" min="0" max="200" id="b" value="100" step="1">
 					<output for="range" id="bPointSize">100٪</output>
-					<i class="material-icons ico" onclick="resetB()" title="Reset Brightness">refresh</i>
+					<i class="material-icons res" onclick="resetB()" title="Reset Brightness">refresh</i>
 				</div>
 				<!--Saturate slider-->
 				<div id="sslider" class="slider closed">
-					<label for="s"><i class="material-icons ico">tonality</i></label>
+					<label for="s" title="Saturation"><i class="material-icons ico">tonality</i></label>
 					<input type="range" min="0" max="200" id="s" value="100" step="1">
 					<output for="range" id="sPointSize">100٪</output>
-					<i class="material-icons ico" onclick="resetS()" title="Reset Saturation">refresh</i>
+					<i class="material-icons res" onclick="resetS()" title="Reset Saturation">refresh</i>
 				</div>
 				<!--Contrast slider-->
 				<div id="cslider" class="slider closed">
-					<label for="c"><i class="material-icons ico">exposure</i></label>
+					<label for="c" title="Contrast"><i class="material-icons ico">exposure</i></label>
 					<input type="range" min="0" max="200" id="c" value="100" step="1">
 					<output for="range" id="cPointSize">100٪</output>
-					<i class="material-icons ico" onclick="resetC()" title="Reset Contrast">refresh</i>
+					<i class="material-icons res" onclick="resetC()" title="Reset Contrast">refresh</i>
 				</div>
 				<!--Opacity slider-->
 				<div id="oslider" class="slider closed">
-					<label for="o"><i class="material-icons ico">opacity</i></label>
+					<label for="o" title="Opacity"><i class="material-icons ico">opacity</i></label>
 					<input type="range" min="0" max="100" id="o" value="100" step="1">
 					<output for="range" id="oPointSize">100٪</output>
-					<i class="material-icons ico" onclick="resetO()" title="Reset Opacity">refresh</i>
+					<i class="material-icons res" onclick="resetO()" title="Reset Opacity">refresh</i>
 				</div>
 				<!--Scale/zoom slider-->
 				<div id="zslider" class="slider closed">
-					<label for="z"><i class="material-icons ico">straighten</i></label>
+					<label for="z" title="Scale"><i class="material-icons ico">straighten</i></label>
 					<input type="range" min="0" max="2" id="z" value="1" step=".1">
 					<output for="range" id="zPointSize">1×</output>
-					<i class="material-icons ico" onclick="resetZ()" title="Reset Scale">refresh</i>
+					<i class="material-icons res" onclick="resetZ()" title="Reset Scale">refresh</i>
 				</div>
 			</div>
-			<div class="toolbar space">
-				<div class="toolbar">
-					<!--More toggle-->
-					<label for="toggleMore" class="switch">
-						<input type="checkbox" onclick="toggleMore()" id="toggleMore">
-						<div class="button" title="More">
-							<i class="off material-icons">tune</i>
-							<i class="on material-icons">photo_filter</i>
-						</div>
-					</label>
-					<div id="more" class="slider closed">
-						<!--Brightness toggle-->
-						<label for="toggleBrightness" class="switch">
-							<input type="checkbox" onclick="toggleBrightness()" id="toggleBrightness">
-							<div class="button" title="Brightness">
-								<i class="off material-icons">brightness_low</i>
-								<i class="on material-icons">brightness_high</i>
-							</div>
-						</label>
-						<!--Saturate toggle-->
-						<label for="toggleSaturate" class="switch">
-							<input type="checkbox" onclick="toggleSaturate()" id="toggleSaturate">
-							<div class="button" title="Saturation">
-								<i class="off material-icons">tonality</i>
-								<i class="on material-icons">tonality</i>
-							</div>
-						</label>
-						<!--Contrast toggle-->
-						<label for="toggleContrast" class="switch">
-							<input type="checkbox" onclick="toggleContrast()" id="toggleContrast">
-							<div class="button" title="Contrast">
-								<i class="off material-icons">exposure</i>
-								<i class="on material-icons">exposure</i>
-							</div>
-						</label>
-						<!--Opacity toggle-->
-						<label for="toggleOpacity" class="switch">
-							<input type="checkbox" onclick="toggleOpacity()" id="toggleOpacity">
-							<div class="button" title="Opacity">
-								<i class="off material-icons">opacity</i>
-								<i class="on material-icons">opacity</i>
-							</div>
-						</label>
-						<!--Scale/zoom toggle-->
-						<label for="toggleScale" class="switch">
-							<input type="checkbox" onclick="toggleScale()" id="toggleScale">
-							<div class="button" title="Scale">
-								<i class="off material-icons">straighten</i>
-								<i class="on material-icons">straighten</i>
-							</div>
-						</label>
-						<!--Grid toggle-->
-						<label for="toggleGrid" class="switch">
-							<input type="checkbox" onclick="toggleGrid()" id="toggleGrid">
-							<div class="button" title="Grid">
-								<i class="off material-icons">grid_off</i>
-								<i class="on material-icons">grid_on</i>
-							</div>
-						</label>
-						<!--Flash toggle-->
-						<!--
-						<label class="switch">
-							<div class="button" title="Flash">
-								<i class="off material-icons">flash_off</i>
-								<i class="on material-icons">flash_on</i>
-							</div>
-						</label>
-						<input type="checkbox" class="flash" id="flash">
-						-->
-					</div>
-				</div>
-				<!--Camera toggle-->
-				<!--
-				<label class="switch">
-					<input type="checkbox">
-					<div class="button" title="Switch camera">
-						<i class="off material-icons">camera_rear</i>
-						<i class="on material-icons">camera_front</i>
+			<div class="toolbar">
+				<!--More toggle-->
+				<label for="toggleMore">
+					<input type="checkbox" onclick="toggleMore()" id="toggleMore">
+					<div class="button" title="Tuning">
+						<i class="off material-icons">expand_less</i>
+						<i class="on material-icons">expand_more</i>
 					</div>
 				</label>
-				-->
+				<div id="more" class="slider closed">
+					<!--Brightness toggle-->
+					<label for="toggleBrightness">
+						<input type="checkbox" onclick="toggleBrightness()" id="toggleBrightness">
+						<div class="button" title="Brightness">
+							<i class="off material-icons">brightness_low</i>
+							<i class="on material-icons">brightness_high</i>
+						</div>
+					</label>
+					<!--Saturate toggle-->
+					<label for="toggleSaturate">
+						<input type="checkbox" onclick="toggleSaturate()" id="toggleSaturate">
+						<div class="button" title="Saturation">
+							<i class="off material-icons">tonality</i>
+							<i class="on material-icons">tonality</i>
+						</div>
+					</label>
+					<!--Contrast toggle-->
+					<label for="toggleContrast">
+						<input type="checkbox" onclick="toggleContrast()" id="toggleContrast">
+						<div class="button" title="Contrast">
+							<i class="off material-icons">exposure</i>
+							<i class="on material-icons">exposure</i>
+						</div>
+					</label>
+					<!--Opacity toggle-->
+					<label for="toggleOpacity">
+						<input type="checkbox" onclick="toggleOpacity()" id="toggleOpacity">
+						<div class="button" title="Opacity">
+							<i class="off material-icons">opacity</i>
+							<i class="on material-icons">opacity</i>
+						</div>
+					</label>
+					<!--Scale/zoom toggle-->
+					<label for="toggleScale">
+						<input type="checkbox" onclick="toggleScale()" id="toggleScale">
+						<div class="button" title="Scale">
+							<i class="off material-icons">straighten</i>
+							<i class="on material-icons">straighten</i>
+						</div>
+					</label>
+					<!--Grid toggle-->
+					<label for="toggleGrid">
+						<input type="checkbox" onclick="toggleGrid()" id="toggleGrid">
+						<div class="button" title="Grid">
+							<i class="off material-icons">grid_off</i>
+							<i class="on material-icons">grid_on</i>
+						</div>
+					</label>
+				</div>
+				<a id="download-link" style="display:none"></a>
+				<script src="assets/js/merge.js"></script>
+				<script src="assets/js/capture.min.js"></script>
+				<script src="assets/js/index.js"></script>
 			</div>
 			<div id="grid" class="hidden">
 				<table>
@@ -239,19 +224,18 @@
 			</div>
 		</div>
 	</main>
-	<a-scene id="capture" embedded vr-mode-ui="enabled: false" arjs="debugUIEnabled: false; sourceType: webcam; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
+	<a-scene id="app" embedded vr-mode-ui="enabled: false" arjs="debugUIEnabled: false; sourceType: webcam; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
 		<!--Assets-->
 		<a-assets>
 			<audio id="blip1" src="assets/audio/blip1.wav" preload="auto"></audio>
 			<audio id="blip2" src="assets/audio/blip2.wav" preload="auto"></audio>
-			<!--<img id="image1" src="assets/images/snap-logo-white.png">-->
+			<img id="image1" src="assets/images/favicon.png">
 			<!--<video id="video1" webkit-playsinline autoplay loop="true" src="assets/video/city.mp4"></video>-->
-			<a-asset-item id="love" src="assets/gltf/love/scene.gltf"></a-asset-item>
-			<a-asset-item id="cat" src="assets/gltf/cat/scene.gltf"></a-asset-item>
-			<a-asset-item id="male" src="assets/gltf/male/scene.gltf"></a-asset-item>
-			<a-asset-item id="construction" src="assets/gltf/construction/scene.gltf"></a-asset-item>
-			<a-asset-item id="stickman_2" src="assets/gltf/stickman_2/model.gltf"></a-asset-item>
-			<a-asset-item id="stickman" src="assets/gltf/stickman/scene.gltf"></a-asset-item>
+			<!--<video id="feed"></video>-->
+			<a-asset-item id="hand" src="assets/gltf/hand/scene.gltf"></a-asset-item>
+			<a-asset-item id="bytt" src="assets/gltf/bytt/bytt.gltf"></a-asset-item>
+			<a-asset-item id="penguin" src="assets/gltf/penguin/scene.gltf"></a-asset-item>
+			<a-asset-item id="dodge" src="assets/gltf/dodge/dodge.gltf"></a-asset-item>
 		</a-assets>
 		<!--Camera-->
 		<a-entity camera>
@@ -317,7 +301,7 @@
 		<a-marker type="barcode" value="5">
 			<a-text side="double" position="0 1.75 0.5" scale="0.5 0.5 0.5" value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
-			<a-box id="cube" position="0 0.5 0" material="opacity: 0.5; color: skyblue;" sound="src: #blip2; on: click">
+			<a-box id="cube" position="0 0.5 0" material="opacity: 0.5; color: skyblue;" sound="src: #blip2; on: click" shadow>
 				<a-animation begin="click" attribute="rotation" to="360 360 0" dur="2000" fill="both" direction="alternate" easing="linear">
 				</a-animation>
 				<a-box scale="0.5 0.5 0.5" material="opacity: 0.75; side: double; color: yellowgreen;">
@@ -325,11 +309,11 @@
 					</a-animation>
 				</a-box>
 			</a-box>
-			<a-cone color="tomato" radius-bottom="0.5" position="0 1 0" radius-top="0">
+			<a-cone color="tomato" radius-bottom="0.5" position="0 1 0" radius-top="0" shadow>
 				<a-animation attribute="geometry.radiusTop" from="0" to="0.5" dur="2000" fill="both" direction="alternate" repeat="indefinite">
 				</a-animation>
 			</a-cone>
-			<a-sphere radius="0.5" segments-height="53" position="0 2 0" material="color: red;">
+			<a-sphere radius="0.5" segments-height="53" position="0 2 0" material="color: red;" shadow>
 				<a-animation attribute="position" dur="1000" from="0 2 0" to="0 3 0" direction="alternate-reverse" easing="ease-out-bounce" repeat="indefinite">
 				</a-animation>
 			</a-sphere>
@@ -338,83 +322,82 @@
 		<a-marker preset="hiro">
 			<a-text side="double" position="0 1.75 0.5" scale="0.5 0.5 0.5" value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
-			<a-sphere src="assets/images/textures/sun.jpg" radius="0.5" segments-height="53" position="0 0.5 0" rotation="0 0 0" animation="property: rotation; dur: 10000; to: 0 360 0; easing: ease-in-out-circ; repeat: indefinite;">
-			</a-sphere>
-			<a-sky color="#000"></a-sky>
+			<a-image src="#image1"></a-image>
 			<!--<a-video src="#video1" position="0 1 0"></a-video>-->
-			<!--<a-image src="#image1"></a-image>-->
 		</a-marker>
 		<!--preset marker [Kanji]-->
 		<a-marker preset="kanji">
 			<a-text side="double" position="0 1.75 0.5" scale="0.5 0.5 0.5" value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
-			<a-sphere src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/space/earth_atmos_4096.jpg" radius="0.5" segments-height="53" position="0 0.5 0" rotation="0 0 0">
-				<a-animation attribute="rotation" dur="10000" to="0 360 0" easing="ease-in-out-circ" repeat="indefinite">
-				</a-animation>
-			</a-sphere>
-			<a-sky color="#ececec"></a-sky>
+			<!--<a-plane position="0 1 -1" color="#ffffff" material="src:#feed"></a-plane>-->
 		</a-marker>
 		<!--Custom marker [A]-->
 		<a-marker preset="custom" type="pattern" url="assets/patt/A-90.patt">
 			<a-text side="double" position="0 1.75 0.5" scale="0.5 0.5 0.5" value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
-			<a-entity gltf-model="#love" scale="0.01 0.01 0.01" animation-mixer>
-			</a-entity>
+			<a-entity gltf-model="#bytt" scale="0.05 0.05 0.05" animation-mixer></a-entity>
 		</a-marker>
 		<!--Custom marker [B]-->
 		<a-marker preset="custom" type="pattern" url="assets/patt/B-90.patt">
 			<a-text side="double" position="0 1.75 0.5" scale="0.5 0.5 0.5" value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
-			<a-entity gltf-model="#cat" scale="0.04 0.04 0.04" animation-mixer>
-			</a-entity>
+			<a-entity gltf-model="#penguin" scale="0.5 0.5 0.5" animation-mixer></a-entity>
 		</a-marker>
 		<!--Custom marker [C]-->
 		<a-marker preset="custom" type="pattern" url="assets/patt/C-90.patt">
 			<a-text side="double" position="0 1.75 0.5" scale="0.5 0.5 0.5" value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
-			<a-entity gltf-model="#stickman_2" scale="1 1 1" animation-mixer>
-			</a-entity>
+			<a-entity gltf-model="#hand" scale="0.5 0.5 0.5" animation-mixer></a-entity>
 		</a-marker>
 		<!--Custom marker [D]-->
 		<a-marker preset="custom" type="pattern" url="assets/patt/D-90.patt">
 			<a-text side="double" position="0 1.75 0.5" scale="0.5 0.5 0.5" value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
-			<a-entity gltf-model="#male" position="0 0 -1" scale="0.5 0.5 0.5" animation-mixer>
-			</a-entity>
+			<a-entity gltf-model="#dodge" scale="2.5 2.5 2.5" animation-mixer></a-entity>
 		</a-marker>
 		<!--Custom marker [F]-->
+		<!--
 		<a-marker preset="custom" type="pattern" url="assets/patt/F-90.patt">
 			<a-text side="double" position="0 1.75 0.5" scale="0.5 0.5 0.5" value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
-			<a-entity gltf-model="#construction" scale="0.2 0.2 0.2" animation-mixer>
-			</a-entity>
 		</a-marker>
+		-->
 		<!--Custom marker [G]-->
+		<!--
 		<a-marker preset="custom" type="pattern" url="assets/patt/G-90.patt">
 			<a-text side="double" position="0 1.75 0.5" scale="0.5 0.5 0.5" value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
-			<a-entity gltf-model="#stickman" scale="0.2 0.2 0.2" animation-mixer>
-			</a-entity>
 		</a-marker>
+		-->
 		<!--Custom marker and barcode [6]-->
+		<!--
 		<a-marker preset="custom" type="pattern" url="assets/patt/6.patt">
 			<a-text side="double" position="0 1.75 0.5" scale="0.5 0.5 0.5" value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
 		</a-marker>
+		-->
 		<!--Barcode marker [6]-->
+		<!--
 		<a-marker type="barcode" value="6">
 			<a-text side="double" position="0 1.75 0.5" scale="0.5 0.5 0.5" value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
 		</a-marker>
+		-->
 		<!--custom colored marker [2]-->
+		<!--
 		<a-marker preset="custom" type="pattern" url="assets/patt/colored.patt">
 			<a-text side="double" position="0 1.75 0.5" scale="0.5 0.5 0.5" value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
 		</a-marker>
+		-->
 		<!--Sound-->
 		<a-entity sound="src: #blip1; autoplay: true;"></a-entity>
 		<a-entity sound="src: #blip2; autoplay: true;"></a-entity>
 	</a-scene>
+	<noscript>
+  	<a href="/">No JavaScript? Go home kid!</a>
+	</noscript>
+	<script async src="assets/js/script.min.js"></script>
 </body>
 
 </html>
