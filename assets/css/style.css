@@ -17,7 +17,7 @@ body {
 	padding: 0;
 	min-height: 100vh;
 	overflow: hidden;
-	font-size: 18px;
+	font-size: 16px;
 	color: #fff;
 	font-family: 'Roboto', 'Noto', sans-serif;
 	background-color: #000;
@@ -61,7 +61,7 @@ a:hover {
 }
 
 #actions {
-	position: fixed;
+	position: absolute;
 	z-index: 2;
 	left: 0;
 	top: 0;
@@ -179,9 +179,9 @@ input[type=checkbox]:checked + div {
 input[type=range] {
 	-webkit-appearance: none;
 	display: flex;
-	margin: 16px 0;
+	margin: 4px 0;
 	width: 100%;
-	background: transparent;
+	background: none;
 }
 
 input[type=range]::-webkit-slider-runnable-track {
@@ -219,6 +219,14 @@ input[type=range]::-moz-range-thumb {
 	border-radius: 50%;
 	background: #fff;
 	cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-thumb:active {
+	transform: scale(1.1);
+}
+
+input[type=range]::-moz-range-thumb:active {
+	transform: scale(1.1);
 }
 
 input[type=range]::-moz-focus-outer {
@@ -262,8 +270,7 @@ table td {
 }
 
 @media(max-width:640px) {
-	.button:hover,
-	.button:active {
-		background: 0;
+	.button:hover {
+		background: none;
 	}
 }
