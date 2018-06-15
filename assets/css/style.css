@@ -61,7 +61,7 @@ a:hover {
 }
 
 #actions {
-	position: absolute;
+	position: fixed;
 	z-index: 2;
 	left: 0;
 	top: 0;
