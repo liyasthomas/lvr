@@ -88,24 +88,16 @@ a:hover {
 }
 
 #snap-button {
-	color: #fff;
 	margin: 8px;
+	padding: 24px;
 	border-radius: 50%;
-	border: 2px solid rgba(255, 255, 255, .54);
+	border: 3px solid #fff;
 	cursor: pointer;
 	transition: all .2s;
 }
 
 #snap-button:active {
 	transform: scale(1.2);
-}
-
-#snap-button-inner {
-	padding: 24px;
-	border-radius: 50%;
-	margin: 4px;
-	background-color: #ff3b30;
-	filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.2));
 }
 
 .button {
