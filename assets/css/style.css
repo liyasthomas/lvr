@@ -17,7 +17,7 @@ body {
 	padding: 0;
 	min-height: 100vh;
 	overflow: hidden;
-	font-size: 18px;
+	font-size: 16px;
 	color: #fff;
 	font-family: 'Roboto', 'Noto', sans-serif;
 	background-color: #000;
@@ -88,24 +88,16 @@ a:hover {
 }
 
 #snap-button {
-	color: #fff;
 	margin: 8px;
+	padding: 24px;
 	border-radius: 50%;
-	border: 2px solid rgba(255, 255, 255, .54);
+	border: 3px solid #fff;
 	cursor: pointer;
 	transition: all .2s;
 }
 
 #snap-button:active {
 	transform: scale(1.2);
-}
-
-#snap-button-inner {
-	padding: 24px;
-	border-radius: 50%;
-	margin: 4px;
-	background-color: #ff3b30;
-	filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.2));
 }
 
 .button {
@@ -179,9 +171,9 @@ input[type=checkbox]:checked + div {
 input[type=range] {
 	-webkit-appearance: none;
 	display: flex;
-	margin: 16px 0;
+	margin: 4px 0;
 	width: 100%;
-	background: transparent;
+	background: none;
 }
 
 input[type=range]::-webkit-slider-runnable-track {
@@ -219,6 +211,14 @@ input[type=range]::-moz-range-thumb {
 	border-radius: 50%;
 	background: #fff;
 	cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-thumb:active {
+	transform: scale(1.1);
+}
+
+input[type=range]::-moz-range-thumb:active {
+	transform: scale(1.1);
 }
 
 input[type=range]::-moz-focus-outer {
@@ -262,8 +262,7 @@ table td {
 }
 
 @media(max-width:640px) {
-	.button:hover,
-	.button:active {
-		background: 0;
+	.button:hover {
+		background: none;
 	}
 }
