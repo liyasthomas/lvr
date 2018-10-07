@@ -89,7 +89,7 @@ a:hover {
 
 #snap-button {
 	margin: 8px;
-	padding: 24px;
+	padding: 16px;
 	border-radius: 50%;
 	border: 3px solid #fff;
 	cursor: pointer;
@@ -238,6 +238,10 @@ output,
 .res {
 	cursor: pointer;
 	padding-left: 0;
+}
+
+.flip {
+	transform: translateX(-50%) scaleX(-1);
 }
 
 #grid {

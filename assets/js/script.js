@@ -1,5 +1,4 @@
 //Video Feed
-
 //var constraints = {
 //	audio: true,
 //	video: {
@@ -19,7 +18,6 @@
 //	.catch(function (err) {
 //		console.log(err.name + ": " + err.message);
 //	});
-
 //function snap() {
 //	document.querySelector('a-scene').components.screenshot.capture('perspective');
 //}
@@ -29,37 +27,41 @@ function toggleMore() {
 	var e = document.getElementById("more");
 	e.classList.toggle("closed");
 }
-
 //Toggle brightness
 function toggleBrightness() {
 	var e = document.getElementById("bslider");
 	e.classList.toggle("closed");
 }
-
 //Toggle saturate
 function toggleSaturate() {
 	var e = document.getElementById("sslider");
 	e.classList.toggle("closed");
 }
-
 //Toggle contrast
 function toggleContrast() {
 	var e = document.getElementById("cslider");
 	e.classList.toggle("closed");
 }
-
 //Toggle opacity
 function toggleOpacity() {
 	var e = document.getElementById("oslider");
 	e.classList.toggle("closed");
 }
-
 //Toggle scale
 function toggleScale() {
 	var e = document.getElementById("zslider");
 	e.classList.toggle("closed");
 }
-
+//Toggle grid
+function toggleGrid() {
+	var e = document.getElementById("grid");
+	e.classList.toggle("hidden");
+}
+//Toggle flip
+function toggleFlip() {
+	var e = document.getElementById("app");
+	e.classList.toggle("flip");
+}
 var p = document.getElementById("app"),
 	bRange = document.getElementById("b"),
 	sRange = document.getElementById("s"),
@@ -105,7 +107,6 @@ zRange.addEventListener("input", function () {
 }, false);
 
 //Reset
-
 function resetB() {
 	var sat = sRange.value,
 		con = cRange.value,
@@ -113,7 +114,7 @@ function resetB() {
 	p.style.filter = "brightness(100%) saturate(" + sat + "%) contrast(" + con + "%) opacity(" + opa + "%)";
 	document.getElementById("b").value = 100;
 	document.getElementById("bPointSize").value = 100 + "٪";
-};
+}
 
 function resetS() {
 	var bri = bRange.value,
@@ -122,7 +123,7 @@ function resetS() {
 	p.style.filter = "brightness(" + bri + "%) saturate(100%) contrast(" + con + "%) opacity(" + opa + "%)";
 	document.getElementById("s").value = 100;
 	document.getElementById("sPointSize").value = 100 + "٪";
-};
+}
 
 function resetC() {
 	var bri = bRange.value,
@@ -131,7 +132,7 @@ function resetC() {
 	p.style.filter = "brightness(" + bri + "%) saturate(" + sat + "%) contrast(100%) opacity(" + opa + "%)";
 	document.getElementById("c").value = 100;
 	document.getElementById("cPointSize").value = 100 + "٪";
-};
+}
 
 function resetO() {
 	var bri = bRange.value,
@@ -140,16 +141,10 @@ function resetO() {
 	p.style.filter = "brightness(" + bri + "%) saturate(" + sat + "%) contrast(" + con + "%) opacity(100%)";
 	document.getElementById("o").value = 100;
 	document.getElementById("oPointSize").value = 100 + "٪";
-};
+}
 
 function resetZ() {
 	p.style.transform = "scale3d(1,1,1)";
 	document.getElementById("z").value = 1;
 	document.getElementById("zPointSize").value = 1 + "×";
-};
-
-//Toggle grid
-function toggleGrid() {
-	var e = document.getElementById("grid");
-	e.classList.toggle("hidden");
 }

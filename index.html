@@ -1,22 +1,16 @@
 <!--
 	Made by: Liyas Thomas (https://liyas-thomas.firebaseapp.com)
-
 	ALL RIGHTS RESERVED. ALL WRONGS RESERVED.
-
 	MIT License
-
 	Copyright (c) 2018 Liyas Thomas
-
 	Permission is hereby granted, free of charge, to any person obtaining a copy
 	of this software and associated documentation files (the "Software"), to deal
 	in the Software without restriction, including without limitation the rights
 	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 	copies of the Software, and to permit persons to whom the Software is
 	furnished to do so, subject to the following conditions:
-
 	The above copyright notice and this permission notice shall be included in all
 	copies or substantial portions of the Software.
-
 	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -69,7 +63,6 @@
 				});
 			});
 		}
-
 	</script>
 	<!--A-Frame.js v0.8.2 (https://github.com/aframevr/aframe/releases)(https://cdn.rawgit.com/aframevr/aframe/v0.8.2/dist/aframe-master.min.js)(https://aframe.io/releases/0.8.2/aframe.min.js)-->
 	<script src="assets/js/aframe.min.js"></script>
@@ -83,18 +76,16 @@
 <body>
 	<main role="main">
 		<div id="actions">
-			<!--
 			<div class="toolbar space">
 				<div class="button">
-					<i class="material-icons">menu</i>
+					<i class="material-icons">close</i>
 				</div>
-				<a href="https://liyas-vr.firebaseapp.com">
+				<a href="https://github.com/liyasthomas/lvr" target="_blank">
 					<div class="button">
 						<i class="material-icons">help_outline</i>
 					</div>
 				</a>
 			</div>
--->
 			<div class="toolbar bottom">
 				<div id="snap-button" title="Snap!">
 				</div>
@@ -141,8 +132,8 @@
 				<label for="toggleMore">
 					<input type="checkbox" onclick="toggleMore()" id="toggleMore">
 					<div class="button" title="Tuning">
-						<i class="off material-icons">expand_less</i>
-						<i class="on material-icons">expand_more</i>
+						<i class="off material-icons">tune</i>
+						<i class="on material-icons">photo_filter</i>
 					</div>
 				</label>
 				<div id="more" class="slider closed">
@@ -195,6 +186,22 @@
 						</div>
 					</label>
 				</div>
+				<!--Flip toggle-->
+				<label for="toggleFlip">
+					<input type="checkbox" onclick="toggleFlip()" id="toggleFlip">
+					<div class="button" title="Flip">
+						<i class="off material-icons">flip_to_back</i>
+						<i class="on material-icons">flip_to_front</i>
+					</div>
+				</label>
+				<!--Camera toggle-->
+				<label for="toggleCamera">
+					<input type="checkbox" onclick="toggleCamera()" id="toggleCamera">
+					<div class="button" title="Toggle camara">
+						<i class="off material-icons">camera_rear</i>
+						<i class="on material-icons">camera_front</i>
+					</div>
+				</label>
 				<a id="download-link" style="display:none"></a>
 				<script src="assets/js/merge.js"></script>
 				<script src="assets/js/capture.min.js"></script>
@@ -227,7 +234,7 @@
 			<audio id="blip1" src="assets/audio/blip1.wav" preload="auto"></audio>
 			<audio id="blip2" src="assets/audio/blip2.wav" preload="auto"></audio>
 			<img id="image1" src="assets/images/favicon.png">
-			<!--<video id="video1" webkit-playsinline autoplay loop="true" src="assets/video/city.mp4"></video>-->
+			<!--<video id="video1" playsinline webkit-playsinline autoplay loop="true" src="assets/video/city.mp4"></video>-->
 			<!--<video id="feed"></video>-->
 			<a-asset-item id="hand" src="assets/gltf/hand/scene.gltf"></a-asset-item>
 			<a-asset-item id="bytt" src="assets/gltf/bytt/bytt.gltf"></a-asset-item>
@@ -392,7 +399,7 @@
 		<a-entity sound="src: #blip2; autoplay: true;"></a-entity>
 	</a-scene>
 	<noscript>
-  	<a href="/">No JavaScript? Go home kid!</a>
+		<a href="/">No JavaScript? Go home kid!</a>
 	</noscript>
 	<script async src="assets/js/script.min.js"></script>
 </body>
