@@ -6,16 +6,10 @@
 	outline: 0;
 }
 
-/*
-:root {
-	--app-color: #000;
-}
-*/
-
 body {
 	margin: 0;
 	padding: 0;
-	min-height: 100vh;
+	height: 100vh;
 	overflow: hidden;
 	font-size: 16px;
 	color: #fff;
@@ -174,6 +168,7 @@ input[type=range] {
 	margin: 4px 0;
 	width: 100%;
 	background: none;
+	vertical-align: middle;
 }
 
 input[type=range]::-webkit-slider-runnable-track {
