@@ -60,7 +60,7 @@ What things you need to install the software and how to install them.
 
 <div align="center">
   <br>
-  <img src="https://mixedreality.mozilla.org/static/img/experience/devices.png" alt="Lvr" width="100%">
+  <img src="https://mixedreality.mozilla.org/static/devices-3c0ceed45357ed262a2b4f54c5c71adb.png" alt="Lvr" width="100%">
   <br>
   <br>
 </div>
