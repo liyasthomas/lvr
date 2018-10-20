@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-	<title>Lvr - Architecture</title>
+	<title>Lvr - Geography</title>
 	<meta name="description" content="L virtual reality">
 	<link rel="shortcut icon" href="../assets/images/favicon.png">
 	<meta name="theme-color" content="#000">
@@ -41,9 +41,7 @@
 		<a-assets>
 			<audio id="blip1" src="../assets/audio/blip1.wav" preload="auto"></audio>
 			<audio id="blip2" src="../assets/audio/blip2.wav" preload="auto"></audio>
-			<a-asset-item id="construction" src="../assets/gltf/construction/scene.gltf"></a-asset-item>
-			<a-asset-item id="kitchen" src="../assets/gltf/kitchen/model.gltf"></a-asset-item>
-			<a-asset-item id="kitchen_2" src="../assets/gltf/kitchen_2/model.gltf"></a-asset-item>
+			<a-asset-item id="love" src="../assets/gltf/love/scene.gltf"></a-asset-item>
 		</a-assets>
 		<!--Camera-->
 		<a-entity camera>
@@ -68,21 +66,7 @@
 		<a-marker preset='custom' type='pattern' url='../assets/patt/A-90.patt'>
 			<a-text side='double' position='0 1.75 0.5' scale='0.5 0.5 0.5' value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
-			<a-entity gltf-model="#construction" scale="0.2 0.2 0.2" animation-mixer>
-			</a-entity>
-		</a-marker>
-		<!--Custom marker [B]-->
-		<a-marker preset='custom' type='pattern' url='../assets/patt/B-90.patt'>
-			<a-text side='double' position='0 1.75 0.5' scale='0.5 0.5 0.5' value="Lvr" align="center" rotation="-90 0 0">
-			</a-text>
-			<a-entity gltf-model="#kitchen" scale="2.5 2.5 2.5" animation-mixer>
-			</a-entity>
-		</a-marker>
-		<!--Custom marker [C]-->
-		<a-marker preset='custom' type='pattern' url='../assets/patt/C-90.patt'>
-			<a-text side='double' position='0 1.75 0.5' scale='0.5 0.5 0.5' value="Lvr" align="center" rotation="-90 0 0">
-			</a-text>
-			<a-entity gltf-model="#kitchen_2" scale="0.5 0.5 0.5" animation-mixer>
+			<a-entity gltf-model="#love" scale="0.01 0.01 0.01" animation-mixer>
 			</a-entity>
 		</a-marker>
 		<!--Sound-->
