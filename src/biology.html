@@ -41,7 +41,7 @@
 		<a-assets>
 			<audio id="blip1" src="../assets/audio/blip1.wav" preload="auto"></audio>
 			<audio id="blip2" src="../assets/audio/blip2.wav" preload="auto"></audio>
-			<a-asset-item id="love" src="../assets/gltf/love/scene.gltf"></a-asset-item>
+			<a-asset-item id="skeleton" src="../assets/gltf/skeleton/scene.gltf"></a-asset-item>
 		</a-assets>
 		<!--Camera-->
 		<a-entity camera>
@@ -64,9 +64,7 @@
 		</a-marker>
 		<!--Custom marker [A]-->
 		<a-marker preset='custom' type='pattern' url='../assets/patt/A-90.patt'>
-			<a-text side='double' position='0 1.75 0.5' scale='0.5 0.5 0.5' value="Lvr" align="center" rotation="-90 0 0">
-			</a-text>
-			<a-entity gltf-model="#love" scale="0.01 0.01 0.01" animation-mixer>
+			<a-entity gltf-model="#skeleton" scale="0.25 0.25 0.25" animation-mixer>
 			</a-entity>
 		</a-marker>
 		<!--Sound-->
