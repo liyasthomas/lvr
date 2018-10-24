@@ -42,6 +42,7 @@
 			<audio id="blip1" src="../assets/audio/blip1.wav" preload="auto"></audio>
 			<audio id="blip2" src="../assets/audio/blip2.wav" preload="auto"></audio>
 			<a-asset-item id="construction" src="../assets/gltf/construction/scene.gltf"></a-asset-item>
+			<a-asset-item id="house" src="../assets/gltf/house/scene.gltf"></a-asset-item>
 			<a-asset-item id="kitchen" src="../assets/gltf/kitchen/model.gltf"></a-asset-item>
 			<a-asset-item id="kitchen_2" src="../assets/gltf/kitchen_2/model.gltf"></a-asset-item>
 		</a-assets>
@@ -75,11 +76,18 @@
 		<a-marker preset='custom' type='pattern' url='../assets/patt/B-90.patt'>
 			<a-text side='double' position='0 1.75 0.5' scale='0.5 0.5 0.5' value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
-			<a-entity gltf-model="#kitchen" scale="2.5 2.5 2.5" animation-mixer>
+			<a-entity gltf-model="#house" scale="2.5 2.5 2.5" animation-mixer>
 			</a-entity>
 		</a-marker>
 		<!--Custom marker [C]-->
 		<a-marker preset='custom' type='pattern' url='../assets/patt/C-90.patt'>
+			<a-text side='double' position='0 1.75 0.5' scale='0.5 0.5 0.5' value="Lvr" align="center" rotation="-90 0 0">
+			</a-text>
+			<a-entity gltf-model="#kitchen" scale="2.5 2.5 2.5" animation-mixer>
+			</a-entity>
+		</a-marker>
+		<!--Custom marker [D]-->
+		<a-marker preset='custom' type='pattern' url='../assets/patt/D-90.patt'>
 			<a-text side='double' position='0 1.75 0.5' scale='0.5 0.5 0.5' value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
 			<a-entity gltf-model="#kitchen_2" scale="0.5 0.5 0.5" animation-mixer>
