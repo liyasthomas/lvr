@@ -33,7 +33,7 @@
 	<title>AEIOU</title>
 	<meta name="description" content="L virtual reality">
 	<link rel="shortcut icon" href="assets/images/favicon.png">
-	<meta name="theme-color" content="#212121">
+	<meta name="theme-color" content="#000">
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="application-name" content="Lvr">
 	<meta name="apple-mobile-web-app-capable" content="yes">
@@ -41,7 +41,7 @@
 	<meta name="apple-mobile-web-app-title" content="Lvr">
 	<link rel="apple-touch-icon" href="assets/images/favicon.png">
 	<meta name="msapplication-TileImage" content="assets/images/favicon.png">
-	<meta name="msapplication-TileColor" content="#212121">
+	<meta name="msapplication-TileColor" content="#000">
 	<meta name="msapplication-tap-highlight" content="no">
 	<meta property="og:site_name" content="Lvr">
 	<meta property="og:url" content="https://liyas-vr.firebaseapp.com">
@@ -72,7 +72,7 @@
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
-		height: calc(100vh - 64px);
+		min-height: calc(100vh - 64px);
 		padding: 32px;
 	}
 
@@ -83,32 +83,34 @@
 	a {
 		text-decoration: none;
 		color: inherit;
-		border-bottom: 2px solid;
 	}
 
 	.demo {
-		padding: 16px;
-		line-height: 2;
+		display: inline-block;
+		color: #000;
+		padding: 16px 24px;
+		border-radius: 8px;
+		margin: 8px;
 	}
 
 	.a {
-		color: #0dfdb2;
+		background-color: #0dfdb2;
 	}
 
 	.e {
-		color: #18ffff;
+		background-color: #18ffff;
 	}
 
 	.i {
-		color: #0e61ff;
+		background-color: #0e61ff;
 	}
 
 	.o {
-		color: #ff5cff;
+		background-color: #ff5cff;
 	}
 
 	.u {
-		color: #ff0052;
+		background-color: #ff0052;
 	}
 
 </style>
@@ -117,11 +119,11 @@
 	<div class="container">
 		<div>
 			<h1>
-				<span class="a">A</span>
-				<span class="e">E</span>
-				<span class="i">I</span>
-				<span class="o">O</span>
-				<span class="u">U</span>
+				<span class="demo a">A</span>
+				<span class="demo e">E</span>
+				<span class="demo i">I</span>
+				<span class="demo o">O</span>
+				<span class="demo u">U</span>
 			</h1>
 		</div>
 		<div>
@@ -130,19 +132,18 @@
 	</div>
 	<div class="container">
 		<div>
-            <p class="demo">Pages</p>
 			<span class="demo a"><a href="src/alphabets.html" target="_blank">Alphabets</a></span>
 			<span class="demo e"><a href="src/animals.html" target="_blank">Animals</a></span>
-			<span class="demo i"><a href="src/chemistry.html" target="_blank">Chemistry</a></span>
-			<span class="demo o"><a href="src/geography.html" target="_blank">Geography</a></span>
+			<span class="demo i"><a href="src/architecture.html" target="_blank">Real&nbsp;estate</a></span>
+			<span class="demo o"><a href="src/automobile.html" target="_blank">Automobile</a></span>
 			<span class="demo u"><a href="src/biology.html" target="_blank">Biology</a></span>
-			<span class="demo a"><a href="src/food.html" target="_blank">Restaurant</a></span>
-			<span class="demo e"><a href="src/architecture.html" target="_blank">Real&nbsp;estate</a></span>
-			<span class="demo i"><a href="src/automobile.html" target="_blank">Automobile</a></span>
-			<span class="demo o"><a href="src/film.html" target="_blank">Film&nbsp;poster</a></span>
-			<span class="demo u"><a href="src/wedding.html" target="_blank">Business&nbsp;card</a></span>
-			<span class="demo a"><a href="src/ecommerce.html" target="_blank">Ecommerce</a></span>
-			<span class="demo e"><a href="src/entertainment.html" target="_blank">Entertainment</a></span>
+			<span class="demo a"><a href="src/business.html" target="_blank">Business&nbsp;card</a></span>
+			<span class="demo e"><a href="src/chemistry.html" target="_blank">Chemistry</a></span>
+			<span class="demo i"><a href="src/ecommerce.html" target="_blank">Ecommerce</a></span>
+			<span class="demo o"><a href="src/entertainment.html" target="_blank">Entertainment</a></span>
+			<span class="demo u"><a href="src/film.html" target="_blank">Film</a></span>
+			<span class="demo a"><a href="src/food.html" target="_blank">Food</a></span>
+			<span class="demo e"><a href="src/geography.html" target="_blank">Geography</a></span>
 		</div>
 	</div>
 </body>
