@@ -41,7 +41,7 @@
 		<a-assets>
 			<audio id="blip1" src="../assets/audio/blip1.wav" preload="auto"></audio>
 			<audio id="blip2" src="../assets/audio/blip2.wav" preload="auto"></audio>
-            <video id="feed"></video>
+            <video id="feed" playsinline></video>
 			<a-asset-item id="love" src="../assets/gltf/love/scene.gltf"></a-asset-item>
 		</a-assets>
 		<!--Camera-->
@@ -74,25 +74,14 @@
 		<a-entity sound="src: #blip2; autoplay: true;"></a-entity>
 	</a-scene>
     <script>
-        var constraints = {
-            audio: true,
-            video: {
-                width: 1280,
-                height: 720
-            }
-        };
-
-        navigator.mediaDevices.getUserMedia(constraints)
-            .then(function (mediaStream) {
-                var video = document.querySelector('#feed');
-                video.srcObject = mediaStream;
-                video.onloadedmetadata = function (e) {
-                    video.play();
-                };
-            })
-            .catch(function (err) {
-                console.log(err.name + ": " + err.message);
-            });
+      navigator.mediaDevices.getUserMedia({audio: false, video: true})
+      .then(stream => {
+        let $video = document.querySelector('video')
+        $video.srcObject = stream
+        $video.onloadedmetadata = () => {
+          $video.play()
+        }
+      })
     </script>
 </body>
 
