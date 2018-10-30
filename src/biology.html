@@ -43,6 +43,7 @@
 			<audio id="blip2" src="../assets/audio/blip2.wav" preload="auto"></audio>
 			<a-asset-item id="skeleton" src="../assets/gltf/skeleton/scene.gltf"></a-asset-item>
 			<a-asset-item id="cell" src="../assets/gltf/cell/scene.gltf"></a-asset-item>
+			<a-asset-item id="thymine" src="../assets/gltf/thymine/scene.gltf"></a-asset-item>
 		</a-assets>
 		<!--Camera-->
 		<a-entity camera>
@@ -75,6 +76,14 @@
 		<a-marker preset='custom' type='pattern' url='../assets/patt/B-90.patt'>
             <a-plane rotation="-90 0 0" width="2" height="2" color="#000" shadow></a-plane>
 			<a-entity gltf-model="#cell" scale="0.25 0.25 0.25" animation-mixer>
+				<a-animation attribute="rotation" to="0 360 0" dur="5000" easing="linear" repeat="indefinite">
+				</a-animation>
+			</a-entity>
+		</a-marker>
+		<!--Custom marker [C]-->
+		<a-marker preset='custom' type='pattern' url='../assets/patt/C-90.patt'>
+            <a-plane rotation="-90 0 0" width="2" height="2" color="#000" shadow></a-plane>
+			<a-entity gltf-model="#thymine" scale="0.25 0.25 0.25" animation-mixer>
 				<a-animation attribute="rotation" to="0 360 0" dur="5000" easing="linear" repeat="indefinite">
 				</a-animation>
 			</a-entity>
