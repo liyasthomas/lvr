@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-	<title>Lvr - Business card</title>
+	<title>Lvr - Scan</title>
 	<meta name="description" content="L virtual reality">
 	<link rel="shortcut icon" href="../assets/images/favicon.png">
 	<meta name="theme-color" content="#000">
@@ -202,7 +202,8 @@
 		<a-assets>
 			<audio id="blip1" src="../assets/audio/blip1.wav" preload="auto"></audio>
 			<audio id="blip2" src="../assets/audio/blip2.wav" preload="auto"></audio>
-			<a-asset-item id="person" src="../assets/gltf/person_x/scene.gltf"></a-asset-item>
+            <video id="feed" playsinline></video>
+			<a-asset-item id="love" src="../assets/gltf/love/scene.gltf"></a-asset-item>
 		</a-assets>
 		<!--Camera-->
 		<a-entity camera>
@@ -225,8 +226,9 @@
 		</a-marker>
 		<!--Custom marker [A]-->
 		<a-marker preset='custom' type='pattern' url='../assets/patt/A-90.patt'>
-			<a-entity gltf-model="#person" scale="0.01 0.01 0.01" animation-mixer>
-			</a-entity>
+			<a-text side='double' position='0 1.75 0.5' scale='0.5 0.5 0.5' value="Lvr" align="center" rotation="-90 0 0">
+			</a-text>
+            <a-plane position="0 1 -1" color="#ffffff" material="src:#feed"></a-plane>
 		</a-marker>
 		<!--Sound-->
 		<a-entity sound="src: #blip1; autoplay: true;"></a-entity>
@@ -235,7 +237,17 @@
 	<noscript>
 		<a href="/">No JavaScript? Go home kid!</a>
 	</noscript>
-	<script src="../assets/js/script.min.js"></script>
+	<script async src="../assets/js/script.min.js"></script>
+    <script>
+      navigator.mediaDevices.getUserMedia({audio: false, video: true})
+      .then(stream => {
+        let $video = document.querySelector('video')
+        $video.srcObject = stream
+        $video.onloadedmetadata = () => {
+          $video.play()
+        }
+      })
+    </script>
 </body>
 
 </html>
