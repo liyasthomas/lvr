@@ -1,13 +1,13 @@
+```
+When I wrote this, only God and I understood what I was doing. Now, only God knows.
+```
 <div align="center">
-  <a href="https://liyas-vr.firebaseapp.com"><img src="https://raw.githubusercontent.com/liyasthomas/templates/master/assets/logo.gif" alt="Liyas Thomas" width="200"></a>
+  <a href="https://liyas-thomas.firebaseapp.com"><img src="https://raw.githubusercontent.com/liyasthomas/templates/master/assets/logo.gif" alt="Liyas Thomas" width="200"></a>
   <br>
   <h1>Liyas Thomas</h1>
-</div>
-
-<div align="center">
   <sub>Built with ❤︎ by
   <a href="https://github.com/liyasthomas">liyasthomas</a> and
-  <a href="https://github.com/liyasthomas/lvr/graphs/contributors">contributors</a>
+  <a href="https://github.com/liyasthomas/templates/graphs/contributors">contributors</a>
 	</sub>
 </div>
 
@@ -15,9 +15,9 @@
 
 [![Build Status](https://travis-ci.org/liyasthomas/lvr.svg?branch=master)](https://travis-ci.org/liyasthomas/lvr) [![GitHub release](https://img.shields.io/github/release/liyasthomas/lvr/all.svg)](https://github.com/liyasthomas/lvr/releases/latest) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/liyasthomas/lvr/issues) [![Website](https://img.shields.io/website-up-down-ff69b4-ff69b4/https/shields.io.svg?label=website)](https://liyas-vr.firebaseapp.com) [![license](https://img.shields.io/github/license/liyasthomas/lvr.svg)](https://github.com/liyasthomas/lvr/blob/master/LICENSE) [![Donate](https://img.shields.io/badge/$-donate-ff69b4.svg)](https://www.paypal.me/liyascthomas)
 
-# <img src="https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/images/favicon.png" alt="Lvr" width="32"> Lvr
+# Lvr <img src="https://raw.githubusercontent.com/liyasthomas/lvr/master/assets/images/favicon.png" alt="Lvr" width="32">
 
-### Virtual reality for everyone by [Liyas Thomas](https://github.com/liyasthomas)
+### :eyeglasses: Virtual reality for everyone by [Liyas Thomas](https://github.com/liyasthomas)
 
 <div align="center">
   <br>
@@ -35,9 +35,7 @@
 
 :zap: **Performance**: Lvr is a thin framework on top of [AR.js](https://github.com/jeromeetienne/AR.js) and [A-Frame](https://github.com/aframevr/aframe). Although A-Frame uses the DOM, A-Frame does not touch the browser layout engine. Performance is a top priority, being battle-tested on highly interactive [WebVR](https://webvr.info) experiences. It runs efficiently even on mobile phones!
 
-:globe_with_meridians: **Cross-Platform**: Build VR applications for Vive,
-Rift, Daydream, GearVR, and Cardboard. Don't have a headset or controllers? No
-problem! Lvr still works on standard desktop and smartphones. It is a pure web solution, so no installation required. Full JavaScript based on [three.js](https://github.com/mrdoob/three.js) + [jsartoolkit5](https://github.com/artoolkit/jsartoolkit5).
+:globe_with_meridians: **Cross-Platform**: Build VR applications for Vive, Rift, Daydream, GearVR, and Cardboard. Don't have a headset or controllers? No problem! Lvr still works on standard desktop and smartphones. It is a pure web solution, so no installation required. Full JavaScript based on [three.js](https://github.com/mrdoob/three.js) + [jsartoolkit5](https://github.com/artoolkit/jsartoolkit5).
 
 ---
 
@@ -62,7 +60,7 @@ What things you need to install the software and how to install them.
 
 <div align="center">
   <br>
-  <img src="https://mixedreality.mozilla.org/static/img/experience/devices.png" alt="Lvr" width="100%">
+  <img src="https://mixedreality.mozilla.org/static/devices-3c0ceed45357ed262a2b4f54c5c71adb.png" alt="Lvr" width="100%">
   <br>
   <br>
 </div>

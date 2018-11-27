@@ -3,39 +3,32 @@
 *::before,
 *::after {
 	box-sizing: border-box;
-	outline: none;
-}
-
-:root {
-	--app-color: cyan;
-}
-
-a {
-	text-decoration: none;
-	color: inherit;
-}
-
-a:hover {
-	color: inherit;
+	outline: 0;
 }
 
 body {
 	margin: 0;
 	padding: 0;
-	min-height: 100vh;
+	height: 100vh;
 	overflow: hidden;
-	font-size: 18px;
+	font-size: 16px;
 	color: #fff;
 	font-family: 'Roboto', 'Noto', sans-serif;
-	background-color: #212121;
-	background-image: url(../images/snap-logo-white.svg);
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: 64px;
+	background-color: #000;
 	-webkit-tap-highlight-color: transparent;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	user-select: none;
+}
+
+a {
+	text-decoration: none !important;
+	outline: 0;
+	color: inherit;
+}
+
+a:hover {
+	color: inherit;
 }
 
 .hidden {
@@ -47,7 +40,6 @@ body {
 	font-weight: normal;
 	font-style: normal;
 	font-size: 24px;
-	/* Preferred icon size */
 	display: inline-block;
 	line-height: 1;
 	text-transform: none;
@@ -55,20 +47,11 @@ body {
 	word-wrap: normal;
 	white-space: nowrap;
 	direction: ltr;
-
-	/* Support for all WebKit browsers. */
 	-webkit-font-smoothing: antialiased;
-	/* Support for Safari and Chrome. */
 	text-rendering: optimizeLegibility;
-
-	/* Support for Firefox. */
 	-moz-osx-font-smoothing: grayscale;
-
-	/* Support for IE. */
 	font-feature-settings: 'liga';
-
-	-webkit-filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.2));
-	filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.2));
+	filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.2));
 }
 
 #actions {
@@ -85,19 +68,9 @@ body {
 
 .toolbar {
 	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
 	align-items: center;
-	white-space: nowrap;
-	overflow-x: auto;
-}
-
-.toolbar.left {
-	justify-content: flex-start;
-}
-
-.toolbar.right {
-	justify-content: flex-end;
+	justify-content: center;
+	flex-direction: row;
 }
 
 .toolbar.space {
@@ -108,23 +81,25 @@ body {
 	margin-top: auto;
 }
 
-.center {
-	justify-content: center;
+#snap-button {
+	margin: 8px;
+	padding: 16px;
+	border-radius: 50%;
+	border: 3px solid #fff;
+	cursor: pointer;
+	transition: all .2s;
 }
 
-button {
-	background: none;
-	border: none;
+#snap-button:active {
+	transform: scale(1.2);
 }
 
-.button,
-.snap {
+.button {
 	display: flex;
-	justify-content: center;
 	align-items: center;
+	justify-content: center;
 	margin: 4px;
-	height: 56px;
-	width: 56px;
+	padding: 16px;
 	color: #fff;
 	border-radius: 50%;
 	cursor: pointer;
@@ -133,41 +108,24 @@ button {
 
 .button:hover,
 .button:active {
-	background-color: rgba(255, 255, 255, 0.12);
-}
-
-/*
-.snap {
-	background-color: #fff;
-	color: #2196f3;
-	box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.12);
-}
-*/
-
-.snap:hover {
-	background-color: var(--app-color);
-	color: #fff;
-}
-
-.switch {
-	display: inline-block;
-}
-
-#more {
-	display: flex;
-	width: 100%;
-	flex-shrink: none;
-	overflow-x: auto;
-	transition: all .2s;
+	background: rgba(255, 255, 255, .12);
 }
 
 input[type=checkbox] {
 	display: none;
 }
 
+.slider .off {
+	color: rgba(255, 255, 255, .54);
+}
+
 input[type=checkbox]:checked + div .on {
 	display: block;
-	color: var(--app-color);
+}
+
+.slider input[type=checkbox]:checked + div .on {
+	display: block;
+	color: #fff;
 }
 
 input[type=checkbox]:checked + div .off {
@@ -182,15 +140,6 @@ input[type=checkbox]:checked + div {
 	display: none;
 }
 
-.ico {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	cursor: pointer;
-	padding: 16px;
-	color: #fff;
-}
-
 .sliders {
 	display: flex;
 	flex-direction: column;
@@ -199,10 +148,11 @@ input[type=checkbox]:checked + div {
 }
 
 .slider {
+	display: flex;
+	align-items: center;
+	width: 100%;
 	opacity: 1;
 	max-height: 64px;
-	display: flex;
-	width: 100%;
 	overflow-y: hidden;
 	transition: all .2s;
 }
@@ -215,42 +165,31 @@ input[type=checkbox]:checked + div {
 input[type=range] {
 	-webkit-appearance: none;
 	display: flex;
-	margin: 16px 0;
+	margin: 4px 0;
 	width: 100%;
-	background: transparent;
+	background: none;
+	vertical-align: middle;
 }
 
 input[type=range]::-webkit-slider-runnable-track {
 	width: 100%;
 	height: 3px;
 	cursor: pointer;
-	background: rgba(255, 255, 255, .7);
+	background: rgba(255, 255, 255, .54);
 	border-radius: 6px;
-	-webkit-filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.2));
-	filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.2));
-}
-
-input[type=range]:focus::-webkit-slider-runnable-track {
-	background: var(--app-color);
+	filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.2));
 }
 
 input[type=range]::-moz-range-track {
 	width: 100%;
 	height: 3px;
 	cursor: pointer;
-	background: rgba(255, 255, 255, .7);
+	background: rgba(255, 255, 255, .54);
 	border-radius: 6px;
-	-webkit-filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.2));
-	filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.2));
-}
-
-input[type=range]:focus::-moz-range-track {
-	background: var(--app-color);
+	filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.2));
 }
 
 input[type=range]::-webkit-slider-thumb {
-	-webkit-filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.2));
-	filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.2));
 	height: 18px;
 	width: 18px;
 	border-radius: 50%;
@@ -261,9 +200,7 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 input[type=range]::-moz-range-thumb {
-	border: none;
-	-webkit-filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.2));
-	filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.2));
+	border: 0;
 	height: 18px;
 	width: 18px;
 	border-radius: 50%;
@@ -271,8 +208,35 @@ input[type=range]::-moz-range-thumb {
 	cursor: pointer;
 }
 
+input[type=range]::-webkit-slider-thumb:active {
+	transform: scale(1.1);
+}
+
+input[type=range]::-moz-range-thumb:active {
+	transform: scale(1.1);
+}
+
 input[type=range]::-moz-focus-outer {
 	border: 0;
+}
+
+output,
+.ico,
+.res {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 16px;
+	color: #fff;
+}
+
+.res {
+	cursor: pointer;
+	padding-left: 0;
+}
+
+.flip {
+	transform: translateX(-50%) scaleX(-1);
 }
 
 #grid {
@@ -291,22 +255,13 @@ table td {
 	border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
-output {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 16px;
-	color: #fff;
-}
-
-#capture {
+#app {
 	transform-origin: center;
 	transform-style: preserve-3d;
 }
 
-@media (max-width: 640px) {
-	.button:hover,
-	.button:active {
-		background-color: transparent;
+@media(max-width:640px) {
+	.button:hover {
+		background: none;
 	}
 }
