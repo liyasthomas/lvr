@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-	<title>Lvr - Film</title>
+	<title>Lvr - Electronics</title>
 	<meta name="description" content="L virtual reality">
 	<link rel="shortcut icon" href="../assets/images/favicon.png">
 	<meta name="theme-color" content="#000">
@@ -202,8 +202,12 @@
 		<a-assets>
 			<audio id="blip1" src="../assets/audio/blip1.wav" preload="auto"></audio>
 			<audio id="blip2" src="../assets/audio/blip2.wav" preload="auto"></audio>
-			<a-asset-item id="spiderman" src="../assets/gltf/spiderman/scene.gltf"></a-asset-item>
-			<a-asset-item id="ironman" src="../assets/gltf/ironman/scene.gltf"></a-asset-item>
+			<a-asset-item id="methane" src="../assets/gltf/methane/scene.gltf"></a-asset-item>
+			<a-asset-item id="ethane" src="../assets/gltf/ethane/scene.gltf"></a-asset-item>
+			<a-asset-item id="cyclo-hexane" src="../assets/gltf/cyclo-hexane/scene.gltf"></a-asset-item>
+			<a-asset-item id="ethanol" src="../assets/gltf/ethanol/scene.gltf"></a-asset-item>
+			<a-asset-item id="pyrrole" src="../assets/gltf/pyrrole/scene.gltf"></a-asset-item>
+			<a-asset-item id="nuclear_fission" src="../assets/gltf/nuclear_fission/scene.gltf"></a-asset-item>
 		</a-assets>
 		<!--Camera-->
 		<a-entity camera>
@@ -226,14 +230,42 @@
 		</a-marker>
 		<!--Custom marker [A]-->
 		<a-marker preset='custom' type='pattern' url='../assets/patt/A-90.patt'>
-			<a-entity gltf-model="#spiderman" scale="2 2 2" animation-mixer>
-				<a-animation attribute="rotation" to="0 360 0" dur="5000" easing="linear" repeat="indefinite">
+			<a-entity gltf-model="#methane" scale="0.5 0.5 0.5" animation-mixer>
+				<a-animation attribute="rotation" to="360 360 360" dur="5000" easing="linear" repeat="indefinite">
 				</a-animation>
 			</a-entity>
 		</a-marker>
 		<!--Custom marker [B]-->
 		<a-marker preset='custom' type='pattern' url='../assets/patt/B-90.patt'>
-			<a-entity gltf-model="#ironman" scale="2 2 2" animation-mixer>
+			<a-entity gltf-model="#ethane" scale="0.5 0.5 0.5" animation-mixer>
+				<a-animation attribute="rotation" to="360 360 360" dur="5000" easing="linear" repeat="indefinite">
+				</a-animation>
+			</a-entity>
+		</a-marker>
+		<!--Custom marker [C]-->
+		<a-marker preset='custom' type='pattern' url='../assets/patt/C-90.patt'>
+			<a-entity gltf-model="#cyclo-hexane" scale="0.5 0.5 0.5" animation-mixer>
+				<a-animation attribute="rotation" to="360 360 360" dur="5000" easing="linear" repeat="indefinite">
+				</a-animation>
+			</a-entity>
+		</a-marker>
+		<!--Custom marker [D]-->
+		<a-marker preset='custom' type='pattern' url='../assets/patt/D-90.patt'>
+			<a-entity gltf-model="#ethanol" scale="0.25 0.25 0.25" animation-mixer>
+				<a-animation attribute="rotation" to="360 360 360" dur="5000" easing="linear" repeat="indefinite">
+				</a-animation>
+			</a-entity>
+		</a-marker>
+		<!--Custom marker [F]-->
+		<a-marker preset='custom' type='pattern' url='../assets/patt/F-90.patt'>
+			<a-entity gltf-model="#pyrrole" scale="0.5 0.5 0.5" animation-mixer>
+				<a-animation attribute="rotation" to="360 360 360" dur="5000" easing="linear" repeat="indefinite">
+				</a-animation>
+			</a-entity>
+		</a-marker>
+		<!--Custom marker [G]-->
+		<a-marker preset='custom' type='pattern' url='../assets/patt/G-90.patt'>
+			<a-entity gltf-model="#nuclear_fission" scale="0.5 0.5 0.5" animation-mixer>
 				<a-animation attribute="rotation" to="0 360 0" dur="5000" easing="linear" repeat="indefinite">
 				</a-animation>
 			</a-entity>
