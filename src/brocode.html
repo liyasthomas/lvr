@@ -228,7 +228,10 @@
 		<a-marker preset='custom' type='pattern' url='../assets/patt/A-90.patt'>
 			<a-text side="double" position="0 1.75 0.5" scale="0.5 0.5 0.5" value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
-			<a-image src="#image1"></a-image>
+			<a-image src="#image1">
+				<a-animation attribute="rotation" dur="5000" to="0 360 0" easing="ease-in-out-circ" repeat="indefinite">
+				</a-animation>
+			</a-image>
 		</a-marker>
 		<!--Sound-->
 		<a-entity sound="src: #blip1; autoplay: true;"></a-entity>
