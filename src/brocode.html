@@ -226,9 +226,11 @@
 		</a-marker>
 		<!--Custom marker [A]-->
 		<a-marker preset='custom' type='pattern' url='../assets/patt/B-90.patt'>
-			<a-entity gltf-model="#brocode" position='0 0 0' scale="1.2 1.2 1.2" animation-mixer>
-				<a-animation attribute="rotation" dur="5000" to="0 360 0" easing="ease-in-out-circ" repeat="indefinite">
-				</a-animation>
+			<a-entity rotation="-90 180 180">
+				<a-entity gltf-model="#brocode" position='0 0 0' scale="1.2 1.2 1.2" animation-mixer>
+					<a-animation attribute="rotation" dur="5000" to="0 360 0" easing="ease-in-out-circ" repeat="indefinite">
+					</a-animation>
+				</a-entity>
 			</a-entity>
 		</a-marker>
 		<!--Sound-->
