@@ -43,10 +43,10 @@
 			<audio id="blip1" src="../assets/audio/blip1.wav" preload="auto"></audio>
 			<audio id="blip2" src="../assets/audio/blip2.wav" preload="auto"></audio>
 			<img id="image1" src="../assets/images/ms.png">
-<!--
-			<a-asset-item id="apple" src="../assets/gltf/apple/scene.gltf"></a-asset-item>
-			<a-asset-item id="bytt" src="../assets/gltf/bytt/bytt.gltf"></a-asset-item>
--->
+			<img id="image2" src="../assets/images/engineering.png">
+			<img id="image3" src="../assets/images/mushroom.png">
+			<a-asset-item id="meal" src="../assets/gltf/meal/scene.gltf"></a-asset-item>
+			<a-asset-item id="rubix" src="../assets/gltf/rubix/scene.gltf"></a-asset-item>
 		</a-assets>
 		<!--Camera-->
 		<a-entity camera>
@@ -102,6 +102,30 @@
          <a-marker type='barcode' value='9'>
 			<a-entity rotation="-90 180 180">
 				<a-image src="#image1"></a-image>
+			</a-entity>
+		</a-marker>
+		<!--Barcode marker [10]-->
+         <a-marker type='barcode' value='10'>
+			<a-entity rotation="-90 180 180">
+				<a-image src="#image2"></a-image>
+			</a-entity>
+		</a-marker>
+		<!--Barcode marker [11]-->
+         <a-marker type='barcode' value='11'>
+			<a-entity rotation="-90 180 180">
+				<a-image src="#image3"></a-image>
+			</a-entity>
+		</a-marker>
+		<!--Barcode marker [12]-->
+         <a-marker type='barcode' value='12'>
+			<a-entity gltf-model="#meal" scale="0.3 0.3 0.3" animation-mixer>
+			</a-entity>
+		</a-marker>
+		<!--Barcode marker [13]-->
+         <a-marker type='barcode' value='13'>
+			<a-entity gltf-model="#rubix" scale="0.5 0.5 0.5" animation-mixer>
+				<a-animation attribute="rotation" to="360 360 360" dur="5000" easing="linear" repeat="indefinite">
+				</a-animation>
 			</a-entity>
 		</a-marker>
 		<!--Sound-->
