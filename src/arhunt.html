@@ -42,6 +42,7 @@
 		<a-assets>
 			<audio id="blip1" src="../assets/audio/blip1.wav" preload="auto"></audio>
 			<audio id="blip2" src="../assets/audio/blip2.wav" preload="auto"></audio>
+			<img id="image1" src="../assets/images/ms.png">
 <!--
 			<a-asset-item id="apple" src="../assets/gltf/apple/scene.gltf"></a-asset-item>
 			<a-asset-item id="bytt" src="../assets/gltf/bytt/bytt.gltf"></a-asset-item>
@@ -87,13 +88,21 @@
 			<a-text side='double' position='0 0.5 0' scale='0.5 0.5 0.5' value="In Spanish: Almacenar\nWhat's in English?" align="center" color="red" rotation="-90 0 0">
 			</a-text>
 		</a-marker>
+		<!--Barcode marker [7]-->
         <a-marker type='barcode' value='7'>
 			<a-text side='double' position='0 0.5 0' scale='0.5 0.5 0.5' value="This is not a decimal Number.Only Google can find this 10.7438868,76.4335652?" align="center" color="red" rotation="-90 0 0">
             </a-text>
 		</a-marker>
+		<!--Barcode marker [8]-->
          <a-marker type='barcode' value='8'>
 			<a-text side='double' position='0 0.5 0' scale='0.5 0.5 0.5' value="" align="center" color="red" rotation="-90 0 0">
 			</a-text>
+		</a-marker>
+		<!--Barcode marker [9]-->
+         <a-marker type='barcode' value='9'>
+			<a-entity rotation="-90 180 180">
+				<a-image src="#image1"></a-image>
+			</a-entity>
 		</a-marker>
 		<!--Sound-->
 		<a-entity sound="src: #blip1; autoplay: true;"></a-entity>
