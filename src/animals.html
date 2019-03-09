@@ -211,55 +211,39 @@
 		<!--Camera-->
 		<a-entity camera>
 			<!--cursor-->
-			<a-entity cursor="fuse: true;" position="0 0 -1" geometry="primitive: ring; radiusInner: 0.01; radiusOuter: 0.013;" material="color: white; shader: flat; opacity: 0.5;">
-				<a-animation begin="cursor-fusing" easing="ease-in" attribute="scale" dur="1500" fill="backwards" from="1 1 1" to="0.1 0.1 0.1">
-				</a-animation>
-				<a-animation begin="click" easing="ease-in" attribute="scale" dur="150" from="0.1 0.1 0.1" to="1 1 1">
-				</a-animation>
+			<a-entity cursor="fuse: true; fuseTimeout: 500" position="0 0 -1" geometry="primitive: ring; radiusInner: 0.01; radiusOuter: 0.013;" material="color: white; shader: flat; opacity: 0.5;" animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 150; from: 0.1 0.1 0.1; to: 1 1 1" animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 1500; from: 1 1 1; to: 0.1 0.1 0.1" animation__mouseleave="property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 500; to: 1 1 1">
 			</a-entity>
 		</a-entity>
 		<!--Barcode marker [1]-->
 		<a-marker type='barcode' value='1'>
 			<a-text side='double' position='0 1.75 0.5' scale='0.5 0.5 0.5' value="Lvr" align="center" rotation="-90 0 0">
 			</a-text>
-			<a-text side='double' position='0 1.6 1' scale='0.2 0.2 0.2' font='https://cdn.aframe.io/fonts/Monoid.fnt' value="Virtual & Augmented Reality\nby Liyas Thomas" align="center">
-				<a-animation attribute="position" from="0 1.6 1" to="0 1.65 1" direction="alternate" dur="500" repeat="indefinite" easing='ease-in-out-cubic'>
-				</a-animation>
+			<a-text side='double' position='0 1.6 1' scale='0.2 0.2 0.2' font='https://cdn.aframe.io/fonts/Monoid.fnt' value="Virtual & Augmented Reality\nby Liyas Thomas" align="center" animation="property: position; from: 0 1.6 1; to: 0 1.65 1;  direction: alternate; dur: 500; easing: easeInOutCubic; repeat: indefinite;">
 			</a-text>
 		</a-marker>
 		<!--Custom marker [A]-->
 		<a-marker preset='custom' type='pattern' url='../assets/patt/A-90.patt'>
-			<a-entity gltf-model="#catt" scale="0.04 0.04 0.04" animation-mixer>
-				<a-animation attribute="rotation" to="0 360 0" dur="5000" easing="linear" repeat="indefinite">
-				</a-animation>
+			<a-entity gltf-model="#catt" scale="0.04 0.04 0.04" animation-mixer animation="property: rotation; to: 0 360 0; dur: 5000; easing: linear; repeat: indefinite;">
 			</a-entity>
 		</a-marker>
 		<!--Custom marker [B]-->
 		<a-marker preset='custom' type='pattern' url='../assets/patt/B-90.patt'>
-			<a-entity gltf-model="#bytt" scale="0.05 0.05 0.05" animation-mixer>
-				<a-animation attribute="rotation" to="0 360 0" dur="5000" easing="linear" repeat="indefinite">
-				</a-animation>
+			<a-entity gltf-model="#bytt" scale="0.05 0.05 0.05" animation-mixer animation="property: rotation; to: 0 360 0; dur: 5000; easing: linear; repeat: indefinite;">
 			</a-entity>
 		</a-marker>
 		<!--Custom marker [C]-->
 		<a-marker preset='custom' type='pattern' url='../assets/patt/C-90.patt'>
-			<a-entity gltf-model="#fish" scale="0.005 0.005 0.005" animation-mixer>
-				<a-animation attribute="rotation" to="0 360 0" dur="5000" easing="linear" repeat="indefinite">
-				</a-animation>
+			<a-entity gltf-model="#fish" scale="0.005 0.005 0.005" animation-mixer animation="property: rotation; to: 0 360 0; dur: 5000; easing: linear; repeat: indefinite;">
 			</a-entity>
 		</a-marker>
 		<!--Custom marker [D]-->
 		<a-marker preset='custom' type='pattern' url='../assets/patt/D-90.patt'>
-			<a-entity gltf-model="#dog" scale="0.05 0.05 0.05" animation-mixer>
-				<a-animation attribute="rotation" to="0 360 0" dur="5000" easing="linear" repeat="indefinite">
-				</a-animation>
+			<a-entity gltf-model="#dog" scale="0.05 0.05 0.05" animation-mixer animation="property: rotation; to: 0 360 0; dur: 5000; easing: linear; repeat: indefinite;">
 			</a-entity>
 		</a-marker>
 		<!--Custom marker [F]-->
 		<a-marker preset='custom' type='pattern' url='../assets/patt/F-90.patt'>
-			<a-entity gltf-model="#panda" scale="0.05 0.05 0.05" animation-mixer>
-				<a-animation attribute="rotation" to="0 360 0" dur="5000" easing="linear" repeat="indefinite">
-				</a-animation>
+			<a-entity gltf-model="#panda" scale="0.05 0.05 0.05" animation-mixer animation="property: rotation; to: 0 360 0; dur: 5000; easing: linear; repeat: indefinite;">
 			</a-entity>
 		</a-marker>
 		<!--Sound-->
