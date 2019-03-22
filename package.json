@@ -8,7 +8,7 @@
 	"author": "@liyasthomas",
 	"version": "1.0.0",
 	"devDependencies": {
-		"jshint": "^2.8.0"
+		"jshint": "^2.10.2"
 	},
 	"scripts": {
 		"test": "jshint travis.js"
