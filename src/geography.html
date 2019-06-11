@@ -52,8 +52,7 @@
 			</div>
 -->
 			<div class="toolbar bottom">
-				<div id="snap-button" title="Snap!">
-				</div>
+				<!--				<div id="snap-button" title="Snap!"></div>-->
 			</div>
 			<div class="toolbar sliders">
 				<!--Brightness slider-->
@@ -171,10 +170,12 @@
 					</div>
 				</label>
 -->
+				<!--
 				<a id="download-link" style="display:none"></a>
 				<script src="../assets/js/merge.js"></script>
 				<script src="../assets/js/capture.min.js"></script>
 				<script src="../assets/js/index.js"></script>
+-->
 			</div>
 			<div id="grid" class="hidden">
 				<table>
@@ -197,7 +198,7 @@
 			</div>
 		</div>
 	</main>
-	<a-scene id="capture" embedded vr-mode-ui="enabled: true" arjs='debugUIEnabled: false; sourceType: webcam; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
+	<a-scene id="capture" embedded vr-mode-ui="enabled: false" arjs='debugUIEnabled: false; sourceType: webcam; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
 		<!--Assets-->
 		<a-assets>
 			<audio id="blip1" src="../assets/audio/blip1.wav" preload="auto"></audio>
