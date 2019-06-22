@@ -71,7 +71,7 @@ It works on all platforms. Android, iOS and Windows phone. It runs on **any brow
 
 Try on your phone in only two easy steps, check it out!
 
-1. Open any [marker image from here](https://github.com/liyasthomas/lvr/tree/master/assets/patterns) in your browser.
+1. Open [marker image from here](https://github.com/liyasthomas/lvr/blob/master/assets/images/patterns/barcode/1.png) in your browser.
 2. Open my [augmented reality web app](https://liyasthomas.github.io/lvr) in your phone browser. Give permissions to access camera. Scan marker image with your camera.
 
 You're done! It will open a web page which read the phone's webcam, localize a marker and add 3D on top of it.
