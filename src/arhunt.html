@@ -1,116 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>Lvr - AR Hunt</title>
+    <meta name="description" content="L virtual reality" />
+    <link rel="shortcut icon" href="../assets/images/favicon.png" />
+    <meta name="theme-color" content="#000" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="Lvr" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="apple-mobile-web-app-title" content="Lvr" />
+    <link rel="apple-touch-icon" href="../assets/images/favicon.png" />
+    <meta
+      name="msapplication-TileImage"
+      content="../assets/images/favicon.png"
+    />
+    <meta name="msapplication-TileColor" content="#000" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta property="og:site_name" content="Lvr" />
+    <meta property="og:url" content="https://lean-vr.firebaseapp.app" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Lvr" />
+    <meta property="og:description" content="L virtual reality" />
+    <meta property="og:image" content="../assets/images/favicon.png" />
+    <meta name="twitter:site" content="@liyasthomas" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Lvr" />
+    <meta name="twitter:description" content="L virtual reality" />
+    <meta name="twitter:image" content="../assets/images/favicon.png" />
+    <meta name="twitter:url" content="https://lean-vr.firebaseapp.app" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="../assets/css/style.min.css" />
+    <script src="../assets/js/aframe.min.js"></script>
+    <script src="../assets/js/aframe-ar.js"></script>
+    <script src="../assets/js/aframe-extras.min.js"></script>
+  </head>
 
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-	<title>Lvr - AR Hunt</title>
-	<meta name="description" content="L virtual reality">
-	<link rel="shortcut icon" href="../assets/images/favicon.png">
-	<meta name="theme-color" content="#000">
-	<meta name="mobile-web-app-capable" content="yes">
-	<meta name="application-name" content="Lvr">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-	<meta name="apple-mobile-web-app-title" content="Lvr">
-	<link rel="apple-touch-icon" href="../assets/images/favicon.png">
-	<meta name="msapplication-TileImage" content="../assets/images/favicon.png">
-	<meta name="msapplication-TileColor" content="#000">
-	<meta name="msapplication-tap-highlight" content="no">
-	<meta property="og:site_name" content="Lvr">
-	<meta property="og:url" content="https://liyas-vr.firebaseapp.com">
-	<meta property="og:type" content="website">
-	<meta property="og:title" content="Lvr">
-	<meta property="og:description" content="L virtual reality">
-	<meta property="og:image" content="../assets/images/favicon.png">
-	<meta name="twitter:site" content="@liyasthomas">
-	<meta name="twitter:card" content="summary">
-	<meta name="twitter:title" content="Lvr">
-	<meta name="twitter:description" content="L virtual reality">
-	<meta name="twitter:image" content="../assets/images/favicon.png">
-	<meta name="twitter:url" content="https://liyas-vr.firebaseapp.com">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-	<link rel="stylesheet" href="../assets/css/style.min.css">
-	<script src="../assets/js/aframe.min.js"></script>
-	<script src="../assets/js/aframe-ar.js"></script>
-	<script src="../assets/js/aframe-extras.min.js"></script>
-</head>
-
-<body>
-	<a-scene id="app" embedded vr-mode-ui="enabled: false" arjs="debugUIEnabled: false; sourceType: webcam; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
-		<!--Assets-->
-		<a-assets>
-			<audio id="blip1" src="../assets/audio/blip1.wav" preload="auto"></audio>
-			<audio id="blip2" src="../assets/audio/blip2.wav" preload="auto"></audio>
-			<img id="image1" src="../assets/images/cb.png">
-			<img id="image2" src="../assets/images/spider.png">
-			<!--			<a-asset-item id="meal" src="../assets/gltf/meal/scene.gltf"></a-asset-item>-->
-		</a-assets>
-		<!--Camera-->
-		<a-entity camera>
-			<!--cursor-->
-			<a-entity cursor="fuse: true; fuseTimeout: 500" position="0 0 -1" geometry="primitive: ring; radiusInner: 0.01; radiusOuter: 0.013;" material="color: white; shader: flat; opacity: 0.5;" animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 150; from: 0.1 0.1 0.1; to: 1 1 1" animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 1500; from: 1 1 1; to: 0.1 0.1 0.1" animation__mouseleave="property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 500; to: 1 1 1">
-			</a-entity>
-		</a-entity>
-		<!--Barcode marker [1]-->
-		<a-marker type='barcode' value='1'>
-			<a-text side='double' position='0 0.5 0' scale='0.5 0.5 0.5' value="Do you see rain, clouds,\nsunshine or may be snow?\nLook out for it straight through your window!" align="center" color="red" rotation="-90 0 0">
-			</a-text>
-		</a-marker>
-		<!--Barcode marker [2]-->
-		<a-marker type='barcode' value='2'>
-			<a-text side='double' position='0 0.5 0' scale='0.5 0.5 0.5' value="Roam, roam, roam;\nOutside round the block and\nwhen u see the perimeter wall\nnever fail to stop!" align="center" color="red" rotation="-90 0 0">
-			</a-text>
-		</a-marker>
-		<!--Barcode marker [3]-->
-		<a-marker type='barcode' value='3'>
-			<a-text side='double' position='0 0.5 0' scale='0.5 0.5 0.5' value="Largest tree-borne fruit;\nA green cabinet covered with thousand\ncream countries with yellow kings." align="center" color="red" rotation="-90 0 0">
-			</a-text>
-		</a-marker>
-		<!--Barcode marker [4]-->
-		<a-marker type='barcode' value='4'>
-			<a-text side='double' position='0 0.5 0' scale='0.5 0.5 0.5' value="Add some colour to your day!!\nPick some paintings on your way!" align="center" color="red" rotation="-90 0 0">
-			</a-text>
-		</a-marker>
-		<!--Barcode marker [5]-->
-		<a-marker type='barcode' value='5'>
-			<a-text side='double' position='0 0.5 0' scale='0.5 0.5 0.5' value="Are u hungry?\nIts time you eat some food\nand heal your hunger!" align="center" color="red" rotation="-90 0 0">
-			</a-text>
-		</a-marker>
-		<!--Barcode marker [6]-->
-		<a-marker type='barcode' value='6'>
-			<a-entity rotation="-90 180 180">
-				<a-image src="#image1"></a-image>
-			</a-entity>
-		</a-marker>
-		<!--Barcode marker [7]-->
-		<a-marker type='barcode' value='7'>
-			<a-text side='double' position='0 0.5 0' scale='0.5 0.5 0.5' value="Come on India!\nLet’s ...........!!" align="center" color="red" rotation="-90 0 0">
-			</a-text>
-		</a-marker>
-		<!--Barcode marker [8]-->
-		<a-marker type='barcode' value='8'>
-			<a-text side='double' position='0 0.5 0' scale='0.5 0.5 0.5' value="Escalator not working! :(" align="center" color="red" rotation="-90 0 0">
-			</a-text>
-		</a-marker>
-		<!--Barcode marker [9]-->
-		<a-marker type='barcode' value='9'>
-			<a-entity rotation="-90 180 180">
-				<a-image src="#image2"></a-image>
-			</a-entity>
-		</a-marker>
-		<!--Barcode marker [10]-->
-		<a-marker type='barcode' value='10'>
-			<a-text side='double' position='0 0.5 0' scale='0.5 0.5 0.5' value="Tressure!!" align="center" color="red" rotation="-90 0 0">
-			</a-text>
-		</a-marker>
-		<!--Sound-->
-		<a-entity sound="src: #blip1; autoplay: true;"></a-entity>
-		<a-entity sound="src: #blip2; autoplay: true;"></a-entity>
-	</a-scene>
-	<noscript>
-		<a href="/">No JavaScript? Go home kid!</a>
-	</noscript>
-</body>
-
+  <body>
+    <a-scene
+      id="app"
+      embedded
+      vr-mode-ui="enabled: false"
+      arjs="debugUIEnabled: false; sourceType: webcam; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3;"
+    >
+      <!--Assets-->
+      <a-assets>
+        <audio
+          id="blip1"
+          src="../assets/audio/blip1.wav"
+          preload="auto"
+        ></audio>
+        <audio
+          id="blip2"
+          src="../assets/audio/blip2.wav"
+          preload="auto"
+        ></audio>
+        <img id="image1" src="../assets/images/cb.png" />
+        <img id="image2" src="../assets/images/spider.png" />
+        <!--			<a-asset-item id="meal" src="../assets/gltf/meal/scene.gltf"></a-asset-item>-->
+      </a-assets>
+      <!--Camera-->
+      <a-entity camera>
+        <!--cursor-->
+        <a-entity
+          cursor="fuse: true; fuseTimeout: 500"
+          position="0 0 -1"
+          geometry="primitive: ring; radiusInner: 0.01; radiusOuter: 0.013;"
+          material="color: white; shader: flat; opacity: 0.5;"
+          animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 150; from: 0.1 0.1 0.1; to: 1 1 1"
+          animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 1500; from: 1 1 1; to: 0.1 0.1 0.1"
+          animation__mouseleave="property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 500; to: 1 1 1"
+        >
+        </a-entity>
+      </a-entity>
+      <!--Barcode marker [1]-->
+      <a-marker type="barcode" value="1">
+        <a-text
+          side="double"
+          position="0 0.5 0"
+          scale="0.5 0.5 0.5"
+          value="Do you see rain, clouds,\nsunshine or may be snow?\nLook out for it straight through your window!"
+          align="center"
+          color="red"
+          rotation="-90 0 0"
+        >
+        </a-text>
+      </a-marker>
+      <!--Barcode marker [2]-->
+      <a-marker type="barcode" value="2">
+        <a-text
+          side="double"
+          position="0 0.5 0"
+          scale="0.5 0.5 0.5"
+          value="Roam, roam, roam;\nOutside round the block and\nwhen u see the perimeter wall\nnever fail to stop!"
+          align="center"
+          color="red"
+          rotation="-90 0 0"
+        >
+        </a-text>
+      </a-marker>
+      <!--Barcode marker [3]-->
+      <a-marker type="barcode" value="3">
+        <a-text
+          side="double"
+          position="0 0.5 0"
+          scale="0.5 0.5 0.5"
+          value="Largest tree-borne fruit;\nA green cabinet covered with thousand\ncream countries with yellow kings."
+          align="center"
+          color="red"
+          rotation="-90 0 0"
+        >
+        </a-text>
+      </a-marker>
+      <!--Barcode marker [4]-->
+      <a-marker type="barcode" value="4">
+        <a-text
+          side="double"
+          position="0 0.5 0"
+          scale="0.5 0.5 0.5"
+          value="Add some colour to your day!!\nPick some paintings on your way!"
+          align="center"
+          color="red"
+          rotation="-90 0 0"
+        >
+        </a-text>
+      </a-marker>
+      <!--Barcode marker [5]-->
+      <a-marker type="barcode" value="5">
+        <a-text
+          side="double"
+          position="0 0.5 0"
+          scale="0.5 0.5 0.5"
+          value="Are u hungry?\nIts time you eat some food\nand heal your hunger!"
+          align="center"
+          color="red"
+          rotation="-90 0 0"
+        >
+        </a-text>
+      </a-marker>
+      <!--Barcode marker [6]-->
+      <a-marker type="barcode" value="6">
+        <a-entity rotation="-90 180 180">
+          <a-image src="#image1"></a-image>
+        </a-entity>
+      </a-marker>
+      <!--Barcode marker [7]-->
+      <a-marker type="barcode" value="7">
+        <a-text
+          side="double"
+          position="0 0.5 0"
+          scale="0.5 0.5 0.5"
+          value="Come on India!\nLet’s ...........!!"
+          align="center"
+          color="red"
+          rotation="-90 0 0"
+        >
+        </a-text>
+      </a-marker>
+      <!--Barcode marker [8]-->
+      <a-marker type="barcode" value="8">
+        <a-text
+          side="double"
+          position="0 0.5 0"
+          scale="0.5 0.5 0.5"
+          value="Escalator not working! :("
+          align="center"
+          color="red"
+          rotation="-90 0 0"
+        >
+        </a-text>
+      </a-marker>
+      <!--Barcode marker [9]-->
+      <a-marker type="barcode" value="9">
+        <a-entity rotation="-90 180 180">
+          <a-image src="#image2"></a-image>
+        </a-entity>
+      </a-marker>
+      <!--Barcode marker [10]-->
+      <a-marker type="barcode" value="10">
+        <a-text
+          side="double"
+          position="0 0.5 0"
+          scale="0.5 0.5 0.5"
+          value="Tressure!!"
+          align="center"
+          color="red"
+          rotation="-90 0 0"
+        >
+        </a-text>
+      </a-marker>
+      <!--Sound-->
+      <a-entity sound="src: #blip1; autoplay: true;"></a-entity>
+      <a-entity sound="src: #blip2; autoplay: true;"></a-entity>
+    </a-scene>
+    <noscript>
+      <a href="/">No JavaScript? Go home kid!</a>
+    </noscript>
+  </body>
 </html>

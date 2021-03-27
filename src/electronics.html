@@ -1,45 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>Lvr - Electronics</title>
+    <meta name="description" content="L virtual reality" />
+    <link rel="shortcut icon" href="../assets/images/favicon.png" />
+    <meta name="theme-color" content="#000" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="Lvr" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="apple-mobile-web-app-title" content="Lvr" />
+    <link rel="apple-touch-icon" href="../assets/images/favicon.png" />
+    <meta
+      name="msapplication-TileImage"
+      content="../assets/images/favicon.png"
+    />
+    <meta name="msapplication-TileColor" content="#000" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta property="og:site_name" content="Lvr" />
+    <meta property="og:url" content="https://lean-vr.firebaseapp.app" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Lvr" />
+    <meta property="og:description" content="L virtual reality" />
+    <meta property="og:image" content="../assets/images/favicon.png" />
+    <meta name="twitter:site" content="@liyasthomas" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Lvr" />
+    <meta name="twitter:description" content="L virtual reality" />
+    <meta name="twitter:image" content="../assets/images/favicon.png" />
+    <meta name="twitter:url" content="https://lean-vr.firebaseapp.app" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="../assets/css/style.min.css" />
+    <script src="../assets/js/aframe.min.js"></script>
+    <script src="../assets/js/aframe-ar.js"></script>
+    <script src="../assets/js/aframe-extras.min.js"></script>
+  </head>
 
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-	<title>Lvr - Electronics</title>
-	<meta name="description" content="L virtual reality">
-	<link rel="shortcut icon" href="../assets/images/favicon.png">
-	<meta name="theme-color" content="#000">
-	<meta name="mobile-web-app-capable" content="yes">
-	<meta name="application-name" content="Lvr">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-	<meta name="apple-mobile-web-app-title" content="Lvr">
-	<link rel="apple-touch-icon" href="../assets/images/favicon.png">
-	<meta name="msapplication-TileImage" content="../assets/images/favicon.png">
-	<meta name="msapplication-TileColor" content="#000">
-	<meta name="msapplication-tap-highlight" content="no">
-	<meta property="og:site_name" content="Lvr">
-	<meta property="og:url" content="https://liyas-vr.firebaseapp.com">
-	<meta property="og:type" content="website">
-	<meta property="og:title" content="Lvr">
-	<meta property="og:description" content="L virtual reality">
-	<meta property="og:image" content="../assets/images/favicon.png">
-	<meta name="twitter:site" content="@liyasthomas">
-	<meta name="twitter:card" content="summary">
-	<meta name="twitter:title" content="Lvr">
-	<meta name="twitter:description" content="L virtual reality">
-	<meta name="twitter:image" content="../assets/images/favicon.png">
-	<meta name="twitter:url" content="https://liyas-vr.firebaseapp.com">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-	<link rel="stylesheet" href="../assets/css/style.min.css">
-	<script src="../assets/js/aframe.min.js"></script>
-	<script src="../assets/js/aframe-ar.js"></script>
-	<script src="../assets/js/aframe-extras.min.js"></script>
-</head>
-
-<body>
-	<main role="main">
-		<div id="actions">
-			<!--
+  <body>
+    <main role="main">
+      <div id="actions">
+        <!--
 			<div class="toolbar space">
 				<div class="button">
 					<i class="material-icons">close</i>
@@ -51,108 +62,155 @@
 				</a>
 			</div>
 -->
-			<div class="toolbar bottom">
-				<div id="snap-button" title="Snap!">
-				</div>
-			</div>
-			<div class="toolbar sliders">
-				<!--Brightness slider-->
-				<div id="bslider" class="slider closed">
-					<label for="b" title="Brightness"><i class="material-icons ico">brightness_medium</i></label>
-					<input type="range" min="0" max="200" id="b" value="100" step="1">
-					<output for="range" id="bPointSize">100٪</output>
-					<i class="material-icons res" onclick="resetB()" title="Reset Brightness">refresh</i>
-				</div>
-				<!--Saturate slider-->
-				<div id="sslider" class="slider closed">
-					<label for="s" title="Saturation"><i class="material-icons ico">tonality</i></label>
-					<input type="range" min="0" max="200" id="s" value="100" step="1">
-					<output for="range" id="sPointSize">100٪</output>
-					<i class="material-icons res" onclick="resetS()" title="Reset Saturation">refresh</i>
-				</div>
-				<!--Contrast slider-->
-				<div id="cslider" class="slider closed">
-					<label for="c" title="Contrast"><i class="material-icons ico">exposure</i></label>
-					<input type="range" min="0" max="200" id="c" value="100" step="1">
-					<output for="range" id="cPointSize">100٪</output>
-					<i class="material-icons res" onclick="resetC()" title="Reset Contrast">refresh</i>
-				</div>
-				<!--Opacity slider-->
-				<div id="oslider" class="slider closed">
-					<label for="o" title="Opacity"><i class="material-icons ico">opacity</i></label>
-					<input type="range" min="0" max="100" id="o" value="100" step="1">
-					<output for="range" id="oPointSize">100٪</output>
-					<i class="material-icons res" onclick="resetO()" title="Reset Opacity">refresh</i>
-				</div>
-				<!--Scale/zoom slider-->
-				<div id="zslider" class="slider closed">
-					<label for="z" title="Scale"><i class="material-icons ico">straighten</i></label>
-					<input type="range" min="0" max="2" id="z" value="1" step=".1">
-					<output for="range" id="zPointSize">1×</output>
-					<i class="material-icons res" onclick="resetZ()" title="Reset Scale">refresh</i>
-				</div>
-			</div>
-			<div class="toolbar">
-				<!--More toggle-->
-				<label for="toggleMore">
-					<input type="checkbox" onclick="toggleMore()" id="toggleMore">
-					<div class="button" title="Tuning">
-						<i class="off material-icons">tune</i>
-						<i class="on material-icons">photo_filter</i>
-					</div>
-				</label>
-				<div id="more" class="slider closed">
-					<!--Brightness toggle-->
-					<label for="toggleBrightness">
-						<input type="checkbox" onclick="toggleBrightness()" id="toggleBrightness">
-						<div class="button" title="Brightness">
-							<i class="off material-icons">brightness_low</i>
-							<i class="on material-icons">brightness_high</i>
-						</div>
-					</label>
-					<!--Saturate toggle-->
-					<label for="toggleSaturate">
-						<input type="checkbox" onclick="toggleSaturate()" id="toggleSaturate">
-						<div class="button" title="Saturation">
-							<i class="off material-icons">tonality</i>
-							<i class="on material-icons">tonality</i>
-						</div>
-					</label>
-					<!--Contrast toggle-->
-					<label for="toggleContrast">
-						<input type="checkbox" onclick="toggleContrast()" id="toggleContrast">
-						<div class="button" title="Contrast">
-							<i class="off material-icons">exposure</i>
-							<i class="on material-icons">exposure</i>
-						</div>
-					</label>
-					<!--Opacity toggle-->
-					<label for="toggleOpacity">
-						<input type="checkbox" onclick="toggleOpacity()" id="toggleOpacity">
-						<div class="button" title="Opacity">
-							<i class="off material-icons">opacity</i>
-							<i class="on material-icons">opacity</i>
-						</div>
-					</label>
-					<!--Scale/zoom toggle-->
-					<label for="toggleScale">
-						<input type="checkbox" onclick="toggleScale()" id="toggleScale">
-						<div class="button" title="Scale">
-							<i class="off material-icons">straighten</i>
-							<i class="on material-icons">straighten</i>
-						</div>
-					</label>
-					<!--Grid toggle-->
-					<label for="toggleGrid">
-						<input type="checkbox" onclick="toggleGrid()" id="toggleGrid">
-						<div class="button" title="Grid">
-							<i class="off material-icons">grid_off</i>
-							<i class="on material-icons">grid_on</i>
-						</div>
-					</label>
-				</div>
-				<!--Flip toggle-->
-				<!--
+        <div class="toolbar bottom">
+          <div id="snap-button" title="Snap!"></div>
+        </div>
+        <div class="toolbar sliders">
+          <!--Brightness slider-->
+          <div id="bslider" class="slider closed">
+            <label for="b" title="Brightness"
+              ><i class="material-icons ico">brightness_medium</i></label
+            >
+            <input type="range" min="0" max="200" id="b" value="100" step="1" />
+            <output for="range" id="bPointSize">100٪</output>
+            <i
+              class="material-icons res"
+              onclick="resetB()"
+              title="Reset Brightness"
+              >refresh</i
+            >
+          </div>
+          <!--Saturate slider-->
+          <div id="sslider" class="slider closed">
+            <label for="s" title="Saturation"
+              ><i class="material-icons ico">tonality</i></label
+            >
+            <input type="range" min="0" max="200" id="s" value="100" step="1" />
+            <output for="range" id="sPointSize">100٪</output>
+            <i
+              class="material-icons res"
+              onclick="resetS()"
+              title="Reset Saturation"
+              >refresh</i
+            >
+          </div>
+          <!--Contrast slider-->
+          <div id="cslider" class="slider closed">
+            <label for="c" title="Contrast"
+              ><i class="material-icons ico">exposure</i></label
+            >
+            <input type="range" min="0" max="200" id="c" value="100" step="1" />
+            <output for="range" id="cPointSize">100٪</output>
+            <i
+              class="material-icons res"
+              onclick="resetC()"
+              title="Reset Contrast"
+              >refresh</i
+            >
+          </div>
+          <!--Opacity slider-->
+          <div id="oslider" class="slider closed">
+            <label for="o" title="Opacity"
+              ><i class="material-icons ico">opacity</i></label
+            >
+            <input type="range" min="0" max="100" id="o" value="100" step="1" />
+            <output for="range" id="oPointSize">100٪</output>
+            <i
+              class="material-icons res"
+              onclick="resetO()"
+              title="Reset Opacity"
+              >refresh</i
+            >
+          </div>
+          <!--Scale/zoom slider-->
+          <div id="zslider" class="slider closed">
+            <label for="z" title="Scale"
+              ><i class="material-icons ico">straighten</i></label
+            >
+            <input type="range" min="0" max="2" id="z" value="1" step=".1" />
+            <output for="range" id="zPointSize">1×</output>
+            <i class="material-icons res" onclick="resetZ()" title="Reset Scale"
+              >refresh</i
+            >
+          </div>
+        </div>
+        <div class="toolbar">
+          <!--More toggle-->
+          <label for="toggleMore">
+            <input type="checkbox" onclick="toggleMore()" id="toggleMore" />
+            <div class="button" title="Tuning">
+              <i class="off material-icons">tune</i>
+              <i class="on material-icons">photo_filter</i>
+            </div>
+          </label>
+          <div id="more" class="slider closed">
+            <!--Brightness toggle-->
+            <label for="toggleBrightness">
+              <input
+                type="checkbox"
+                onclick="toggleBrightness()"
+                id="toggleBrightness"
+              />
+              <div class="button" title="Brightness">
+                <i class="off material-icons">brightness_low</i>
+                <i class="on material-icons">brightness_high</i>
+              </div>
+            </label>
+            <!--Saturate toggle-->
+            <label for="toggleSaturate">
+              <input
+                type="checkbox"
+                onclick="toggleSaturate()"
+                id="toggleSaturate"
+              />
+              <div class="button" title="Saturation">
+                <i class="off material-icons">tonality</i>
+                <i class="on material-icons">tonality</i>
+              </div>
+            </label>
+            <!--Contrast toggle-->
+            <label for="toggleContrast">
+              <input
+                type="checkbox"
+                onclick="toggleContrast()"
+                id="toggleContrast"
+              />
+              <div class="button" title="Contrast">
+                <i class="off material-icons">exposure</i>
+                <i class="on material-icons">exposure</i>
+              </div>
+            </label>
+            <!--Opacity toggle-->
+            <label for="toggleOpacity">
+              <input
+                type="checkbox"
+                onclick="toggleOpacity()"
+                id="toggleOpacity"
+              />
+              <div class="button" title="Opacity">
+                <i class="off material-icons">opacity</i>
+                <i class="on material-icons">opacity</i>
+              </div>
+            </label>
+            <!--Scale/zoom toggle-->
+            <label for="toggleScale">
+              <input type="checkbox" onclick="toggleScale()" id="toggleScale" />
+              <div class="button" title="Scale">
+                <i class="off material-icons">straighten</i>
+                <i class="on material-icons">straighten</i>
+              </div>
+            </label>
+            <!--Grid toggle-->
+            <label for="toggleGrid">
+              <input type="checkbox" onclick="toggleGrid()" id="toggleGrid" />
+              <div class="button" title="Grid">
+                <i class="off material-icons">grid_off</i>
+                <i class="on material-icons">grid_on</i>
+              </div>
+            </label>
+          </div>
+          <!--Flip toggle-->
+          <!--
 				<label for="toggleFlip">
 					<input type="checkbox" onclick="toggleFlip()" id="toggleFlip">
 					<div class="button" title="Flip">
@@ -161,8 +219,8 @@
 					</div>
 				</label>
 -->
-				<!--Camera toggle-->
-				<!--
+          <!--Camera toggle-->
+          <!--
 				<label for="toggleCamera">
 					<input type="checkbox" onclick="toggleCamera()" id="toggleCamera">
 					<div class="button" title="Toggle camara">
@@ -171,64 +229,90 @@
 					</div>
 				</label>
 -->
-				<a id="download-link" style="display:none"></a>
-				<script src="../assets/js/merge.js"></script>
-				<script src="../assets/js/capture.min.js"></script>
-				<script src="../assets/js/index.js"></script>
-			</div>
-			<div id="grid" class="hidden">
-				<table>
-					<tr>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-				</table>
-			</div>
-		</div>
-	</main>
-	<a-scene id="capture" embedded vr-mode-ui="enabled: false" arjs='debugUIEnabled: false; sourceType: webcam; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
-		<!--Assets-->
-		<a-assets>
-			<audio id="blip1" src="../assets/audio/blip1.wav" preload="auto"></audio>
-			<audio id="blip2" src="../assets/audio/blip2.wav" preload="auto"></audio>
-			<a-asset-item id="board" src="../assets/gltf/board/scene.gltf"></a-asset-item>
-			<a-asset-item id="fan" src="../assets/gltf/fan/scene.gltf"></a-asset-item>
-		</a-assets>
-		<!--Camera-->
-		<a-entity camera>
-			<!--cursor-->
-			<a-entity cursor="fuse: true; fuseTimeout: 500" position="0 0 -1" geometry="primitive: ring; radiusInner: 0.01; radiusOuter: 0.013;" material="color: white; shader: flat; opacity: 0.5;" animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 150; from: 0.1 0.1 0.1; to: 1 1 1" animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 1500; from: 1 1 1; to: 0.1 0.1 0.1" animation__mouseleave="property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 500; to: 1 1 1">
-			</a-entity>
-		</a-entity>
-		<!--Barcode marker [2]-->
-		<a-marker type='barcode' value='2'>
-			<a-entity gltf-model="#board" scale="0.02 0.02 0.02" animation-mixer>
-			</a-entity>
-		</a-marker>
-		<!--Barcode marker [3]-->
-		<a-marker type='barcode' value='3'>
-			<a-entity gltf-model="#fan" scale="0.5 0.5 0.5" animation-mixer>
-			</a-entity>
-		</a-marker>
-		<!--Sound-->
-		<a-entity sound="src: #blip1; autoplay: true;"></a-entity>
-		<a-entity sound="src: #blip2; autoplay: true;"></a-entity>
-	</a-scene>
-	<noscript>
-		<a href="/">No JavaScript? Go home kid!</a>
-	</noscript>
-	<script src="../assets/js/script.min.js"></script>
-</body>
-
+          <a id="download-link" style="display: none"></a>
+          <script src="../assets/js/merge.js"></script>
+          <script src="../assets/js/capture.min.js"></script>
+          <script src="../assets/js/index.js"></script>
+        </div>
+        <div id="grid" class="hidden">
+          <table>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </main>
+    <a-scene
+      id="capture"
+      embedded
+      vr-mode-ui="enabled: false"
+      arjs="debugUIEnabled: false; sourceType: webcam; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3;"
+    >
+      <!--Assets-->
+      <a-assets>
+        <audio
+          id="blip1"
+          src="../assets/audio/blip1.wav"
+          preload="auto"
+        ></audio>
+        <audio
+          id="blip2"
+          src="../assets/audio/blip2.wav"
+          preload="auto"
+        ></audio>
+        <a-asset-item
+          id="board"
+          src="../assets/gltf/board/scene.gltf"
+        ></a-asset-item>
+        <a-asset-item
+          id="fan"
+          src="../assets/gltf/fan/scene.gltf"
+        ></a-asset-item>
+      </a-assets>
+      <!--Camera-->
+      <a-entity camera>
+        <!--cursor-->
+        <a-entity
+          cursor="fuse: true; fuseTimeout: 500"
+          position="0 0 -1"
+          geometry="primitive: ring; radiusInner: 0.01; radiusOuter: 0.013;"
+          material="color: white; shader: flat; opacity: 0.5;"
+          animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 150; from: 0.1 0.1 0.1; to: 1 1 1"
+          animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 1500; from: 1 1 1; to: 0.1 0.1 0.1"
+          animation__mouseleave="property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 500; to: 1 1 1"
+        >
+        </a-entity>
+      </a-entity>
+      <!--Barcode marker [2]-->
+      <a-marker type="barcode" value="2">
+        <a-entity gltf-model="#board" scale="0.02 0.02 0.02" animation-mixer>
+        </a-entity>
+      </a-marker>
+      <!--Barcode marker [3]-->
+      <a-marker type="barcode" value="3">
+        <a-entity gltf-model="#fan" scale="0.5 0.5 0.5" animation-mixer>
+        </a-entity>
+      </a-marker>
+      <!--Sound-->
+      <a-entity sound="src: #blip1; autoplay: true;"></a-entity>
+      <a-entity sound="src: #blip2; autoplay: true;"></a-entity>
+    </a-scene>
+    <noscript>
+      <a href="/">No JavaScript? Go home kid!</a>
+    </noscript>
+    <script src="../assets/js/script.min.js"></script>
+  </body>
 </html>

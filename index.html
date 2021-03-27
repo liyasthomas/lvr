@@ -26,130 +26,158 @@
 -->
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>Lvr</title>
+    <meta name="description" content="L virtual reality" />
+    <link rel="shortcut icon" href="assets/images/favicon.png" />
+    <meta name="theme-color" content="#000" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="Lvr" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="apple-mobile-web-app-title" content="Lvr" />
+    <link rel="apple-touch-icon" href="assets/images/favicon.png" />
+    <meta name="msapplication-TileImage" content="assets/images/favicon.png" />
+    <meta name="msapplication-TileColor" content="#000" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta property="og:site_name" content="Lvr" />
+    <meta property="og:url" content="https://lean-vr.firebaseapp.app" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Lvr" />
+    <meta property="og:description" content="L virtual reality" />
+    <meta property="og:image" content="assets/images/favicon.png" />
+    <meta name="twitter:site" content="@liyasthomas" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Lvr" />
+    <meta name="twitter:description" content="L virtual reality" />
+    <meta name="twitter:image" content="assets/images/favicon.png" />
+    <meta name="twitter:url" content="https://lean-vr.firebaseapp.app" />
+  </head>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-size: 22px;
+      margin: 0;
+      font-family: Arial;
+      font-weight: 900;
+    }
 
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-	<title>Lvr</title>
-	<meta name="description" content="L virtual reality">
-	<link rel="shortcut icon" href="assets/images/favicon.png">
-	<meta name="theme-color" content="#000">
-	<meta name="mobile-web-app-capable" content="yes">
-	<meta name="application-name" content="Lvr">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-	<meta name="apple-mobile-web-app-title" content="Lvr">
-	<link rel="apple-touch-icon" href="assets/images/favicon.png">
-	<meta name="msapplication-TileImage" content="assets/images/favicon.png">
-	<meta name="msapplication-TileColor" content="#000">
-	<meta name="msapplication-tap-highlight" content="no">
-	<meta property="og:site_name" content="Lvr">
-	<meta property="og:url" content="https://liyas-vr.firebaseapp.com">
-	<meta property="og:type" content="website">
-	<meta property="og:title" content="Lvr">
-	<meta property="og:description" content="L virtual reality">
-	<meta property="og:image" content="assets/images/favicon.png">
-	<meta name="twitter:site" content="@liyasthomas">
-	<meta name="twitter:card" content="summary">
-	<meta name="twitter:title" content="Lvr">
-	<meta name="twitter:description" content="L virtual reality">
-	<meta name="twitter:image" content="assets/images/favicon.png">
-	<meta name="twitter:url" content="https://liyas-vr.firebaseapp.com">
-</head>
-<style>
-	body {
-		background-color: #000;
-		color: #fff;
-		font-size: 22px;
-		margin: 0;
-		font-family: Arial;
-		font-weight: 900;
-	}
+    .container {
+      display: flex;
+      align-content: center;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      min-height: 100vh;
+      padding: 32px;
+    }
 
-	.container {
-		display: flex;
-		align-content: center;
-		align-items: center;
-		justify-content: center;
-		flex-direction: column;
-		min-height: 100vh;
-		padding: 32px;
-	}
+    h1 {
+      font-size: 2.5em;
+    }
 
-	h1 {
-		font-size: 2.5em;
-	}
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-	a {
-		text-decoration: none;
-		color: inherit;
-	}
+    .demo {
+      display: inline-block;
+      color: #000;
+      background-color: #fff;
+      padding: 16px 24px;
+      border-radius: 8px;
+      margin: 4px;
+    }
 
-	.demo {
-		display: inline-block;
-		color: #000;
-		background-color: #fff;
-		padding: 16px 24px;
-		border-radius: 8px;
-		margin: 4px;
-	}
+    .a {
+      background-color: #0dfdb2;
+    }
 
-	.a {
-		background-color: #0dfdb2;
-	}
+    .e {
+      background-color: #18ffff;
+    }
 
-	.e {
-		background-color: #18ffff;
-	}
+    .i {
+      background-color: #0e61ff;
+    }
 
-	.i {
-		background-color: #0e61ff;
-	}
+    .o {
+      background-color: #ff5cff;
+    }
 
-	.o {
-		background-color: #ff5cff;
-	}
+    .u {
+      background-color: #ff0052;
+    }
+  </style>
 
-	.u {
-		background-color: #ff0052;
-	}
-
-</style>
-
-<body>
-	<div class="container">
-		<div>
-			<h1>
-				<span class="demo e">L</span>
-				<span class="demo o">v</span>
-				<span class="demo a">r</span>
-			</h1>
-		</div>
-		<div>
-			<p>Augmented Reality Enhanced Computer Aided Education</p>
-			<p>Developed by <a class="u" href="https://liyas-thomas.firebaseapp.com">&nbsp;Liyas Thomas&nbsp;</a></p>
-		</div>
-	</div>
-	<div class="container">
-		<div>
-			<a class="demo a" href="src/alphabets.html" target="_blank">Alphabets</a>
-			<a class="demo e" href="src/animals.html" target="_blank">Animals</a>
-			<a class="demo i" href="src/architecture.html" target="_blank">Architecture</a>
-			<a class="demo o" href="src/automobile.html" target="_blank">Automobile</a>
-			<a class="demo u" href="src/biology.html" target="_blank">Biology</a>
-			<a class="demo a" href="src/business.html" target="_blank">Business&nbsp;card</a>
-			<a class="demo e" href="src/chemistry.html" target="_blank">Chemistry</a>
-			<a class="demo i" href="src/electronics.html" target="_blank">Electronics</a>
-			<a class="demo o" href="src/ecommerce.html" target="_blank">E-commerce</a>
-			<a class="demo u" href="src/entertainment.html" target="_blank">Entertainment</a>
-			<a class="demo a" href="src/film.html" target="_blank">Movie</a>
-			<a class="demo e" href="src/food.html" target="_blank">Food</a>
-			<a class="demo i" href="src/geography.html" target="_blank">Geography</a>
-			<a class="demo o" href="src/brocode.html" target="_blank">Brocode</a>
-			<a class="demo u" href="src/arhunt.html" target="_blank">AR Hunt</a>
-			<a class="demo e" href="src/scan.html" target="_blank">Video&nbsp;feed</a>
-		</div>
-	</div>
-</body>
-
+  <body>
+    <div class="container">
+      <div>
+        <h1>
+          <span class="demo e">L</span>
+          <span class="demo o">v</span>
+          <span class="demo a">r</span>
+        </h1>
+      </div>
+      <div>
+        <p>Augmented Reality Enhanced Computer Aided Education</p>
+        <p>
+          Developed by
+          <a class="u" href="https://liyas-thomas.firebaseapp.com"
+            >&nbsp;Liyas Thomas&nbsp;</a
+          >
+        </p>
+      </div>
+    </div>
+    <div class="container">
+      <div>
+        <a class="demo a" href="src/alphabets.html" target="_blank"
+          >Alphabets</a
+        >
+        <a class="demo e" href="src/animals.html" target="_blank">Animals</a>
+        <a class="demo i" href="src/architecture.html" target="_blank"
+          >Architecture</a
+        >
+        <a class="demo o" href="src/automobile.html" target="_blank"
+          >Automobile</a
+        >
+        <a class="demo u" href="src/biology.html" target="_blank">Biology</a>
+        <a class="demo a" href="src/business.html" target="_blank"
+          >Business&nbsp;card</a
+        >
+        <a class="demo e" href="src/chemistry.html" target="_blank"
+          >Chemistry</a
+        >
+        <a class="demo i" href="src/electronics.html" target="_blank"
+          >Electronics</a
+        >
+        <a class="demo o" href="src/ecommerce.html" target="_blank"
+          >E-commerce</a
+        >
+        <a class="demo u" href="src/entertainment.html" target="_blank"
+          >Entertainment</a
+        >
+        <a class="demo a" href="src/film.html" target="_blank">Movie</a>
+        <a class="demo e" href="src/food.html" target="_blank">Food</a>
+        <a class="demo i" href="src/geography.html" target="_blank"
+          >Geography</a
+        >
+        <a class="demo o" href="src/brocode.html" target="_blank">Brocode</a>
+        <a class="demo u" href="src/arhunt.html" target="_blank">AR Hunt</a>
+        <a class="demo e" href="src/scan.html" target="_blank"
+          >Video&nbsp;feed</a
+        >
+      </div>
+    </div>
+  </body>
 </html>

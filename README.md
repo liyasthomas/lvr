@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/liyasthomas/lvr.svg?branch=master)](https://travis-ci.com/liyasthomas/lvr) [![GitHub release](https://img.shields.io/github/release/liyasthomas/lvr/all.svg)](https://github.com/liyasthomas/lvr/releases/latest) [![repo size](https://img.shields.io/github/repo-size/liyasthomas/lvr.svg)](https://github.com/liyasthomas/lvr/archive/master.zip) [![license](https://img.shields.io/github/license/liyasthomas/lvr.svg)](https://github.com/liyasthomas/lvr/blob/master/LICENSE) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/liyasthomas/lvr/issues) [![Website](https://img.shields.io/website-up-down-green-red/https/shields.io.svg?label=website)](https://liyas-thomas.firebaseapp.com) [![Donate](https://img.shields.io/badge/$-donate-ff69b4.svg)](https://www.paypal.me/liyascthomas)
+[![Build Status](https://travis-ci.com/liyasthomas/lvr.svg?branch=master)](https://travis-ci.com/liyasthomas/lvr) [![GitHub release](https://img.shields.io/github/release/liyasthomas/lvr/all.svg)](https://github.com/liyasthomas/lvr/releases/latest) [![repo size](https://img.shields.io/github/repo-size/liyasthomas/lvr.svg)](https://github.com/liyasthomas/lvr/archive/master.zip) [![license](https://img.shields.io/github/license/liyasthomas/lvr.svg)](https://github.com/liyasthomas/lvr/blob/main/LICENSE) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/liyasthomas/lvr/issues) [![Website](https://img.shields.io/website-up-down-green-red/https/shields.io.svg?label=website)](https://liyas-thomas.firebaseapp.com) [![Donate](https://img.shields.io/badge/$-donate-ff69b4.svg)](https://www.paypal.me/liyascthomas)
 
 # Lvr <img src="assets/images/favicon.png" alt="Lvr" width="32">
 
@@ -26,10 +26,10 @@ These instructions will get you a copy of the project up and running on your loc
 
 What things you need to install the software and how to install them.
 
-* A device which supports [WebGL](https://caniuse.com/#feat=webgl) and [WebRTC](https://caniuse.com/#feat=stream) with a working camera input
-* Internet connection
-* A web browser that supports [WebVR](https://webvr.info). Works best with Chrome on Android devices. You can still experience [WebVR](https://webvr.info) content in other browsers on Android and iOS, but it might not be as smooth since those browsers don’t fully support [WebVR](https://webvr.info)
-* [Wonder](https://en.wikipedia.org/wiki/Wonder_(emotion))! :heart:
+- A device which supports [WebGL](https://caniuse.com/#feat=webgl) and [WebRTC](https://caniuse.com/#feat=stream) with a working camera input
+- Internet connection
+- A web browser that supports [WebVR](https://webvr.info). Works best with Chrome on Android devices. You can still experience [WebVR](https://webvr.info) content in other browsers on Android and iOS, but it might not be as smooth since those browsers don’t fully support [WebVR](https://webvr.info)
+- [Wonder](<https://en.wikipedia.org/wiki/Wonder_(emotion)>)! :heart:
 
 <div align="center">
   <br>
@@ -44,7 +44,7 @@ It works on all platforms. Android, iOS and Windows phone. It runs on **any brow
 
 Try on your phone in only two easy steps, check it out!
 
-1. Open [marker image from here](https://github.com/liyasthomas/lvr/blob/master/assets/images/patterns/barcode/1.png) in your browser.
+1. Open [marker image from here](https://github.com/liyasthomas/lvr/blob/main/assets/images/patterns/barcode/1.png) in your browser.
 2. Open my [augmented reality web app](https://liyasthomas.github.io/lvr) in your phone browser. Give permissions to access camera. Scan marker image with your camera.
 
 You're done! It will open a web page which read the phone's webcam, localize a marker and add 3D on top of it.
@@ -65,48 +65,16 @@ A step by step series of examples that tell you've to get a development environm
 
 ---
 
-## Configure
-
-Explain how to run the automated tests for this system.
-
-### Break down into end to end tests
-
-Explain what these tests test and why.
-
-```
-Will be explained later
-```
-
-### And coding style tests
-
-Explain what these tests test and why.
-
-```
-Will be explained later
-```
-
----
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system.
-
-```
-Will be explained later
-```
-
----
-
 ## Built with
 
-* **[AR.js](https://github.com/jeromeetienne/AR.js)** - For efficient augmented reality for the web
-	* [three.js](https://github.com/mrdoob/three.js) - For being a great library to do 3d on the web
-	* [ARToolKit](https://github.com/artoolkit/artoolkit5) - Years of development and experiences on doing augmented reality
-	* [emscripten](https://github.com/kripken/emscripten) and [asm.js](https://github.com/dherman/asm.js) - Thus we could compile ARToolKit C into JavaScript
-* **[A-Frame](https://github.com/aframevr/aframe)** - Web framework for building virtual reality experiences
-* **[Chromium](https://github.com/chromium/chromium)** - Thanks for being so fast!
-* HTML - For the web framework
-* CSS - For styling components
+- **[AR.js](https://github.com/jeromeetienne/AR.js)** - For efficient augmented reality for the web
+  - [three.js](https://github.com/mrdoob/three.js) - For being a great library to do 3d on the web
+  - [ARToolKit](https://github.com/artoolkit/artoolkit5) - Years of development and experiences on doing augmented reality
+  - [emscripten](https://github.com/kripken/emscripten) and [asm.js](https://github.com/dherman/asm.js) - Thus we could compile ARToolKit C into JavaScript
+- **[A-Frame](https://github.com/aframevr/aframe)** - Web framework for building virtual reality experiences
+- **[Chromium](https://github.com/chromium/chromium)** - Thanks for being so fast!
+- HTML - For the web framework
+- CSS - For styling components
 
 ---
 
@@ -131,10 +99,12 @@ This project is developed by [Liyas Thomas](https://github.com/liyasthomas) usin
 ## Authors
 
 ### Lead Developers
-* [**Liyas Thomas**](https://github.com/liyasthomas) - *Author*
+
+- [**Liyas Thomas**](https://github.com/liyasthomas) - _Author_
 
 ### Thanks
-* [Jerome Etienne](https://github.com/jeromeetienne) - For [AR.js](https://github.com/jeromeetienne/AR.js)
+
+- [Jerome Etienne](https://github.com/jeromeetienne) - For [AR.js](https://github.com/jeromeetienne/AR.js)
 
 See also the list of [contributors](https://github.com/liyasthomas/lvr/graphs/contributors) who participated in this project.
 
@@ -154,16 +124,16 @@ See the [CHANGELOG](CHANGELOG.md) file for details.
 
 ## Acknowledgments
 
-* Hat tip to anyone who's code was used
-* Inspirations:
-	* [Google VR](https://vr.google.com)
-	* [Google ARCore](https://developers.google.com/ar)
-	* [Google WebVR Experiments](https://experiments.withgoogle.com/webvr)
-	* [Google AR Experiments](https://experiments.withgoogle.com/ar)
-	* [Apple ARKit](https://developer.apple.com/arkit)
-	* [Microsoft HoloLens](https://www.microsoft.com/en-us/hololens)
-	* [YouTube](https://www.youtube.com)
-	* [A-Frame](https://aframe.io)
-	* [three.js](https://threejs.org)
-	* [CodePen](https://codepen.io)
-	* [GitHub](https://github.com)
+- Hat tip to anyone who's code was used
+- Inspirations:
+  - [Google VR](https://vr.google.com)
+  - [Google ARCore](https://developers.google.com/ar)
+  - [Google WebVR Experiments](https://experiments.withgoogle.com/webvr)
+  - [Google AR Experiments](https://experiments.withgoogle.com/ar)
+  - [Apple ARKit](https://developer.apple.com/arkit)
+  - [Microsoft HoloLens](https://www.microsoft.com/en-us/hololens)
+  - [YouTube](https://www.youtube.com)
+  - [A-Frame](https://aframe.io)
+  - [three.js](https://threejs.org)
+  - [CodePen](https://codepen.io)
+  - [GitHub](https://github.com)
